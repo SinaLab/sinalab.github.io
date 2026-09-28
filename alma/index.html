@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="icon" type="image/ico" href="../favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/Fira-Sans-font.css" />
+    <link rel="stylesheet" href="../main.css?v=9" />
+    <link rel="stylesheet" type="text/css" href="./ALMA.css?t=3" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <meta
+      property="og:image"
+      content="https://sina.birzeit.edu/Images/OGLogo.jpg"
+    />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+    <meta property="og:image:alt" content="SinaLab logo" />
+
+    <meta property="header" content="ALMA" />
+
+    <meta property="og:url" content="https://sina.birzeit.edu/alma/" />
+    <meta property="og:type" content="WebSite" />
+    <meta
+      property="og:description"
+      content="Fast and accurate morphology tagger (lemmatizer, POS tagger, and root tagger) for Arabic that outperforms all related tools."
+    />
+    <meta
+      property="og:title"
+      content="ALMA - Arabic Morphology tagger Online Demo  المحلل الصرفي "
+    />
+
+    <meta
+      property="image"
+      content="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+    />
+    <meta property="image:width" content="200" />
+    <meta property="image:height" content="200" />
+    <meta property="image:alt" content="SinaLab logo" />
+
+    <meta property="url" content="https://sina.birzeit.edu/alma/" />
+    <meta property="type" content="WebSite" />
+    <meta
+      name="description"
+      content="Fast and accurate morphology tagger (lemmatizer, POS tagger, and root tagger) for Arabic that outperforms all related tools."
+    />
+
+    <meta name="author" content="SinaLab - Birzeit University" />
+    <meta
+      name="keywords"
+      content="Free, online, open sources, SinaTools, relation extraction, LLMs, algorithms, ALMA, Annotation tools, Arabic, Arabic Dictionary, Arabic Lexicographic Database, Arabic Lexicon, articles, Baladi, BERT, bias, Birzeit University, cleaning, Corpora, Corpus, Curras, Currasat, Data visualisation, dataset, datasets, Deep Learning, Demo, diacratics, Diacritics-aware, dialect, Dialect Lemma, Dialect Lemma, Dialects, dictionaries, Dictionary, Digital archives, Digitisation, Discourse analysis, Document classification, Duplication, emotional content extraction, English, entity, Entity linking, event argument extraction, Event detection, events, Guideline, Hate speech, Hebrew, implication, information retrieval, intents, intersection, Iraqi, Iraqi Dialect Corpus, jaccard similarity, Knowledge Graphs, Knowledge representation, language corpora, Languages, Large Language Models, Lebanese, Lebanese Dialect Corpus, Lemmas, Lemmatization, Lexicon, Lexicons, Libyan, Libyan Dialect Corpus, Linked Data, Lisan, Machine translation, matching, Media, metadata, Middle Eastern history, misinformation, models, Modern Standard Arabic, Morphological Solution, Morphology, MSA, MSA, MSA lemma, Mustafa Jarrar, Nabra, Nakba narratives, Nakba testimonies, Named Entity Recognition, narratives, Natural Language Generation, NER, Nested, News, NLP, NLU, offensive language, online, ontologies, Open-Source, organizations, Palestine, Palestinian, Palestinian Dialect Corpus, Palestinian Nakba, paraphrasing, Part-Of-Speech, Part-of-speech Tagging, POS, Pre-trained model, Prefix, Projects, Qabas, relationship extraction, Research, resources, SALMA, Semantic Relatedness, semantic tagging, sense, Sentiment analysis, similarity, SinaLab, stem, Sudanese, Sudanese Dialect Corpus, suffix, summarisation, Synonyms, Synonyms Evaluate, Synonyms Extraction, Syrian, Syrian Dialect Corpus, Tool, topic modeling, union, Vocabularies, Welsh, Wojood, Word Sense Disambiguation, Workshop, WSD, Yemeni, Yemeni Dialect Corpus, أخبار, ألمى, اتحاد, استخراج المترادفات, التعرف على الكينونات, اللغة العربية, اللغة العربية المعاصرة, انجليزي, بحث علمي, تقاطع, جامعة بيرزيت, خصائص صرفية, خوارزميات, دليل معياري, ذم, سلمى, سينا, شبكة بيانات, شبكة بيانات معجمية, عامية, عامية إماراتية, عامية سودانية, عامية سورية, عامية عراقية, عامية فلسطينية, عامية لبنانية, عامية ليبية, عامية مصرية, عامية يمنية, عربي, فصحى, فصحى حديثة, فلسطين, فهم الدلالة, قاموس عربي, قبس, قسم الكلام, كراسات, كراهية, محلل دلالي, مدخلات, مدخلات معجمية, مدخلة, مدخلة عامية, مدخلة فصحى, مدونات, مدونات عامية, مدونة, مصادر, مصطفى جرار, معاجم, معالجة اللغة الطبيعية, معجم, معجم اللغة العربية, معجم عربي, معجم مجاني, مفتوح المصدر, مقارنة, مكنز, مكنز شجري صرفي, نكبة, نموذج, وجود"
+    />
+    <meta
+      property="title"
+      content="ALMA - Arabic Morphology tagger Online Demo  المحلل الصرفي"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+      type="image/x-icon"
+    />
+    <title>ALMA - Arabic Lemmatizer and POS tagger Demo</title>
+
+    <script src="ALMA.js?v=9"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SV0Y0V4JTT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SV0Y0V4JTT');
+    </script>
+  </head>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default bg-light">
+      <div class="sina-header">
+        <div class="image-holder" onclick="window.open('../index.html');">
+          <img
+            src="../Images/arOntLogo.png"
+            class="img-responsive logo"
+            alt="logo"
+          />
+          <div class="vertical-line"></div>
+          <p class="title">SinaLab</p>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="nav text-center navigation-bar">
+          <li><a href="../news/index.html">News</a></li>
+          <li><a href="../index.html#team">Team</a></li>
+          <li><a href="../resources/index.html">Resources</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div>
+      <div class="intro-section">
+        <p class="intro-section-title">ALMA (ألمى)</p>
+        <p class="intro-section-title">Arabic Morphology Tagger</p>
+        <p class="salma-subtitle">
+          Lemmatizer, POS tagger, and root tagger.
+          <br />
+          <span class="a-description">Accuracy:</span> POS (93.8%),
+          lemmatization (90.48%), and speed (32K tokens/second). Outperformed
+          all other tools (see
+          <a href="https://www.jarrar.info/publications/JAH24.pdf">article</a>).
+        </p>
+      </div>
+
+      <div class="wojood-container center-align">
+        <textarea id="text"> أسرع المحللات الصرفية العربية وأكثرها دقة، وهو محلل مفتوح المصدر. يتم تحديد المدخلة المعجمية وقسم الكلام والجذر لكل كلمة في النص.</textarea
+        >
+        <div id="myBtnContainer">
+          <button class="btn" id="morph_tagger" onclick="morphTagger()">
+            Morph Tagger
+          </button>
+          <button class="btn" id="lemmatizer" onclick="lemmatization()">
+            Lemmatizer
+          </button>
+          <button class="btn" id="pos_tagger" onclick="posTagger()">
+            POS Tagger
+          </button>
+        </div>
+      </div>
+
+      <div class="alma-container">
+        <div class="form-horizontal">
+          <div class="normalText">
+            <ul class="services-list">
+              <li id="li_hidden" style="display: none">
+                <div class="services-list-item" style="margin-bottom: 40px">
+                  <input
+                    type="checkbox"
+                    id="p-toggle55"
+                    class="p-unfolder p-unfolder14"
+                  />
+                  <label for="p-toggle55" class="resultLable">
+                    <span class="p-unfold-icon" style="padding-right: 0"
+                      >+</span
+                    >
+                    <span class="p-fold-icon" style="padding-right: 0">-</span>
+                    <p
+                      class="p-label-title-res"
+                      style="display: inline; margin-left: -7px"
+                    >
+                      Results
+                      <div id="csv-download" style="margin-top: 20px; display: inline;"></div>
+
+                    </p>
+                  </label>
+                  <span class="p-fold description_fold">
+                    <span class="p-fold description-p-table">
+                      <span
+                        style="
+                          line-height: 40px;
+                          unicode-bidi: plaintext;
+                          background-color: rgb(255, 255, 255);
+                          width: 100%;
+                          display: flex;
+                          justify-content: center;
+                        "
+                        id="output"
+                      ></span>
+                    </span>
+                  </span>
+                </div>
+              </li>
+              
+              <li>
+                <div class="services-list-item">
+                  <input
+                    type="checkbox"
+                    id="p-toggle1"
+                    class="p-unfolder p-unfolder14"
+                  />
+                  <label for="p-toggle1" class="p-toggle-label">
+                    <span class="p-unfold-icon">+</span>
+                    <span class="p-fold-icon">-</span>
+                    <span class="p-label-title">Downloads</span>
+                  </label>
+                  <div class="p-fold description_fold">
+                    <div class="p-fold description-p">
+                      <p class="p-description-p">
+                        <span class="remove-padding"
+                          >Download
+                          <a href="https://sina.birzeit.edu/sinatools/"
+                            >SinaTools</a
+                          >
+                          (Morph Module), you can also access ALMA memory (morphological solution ordered by frequency) which is part of SinaTools.</span
+                        >
+                        <br />
+                        <br />
+                        <span class="remove-padding"
+                          >Download
+                          <a href="https://sina.birzeit.edu/qabas/about#copyright"
+                            >Qabas</a
+                          >
+                          lexicon that we used to build Alma.</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="services-list-item" id="benchmarks">
+                <input
+                  type="checkbox"
+                  id="p-toggle66"
+                  class="p-unfolder p-unfolder0"
+                />
+                <label for="p-toggle66" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span>
+                  <span class="p-fold-icon">-</span>
+                  <span class="p-label-title"
+                    >Benchmarks
+                    
+                  </span>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+                    <span style="font-weight: bold;">Lemmatization BenchMarking</span>
+                    <div class="p-fold description-p" style="padding-top: 0px;">
+                      <span style="padding-left: 0px;">We used two datasets (Arabic Treebank and SALMA) to evaluate four tools in five lemmatization scenarios, keeping the default settings for all tools. For more details, refer to article [<a href="https://www.jarrar.info/publications/JAH24.pdf">1</a>].</span>
+                    </div>
+                    <div class="p-fold description-p" style="padding-top: 0px;">
+                      <img
+                        src="../Images/ALMA_lemmatizer.JPG"
+                        alt="ALMA Benchmarks"
+                        class="responsive-img hoverable"
+                        onclick="openLightbox(this)"
+                      />
+                    </div>
+                    <span style="font-weight: bold;">POS BenchMarking</span>
+                    <div class="p-fold description-p" style="padding-top: 0px;">
+                      <span style="padding-left: 0px;">We used the ATB dataset to evaluate four tools in three POS tagging scenarios, keeping the default settings for all tools. For more details, refer to article [<a href="https://www.jarrar.info/publications/JAH24.pdf">1</a>].</span>
+                    </div>
+                    <div class="p-fold description-p" style="padding-top: 0px;">
+                      <img
+                        src="../Images/ALMA_pos.JPG"
+                        alt="ALMA POS Benchmarks"
+                        class="responsive-img hoverable"
+                        onclick="openLightbox(this)"
+                      />
+                    </div>                      
+                    <span style="font-weight: bold;">Speed BenchMarking</span>
+                    <div class="p-fold description-p" style="padding-top: 0px;">
+                      <span style="padding-left: 0px;">We evaluated the lemmatization speed of the four tools (default settings) on the same machine (24 CPU, 47G Memory, CentOS, size 1.3T) using the same setup (reading input from a file and writing output to a file). The experiment was repeated six times, excluding the first run to account for the initial memory loading time of some tools. See article [<a href="https://www.jarrar.info/publications/JAH24.pdf">1</a>] for more details.</span>
+                    </div> 
+                    <div class="p-fold description-p" style="padding-top: 0px;">
+                      <img
+                        src="../Images/ALMA_speed.JPG"
+                        alt="ALMA Benchmarks"
+                        class="responsive-img hoverable"
+                        onclick="openLightbox(this)"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </li>
+              
+              <!-- Lightbox Container -->
+              <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+                <span class="close" onclick="closeLightbox(event)">&times;</span>
+                <img class="lightbox-img" id="lightbox-img" />
+              </div>
+              
+              
+              
+              
+              
+              <li>
+                <div class="services-list-item">
+                  <input
+                    type="checkbox"
+                    id="p-toggle139"
+                    class="p-unfolder p-unfolder14"
+                  />
+                  <label for="p-toggle139" class="p-toggle-label"
+                    ><span class="p-unfold-icon">+</span
+                    ><span class="p-fold-icon">-</span>
+                    <span class="p-label-title">Publications</span>
+                  </label>
+                  <div class="p-fold description_fold">
+                    <div class="p-fold description-p">
+                      <p class="p-description-p">
+                        Mustafa Jarrar, Diyam Akra, Tymaa Hammouda:
+                        <a href="https://www.jarrar.info/publications/JAH24.pdf"
+                          >ALMA: Fast Lemmatizer and POS Tagger for Arabic. </a
+                        >In Proceedings of the 2024 AI in Computational
+                        Linguistics (ACLING 2024), Procedia Computer Science,
+                        Dubai. ELSEVIER.
+                      </p>
+                      <br />
+                      <p class="p-description-p">
+                        Tymaa Hammouda, Mustafa Jarrar, Mohammed Khalilia: <a
+                          href="https://www.jarrar.info/publications/HJK24.pdf"
+                          >SinaTools: Open Source Toolkit for Arabic Natural
+                          Language Understanding.</a
+                        > In Proceedings of the 2024 AI in Computational
+                        Linguistics (ACLING 2024), Procedia Computer Science,
+                        Dubai. ELSEVIER.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <br />
+    </div>
+    <!-- Birzeit Footer -->
+    <!-- <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-content-div">
+          <span class="footer-copyrights">
+            <a href="http://www.birzeit.edu/" target="_blank">
+              <img src="../Images/bzu-logo2.png" alt="bzu logo" />
+            </a>
+          </span>
+          <span class="ng-binding"> Copyright © 2023 Birzeit University </span>
+        </div>
+      </div>
+    </footer> -->
+  </body>
+</html>

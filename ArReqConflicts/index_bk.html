@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>ArReqConflicts - Detect and Resolve conflicts in ArSR</title>
+    <link rel="icon" type="image/ico" href="./favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/Fira-Sans-font.css" />
+    <link rel="stylesheet" href="../main.css?v=8" />
+    <link rel="stylesheet" href="./ArReqConflicts.css?v=8" />
+    <script src="./ArReqConflicts.js?v=13"></script>
+    <!-- 
+    <meta property="og:image:width" content="100">
+    <meta property="og:image:height" content="100"> -->
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1, viewport-fit=cover"
+    />
+    <!--viewport-fit=cover - for iPhone X notch-->
+
+    <meta property="header" content="ArReqConflicts" />
+
+    <meta
+      property="og:title"
+      content="ArReqConflicts - Detect and Resolve conflicts in ArSR"
+    />
+    <meta
+      property="og:image"
+      content="https://sina.birzeit.edu/Images/OGLogo.jpg"
+    />
+    <meta property="og:url" content="https://sina.birzeit.edu/ArReqConflicts/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Detect and Resolve conflicts in Arabic Software Requirements."
+    />
+    <meta
+      name="description"
+      content="Detect and Resolve conflicts in Arabic Software Requirements."
+    />
+    <meta
+      property="title"
+      content="ArReqConflicts - Detect and Resolve conflicts in ArSR"
+    />
+    <meta name="author" content="SinaLab - Birzeit University" />
+    <meta
+      name="keywords"
+      content="GPT, Deepseek, Fanar, Llama, Free, online, open sources, LLMs, Arabic, Software Engineering, Arabic Software Requirements, Birzeit University, Demo, Datasets, language corpora, Languages, Large Language Models, Machine translation, Natural Language Generation, NLP, NLU, Open-Source, organizations, Palestine, Palestinian"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default bg-light">
+      <div class="sina-header">
+        <div class="image-holder" onclick="window.open('../index.html');">
+          <img
+            src="../Images/arOntLogo.png"
+            class="img-responsive logo"
+            alt="logo"
+          />
+          <div class="vertical-line"></div>
+          <p class="title">SinaLab</p>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="nav text-center navigation-bar">
+          <li><a href="../news/index.html">News</a></li>
+          <li><a href="../index.html#team">Team</a></li>
+          <li><a href="../resources/index.html">Resources</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="intro-section">
+      <p class="intro-section-title">ArReqConflicts</p>
+     <p class="intro-section-title">Detect and Resolve Conflicts in Arabic Software Requirements using LLMs</p>
+
+      <p>
+        Requirement Conflict Benchmark (RCB), 26,545 requirement pairs, generated from 4 source datasets (PURE, WorldVista, OPENCOSS, UAV). (Open Source)<br> <br>
+		
+		<b>Evaluation (Zero- and Few-Shot LLM Settings):</b> <br>
+Fanar (Thinking Mode), GPT-4o, DeepSeek-Reasoner, LLaMA 3.1 8B <br>
+Performance (Average Micro-F1 across all datasets): Zero-Shot (93%), Few-Shot (94%)<br>
+      </p>
+    </div>
+
+<!--
+	<div style="width: 100%;justify-items: center;">
+	<form id="conflictForm">
+      <label for="csvFile" style="font-weight: bold; display: block; margin-top: 20px;">Upload Requirements CSV File:</label>
+	  <p class="note">Note: The CSV file must contain a column for <strong>requirement ID</strong> and a column for <strong>requirement text</strong>. Each row represents one requirement.</p>
+	  <input type="file" id="csvFile" accept=".csv">
+
+	  
+      <label for="model_choice">Model Choice:</label>
+      <select id="model_choice" required="">
+        <option value="GPT-4">GPT-4</option>
+        <option value="DeepSeek-Reasoner">DeepSeek-Reasoner</option>
+        <option value="LLaMA-3.1-8B-Instruct">LLaMA 3.1 8B Instruct</option>
+        <option value="Fanar">Fanar</option>
+      </select>
+
+      <label for="prompt_type">Prompt Type:</label>
+      <select id="prompt_type" required="">
+        <option value="zero-shot">Zero-shot</option>
+        <option value="few-shot">Few-shot</option>
+      </select>
+
+      <label for="api_key">API Key (only for GPT-4):</label>
+      <input type="text" id="api_key" placeholder="Enter GPT-4 API key">
+
+	  <div id="myBtnContainer">
+        <button class="btn" type="submit" style="color:black">Check Conflict</button>
+      </div>
+    </form>
+	</div>
+	-->
+	
+	<div style="width: 100%; justify-items: center;">
+  <form id="conflictForm">
+    <label for="requirement1" style="font-weight: bold; display: block; margin-top: 20px;">
+      Requirement 1:
+    </label>
+    <input type="text" id="requirement1" placeholder="Enter first requirement">
+
+    <label for="requirement2" style="font-weight: bold; display: block; margin-top: 20px;">
+      Requirement 2:
+    </label>
+    <input type="text" id="requirement2" placeholder="Enter second requirement">
+
+    <label for="model_choice">Model Choice:</label>
+    <select id="model_choice" required>
+      <option value="Fanar">Fanar</option>
+	  <option value="GPT-4">GPT-4</option>
+      <option value="DeepSeek-Reasoner">DeepSeek-Reasoner</option>
+      <option value="LLaMA-3.1-8B-Instruct">LLaMA 3.1 8B Instruct</option> 
+    </select>
+
+    <label for="prompt_type">Prompt Type:</label>
+    <select id="prompt_type" required>
+      <option value="zero-shot">Zero-shot</option>
+      <option value="few-shot">Few-shot</option>
+    </select>
+
+	<div id="apiKeyContainer" style="display: none;">
+  <label for="api_key">API Key (only for GPT-4):</label>
+  <input type="text" id="api_key" placeholder="Enter GPT-4 API key">
+</div>
+
+    <p id="modelMessage" style="color: red; display: none;"></p>
+
+    <div id="myBtnContainer">
+      <button class="btn" type="submit" style="color:black">Check Conflict</button>
+    </div>
+  </form>
+
+  <!-- Div to show API response -->
+  <div id="apiResponse" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; min-height: 50px;">
+    API response will appear here.
+  </div>
+</div>
+
+    <div class="wojood-container">
+      <div class="form-horizontal">
+        <div class="normalText">
+          <ul class="services-list">
+            <li>
+              <div class="services-list-item" id="benchmarks">
+              <input type="checkbox" id="p-toggle66" class="p-unfolder p-unfolder0">
+              <label for="p-toggle66" class="p-toggle-label"><span class="p-unfold-icon">+</span>
+                <span class="p-fold-icon">-</span>
+                <span class="p-label-title">Benchmarks
+                  
+                </span>
+              </label>
+              <div class="p-fold description_fold">
+                <div class="p-fold description-p">
+                  <span style="font-weight: bold;">Evaluation of 4 LLMs</span>
+                  <div class="p-fold description-p" style="padding-top: 0px;">
+                    <span style="padding-left: 0px;">We evaluate GPT-4o, Fanar, DeepSeek-Reasoner, and LLaMA 3.1 8B Instruct. The models are evaluated on four datasets (PURE, WorldVista, OPENCOSS, and UAV) under zero-shot and few-shot settings. See article [<a href="https://www.jarrar.info/publications/HJHJ26.pdf">1</a>] for details.</span>
+                  </div>
+                  <div class="p-fold description-p" style="padding-top: 0px;">
+                    <img src="../Images/AraReqBenchmark.PNG" alt="Wojood Benchmarks" class="thumbnail-img" onclick="openFullScreen(this)">
+                  </div>
+                </div>
+              </div>
+            </div>
+            </li>
+            <li id="download">
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle1"
+                  class="p-unfolder p-unfolder14"
+                />
+                <label for="p-toggle1" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Downloads</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+                    <p class="p-description-p">
+                      
+                      <a href="https://github.com/TymaaHammouda/Detecting-and-Resolving-Conflicts-in-Arabic-Software-Requirements-">GitHub:</a>
+                      Evaluation source code.
+                      <br />
+                      <br />
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5_BS12CQ4FHWBn_TC7xTOReB3NtXcnFnPUfHIswDu9-hQ8w/viewform?usp=publish-editor" target="_blank">AraREQ Datasets</a> (Datasets only)
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle139"
+                  class="p-unfolder p-unfolder14"
+                />
+                <label for="p-toggle139" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Publications</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+	
+                    <p class="p-description-p">
+                      Tymaa Hammouda, Alaa Aljabari, Nagham Hamad, Mustafa Jarrar: 
+					  <a href="#">AraREQ: A Dataset and End-to-End Conflict Detection and Resolution in Software Requirements</a>. In Proceedings of the 2026 Joint International Conference on Computational Linguistics,
+Language Resources and Evaluation (LREC-COLING 2026), Palma, Mallorca (Spain).
+                    </p>
+                  
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9mrcepCnz386QEkMK8vUoFU1aW3qqBoPjZVJFo8beXGxhfA/viewform?embedded=true" width="640" height="581" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+        </div>
+      </div>
+    </div>
+    <!-- Birzeit Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-content-div">
+          <span class="footer-copyrights">
+            <a href="http://www.birzeit.edu/" target="_blank">
+              <img src="../Images/bzu-logo2.png" alt="bzu logo" />
+            </a>
+          </span>
+          <span class="ng-binding"> Copyright © 2023 Birzeit University </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

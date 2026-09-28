@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+          
+      <meta charset="utf-8">
+          
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+    
+          
+      <link rel="icon" type="image/ico" href="./favicon.ico">
+          
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+          
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+          
+      <link rel="stylesheet" href="css/Fira-Sans-font.css">
+          
+      <link rel="stylesheet" href="index.css?v=12" />
+          
+      <link rel="stylesheet" href="main.css?v=12" />
+          
+      <style>
+             
+      </style>
+          
+      <meta property="og:image" content="https://sina.birzeit.edu/Images/OGLogo.jpg">
+          
+      <meta property="og:image:width" content="200">
+          
+      <meta property="og:image:height" content="200">
+          
+      <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, viewport-fit=cover">
+      <!--viewport-fit=cover - for iPhone X notch-->
+          
+      <meta property="header" content="SinaLab">
+          
+      <meta property="og:url" content="https://sina.birzeit.edu/index.html">
+          
+      <meta property="og:title" content="SinaLab for Computational Linguistics and Artificial Intelligence">
+          
+      <meta property="og:description" content="Research group at Birzeit University. Interests in NLP, NLU, Arabic dialects, Machine Learning, Knowledge Graphs, Ontology Engineering, Data Engineering, and Interoperability and e-governance.">
+          
+      <meta name="description" content="Research group at Birzeit University. Interests in NLP, NLU, Arabic dialects, Machine Learning, Knowledge Graphs, Ontology Engineering, Data Engineering, and Interoperability and e-governance.">
+          
+      <meta property="title" content="SinaLab for Computational Linguistics and Artificial Intelligence">
+          
+      <meta name="author" content="SinaLab - Birzeit University">
+          
+      <meta name="keywords" content="Free, online, open sources, SinaTools, relation extraction, LLMs, algorithms, ALMA, Annotation tools, Arabic, Arabic Dictionary, Arabic Lexicographic Database, Arabic Lexicon, articles, Baladi, BERT, bias, Birzeit University, cleaning, Corpora, Corpus, Curras, Currasat, Data visualisation, dataset, datasets, Deep Learning, Demo, diacratics, Diacritics-aware, dialect, Dialect Lemma, Dialect Lemma, Dialects, dictionaries, Dictionary, Digital archives, Digitisation, Discourse analysis, Document classification, Duplication, emotional content extraction, English, entity, Entity linking, event argument extraction, Event detection, events, Guideline, Hate speech, Hebrew, implication, information retrieval, intents, intersection, Iraqi, Iraqi Dialect Corpus, jaccard similarity, Knowledge Graphs, Knowledge representation, language corpora, Languages, Large Language Models, Lebanese, Lebanese Dialect Corpus, Lemmas, Lemmatization, Lexicon, Lexicons, Libyan, Libyan Dialect Corpus, Linked Data, Lisan, Machine translation, matching, Media, metadata, Middle Eastern history, misinformation, models, Modern Standard Arabic, Morphological Solution, Morphology, MSA, MSA, MSA lemma, Mustafa Jarrar, Nabra, Nakba narratives, Nakba testimonies, Named Entity Recognition, narratives, Natural Language Generation, NER, Nested, News, NLP, NLU, offensive language, online, ontologies, Open-Source, organizations, Palestine, Palestinian, Palestinian Dialect Corpus, Palestinian Nakba, paraphrasing, Part-Of-Speech, Part-of-speech Tagging, POS, Pre-trained model, Prefix, Projects, Qabas, relationship extraction, Research, resources, SALMA, Semantic Relatedness, semantic tagging, sense, Sentiment analysis, similarity, SinaLab, stem, Sudanese, Sudanese Dialect Corpus, suffix, summarisation, Synonyms, Synonyms Evaluate, Synonyms Extraction, Syrian, Syrian Dialect Corpus, Tool, topic modeling, union, Vocabularies, Welsh, Wojood, Word Sense Disambiguation, Workshop, WSD, Yemeni, Yemeni Dialect Corpus, أخبار, ألمى, اتحاد, استخراج المترادفات, التعرف على الكينونات, اللغة العربية, اللغة العربية المعاصرة, انجليزي, بحث علمي, تقاطع, جامعة بيرزيت, خصائص صرفية, خوارزميات, دليل معياري, ذم, سلمى, سينا, شبكة بيانات, شبكة بيانات معجمية, عامية, عامية إماراتية, عامية سودانية, عامية سورية, عامية عراقية, عامية فلسطينية, عامية لبنانية, عامية ليبية, عامية مصرية, عامية يمنية, عربي, فصحى, فصحى حديثة, فلسطين, فهم الدلالة, قاموس عربي, قبس, قسم الكلام, كراسات, كراهية, محلل دلالي, مدخلات, مدخلات معجمية, مدخلة, مدخلة عامية, مدخلة فصحى, مدونات, مدونات عامية, مدونة, مصادر, مصطفى جرار, معاجم, معالجة اللغة الطبيعية, معجم, معجم اللغة العربية, معجم عربي, معجم مجاني, مفتوح المصدر, مقارنة, مكنز, مكنز شجري صرفي, نكبة, نموذج, وجود, ">
+          
+      <link rel="icon" href="https://sina.birzeit.edu/Images/SinaLogo.jpg" type="image/x-icon">
+          
+      <link rel="shortcut icon" href="https://sina.birzeit.edu/Images/SinaLogo.jpg" type="image/x-icon">
+          <title>SinaLab for Computational Linguistics and Artificial Intelligence</title>
+   </head>
+   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+          
+      <nav class="navbar navbar-default bg-light">
+                 
+         <div class="sina-header">
+                        
+            <div class="image-holder" onclick="window.open('./');">
+                               <img src="Images/arOntLogo.png" class="img-responsive logo" alt="logo">
+                               
+               <div class="vertical-line"></div>
+                               
+               <p class="title">SinaLab</p>
+                           
+            </div>
+                    
+         </div>
+                 
+         <div class="menu">
+                        
+            <ul class="nav text-center navigation-bar">
+                               
+               <li><a href="#News">News</a></li>
+                               
+               <li><a href="#team">Team</a></li>
+                               
+               <li><a href="./resources/index.html">Resources</a></li>
+                           
+            </ul>
+                    
+         </div>
+             
+      </nav>
+          
+      <div class="intro-section">
+                 
+         <p class="intro-section-title">
+                        <span style="font-size: 100%;">مختبر سينا لحوسبة اللغة والذكاء الإصطناعي<br> </span> 
+            SinaLab for Computational Linguistics and Artificial Intelligence
+                    
+         </p>
+                 
+       
+                
+      </div>
+      <div class="sup-intro">
+      <p>Welcome to SinaLab, a research laboratory at both, <a href="https://www.birzeit.edu/en">Birzeit University</a> and <a href="https://www.hbku.edu.qa/en">Hamad Bin Khalifa University</a>. Our research interests include Arabic Natural Language Processing and Understanding, Arabic dialects, Machine Learning, Knowledge Graphs, Ontology Engineering, Data Engineering, and Interoperability and e-governance.</p>
+                
+      <p>We are passionate about developing open-source lexicographic databases, datasets, annotated corpora, and NLP tools.</p>
+              
+      <p>We named our lab after Ibn Sina (Avicenna), one of the most influential philosophers who acknowledged the link between logic and language (<a href="https://plato.stanford.edu/entries/arabic-islamic-language/">1</a>). 
+          <!-- Container (News Section) -->
+      </div>
+      <div id="News" class="container-fluid text-center bg-news">
+                 
+         <div class="section_header"> <span class="underline"> News</span> </div>
+                 
+         <div class="row text-center slideanim">
+            <!--            
+            <div class="col-md-3 col-sm-6 col-xs-12 position-relative">
+                               
+               <div onclick="location.href='./news/index.html#bin-rashed';" class="thumbnail news-card">
+                                      <img src="Images/RashedAward.JPG" alt="bin-rashed" >
+                                      <div class="position-absolute top-0 start-0 w-100 h-100 overlay"
+                                          style="background-color: rgba(0, 0, 0, 0.5);">
+               </div>
+                                   
+               <p class="news-item-title">Bin Rashid’s Arabic Language Award </p>
+            </div>
+                        
+         </div> -->
+		 
+		  <div class="col-md-3 col-sm-6 col-xs-12 position-relative">
+                               
+               <div onclick="location.href='./news/index.html#mou-alecso';" class="thumbnail news-card">
+                                      <img src="Images/news-1.jpg" alt="bin-rashed" >
+                                      <div class="position-absolute top-0 start-0 w-100 h-100 overlay"
+                                          style="background-color: rgba(0, 0, 0, 0.5);">
+               </div>
+                                   
+               <p class="news-item-title">MoU with ALECSO to digitize 50 dictionaries</p>
+                                   <!-- <p class="news-item-description"> for the development of an innovative Lexicographic Search Engine. -->
+                                   <!-- </p> -->
+                                   <!-- <p class="article_link">➜</p> -->
+                               
+            </div>
+                        
+         </div>
+                     
+         <div class="col-md-3 col-sm-6 col-xs-12">
+                            
+            <div onclick="location.href='./news/index.html#shoman';" class="thumbnail news-card">
+                                   <img src="Images/ShomanAwwrd.png" alt="shoman">
+                                   
+               <div class="overlay"></div>
+                                   
+               <p class="news-item-title">Shoman Arab Researchers Award</p>
+                                   <!-- <p class="news-item-description">Professor of computer science at Birzeit University won the 2019
+                  Shoman's Arab Researchers Award
+                  in Technology</p>
+                  <p class="article_link">➜</p> -->
+                               
+            </div>
+                        
+         </div>
+                     
+         <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div onclick="location.href='./news/index.html#MIT-Technology';"
+                                class="thumbnail news-card">
+                                <img src="Images/5_18.jpg" id="MIT-Technology-checkbox" alt="logo">
+                                
+            <div class="overlay"></div>
+                                
+            <p class="news-item-title">Top 30 Arab AI Experts by MIT Technology Review</p>
+                                <!-- <p class="news-item-description">Mustafa Jarrar, a professor of computer science at
+               Birzeit University has been named one of the
+               top 30 Arab experts in artificial intelligence.</p>
+               <p class="article_link">➜</p> -->
+                            
+         </div>
+                     
+      </div>
+                  
+      <div class="col-md-3 col-sm-6 col-xs-12">
+                         
+         <div onclick="location.href='./news/index.html#Currasat';" class="thumbnail news-card">
+                                <img src="Images/Currasat2.jpg" id="Currasat-checkbox" alt="currasat" class="img-fluid">
+                                
+            <div class="overlay"></div>
+                                
+            <p class="news-item-title">Six Arabic Dialects Corpora Released</p>
+                                <!-- <p class="news-item-description">Birzeit University released corpora for Libyan, Palestinian,
+               Lebanese, Iraqi, Sudanese, and Yemeni
+               dialects that have 1.3 million words.</p>
+               <p class="article_link">➜</p> -->
+                            
+         </div>
+                     
+      </div>
+              </div>
+              
+      <div class="more-btn-wrapper more-btn-div"> 
+                     <button onclick="location.href='news/';" type="button" class="more-btn">More News</button>
+                 
+      </div>
+          </div>
+          <!-- Container (Videos Section) -->
+          
+      <div id="Videos" class="container-fluid bg-videos">
+                 
+         <div class="text-center">
+                    
+            <div class="section_header"><span class="underline" style="color: white;"> Videos</span></div>
+                    
+         </div>
+                 
+         <div class="row slideanim">
+            <div class="col-md-3 col-sm-6 videos-card">
+                               
+               <div class="panel panel-default text-center">
+                                      
+                  <div class="panel-body">
+                     <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/FnCdF6iR5_Y?si=a7WLAAUq9mZIsoPS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                     <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=j7bGbe6icbmuo8H5&amp;list=PLSu_tNkEO5Y1DSyLXizKtuLVFlVtKYDvh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>             
+                                             
+                     <div class="video_title">SinaTools - Open-source Toolkit for Arabic NLP</div>
+                                         
+                  </div>
+                                  
+               </div>
+                           
+            </div>
+                        
+            <div class="col-md-3 col-sm-6 videos-card">
+                               
+               <div class="panel panel-default text-center">
+                                      
+                  <div class="panel-body">
+                                             <iframe width="280" height="157" src="https://www.youtube.com/embed/wUIdzZq2sL0" 
+                                                     style="border: none;" 
+                                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                     allowfullscreen></iframe>
+                                         
+                                             
+                     <div class="video_title">Press - NLP at Birzeit University</div>
+                                         
+                  </div>
+                                  
+               </div>
+                           
+            </div>
+                        
+            <div class="col-md-3 col-sm-6 videos-card">
+                               
+               <div class="panel panel-default text-center">
+                                      
+                  <div class="panel-body">
+                                             <iframe width="280" height="157" src="https://www.youtube.com/embed/M8_bKJhdW3E" 
+                                                     style="border: none;" 
+                                                     allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                             
+                     <div class="video_title">Aljazeera – The Arabic dialects corpora</div>
+                                         
+                  </div>
+                                  
+               </div>
+                               
+                           
+            </div>
+                        
+            <div class="col-md-3 col-sm-6 videos-card">
+                               
+               <div class="panel panel-default text-center">
+                                      
+                  <div class="panel-body">
+                                             <iframe width="280" height="157" src="https://www.youtube.com/embed/NY8HzyEN_EQ" 
+                                                     style="border: none;" 
+                                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                     allowfullscreen></iframe>
+                                            
+                     <div class="video_title">Al-Arabiya - The Arabic Ontology</div>
+                                         
+                  </div>
+                                  
+               </div>
+                           
+            </div>
+<!--                         
+            <div class="col-md-3 col-sm-6 videos-card">
+                               
+               <div class="panel panel-default text-center">
+                                      
+                  <div class="panel-body">
+                                             <iframe width="280" height="157" src="https://www.youtube.com/embed/VYyW7P7Fjwg" 
+                                                     style="border: none;" 
+                                                     allow="accelerometer; autoplay; encrypted-media" allowfullscreen></iframe>
+                                            
+                  <div class="video_title">Arabic Ontology and Semantic Computing</div>
+                                         
+                  </div>
+                                  
+               </div>
+                           
+            </div> -->
+                    
+         </div>
+              
+                     
+         <div class="row slideanim">
+                              
+            <div class="col-md-3 col-sm-6 videos-card">
+                               
+               <div class="panel panel-default text-center">
+                                      
+                  <div class="panel-body">
+                                             <iframe width="280" height="157" src="https://www.youtube.com/embed/VYyW7P7Fjwg" 
+                                                     style="border: none;" 
+                                                     allow="accelerometer; autoplay; encrypted-media" allowfullscreen></iframe>
+                                            
+                     <div class="video_title">Arabic Ontology and Semantic Computing</div>
+                                         
+                  </div>
+                                  
+               </div>
+                           
+            </div>
+                            
+            <!-- <div class="col-md-3 col-sm-6 videos-card">
+                                   
+               <div class="panel panel-default text-center">
+                                          
+                  <div class="panel-body">
+                                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Pa6RkarJCNM" title="YouTube video player" 
+                                                         style="border: none;" 
+                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                         allowfullscreen></iframe>
+                                                
+                     <div class="video_title">Roya - Arabic Lexical Resources at BZU</div>
+                                             
+                  </div>
+                                      
+               </div>
+                               
+            </div> -->
+                            
+            <div class="col-md-3 col-sm-6 videos-card">
+                                   
+               <div class="panel panel-default text-center">
+                                          
+                  <div class="panel-body">
+                                                 <iframe width="280" height="157" src="https://www.youtube.com/embed/OEpTpYb0QeE?feature=oembed&showinfo=0" 
+                                                         style="border: none;" 
+                                                         allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                
+                     <div class="video_title">Palestine TV – Lexicgraphic Search Engine</div>
+                                             
+                  </div>
+                                      
+               </div>
+                               
+            </div>
+                            
+            <div class="col-md-3 col-sm-6 videos-card">
+                                   
+               <div class="panel panel-default text-center">
+                                          
+                  <div class="panel-body">
+                                                 <iframe width="400" height="157" src="https://www.youtube.com/embed/CyI_-xcs2Cc" 
+                                                         style="border: none;" 
+                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                         allowfullscreen></iframe>
+                                                
+                     <div class="video_title">Ajyal - Corpora for Six Arabic Dialects</div>
+                                             
+                  </div>
+                                      
+               </div>
+                               
+            </div>
+                                                                                                                               
+                            
+            <div class="col-md-3 col-sm-6 videos-card">
+                                   
+               <div class="panel panel-default text-center">
+                                          
+                  <div class="panel-body">
+                                                 <iframe width="280" height="157" src="https://www.youtube.com/embed/bCbofXRTDMk?feature=oembed&showinfo=0" 
+                                                         style="border: none;" 
+                                                         allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                
+                     <div class="video_title">Alquds TV - Interview with Prof. Jarrar</div>
+                                             
+                  </div>
+                                      
+               </div>
+                               
+            </div>
+                    
+         </div>
+                 
+         <div class="more-btn-wrapper more-btn-div" style="text-align: center;"> 
+                        <button onclick="location.href='https://www.youtube.com/playlist?list=PLSu_tNkEO5Y262adz-9kn2ItqBpnFN8Hv';" type="button" class="more-btn">In the Media</button>
+                        <button onclick="location.href='https://www.youtube.com/playlist?list=PLSu_tNkEO5Y1fW4VLR1GXv6yvSHZaHLLm';" type="button" class="more-btn">More Talks</button>
+                    
+         </div>
+             
+      </div>
+          <!-- Container (Resources Section) -->
+          
+      <div id="Resources" class="container-fluid text-center">
+                 
+         <div class="section_header"><span class="underline">Resources and Downloads</span></div>
+                 
+         <div class="row slideanim">
+                            
+            <div class="col-md-3 col-sm-6 col-xs-12 project-section">
+                                   
+               <div class="card" onclick="window.open('https://ontology.birzeit.edu/concept/293198', '_blank');">
+                                              
+                  <div class="resources_container">
+                                                     <img src="Images/ogy_icon1.png" style="width:13%;" alt="icon">
+                                                 
+                  </div>
+                                              
+                  <div class="card-container">
+                                                     
+                     <div class="Resource_Title">
+                                                            
+                        <div class="Resource_Title_ar">الأنطولوجيا العربية</div>
+                                                            
+                        <div class="Resource_Title_en">Arabic Ontology / Wordnet</div>
+                                                        
+                     </div>
+                                                     
+                     <div class="Resource_desc">Formal Arabic Wordnet, 17K concepts/synsets</div>
+                                                 
+                  </div>
+                                          
+               </div>
+                                   
+            </div>
+                
+                    
+                            
+            <div class="col-md-3 col-sm-6 col-xs-12 project-section">
+                                   
+               <div class="card" onclick="window.open('https://ontology.birzeit.edu/about', '_blank');">
+                                              
+                  <div class="resources_container">
+                                                     <img src="Images/lexicons_icon1.png" style="width:13%;" alt="lexicons_icon1">
+                                                 
+                  </div>
+                                              
+                  <div class="card-container">
+                                                     
+                     <div class="Resource_Title">
+                                                            
+                        <div class="Resource_Title_ar">قواعد بيانات معجمية</div>
+                                                            
+                        <div class="Resource_Title_en">Lexicons & Lexicgraphic Databases</div>
+                                                        
+                     </div>
+                                                     
+                     <div class="Resource_desc">150 Multilingual lexcions (translations, synonyms, glosses)</div>
+                                                 
+                  </div>
+                                          
+               </div>
+                                   
+            </div>
+                            
+            <div class="col-md-3 col-sm-6 col-xs-12 project-section">
+                                   
+               <div class="card" onclick="window.open('./resources/index.html', '_blank');">
+                                              
+                  <div class="resources_container">
+                                                     <img src="Images/corpora_icon1.png" style="width:13%;" alt="corpora">
+                                                 
+                  </div>
+                                              
+                  <div class="card-container">
+                                                     
+                     <div class="Resource_Title">
+                                                            
+                        <div class="Resource_Title_ar">مدونات وذخائر لغوية</div>
+                                                            
+                        <div class="Resource_Title_en">Corpora & annotated Datasets</div>
+                                                        
+                     </div>
+                                                     
+                     <div class="Resource_desc">Seven dialects, 1.4 million tokens fully annotated</div>
+                                                 
+                  </div>
+                                          
+               </div>
+                                   
+            </div>
+                                
+                                
+                    
+                    
+                            
+            <div class="col-md-3 col-sm-6 col-xs-12 project-section">
+                                   
+               <div class="card" onclick="window.open('./resources/index.html', '_blank');">
+                                              
+                  <div class="resources_container">
+                                                     <img src="Images/nlp_tools_icon1.png" style="width:13%;" alt="nlp_tools_icon1">
+                                                 
+                  </div>
+                                              
+                  <div class="card-container">
+                                                     
+                     <div class="Resource_Title">
+                                                            
+                        <div class="Resource_Title_ar">أدوات وبرمجيات</div>
+                                                            
+                        <div class="Resource_Title_en">NLP Tools </div>
+                                                        
+                     </div>
+                                                     
+                     <div class="Resource_desc">NER, WSD, synonyms, lematizaters, POS tagger, etc.</div>
+                                                 
+                  </div>
+                                          
+               </div>
+                                   
+            </div>
+                    
+                   <!--
+               <h2 class="more-btn-wrapper project-btn"> 
+               <button onclick="location.href='./resources/index.html';" type="button" class="btn btn-outline-warning more-btn">More Resources</button></h2>
+               </div>
+                       -->
+                    
+            <div class="more-btn-wrapper more-btn-div"> 
+                           <button onclick="location.href='./resources/index.html';" type="button" class="more-btn">More Resources</button>
+                       
+            </div>
+                
+         </div>
+             
+      </div>
+         
+          
+                 <!-- Container (Team Section) -->
+                 
+      <div id="team" class="container-team container-fluid text-center bg-team">
+                     
+         <div class="section_header"><span class="underline">Team</span></div>
+                     
+         <div>
+                            <!---->
+                            
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                          
+                  <span>
+                                               
+                     <a href="https://www.jarrar.info">
+                                                      
+                        <div class="image">
+                                                             <img class="member_photo" src="Images/Mustafa.png" width="120" height="120" alt="Mustafa Jarrar Photo">
+                                                         
+                        </div>
+                                                      
+                        <div class="member_name">
+                                                               
+                           <div>Prof. Mustafa Jarrar </div>
+                                                         
+                        </div>
+                                                      
+                        <p></p>
+                                                  
+                     </a>
+                                               
+                     <div style="margin-top: 1.5rem;font-weight: bold;font-size: 80%;"> Lab Director</div>
+                                             
+                  </span>
+                   
+                                        
+               </div>
+                               
+            </div>
+                            
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="https://scholar.google.com/citations?user=z8dFyzAAAAAJ&hl=en">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/MohammadKhalilia.jpeg" alt="Mohammad Khalilia Photo"> 
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Prof. Mohammad Khalilia</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                        
+                                           
+                  </span>
+                   
+                                      
+               </div>
+                               
+            </div>
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="https://scholar.google.com/citations?user=TjpCxwYAAAAJ&hl=ar">
+                                                    
+                        <div class="image">
+                        <img class="member_photo" src="Images/radi_jarrar_0_0.jpeg" alt="Radi Jarrar Photo"> 
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Prof. Radi Jarrar</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                        
+                                           
+                  </span>
+                   
+                                      
+               </div>
+                               
+            </div>
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="https://scholar.google.de/citations?user=mWZP7xUAAAAJ&hl=en">
+                                                    
+                        <div class="image">
+                        <img class="member_photo" src="Images/TamerPhoto.jpeg" alt="Tamer Alkhouli Photo"> 
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Prof. Tamer Alkhouli</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                        
+                                           
+                  </span>
+                   
+                                      
+               </div>
+                               
+            </div>
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="https://scholar.google.ae/citations?user=0h0aB8EAAAAJ&hl=en">
+                                                    
+                        <div class="image">
+                        <img class="member_photo" src="Images/MotazPhoto.jpeg" alt="Motaz Sabri Photo"> 
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Prof. Motaz Sabri</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                        
+                                           
+                  </span>
+                   
+                                      
+               </div>
+                               
+            </div>
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="https://scholar.google.com/citations?user=fSdpG-0AAAAJ&hl=en">
+                                                    
+                        <div class="image">
+                        <img class="member_photo" src="Images/YazanAbuFarha.jpeg" alt="Yazan Abu Farha Photo"> 
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Prof. Yazan Abu Farha</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                        
+                                           
+                  </span>
+                   
+                                      
+               </div>
+                               
+            </div>
+                  
+            <!--
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="https://www.birzeit.edu/en/biography/sanad-malaysha">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/sanad_malaysha.png" alt="Sanad Malaysha Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Sanad Malaysha</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                            
+                  </span>
+                                      
+               </div>
+                               
+            </div> -->
+                  
+                  
+                            
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="https://www.birzeit.edu/en/biography/nagham-hamad">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/NaghamHamed.jpg" alt="Nagham Hamad Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Nagham Hamad</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                            
+                  </span>
+                   
+                                      
+               </div>
+                               
+            </div>
+                            
+                            
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="https://www.birzeit.edu/ar/biography/dym-qr">
+                                                    
+                        <div class="image">
+                        <img class="member_photo" src="Images/DiyamAkra.jpg" alt="Diyam Akra Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Diyam Akra</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                            
+                  </span>
+                   
+                                      
+               </div>
+                               
+            </div>
+                            
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/Alaa.jpg" alt="Alaa Aljabari Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Alaa Aljabari</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="https://www.linkedin.com/in/MontherSalahat/">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/Monther.jpg" alt="Monther Salahat Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Monther Salahat</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="https://scholar.google.com/citations?user=G4L2SZAAAAAJ&hl=en">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/Ruwa Abu Hweidi.jpg" alt="Ruwa Abu Hweidi Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Ruwa Abu Hweidi</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                     <img class="member_photo" src="Images/Abed.jpg" alt="Abdurrahman Juma Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Abdurrahman Juma</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/ahlam.jpg" alt="Ahlam Albashiti Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Ahlam Albashiti</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+             
+                            
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="https://scholar.google.com/citations?user=gWBF6oUAAAAJ&hl=en">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/TymaaHammouda.jpg" alt="Tymaa Hammouda Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Tymaa Hammouda</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                            
+                  </span>
+                   
+                                      
+               </div>
+                               
+            </div>
+                            
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="#">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/nabilaothman.jpg" alt="Nabila Taha Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Nabila Taha</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                            
+                  </span>
+                   
+                                      
+               </div>
+                               
+            </div>
+                  
+                            
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/Haneen.jpg" alt="Haneen Liqreina Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Haneen Liqreina</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                           
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+                  
+                            
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                          
+                  <span>
+                                               
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/LinaDuaibes.jpg" alt="Lina Duaibes Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Lina Duaibes</div>
+                                                    
+                        <p></p>
+                                                  
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+                            
+<!--                             
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                          
+                  <span>
+                                               
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/KamalJarrar.jpg" alt="Kamal Jarrar Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Kamal Jarrar</div>
+                                                    
+                        <p></p>
+                                                  
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+                               
+            </div> -->
+                            
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/Shimaa.jpg" alt="Shimaa Hamayel Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Shimaa Hamayel</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                           
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+                  
+                            
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/HibaShanti.jpeg" alt="Hiba Shanti Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Hiba Shanti</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                           
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+                  
+                            
+            <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/AlakRaad.jpeg" alt="Alak Raad Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Alak Raad</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+			
+			
+			<div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/ZeerakSuhail.jpeg" alt="Zeerak Suhail Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Zeerak Suhail</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+			
+
+			<div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/HeyamSalman.jpeg" alt="Heyam Salman Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Heyam Salman</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+			</div>
+
+<div class="member_container">			
+			    <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/FarinaAmir.jpeg" alt="Farina Amir Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Farina Amir</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+			   </div>
+
+<div class="member_container">
+			    <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/NoreldinMorssy.jpeg" alt="Noreldin Morssy Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Noreldin Morssy</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+			   </div>
+			   
+			   <div class="member_container">
+			   			    <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/MaryamSaleh.PNG" alt="Maryam Saleh Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Maryam Saleh</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>	   
+			   
+                 
+				 
+            </div>
+                            
+            <!-- <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/Shahd Khader.jpg" alt="Shahd Khader Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Shahd Khader</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+              -->
+                            
+            <!-- <div class="member_container">
+                                   
+               <div class="member_info">
+                         
+                                        
+                  <span>
+                                             
+                     <a href="">
+                                                    
+                        <div class="image">
+                                                           <img class="member_photo" src="Images/Nagham Idrees.jpg" alt="Nagham Idrees Photo">
+                                                       
+                        </div>
+                                                    
+                        <div class="member_name">Nagham Idrees</div>
+                                                    
+                        <p></p>
+                                                
+                     </a>
+                                             
+                  </span>
+                                      
+               </div>
+                               
+            </div>
+              -->
+                     
+                        
+         </div>
+                
+                       
+             
+                    
+      </div>
+          
+          <!-- Container (Resources Section) -->
+          <!-- <div id="resources" class="container-fluid text-center bg-resources">
+         <h2><span class="underline">Resources</span></h2>
+         <div class="row">
+         <div class="col-sm-8">
+         
+         </div>
+         <div class="col-sm-4">
+         </div>
+         </div>
+         </div> -->
+          <!-- <div id="about" class="container-fluid">
+         <div class="row">
+         <div class="col-sm-8">
+         
+         <h4></h4><br>
+         
+         </div>
+         <div class="col-sm-4">
+         
+         </div>
+         </div>
+         </div> -->
+          <!-- Container (Footer Section) -->
+          
+      <div class="bg-footer">
+                 
+         <div class="container">
+                        
+            <div class="row" style="padding-top: 16px;">
+                               
+               <div class="address col-md-3 col-sm-4 col-xs-4 left_align">
+                                      
+                  <p class="footer-title">Address:</p>
+                                      
+                  <p class="footer-p">Birzeit University</p>
+                                      
+                  <p class="footer-p">PO Box 14, Birzeit</p>
+                                      
+                  <p class="footer-p">Palestine</p>
+                                  
+               </div>
+                               
+               <div class="col-md-3 col-sm-4 col-xs-4 left_align">
+                                      
+                  <ul class="list-unstyled">
+                                             
+                     <li> <a href="./news/index.html">News</a></li>
+                                             
+                     <li><a href="./resources/index.html">Resources</a></li>
+                                             
+                     <li><a href="./projects/index.html">Projects</a></li>
+                                             
+                     <li><a href="https://sina.birzeit.edu/archive/">Sina Institute (Archive)</a></li>
+                                         
+                  </ul>
+                                  
+               </div>
+                               
+               <div class="col-md-3 col-sm-4 col-xs-4 left_align">
+                                      
+                  <ul class="list-unstyled">
+                                             
+                     <li> <a href="https://ontology.birzeit.edu/concept/293198">Arabic Ontology</a></li>
+                                             
+                     <li><a href="https://ontology.birzeit.edu/">Arabic Lexicons</a></li>
+                                             
+                     <li><a href="https://sina.birzeit.edu/currasat/">Currasat</a></li>
+                                             
+                     <li> <a href="https://sina.birzeit.edu/wojood/">Wojood</a></li>
+                                         
+                  </ul>
+                                  
+               </div>
+                               
+               <div class="col-md-3  col-sm-12 col-xs-12 social-links" style="display: flex;
+                  justify-content: center;
+                  align-items: center;">
+                                      <a href="https://www.facebook.com/ArabicOntology/">
+                                          <img src="Images/facebook-icon.png" alt="Facebook">
+                                      </a>
+                                      <a href="https://twitter.com/mjarrar">
+                                          <img src="Images/twitter-icon.png" alt="Twitter">
+                                      </a>
+                                      <a href="https://www.youtube.com/channel/UCZJbD_DThlmJa94tpuHbXzQ">
+                                          <img src="Images/youtube-icon.png" alt="youtube">
+                                      </a>
+                                  
+               </div>
+                           
+            </div>
+                    
+         </div>
+             
+      </div>
+          <!-- Birzeit Footer -->
+          
+      <!--<footer class="footer">
+                 
+         <div class="footer-content">
+                        
+            <div class="footer-content-div">
+                               <span class="footer-copyrights">
+                                   <a href="http://www.birzeit.edu/" target="_blank">
+                                       <img src="Images/bzu-logo2.png" alt="bzu logo"> </a>
+                               </span>
+                               <span class="ng-binding">
+               Copyright © 2023 Birzeit University
+                               </span>
+                           
+            </div>
+                    
+         </div>
+             
+      </footer> -->
+          <script src="js/jquery.min.js"></script>
+          <script src="js/bootstrap.min.js"></script>
+          <script>
+               $(document).ready(function () {
+                  // Add smooth scrolling to all links in navbar + footer link
+                  $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+                     
+                     // Store hash
+                     var hash = this.hash;
+
+                     // Check if the link is an internal link
+                     if (hash !== "" && $(hash).length > 0) {
+                           // Prevent default anchor click behavior
+                           event.preventDefault();
+
+                           // Using jQuery's animate() method to add smooth page scroll
+                           $('html, body').animate({
+                              scrollTop: $(hash).offset().top
+                           }, 900, function () {
+                              // Add hash (#) to URL when done scrolling (default click behavior)
+                              window.location.hash = hash;
+                           });
+                     }
+                   
+                     else if (this.href.includes("resources/index.html")) {
+                           window.location.href = this.href; 
+                     }
+                  });
+
+                  // Slide in elements on scroll
+                  $(window).scroll(function () {
+                     $(".slideanim").each(function () {
+                           var pos = $(this).offset().top;
+
+                           var winTop = $(window).scrollTop();
+                           if (pos < winTop + 600) {
+                              $(this).addClass("slide");
+                           }
+                     });
+                  });
+               });
+
+             
+      </script>
+   </body>
+</html>

@@ -1,0 +1,311 @@
+.project-box {
+    background-color: white;
+    display: flex;
+    flex-flow: row;
+    margin: 15px auto;
+    width: 1000px;
+    justify-content: left;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    padding: 1% 5px;
+    padding-bottom: 15px;
+
+}
+
+.project-box:last-child {
+    margin-bottom: 2.5cm;
+}
+
+.project-box-sub {
+    display: flex;
+    flex-flow: row;
+    justify-content: left;
+}
+
+.project-box-base {
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    margin: 15px auto;
+    width: 1000px;
+    justify-content: flex-start;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    padding: 1% 5px;
+}
+
+.project-box-content>p {
+    color: #14a99e;
+    margin-bottom: 10px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.project-box-content>p:hover {
+    cursor: pointer;
+    color: #337ab7;
+}
+
+.project-box-content>a {
+    display: inline;
+    width: max-content;
+    /*font-size: 16px;*/
+}
+
+.project-img {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 10px 20px 10px 10px;
+}
+
+.project-img>img {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-img>img:hover {
+    cursor: pointer;
+}
+
+.project-box-content-facebook-img{
+    display: inline;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.link-style{
+    overflow-wrap: anywhere;
+}
+
+/*.fb-container{
+    display: flex; 
+}*/
+
+.project-box-content>img:hover {
+    cursor: pointer;
+}
+
+.links {
+    display: inline;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.media-div .unfold-icon,
+.media-div .fold-icon {
+    color: initial;
+    padding-right: initial;
+    width: 15px;
+    height: 13px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.unfold-icon {
+    cursor: pointer;
+}
+
+.fold-icon {
+    cursor: pointer;
+}
+
+.mosiac-img {
+    background-color: #63b776;
+}
+
+.palgov-img {
+    background-color: white;
+}
+
+.projects-unfolder1~.projects-fold {
+    display: none;
+}
+
+.projects-unfolder1~label .fold-icon {
+    display: none;
+}
+
+.projects-unfolder1:checked~.projects-fold {
+    display: block;
+}
+
+.projects-unfolder1:checked~label .fold-icon {
+    display: block;
+}
+
+.projects-unfolder1:checked~label .unfold-icon {
+    display: none;
+}
+
+/*---------------------------*/
+
+.projects-unfolder2~.projects-fold {
+    display: none;
+}
+
+.projects-unfolder2~label .fold-icon {
+    display: none;
+}
+
+.projects-unfolder2:checked~.projects-fold {
+    display: block;
+}
+
+.projects-unfolder2:checked~label .fold-icon {
+    display: block;
+}
+
+.projects-unfolder2:checked~label .unfold-icon {
+    display: none;
+}
+
+/*---------------------------*/
+
+.projects-fold h3 {
+    /*font-size: 27px;*/
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.projects-fold>.media-box-container>.media-box>iframe {
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    width: 444px;
+}
+
+@media all and (max-width: 1020px) {
+    .project-box {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .project-box-base {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media all and (max-width: 770px) {
+    .project-box {
+        flex-flow: column;
+    }
+
+    .project-box-sub {
+        flex-flow: column;
+    }
+
+
+    .projects-fold>.media-box-container>.media-box {
+        flex-flow: column;
+    }
+
+    .projects-fold>.media-box-container>.media-box a {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .projects-fold>.media-box-container>.media-box>.imgwr {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .projects-fold>.media-box-container>.media-box>iframe {
+        width: auto;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        /*border-bottom: 2px solid #14a79c;*/
+    }
+
+    .project-box-content>h4 {
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .project-box-content>p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .project-box-content>a {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .project-box-content>img {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    #arabic-ontology-logo {
+        width: auto;
+    }
+
+    #arabic-ontology-logo>img {
+        width: 90px;
+    }
+
+    #curras-logo>img {
+        width: 160px;
+    }
+
+    #vermesh-logo>img {
+        width: 140px;
+    }
+
+    #nlp-tools-logo>img {
+        width: 140px;
+    }
+
+    #mashql-logo>img {
+        width: 160px;
+    }
+
+}
+
+#arabic-ontology-logo {
+    width: 200px;
+}
+
+#arabic-ontology-logo>img {
+    width: 90px;
+}
+
+#verbmesh-logo {
+    width: 200px;
+    padding-right: 20px;
+}
+
+#verbmesh-logo>img {
+    width: 180px;
+}
+
+#nlp-tools-logo {
+    width: 200px;
+}
+
+#nlp-tools-logo>img {
+    width: 140px;
+}
+
+@media all and (max-width: 770px) {
+
+    #arabic-ontology-logo,
+    #verbmesh-logo,
+    #nlp-tools-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .project-box-content{
+        text-align: center;
+    }
+}

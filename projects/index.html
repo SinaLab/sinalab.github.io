@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="./favicon.ico">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/Fira-Sans-font.css">
+    <link rel="stylesheet" href="../main.css?v=8" />
+    <link rel="stylesheet" href="./projects.css?v=8" />
+    <style>
+
+    </style>
+
+    <meta property="og:image" content="https://sina.birzeit.edu/Images/OGLogo.jpg">
+    <meta property="og:image:width" content="200">
+    <meta property="og:image:height" content="200">
+    <meta property="og:image:alt" content="SinaLab logo">
+	
+	<meta property="header" content="SinaTools">
+
+    <meta property="og:url" content="https://sina.birzeit.edu/projects/index.html">
+    <meta property="og:type" content="WebSite">
+    <meta property="og:description" content="Ongoing projects related to NLP at SinaLab.">
+    <meta property="og:title" content="SinaLab NLP Projects ">
+
+	<meta property="image" content="https://sina.birzeit.edu/Images/SinaLogo.jpg">
+    <meta property="image:width" content="200">
+    <meta property="image:height" content="200">
+    <meta property="image:alt" content="SinaLab logo">
+		
+    <meta property="url" content="https://sina.birzeit.edu/projects/index.html">
+	<meta property="type" content="WebSite">
+	<meta name="description" content="Ongoing projects related to NLP at SinaLab.">
+    
+    <meta name="author" content="SinaLab - Birzeit University">
+    <meta name="keywords" content="Free, online, open sources, SinaTools, relation extraction, LLMs, algorithms, ALMA, Annotation tools, Arabic, Arabic Dictionary, Arabic Lexicographic Database, Arabic Lexicon, articles, Baladi, BERT, bias, Birzeit University, cleaning, Corpora, Corpus, Curras, Currasat, Data visualisation, dataset, datasets, Deep Learning, Demo, diacratics, Diacritics-aware, dialect, Dialect Lemma, Dialect Lemma, Dialects, dictionaries, Dictionary, Digital archives, Digitisation, Discourse analysis, Document classification, Duplication, emotional content extraction, English, entity, Entity linking, event argument extraction, Event detection, events, Guideline, Hate speech, Hebrew, implication, information retrieval, intents, intersection, Iraqi, Iraqi Dialect Corpus, jaccard similarity, Knowledge Graphs, Knowledge representation, language corpora, Languages, Large Language Models, Lebanese, Lebanese Dialect Corpus, Lemmas, Lemmatization, Lexicon, Lexicons, Libyan, Libyan Dialect Corpus, Linked Data, Lisan, Machine translation, matching, Media, metadata, Middle Eastern history, misinformation, models, Modern Standard Arabic, Morphological Solution, Morphology, MSA, MSA, MSA lemma, Mustafa Jarrar, Nabra, Nakba narratives, Nakba testimonies, Named Entity Recognition, narratives, Natural Language Generation, NER, Nested, News, NLP, NLU, offensive language, online, ontologies, Open-Source, organizations, Palestine, Palestinian, Palestinian Dialect Corpus, Palestinian Nakba, paraphrasing, Part-Of-Speech, Part-of-speech Tagging, POS, Pre-trained model, Prefix, Projects, Qabas, relationship extraction, Research, resources, SALMA, Semantic Relatedness, semantic tagging, sense, Sentiment analysis, similarity, SinaLab, stem, Sudanese, Sudanese Dialect Corpus, suffix, summarisation, Synonyms, Synonyms Evaluate, Synonyms Extraction, Syrian, Syrian Dialect Corpus, Tool, topic modeling, union, Vocabularies, Welsh, Wojood, Word Sense Disambiguation, Workshop, WSD, Yemeni, Yemeni Dialect Corpus, أخبار, ألمى, اتحاد, استخراج المترادفات, التعرف على الكينونات, اللغة العربية, اللغة العربية المعاصرة, انجليزي, بحث علمي, تقاطع, جامعة بيرزيت, خصائص صرفية, خوارزميات, دليل معياري, ذم, سلمى, سينا, شبكة بيانات, شبكة بيانات معجمية, عامية, عامية إماراتية, عامية سودانية, عامية سورية, عامية عراقية, عامية فلسطينية, عامية لبنانية, عامية ليبية, عامية مصرية, عامية يمنية, عربي, فصحى, فصحى حديثة, فلسطين, فهم الدلالة, قاموس عربي, قبس, قسم الكلام, كراسات, كراهية, محلل دلالي, مدخلات, مدخلات معجمية, مدخلة, مدخلة عامية, مدخلة فصحى, مدونات, مدونات عامية, مدونة, مصادر, مصطفى جرار, معاجم, معالجة اللغة الطبيعية, معجم, معجم اللغة العربية, معجم عربي, معجم مجاني, مفتوح المصدر, مقارنة, مكنز, مكنز شجري صرفي, نكبة, نموذج, وجود">
+
+	<link rel="shortcut icon" href="https://sina.birzeit.edu/Images/SinaLogo.jpg" type="image/x-icon">
+	<title>SinaLab NLP Projects</title>	
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Y0V4JTT"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	
+	gtag('config', 'G-SV0Y0V4JTT');
+	</script>
+	
+</head> 
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default bg-light">
+        <div class="sina-header">
+            <div class="image-holder" onclick="window.open('../index.html');">
+                <img src="../Images/arOntLogo.png" class="img-responsive logo" alt="ontology">
+                <div class="vertical-line"></div>
+                <p class="title">SinaLab</p>
+            </div>
+        </div>
+        <div class="menu">
+            <ul class="nav text-center navigation-bar">
+                <li><a href="../news/index.html">News</a></li>
+                <li><a href="../index.html#team">Team</a></li>
+                <li><a href="../resources/index.html">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- <link rel="canonical" href="https://ontology.birzeit.edu/projects" /> -->
+    <div class="main-pg">
+        <div class="main-pg-container">
+
+            <div id="arabic-ontology-info" class="project-box">
+                <div class="project-img" id="arabic-ontology-logo">
+                    <img src="../Images/arOntLogo.png"
+                        onclick="window.open('https://ontology.birzeit.edu/', '_blank');" alt="ontology logo">
+                </div>
+                <div class="project-box-content">
+                    <p class="intro-section-title" onclick="window.open('https://ontology.birzeit.edu/', '_blank');">
+                        The Arabic Ontology
+                    </p>
+                    <div>
+                        <p>
+                            A long-term research project to develop an Arabic Wordnet with ontologically-clean content.
+                        </p>
+                    </div>
+                    <div class="fb-container">
+                        <a target="_blank" href="https://ontology.birzeit.edu/" class="link-style">
+                            https://ontology.birzeit.edu</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="curras-info" class="project-box">
+                <div class="project-img" id="curras-logo">
+                    <img src="../Images/currasat-logo_withoutbg.png " alt="currasat logo"
+                        onclick="window.open('https://sina.birzeit.edu/currasat', '_blank');">
+                </div>
+                <div class="project-box-content">
+                    <p class="intro-section-title" onclick="window.open('https://sina.birzeit.edu/currasat', '_blank');">
+                        Currasat - Corpora for six Arabic dialects</p>
+                    <div>
+                        <p>
+                            Corpora for Libyan, Palestinian, Lebanese, Iraqi, Sudanese, and Yemeni dialects that have 1.3 million words 
+                            were gathered from several resources and each word was manually annotated with 16 features.
+                        </p>
+                    </div>
+                    <div class="fb-container">
+                        <a href="https://sina.birzeit.edu/currasat" class="link-style">
+                            https://sina.birzeit.edu/currasat
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="nlp-tools-info" class="project-box">
+                <div class="project-img" id="nlp-tools-logo">
+                    <img src="../Images/nlp-tools.png" alt="nlp tools logo"
+                        onclick="window.open('../resources/index.html', '_blank');">
+                </div>
+                <div class="project-box-content">
+                    <p class="intro-section-title" onclick="window.open('../resources/index.html', '_blank');">Arabic NLP
+                        tools and resources</p>
+                    <div>
+                        <p>
+                            All tools and algorithms we develop for NLP tasks are made open source.
+                        </p>
+                    </div>
+                    <div class="fb-container">
+                        <a href="../resources/index.html" target="_blank" class="link-style">
+                            https://sina.birzeit.edu/resources/index.html</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="GovSeer-info" class="project-box">
+                <div class="project-img" id="GovSeer-logo">
+                    <img src="../Images/GovSeer_logo.png" class="GovSeer-img" alt="GovSeer logo"
+                        onclick="window.open('https://sina.birzeit.edu/GovSeer/', '_blank');">
+                </div>
+                <div class="project-box-content">
+                    <p class="intro-section-title" onclick="window.open('https://sina.birzeit.edu/GovSeer/', '_blank');">
+                        GovSeer - Interoperability of e-Governmental Services</p>
+                    <div>
+                        <p>
+                            Ontology-Based Interoperability of e-Government Services. <br>
+                            The project aims to support mobility and exchange of researchers between universities to facilitate joint research activities in the area of e-governance and interoperability.
+                        </p>
+                    </div>
+                    <div class="fb-container">
+                        <a href="https://sina.birzeit.edu/GovSeer/" class="link-style">
+                            https://sina.birzeit.edu/GovSeer/</a>
+                    </div>        
+                </div>
+            </div>
+
+            <div id="verbmesh-info" class="project-box">
+                <div class="project-img" id="verbmesh-logo">
+                    <img src="../Images/VerbMeshLogo.png" alt="verbmesh logo"
+                        onmouseover="this.style.cursor='auto'">
+                </div>
+                <div class="project-box-content">
+                    <p class="intro-section-title" onMouseOver="this.style.color='#14a99e';this.style.cursor='auto'"
+                        onMouseOut="this.style.color='#14a99e';this.style.cursor='auto'">
+                        VerbMesh - Large Graph of Arabic Verbs</p>
+                    <div>
+                        <p>
+                            Funded by Birzeit University, 2014-2016.<br>
+                            To collect and integrate Arabic verbs across many lexicons, and to build a large-scale graph of
+                            Arabic verbs and their inflectional and derivational relations.
+                        </p>
+                    </div>
+                    <!-- <div class="fb-container"> -->
+                        <!-- <a href="https://ontology.birzeit.edu/projects#verbmesh-info" class="link-style"> -->
+                            <!-- https://ontology.birzeit.edu/projects#verbmesh-info -->
+                        <!-- </a> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div id="mashql-info" class="project-box">
+                <div class="project-img" id="mashql-logo">
+                    <img src="../Images/MashQLAppLogo.png" alt="mashql logo"
+                        onclick="window.open('http://sina.birzeit.edu/mashql/index.html', '_blank');">
+                </div>
+                <div class="project-box-content">
+                    <p class="intro-section-title" onclick="window.open('http://sina.birzeit.edu/mashql/index.html', '_blank');">
+                        MashQL: Mashup Query Language for Graph Databases</p>
+                    <div>
+                        <p>
+                            Started as part of the EU Marie Curie <a
+                                href="https://www.cs.ucy.ac.cy/grid/SEARCHiN/index.html">SearchIn
+                                Project</a> at the University of Cyprus.<br>
+                            To develop a novel approach for querying the Data Web (Web 3.0) - a mashup query language toping
+                            SPARQL for querying RDF stores.
+                        </p>
+                    </div>
+                    <!--<p class="links">Links:</p>-->
+                    <!--<img src="http://sina.birzeit.edu/ArabicOntology/resources/templates/static/images/fb-icon.png"-->
+                    <!--onclick="window.open('https://www.facebook.com/SinaInstitute/', '_blank');">-->
+                    <div class="fb-container">
+                        <img class="project-box-content-facebook-img" src="../Images/fb-icon.png" alt="fb icon"
+                            onclick="window.open('https://www.facebook.com/ArabicOntology/', '_blank');">
+                        <a href="http://sina.birzeit.edu/mashql/index.html" class="link-style">
+                            http://sina.birzeit.edu/mashql</a>
+                    </div>        
+                </div>
+            </div>
+
+            <!-- <div id="mosiac-info" class="project-box-base"> -->
+                <!-- <div class="project-box-sub"> -->
+                    <!-- <div class="project-img" id="mosiac-logo"> -->
+                        <!-- <img src="../Images/mosiac.png" class="mosiac-img"  -->
+                            <!-- onclick="window.open('http://www.mosaic-med.eu/', '_blank');"> -->
+                    <!-- </div> -->
+                    <!-- <div class="project-box-content"> -->
+                        <!-- <p class="intro-section-title" onclick="window.open('http://www.mosaic-med.eu/', '_blank');"> -->
+                            <!-- MOSIAC</p> -->
+                        <!-- <div> -->
+                            <!-- <p> -->
+                                <!-- Funded by EU-FP7, No. 612076, 13 Partners, 2014-2015.<br> -->
+                                <!-- To foster R&D cooperation between EU and Mediterranean countries on ICT and its support in -->
+                                <!-- EU-MED societal challenges. -->
+                            <!-- </p> -->
+                        <!-- </div> -->
+                        <!-- <div class="fb-container"> -->
+                            <!-- <img class="project-box-content-facebook-img" src="../Images/fb-icon.png" -->
+                                <!-- onclick="window.open('https://www.facebook.com/profile.php?id=100008927926620', '_blank');"> -->
+                            <!-- <a href="http://www.mosaic-med.eu/" class="link-style"> -->
+                                <!-- http://www.mosaic-med.eu</a> -->
+                        <!-- </div>         -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <div class="media-div"> -->
+                    <!-- <input type="checkbox" id="toggle1" class="unfolder projects-unfolder1" /> -->
+                    <!-- <label for="toggle1" class="toggle-label"> -->
+                        <!-- <img class="unfold-icon" src="../Images/expand-icon.png"> -->
+                        <!-- <img class="fold-icon" src="../Images/expand-icon-2.png"> -->
+                    <!-- </label> -->
+                    <!-- <div class="projects-fold"> -->
+                        <!-- <div class="media-box-container"> -->
+                            <!-- <h3 style="font-size: 18px;">Read more:</h3> -->
+                            <!-- <div class="media-box"> -->
+                                <!-- <div class="imgwr"> -->
+                                    <!-- <img src="../Images/bzu.png"> -->
+                                <!-- </div> -->
+                                <!-- <div> -->
+                                    <!-- <a -->
+                                        <!-- href="http://www.birzeit.edu/en/news/birzeit-university-won-eu-fp7-project-ict-industry"> -->
+                                        <!-- Birzeit University won an EU-FP7 project in ICT Industry -->
+                                    <!-- </a> -->
+                                    <!-- <a -->
+                                        <!-- href="http://www.birzeit.edu/ar/news/fwz-jm-byrzyt-bmshrw-wrwby-fy-mjl-sn-lbrmjyt"> -->
+                                        <!-- فوز جامعة بيرزيت بمشروع أوروبي في مجال صناعة البرمجيات -->
+                                    <!-- </a> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+
+            <div id="siera-info" class="project-box">
+                <div class="project-img" id="siera-logo">
+                    <img src="../Images/SIERAAppLogo.png" alt="siera logo"
+                        onclick="window.open('http://sina.birzeit.edu/SIERA/index.html', '_blank');">
+                </div>
+                <div class="project-box-content">
+                    <p class="intro-section-title" onclick="window.open('http://sina.birzeit.edu/SIERA/index.html', '_blank');">
+                        SIERA - Multilingual Knowledge Technologies</p>
+                    <div>
+                        <p>
+                            Coordinator. Funded by EU FP7, No. 295006, 5 Partners, 2011-2014.<br>
+                            To develop multilingual and multi-cultural knowledge-sharing technologies.
+                        </p>
+                    </div>
+                    <div class="fb-container">
+                        <img class="project-box-content-facebook-img" src="../Images/fb-icon.png" alt="fb icon"
+                            onclick="window.open('https://www.facebook.com/SIERAproject/', '_blank');">
+                        <a href="http://sina.birzeit.edu/SIERA/index.html" class="link-style">
+                            http://sina.birzeit.edu/SIERA</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="zinnar-info" class="project-box-base">
+                <div class="project-box-sub">
+                    <div class="project-img" id="zinnar-logo">
+                        <img src="../Images/ZinnarAppLogo.png" alt="zinnar logo"
+                            onclick="window.open('http://zinnar.pna.ps/InteroperabilityPortal/', '_blank');">
+                    </div>
+                    <div class="project-box-content">
+                        <p class="intro-section-title" onclick="window.open('http://zinnar.pna.ps/InteroperabilityPortal/', '_blank');">
+                            Zinnar - The Palestinian e-Government Interoperability Framework</p>
+                        <div>
+                            <p>
+                                In cooperation with the Palestinian Ministry of Telecommunication and IT, and other
+                                Palestinian
+                                ministries.<br>
+                                To develop and deploy a framework and ontology to enable e-governmental and e-services in
+                                Palestine, (adopted by all ministries).
+                            </p>
+                        </div>
+
+                        <div class="fb-container">
+                            <img class="project-box-content-facebook-img" src="../Images/fb-icon.png" alt="fb icon"
+                                onclick="window.open('https://www.facebook.com/ZINNAR.PALESTINE/', '_blank');">
+                            <a href="http://zinnar.pna.ps/InteroperabilityPortal/" class="link-style">
+                                http://zinnar.pna.ps/InteroperabilityPortal/</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-div">
+                    <input type="checkbox" id="toggle2" class="unfolder projects-unfolder2" />
+                    <label for="toggle2" class="toggle-label">
+                        <img class="unfold-icon" src="../Images/expand-icon.png" alt="icon">
+                        <img class="fold-icon" src="../Images/expand-icon-2.png" alt="icon">
+                    </label>
+                    <div class="projects-fold">
+                        <div class="media-box-container">
+                            <!--<h3>In the media:</h3>-->
+                            <div class="media-box">
+                                <!--<div class="imgwr">-->
+                                <!--<img src="http://sina.birzeit.edu/ArabicOntology/resources/templates/static/images/news/media-icons/jarrar.jpg">-->
+                                <!--</div>-->
+                                <iframe 
+                                width="560" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/-PgiURRcSQk?rel=0"
+                                style="display: block; margin: 0 auto; border: none;"
+                                allow="autoplay; encrypted-media" 
+                                allowfullscreen
+                            ></iframe>
+                            </div>
+
+                            <!-- 
+                            <div class="media-box">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/o1tsrEJbS8s?rel=0"
+                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+
+                            <div class="media-box">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/5T4C3BSVqeM?rel=0"
+                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+
+                            <div class="media-box">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/v6n6s5A_pZQ?rel=0"
+                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                        !-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="palgov-info" class="project-box">
+                <div class="project-img" id="palgov-logo">
+                    <img src="../Images/palgov_logo.png" class="palgov-img" alt="palgov logo"
+                        onclick="window.open('https://sina.birzeit.edu/www.egovacademy.ps/', '_blank');">
+                </div>
+                <div class="project-box-content">
+                    <p class="intro-section-title" onclick="window.open('https://sina.birzeit.edu/www.egovacademy.ps/', '_blank');">
+                        PalGov - The Palestinian e-Government Academy</p>
+                    <div>
+                        <p>
+                            Coordinator. Funded by EU-TEMPUS, No. 511159, 11 partners, 2010-2012.<br>
+                            Capacity building for Palestinian ministries to gain the know-how for implementing e-government
+                            services in three main areas (interoperability, security, and IT laws).
+                        </p>
+                    </div>
+                    <div class="fb-container">
+                        <img class="project-box-content-facebook-img" src="../Images/fb-icon.png" alt="fb icon"
+                            onclick="window.open('https://www.facebook.com/PalGovAcademy/', '_blank');">
+                        <a href="https://sina.birzeit.edu/www.egovacademy.ps/" class="link-style">
+                            https://sina.birzeit.edu/www.egovacademy.ps/</a>
+                    </div>        
+                </div>
+            </div>
+
+        </div>
+    </div>
+   <!-- <footer class="footer">
+    
+        <div class="footer-content">
+            <div class="footer-content-div">
+                <span class="footer-copyrights">
+                    <a href="http://www.birzeit.edu/" target="_blank">
+                        <img src="../Images/bzu-logo2.png" alt="bzu logo"> </a>
+                </span>
+                <span class="ng-binding">
+                    Copyright © 2023 Birzeit University
+                </span>
+            </div>
+        </div>
+    </footer> -->            
+</body>
+
+</html>

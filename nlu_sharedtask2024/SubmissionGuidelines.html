@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://dlnlp.ai/st/wojood/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>ArabicNLU Shared-Task</title>
+
+<!-- Latest minified bootstrap css -->
+<link rel="stylesheet" href="./arabicnlu2024_files/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="./arabicnlu2024_files/jquery.min.js.download"></script>
+<!-- Latest minified bootstrap js -->
+<script src="./arabicnlu2024_files/bootstrap.min.js.download"></script>
+<!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/turjuman_logo.ico"> -->
+<link rel="stylesheet" type="text/css" href="./arabicnlu2024_files/style.min.css">
+<script defer="" src="./arabicnlu2024_files/script.js.download"></script>
+<style>
+.header {
+   background:#757575;
+}
+/* .header .menu>.menu-item>.sub-menu>.menu-item>a {color:#f5f813} */
+/* .header .menu>.menu-item>.sub-menu>.menu-item>a:hover{color:#f5f813} */
+.header .menu>.menu-item>a .expand::before,.header .menu>.menu-item>a .expand::after{background:#fff}
+.header .menu>.menu-item:hover>a{color:#f5f813}
+.menu>.menu-item>.sub-menu>.menu-item>a:hover{color:#f5f813}
+.header .menu>.menu-item:hover>a .expand::before,.header .menu>.menu-item:hover>a .expand::after{background:#f5f813}
+.header .menu>.menu-item>a{
+   color:#fff;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-top: 30px;
+    border: 1px solid transparent;
+}
+    .brand {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -1px;
+  color: #fff;
+  text-transform:none;
+}
+body{
+   background:#eff1f2;
+}
+.container{
+        width:100%;
+        
+}   
+
+  option{
+    text-align: left;
+}
+  fieldset {
+    dir:rtl;
+    margin: 8px;
+    border: 1px solid silver;
+    padding: 8px;    
+    border-radius: 4px;
+}
+
+legend {
+    padding: 2px; 
+    font-size:8px;   
+}
+
+th, td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+table{
+    border-spacing: 40px;
+}
+.loadingMask {
+    background: url(./imgs/Ajux_loader.gif) center 50% no-repeat #000000;
+    top:0;
+    left:0;
+    position:fixed;
+    height:100%;
+    width:100%;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    z-index:12030
+ }
+</style>
+
+
+</head>
+
+
+<body data-new-gr-c-s-check-loaded="14.1154.0" data-gr-ext-installed="">
+<!-- Section: Header -->
+<header class="header">
+      <section class="container">
+         <div class="wrapper">
+            <a  href="https://arabicnlp2024.sigarab.org/"><img src="./arabicnlu2024_files/logo_small.png" width="220" height="60px" vertical-align="middle" align="left"></a>
+
+            <!-- <button type="button" class="burger" id="burger">
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+            </button> -->
+			<span class="brand"> <a style="color:white;" href="index.html" >ArabicNLU Shared-Task </a></span>
+            <nav class="navbar" id="navbar">
+               <ul class="menu">
+               <!-- <li class="menu-item"><a  href="https://forms.gle/UCCrVNZ2LaPviCZS6">Registration</a></li> -->
+               <li class="menu-item"><a  href="Leaderboard.html">leaderboards</a></li>
+               <li class="menu-item"><a  href="SubmissionGuidelines.html">Submission Guidelines</a></li>
+               <li class="menu-item menu-item-child">
+                     <a data-toggle="sub-menu">CodaLab<i class="expand"></i></a>
+                     <ul class="sub-menu">
+                        <li class="menu-item"><a  href="https://codalab.lisn.upsaclay.fr/competitions/17758">SubTask-1 Word Sense Disambiguation (WSD)</a></li>
+                        <li class="menu-item"><a  href="https://codalab.lisn.upsaclay.fr/competitions/18918">SubTask-2 Location Mention Disambiguation (LMD)</a></li>
+
+				  </ul>
+                  </li>
+                  
+                  <!-- <li class="menu-item"><a  href="leaderboard.html">Leaderboard</a></li>
+                  <li class="menu-item"><a  href="paper-submission-guidelines.html">Paper Submission Guidelines</a></li> -->
+                  <li class="menu-item"><a  href="https://docs.google.com/document/d/1f-ioOn7YvS6ZMwcbmgYDtT5Z5p0AzOQEN5DEAAIEAgE/edit?usp=sharing">FAQ</a></li>
+                  
+               </ul>
+            </nav>
+         </div>
+      </section>
+   </header>
+<br style="height:1px;">
+<div class="container" style="margin-top:50px;">
+
+<style>
+  .col-sm-3 {
+    width: 100%;
+}
+.form-control{
+  width:350px;
+}
+
+.form-horizontal .control-label {
+  font-size: 14px;
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: left;
+}
+.jumbotron{
+  background:#fff;
+
+}
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.jumbotron hr {
+  border-top: 1px dashed red;
+}
+.jumbotron .output {
+    font-size: 14px;
+}
+.jumbotron .output .source{
+  color:#cd2027;
+    font-weight :bold;
+}
+.jumbotron .output .target{
+  color:#075154;
+    font-weight :bold;
+}
+.jumbotron .output .targets{
+  direction:rtl;
+}
+.jumbotron .brand {
+    font-size: 18px;
+    color:#e67521;
+}
+
+.jumbotron a {
+  font-size: 16px;
+    color:#2b75ad;
+    font-weight :bold;
+}
+.jumbotron a:hover {
+    color:#cd2027;
+}
+.modal-title{
+  text-align:center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+  <!-- <img class ='err_message' src="http://206.12.100.168/images/error.jpg" widtd="30px" height="30px"> -->
+  
+  <div class="container" witd="100%">
+    <div class="jumbotron" style="font-size: 12px;">
+    <!-- <center>
+      <img src="./assets/ner.jpg" alt="logo" />        
+</center>
+<br><br> -->
+<p class="brand"><b>WHAT IS THE PAPER FOR?</b></p>
+<p>
+The system description paper should let another researcher:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) Verify what the system does and how it has been trained.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) Reimplement the system to reproduce the results.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3) Understand the system’s strengths and weaknesses.
+</p>
+
+<p class="brand"><b>WHAT FORMAT SHOULD THE PAPER BE?</b></p>
+<p>
+The paper will be included in the <a href="https://arabicnlp2024.sigarab.org/call-for-papers" >The Second
+Arabic Natural Language Processing Conference (ArabicNLP 2024) </a> proceedings and needs to use the official ACL style templates, which are available <a href="https://github.com/acl-org/acl-style-files">here</a> (Latex and Word). Please follow the paper formatting guidelines general to "*ACL" conferences available <a href="https://acl-org.github.io/ACLPUB/formatting.html">here</a>. Authors may not modify these style files or use templates designed for other conferences.<br>
+
+<b>Submission Website:</b> via openreview:<a href="https://openreview.net/group?id=SIGARAB.org/ArabicNLP/2024/Shared_Task/ArabicNLU">https://openreview.net/group?id=SIGARAB.org/ArabicNLP/2024/Shared_Task/ArabicNLU</a><br>
+Shared task system paper submissions deadline: May 15, 2024.</span><br>
+</p>
+<p class="brand"><b>HOW SHOULD THE PAPER BE STRUCTURED?</b></p>
+<p>
+A common structure for system description papers is:<br>
+
+<b>Title:</b> Title should be as follows: <code>your_team_name at  ArabicNLU shared task: your_own_title</code>. For example, <code>UBC at ArabicNLU shared task: Arabic Natural Language Understanding </code><br>
+
+<b>Abstract:</b> four/five sentences highlighting your approach and key results.<br>
+
+<b>Introduction:</b> ¾ a page expanding on the abstract mentioning key background such as why the task is challenging for current modeling techniques and why your approach is interesting/novel.<br>
+
+<b>Data:</b> review of the data you used to train your system. Be sure to mention the size of the training, validation and test sets that you’ve used, and the label distributions, as well as any tools you used for preprocessing data.<br>
+
+<b>System:</b> a detailed description of how the systems were built and trained. If you’re using a neural network, were there pre-trained embeddings, how was the model trained, what hyperparameters were chosen and experimented with? How long did the model take to train, and on what infrastructure? Linking to source code is valuable here as well, but the description should be able to stand alone as a full description of how to reimplement the system. While other paper styles include background as a separate section, it’s fine to simply include citations to similar systems which inspired your work as you describe your system.<br>
+
+<b>Results:</b> a description of the key results of the paper. If you have done extra error analysis into what types of errors the system makes, this is extremely valuable for the reader. Unofficial results from after the submission deadline can be very useful as well.<br>
+
+<b>Discussion:</b> general discussion of the task and your system. Description of characteristic errors and their frequency over a sample of development data. What would you do if you had another 3 months to work on it?<br>
+
+<b>Conclusion:</b> a restatement of the introduction, highlighting what was learned about the task and how to model it.<br>
+</p>
+
+<p class="brand">Please use the following bibtex entry to cite the shared task description paper:</p>
+<pre>
+@inproceedings{Khalilia-etal-2024-arabicnlp,
+              author = "Khalilia, Mohammed and Malaysha, Sanad and Suwaileh, Reem and Jarrar, Mustafa and Aljabari, Alaa and Elsayed, Tamer and Zitouni, Imed",
+              title = "{A}rabicNLU 2024: The First Arabic Natural Language Understanding Shared Task",
+              booktitle = "Proceedings of the 2nd Arabic Natural Language Processing Conference (Arabic-NLP), Part of the ACL 2024.", 
+              year = "2024", 
+			  publisher = "Association for Computational Linguistics"
+            }
+</pre>
+
+
+
+</div>
+</div>
+</div>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

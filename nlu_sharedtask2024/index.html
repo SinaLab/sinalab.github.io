@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://dlnlp.ai/st/wojood/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>ArabicNLU Shared-Task</title>
+
+<!-- Latest minified bootstrap css -->
+<link rel="stylesheet" href="./arabicnlu2024_files/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="./arabicnlu2024_files/jquery.min.js.download"></script>
+<!-- Latest minified bootstrap js -->
+<script src="./arabicnlu2024_files/bootstrap.min.js.download"></script>
+<!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/turjuman_logo.ico"> -->
+<link rel="stylesheet" type="text/css" href="./arabicnlu2024_files/style.min.css">
+<script defer="" src="./arabicnlu2024_files/script.js.download"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
+		onload="renderMathInElement(document.body);"></script>
+
+<style>
+.header {
+   background:#757575;
+}
+/* .header .menu>.menu-item>.sub-menu>.menu-item>a {color:#f5f813} */
+/* .header .menu>.menu-item>.sub-menu>.menu-item>a:hover{color:#f5f813} */
+.header .menu>.menu-item>a .expand::before,.header .menu>.menu-item>a .expand::after{background:#fff}
+.header .menu>.menu-item:hover>a{color:#f5f813}
+.menu>.menu-item>.sub-menu>.menu-item>a:hover{color:#f5f813}
+.header .menu>.menu-item:hover>a .expand::before,.header .menu>.menu-item:hover>a .expand::after{background:#f5f813}
+.header .menu>.menu-item>a{
+   color:#fff;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-top: 30px;
+    border: 1px solid transparent;
+}
+    .brand {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -1px;
+  color: #fff;
+  text-transform:none;
+}
+body{
+   background:#eff1f2;
+}
+.container{
+        width:100%;
+        
+}   
+
+  option{
+    text-align: left;
+}
+  fieldset {
+    dir:rtl;
+    margin: 8px;
+    border: 1px solid silver;
+    padding: 8px;    
+    border-radius: 4px;
+}
+
+legend {
+    padding: 2px; 
+    font-size:8px;   
+}
+
+th, td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+tr{
+	font-family:Droid Serif;
+	font-size:12pt;
+	color:#666666;
+}
+table{
+    border-spacing: 40px;
+    margin-left:100px;
+}
+.loadingMask {
+    background: url(./imgs/Ajux_loader.gif) center 50% no-repeat #000000;
+    top:0;
+    left:0;
+    position:fixed;
+    height:100%;
+    width:100%;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    z-index:12030
+ }
+
+#old{
+text-decoration: line-through;
+}
+</style>
+
+<meta property="og:image" content="https://sina.birzeit.edu/nlu_sharedtask2024/arabicnlu2024_files/arabicnlu_logo.jpg">
+<meta property="og:title" content="ArabicNLU-2024, Arabic Natural Language Understanding Shared Task">
+</head>
+
+
+<body data-new-gr-c-s-check-loaded="14.1154.0" data-gr-ext-installed="">
+<!-- Section: Header -->
+<header class="header">
+      <section class="container">
+         <div class="wrapper">
+            <a  href="https://arabicnlp2024.sigarab.org/"><img src="./arabicnlu2024_files/logo_small.png" width="220" height="60px" vertical-align="middle" align="left"></a>
+
+            <!-- <button type="button" class="burger" id="burger">
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+            </button> -->
+			<span class="brand"> <a style="color:white;" href="index.html" >ArabicNLU Shared-Task </a></span>
+            <nav class="navbar" id="navbar">
+               <ul class="menu">
+               <!-- <li class="menu-item"><a  href="https://forms.gle/UCCrVNZ2LaPviCZS6">Registration</a></li> -->
+               <li class="menu-item"><a  href="Leaderboard.html">leaderboards</a></li>
+               <li class="menu-item"><a  href="SubmissionGuidelines.html">Submission Guidelines</a></li>
+               <li class="menu-item menu-item-child">
+                     <a data-toggle="sub-menu">CodaLab<i class="expand"></i></a>
+                     <ul class="sub-menu">
+                        <li class="menu-item"><a  href="https://codalab.lisn.upsaclay.fr/competitions/17758">SubTask-1 Word Sense Disambiguation (WSD)</a></li>
+                        <li class="menu-item"><a  href="https://codalab.lisn.upsaclay.fr/competitions/18918">SubTask-2 Location Mention Disambiguation (LMD)</a></li>
+				  </ul>
+                  </li>
+                  
+                  <!-- <li class="menu-item"><a  href="leaderboard.html">Leaderboard</a></li>
+                  <li class="menu-item"><a  href="paper-submission-guidelines.html">Paper Submission Guidelines</a></li> -->
+                  <li class="menu-item"><a  href="https://docs.google.com/document/d/1f-ioOn7YvS6ZMwcbmgYDtT5Z5p0AzOQEN5DEAAIEAgE/edit?usp=sharing">FAQ</a></li>
+                  
+               </ul>
+            </nav>
+         </div>
+      </section>
+   </header>
+<br style="height:1px;">
+<div class="container" style="margin-top:50px;">
+
+<style>
+  .col-sm-3 {
+    width: 100%;
+}
+.form-control{
+  width:350px;
+}
+
+.form-horizontal .control-label {
+  font-size: 14px;
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: left;
+}
+.jumbotron{
+  background:#fff;
+
+}
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.jumbotron hr {
+  border-top: 1px dashed red;
+}
+.jumbotron .output {
+    font-size: 14px;
+}
+.jumbotron .output .source{
+  color:#cd2027;
+    font-weight :bold;
+}
+.jumbotron .output .target{
+  color:#075154;
+    font-weight :bold;
+}
+.jumbotron .output .targets{
+  direction:rtl;
+}
+.jumbotron .brand {
+    font-size: 18px;
+    color:#e67521;
+}
+
+.jumbotron a {
+  font-size: 16px;
+    color:#2b75ad;
+    font-weight :bold;
+}
+.jumbotron a:hover {
+    color:#cd2027;
+}
+.modal-title{
+  text-align:center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+
+
+  <!-- <img class ='err_message' src="http://206.12.100.168/images/error.jpg" width="30px" height="30px"> -->
+  
+  <div class="container" with="100%">
+    <div class="jumbotron" style="font-size: 12px;">
+    <center>
+      <img src="./arabicnlu2024_files/arabicnlu.png" alt="ArabicNLU" height="200" width="600">        
+</center>
+<p class="brand"><b>REGISTRATION</b></p>
+<p>
+Registration is now open until <b id="old">5 April 2024</b> 29 April 2024. To register your team please use this <a href="https://forms.gle/ebxTgCUVfpjLEqyTA">link</a>.</p><p>For further details you can reach us by <a href="https://join.slack.com/t/arabicnlu2024/shared_invite/zt-2gzgoi5ae-y0t2nq27SBruWMHzx3FEzg">Slack</a> or <a href= "mailto:NLUSharedtask2024@gmail.com">NLUSharedtask2024@gmail.com</a>.
+</p>	   	    
+<p class="brand"><b>INTRODUCTION</b></p>
+
+<p>
+	Natural language understanding (NLU) is a core aspect of natural language processing (NLP), facilitating semantics-based human-machine interactions. One of the key challenges in Arabic is ambiguity, that is because Arabic exhibits morphological richness, encompassing a complex interplay of roots, stems, and affixes, rendering words susceptible to multiple interpretations based on their morphology. Ambiguity in language can lead to misunderstandings, incorrect interpretations, and errors in NLP applications. A core NLU task is Word Sense Disambiguation (WSD), and its special case Location Mention Disambiguation (LMD). WSD aims to determine the correct sense of ambiguous words in context, while LMDfocuses on disambiguating location mention that is referred to with multiple toponyms, i.e., particular places or locations. Both tasks are vital in NLP and information retrieval, as it helps to correctly interpret and extract information from text. In this shared-task we introduce two subtasks, WSD and LMD.
+</p>
+
+<p><b><u>Subtask 1:</u></b> <span class="brand">Word Sense Disambiguation (WSD)</span><br>
+	Polysemous words that convey multiple meanings (in different contexts) have led to the emergence of the WSD task. WSD aims to disambiguate a word's semantics. Given a context (i.e., sentence), a target word in the context, and a set of candidate senses (i.e., glosses or definitions) for the target word, the goal of the WSD task is to determine which of these senses is the intended meaning for the target word. Participants can use any machine learning, including deep learning and generative methods.
+
+<p>
+<b>WSD dataset:</b> SALMA corpus is the first sense-annotated corpus for Arabic. SALMA contains 1,440 sentences and 34K tokens (8,760 unique tokens with 3,875 unique lemmas). All tokens are sense-annotated manually, with a total of 4,151 senses. Additional data about the data can be found in this <a href="https://www.jarrar.info/publications/JMHK23.pdf" >article</a>.
+
+<p>Participants will be provided with the development and test datasets. The development set consists of 100 sentences randomly selected from SALMA, the set of candidate senses (glosses) and the target/correct sense for each word in each sentence. The rest of the SALMA corpus (1,340 sentences) will be shared as a test set. The test set is similar to the development set, but it will not include the target/correct senses. No training datasets will be shared with the participants, that is to encourage participants to leverage generative models techniques such as in-context learning and chain-of-thought prompting. Participants can also utilize external datasets, sense inventories or lexicons during the development phase.
+
+
+		<p>
+<b>WSD dataset format:</b> The data is in JSON format and follows the schema below. The data will be shared with the participants after registration.
+
+<p>
+<code style="background-color: white;">
+	{ <br>
+    &nbsp; "type": "array",<br>
+    &nbsp; "items":{<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; "type": "object",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; "properties": {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "sentence_id": {"type": "integer"},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "sentence":    {"type": "string"},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "words": {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "type": "array",<br>
+	&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "items":{<br>
+	&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "type": "object",<br>
+	&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "properties":{<br>
+	&nbsp;&nbsp;        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "word_id":{"type": "integer"},<br>
+	&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "word":{"type": "string"},<br>
+	&nbsp;&nbsp;       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "senses":{"type": "array",items":{"type": ["integer", "null"]}<br>
+	&nbsp;&nbsp;       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "target_sense":{"type": ["integer", "null"]}<br>
+	&nbsp;                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp; }<br>
+	}<br>
+  </code>
+
+
+<p>
+<b> Evaluation </b> Participants will be given the test set, 1340 sentences, and for each target word a set of candidate senses (i.e., glosses). Participants are expected to submit their results following the JSON schema defined above. The accuracy (%) metric will be used to evaluate the submitted results, where it is calculated as the count of correct instances divided by the total number of instances.
+<p>
+<b>Baseline</b> Our is computed based on a sliding window of words count surrounding the target word. We used the Accuracy metric to measure the performance of our model according to the following table:
+
+<table style="width: 50%">
+	<tr>
+		<td style="width: 1280px; color:gray"><p><b>Window</b></p></td>
+		<td style="width: 256px;color:gray"><p><b>Accuracy(%)</b></p></td>
+	</tr>
+	<tr>
+
+
+
+		<td style="width: 1280px; height: 38px">All words in sentence</td>
+		<td style="width: 256px; height: 38px">82.8</td>
+	</tr>
+	<tr>
+
+
+
+		<td style="width: 1280px">11 words (5 left + target word + 5 right)</td>
+		<td style="width: 256px">84.2</td>
+	</tr>
+	<tr>
+
+
+		<td style="width: 1280px">9 words</td>
+		<td style="width: 256px">83.5
+</td>
+	</tr>
+	<tr>
+		<td style="width: 1280px">7 words</td>
+		<td style="width: 256px">83.8</td>
+	</tr>
+	<tr>
+		<td style="width: 1280px">5 words
+</td>
+		<td style="width: 256px">84.0</td>
+	</tr>
+	<tr>
+		<td style="width: 1280px">3 words</td>
+		<td style="width: 256px">82.8
+</td>
+	</tr>
+</table>
+
+</p>
+<p>
+<b> Google Colab notebook: </b> To allow you to experiment with the baseline, we authored a Google Colab notebook that demonstrates how to load and evaluate the data. The notebook demonstrates how to load the data and how to use our WSD system to predict the sense for the target words. The Notebook can be found <a href="https://colab.research.google.com/drive/11ZFqz5rZ9WRv8sBGbSQHBYpbJJfct4t_">here</a>.
+
+<p><b><u>Subtask 2:</u></b> <span class="brand">Location Mention Disambiguation <b>(LMD) </b></span><br>
+		Offering the LMD in a separate task supports developing precise models capable of accurately resolving Location Mentions (LMs) within microblogs and linking them to toponyms in geo-positioning databases. LMD represents challenging retrieval and classification problems such as the lack of context, toponymic polysemy, toponymic homonymous, to name a few. Indeed, the LMD task is understudied for the Arabic language.
+
+		<p>
+
+
+
+<b>Problem Definition:</b>
+<p>Given the following inputs:  A post \(p\) (tweet in our dataset), a set of location mentions (LMs) \(L_p =\{l_i; i \in [1,n_p]\}\) in post \(p\), where \(l_i\) is the ith location mention, and np is the total number of location mentions in \(p\), and a geo-positioning database \(G\) (i.e., OSM) that consists of a set of toponyms \(T = \{t_j; j \in [1,k]\}\), where \(t_j\) is the \(jth\) toponym, and \(k\) is the number of toponyms in \(G\). The LMD system aims to match every location mention \(l_i\) in the post \(p\) to one of the toponyms \(t_j\) in OSM that accurately represents it, if it exists. </p>
+
+		<p>In our shared task, we perceive the LMD task as a candidate retrieval and ranking problem. For every location mention, the LMD system has to retrieve a ranked list of up to 3 candidate toponyms from OSM. The list of retrieved candidates is ranked based on their probability of being the target toponym.
+		In other words, the LMD problem can be typically decomposed into two sub-problems: 1) <b>candidate retrieval</b> (which aims to retrieve a list of candidate toponyms from OSM), 2) and <b>candidate ranking</b> (which aims to rank the list of retrieved candidates).
+		</p>
+		<p>
+<b>LMD Dataset:</b> IDRISI-DA is the first Arabic LMD dataset. It has been carefully constructed to ensure domain and geographical generalizability, enabling fair evaluation of models across various disaster types (such as floods and bombings), as well as different geographical areas. Notably, it encompasses 2,869 posts from diverse dialects, featuring 3,893 location mentions, of which 763 are unique, across seven countries (more statistics of the data below). We use the standard 70:10:20 splits per event.
+
+
+		<table style="width: 60%">
+			<tr>
+				<td style="width:30%"></td>
+
+
+
+
+				<td>#tweets</td>
+				<td>#LMs</td>
+				<td>#Unique LMs</td>
+			</tr>
+			<tr>
+
+
+
+				<td>Train</td>
+				<td>2,170</td>
+				<td>3,997</td>
+				<td>530</td>
+			</tr>
+			<tr>
+
+
+
+				<td>Validation</td>
+				<td>333</td>
+				<td>
+818
+</td>
+				<td>254</td>
+			</tr>
+			<tr>
+				<td>Test</td>
+				<td>791</td>
+				<td>1,630</td>
+				<td>308</td>
+			</tr>
+		</table>
+		<br>
+<p>
+The <i>training</i> and <i>development</i> sets will be provided to the participants after registration. For each post/tweet in the train and dev datasets, we provide annotations of the location mentions, each location mention is accompanied by its correct toponym from the OpenStreetMap (OSM) gazetteer. Each toponym includes several attributes such as geo-coordinates, address, etc. More details about the dataset (and how one can generate negative examples, if needed) can be found in this <a href="https://aclanthology.org/2023.arabicnlp-1.14/" target="_blank">paper</a>. The JSON schema of the data is provided below. The test set that will be shared with the participants includes the annotation of the location mentions, but does not include the correct toponym from the OpenStreetMap gazetteer. Participants are expected to query OpenStreetMap to retrieve candidate toponyms and perform disambiguation to return the correct toponym.
+</p>
+	<p>Accessing the OpenStreetMap can be through its <a href="https://nominatim.org/release-docs/develop/api/Search/" target="_blank">public API</a> or through the library/code that we will also provide in this shared task - to make it easy for the participants.
+<p>
+<code style="background-color: white;">
+{
+ <br> &nbsp; {
+<br> &nbsp; &nbsp; &nbsp; &nbsp; "type": "array",
+<br> &nbsp; &nbsp; &nbsp; &nbsp; "items":{
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "object",
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "properties": {
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tweet_id": {"type": "integer"},
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": {"type": "string"},
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "location_mentions": {
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "array",
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "items":{
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "object",
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "properties":{
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "location_mention":{"type": "string"},
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "location_mention_id":{"type": "integer"},
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "toponym":{"type": "string"}
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+<br> &nbsp; &nbsp; &nbsp; &nbsp; }
+<br> &nbsp; }
+</code>
+
+<p>
+<b> Evaluation</b> Participants are expected to submit the test set with disambiguated location mentions. The submission file should be in JSONL format. Each line is a JSON object corresponding to one candidate toponym retrieved for a location mention. The definition of each property in the prediction file is described in the table below:
+		<p>
+
+		<table style="width: 60%">
+			<tr>
+				<td style="width: 296px"><b>Column name</b></td>
+				<td><b>Description</b></td>
+				
+
+			</tr>
+			<tr>
+			<td style="width: 296px">lm_id</td>
+				<td>A string that concatenates  the tweet_id and location_mention_id<br/><br/>
+
+					Example:<br/>
+					tweet_id = 1290755929869373443<br/>
+					location_mention_id = 1<br/><br/>
+
+					Then<br/>
+					lm_id = '1290755929869373443_1'
+				</td></tr>
+				<tr>
+				<td style="width: 296px">toponym_id</td>
+				<td>A string that concatenates the first character of  osm_type and osm_id properties extracted from OSM.<br/><br/>
+
+					Example:<br/>
+					If osm_type = way and osm_id = 708764827, then the toponym_id = w708764827
+</td></tr>
+<tr>
+				<td style=" width: 296px; left: 0px; top: 249px;">rank</td>
+				<td>An integer value indicating the rank of the toponym in the returned list of candidate toponyms.</td>
+</tr>
+			
+		</table><br/>
+
+	<p>	For example, for each location mention (i.e. “مرفأ بيروت”), the prediction file should contain multiple lines, each line containing the toponym and its rank. An example is below:
+
+		<code style="background-color: white;">
+			<center>
+		{'lm_id': '1290755929869373443_1', 'toponym_id': 'r12927915', 'rank': 1}<br/>
+		{'lm_id': '1290755929869373443_1', 'toponym_id': 'n1139565566', 'rank': 2}<br/>
+		{'lm_id': '1290755929869373443_1', 'toponym_id': 'w777711541', 'rank': 3}
+			</center>
+		</code>
+
+	</p>
+		<p>Systems will be evaluated using Mean Reciprocal Rank (MRR@k), where k indicates the cutoff of the  retrieved ranked list of candidate toponyms. We will set k to 1, 2, and 3. MRR@1 is the primary measure on which submissions will be ranked on the leaderboard. In our context, MRR@1 is equivalent to the accuracy measure. Ties will be resolved by doing a secondary rank using the MRR@2 or MRR@3.</p>
+
+		<p><b>Baseline</b> We use OSM search API as a baseline. We then compute the MRR@k of the returned hits against our ground truth toponyms. The baseline performance is presented below.
+
+		<table style="width: 50%">
+			<tr>
+
+
+				<td><b>Accuracy</b></td>
+				<td><b>Validation</b></td>
+				<td><b>
+Test
+</b></td>
+			</tr>
+			<tr>
+
+
+
+
+
+				<td>MRR@1</td>
+				<td>0.5795</td>
+				<td>0.6270</td>
+			</tr>
+			<tr>
+				<td>MRR@2</td>
+				<td>0.6204</td>
+				<td>0.6669</td>
+			</tr>
+			<tr>
+				<td>MRR@3</td>
+				<td>
+0.6298
+</td>
+				<td>0.6701</td>
+			</tr>
+		</table>
+		<br>
+	<p><b>	Google Colab notebook</b> A notebook was created to demonstrate how to pull the data from Hugging Face, call OSM API to retrieve candidate toponyms, and evaluate the OSM using MRR@k. The notebook assumes that OSM is the baseline model. The notebook can be found <a href="https://gist.github.com/mohammedkhalilia/2b682b67f33c922ffbeaeb9aa1d7f001">here</a> .
+
+
+<p class="brand"><b>IMPORTANT DATES</b></p>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>March 1, 2024:</b> Shared Task Registration Open<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>March 15, 2024:</b> Data-sharing and Evaluation on Development Set Available<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b id="old">April 5, 2024</b><b> April 29, 2024:</b> Shared Task Registration Deadline </span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>April 10, 2024:</b>Test Set Published<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>May 03, 2024:</b> Evaluation on Test Set (TEST) Deadline<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>May 15, 2024:</b> Shared Task System Paper Submission Due </span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>June 17, 2024:</b> Notification of Acceptance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>July 1, 2024:</b> Camera-ready Version Due<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>August 16, 2024:</b> ArabicNLP Conference.<br>
+</p>
+
+
+<p class="brand"><b>ORGANIZERS</b></p>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Mohammed Khalilia, <a href="mailto:mkhalilia@birzeit.edu">mkhalilia@birzeit.edu</a>, Qualtrics/Birzeit University, USA (Contact Person)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Imed Zitouni, <a href="mailto:imed.zitouni@gmail.com">imed.zitouni@gmail.com</a>, Google, USA<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Mustafa Jarrar, <a href="mailto:mjarrar@birzeit.edu">mjarrar@birzeit.edu</a>, Birzeit University , Palestine<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tamer Elsayed, <a href="mailto:telsayed@qu.edu.qa">telsayed@qu.edu.qa</a>, Qatar University, Qatar<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Sanad Malaysha, <a href="mailto:sanad.ahmed2000@gmail.com">sanad.ahmed2000@gmail.com</a>, Birzeit University , Palestine<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Ala’ Jabari, <a href="mailto:ala.jabari@hotmail.com">ala.jabari@hotmail.com</a>, Birzeit University , Palestine<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Reem Suwaileh, <a href="mailto:rsuwaileh@hbku.edu.qa">rsuwaileh@hbku.edu.qa</a>, Hamad Bin Khalifa University, Qatar<br>
+
+
+
+
+</p>
+
+</b></div><b>
+
+</b></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

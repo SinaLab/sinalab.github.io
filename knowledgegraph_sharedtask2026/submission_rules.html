@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submission Rules | KnowledgeGraphEval 2026</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="https://arabicnlp2026.sigarab.org/"
+     target="_blank"
+     class="conference-link">
+     ↗ ArabicNLP 2026 Conference
+  <a href="index.html#registration">Registration</a>
+  <a href="index.html#overview">Overview</a>
+  <a href="index.html#subtasks">Subtasks</a>
+  <a href="index.html#dates">Dates</a>
+  <a href="paper_guidelines.html">Paper Guidelines</a>
+  <a href="submission_rules.html" class="active">Submission</a>
+  <a href="FAQ.html">FAQ</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="https://forms.gle/xGuSr76W6jnxV7At9" class="register-link">Register</a>
+</nav>
+
+<main>
+
+<section id="submission-rules">
+  <h2>Submission Rules</h2>
+
+  <div class="page-intro">
+    <p>
+      This page describes the official submission rules for
+      <strong>KnowledgeGraphEval 2026</strong>. Participants must follow the
+      required output format for each subtask and submit their final predictions
+      through the official Codabench competition pages.
+    </p>
+
+    <p>
+      Teams may participate in one or more subtasks. Final rankings are based
+      only on valid official submissions made before the shared task deadline.
+    </p>
+  </div>
+
+
+<div class="notice-box">
+  <strong>Note:</strong>
+  Participants may be asked to share with the organizers their data, APIs, systems, or any other resources.
+</div>
+
+  <div class="page-nav">
+    <a href="#general-rules">General Rules</a>
+    <a href="#subtask1">Subtask 1 Output</a>
+    <a href="#subtask2">Subtask 2 Output</a>
+    <a href="#checklist">Verification Checklist</a>
+    <a href="#contact">Submission Support</a>
+  </div>
+</section>
+
+<section id="general-rules">
+  <h2>General Rules</h2>
+
+  <div class="rules-grid">
+    <div class="rule-card">
+      <div class="rule-icon">
+        <i class="bi bi-cloud-upload"></i>
+      </div>
+      <h3>Official platform</h3>
+      <p>
+        Submit final outputs through the official Codabench pages for the
+        corresponding subtask.
+      </p>
+    </div>
+
+    <div class="rule-card">
+      <div class="rule-icon">
+        <i class="bi bi-fingerprint"></i>
+      </div>
+      <h3>Preserve IDs</h3>
+      <p>
+        Use the released sentence IDs, token IDs, entity IDs, and pair IDs
+        exactly as they appear in the blind test files.
+      </p>
+    </div>
+
+    <div class="rule-card">
+      <div class="rule-icon">
+        <i class="bi bi-shield-lock"></i>
+      </div>
+      <h3>No hidden-label access</h3>
+      <p>
+        Do not manually inspect, infer, reconstruct, or use hidden gold labels
+        during the evaluation phase.
+      </p>
+    </div>
+
+    <div class="rule-card">
+      <div class="rule-icon">
+        <i class="bi bi-list-check"></i>
+      </div>
+      <h3>Valid submissions</h3>
+      <p>
+        A submission is valid only if it follows the required file format,
+        encoding, schema, and label inventory for the selected subtask.
+      </p>
+    </div>
+  </div>
+
+  <div class="notice-box">
+    <p>
+      All submitted files must use <strong>UTF-8 encoding</strong>. Participants
+      should run the released validation script before uploading their outputs.
+    </p>
+  </div>
+</section>
+
+<section id="subtask1">
+  <div class="subtask-rule">
+    <div class="subtask-rule-header">
+      <div class="subtask-rule-number">1</div>
+      <div class="subtask-rule-title">
+        <h3>Cross-Domain Named Entity Recognition</h3>
+        <span>AdaptNER output rules</span>
+      </div>
+    </div>
+
+    <p>
+      For the NER subtask, systems must produce one named entity tag for each
+      token in the blind test file. Token order and sentence boundaries must be
+      preserved exactly.
+    </p>
+
+    <div class="format-box">
+      <h4>Required output</h4>
+      <ul>
+        <li>Use the official <strong>CoNLL sequence-labeling format</strong>.</li>
+        <li>Provide one predicted BIO tag for each token.</li>
+        <li>Use only the official KnowledgeGraphEval entity label inventory.</li>
+        <li>Do not remove, reorder, normalize, or retokenize the test tokens.</li>
+        <li>Keep blank lines between sentences, following the released template.</li>
+      </ul>
+    </div>
+
+    <div class="format-box">
+      <h4>Evaluation</h4>
+      <p>
+        Systems are evaluated using <strong>entity-level micro F1-score</strong>.
+        A prediction is counted as correct only when the entity span and entity
+        type exactly match the gold annotation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="subtask2">
+  <div class="subtask-rule">
+    <div class="subtask-rule-header">
+      <div class="subtask-rule-number">2</div>
+      <div class="subtask-rule-title">
+        <h3>Relation Extraction</h3>
+        <span>Relation classification with predefined entities</span>
+      </div>
+    </div>
+
+    <p>
+      For the RE subtask, predefined entity mentions are provided. Systems must
+      predict the semantic relation label for each valid entity pair.
+    </p>
+
+    <div class="format-box">
+      <h4>Required output</h4>
+      <ul>
+        <li>Submit predictions using the official TXT template released with the test data.</li>
+        <li>Preserve the triple ID for every test instance.</li>
+        <li>Predict one relation label for each pair.</li>
+        <li>Use <strong>no-relation</strong> when no valid semantic relation exists.</li>
+        <li>Use only the official relation label inventory.</li>
+      </ul>
+    </div>
+
+    <div class="format-box">
+      <h4>Required fields</h4>
+      <pre class="code-sample">triple_id, predicted_relation</pre>
+    </div>
+
+    <div class="format-box">
+      <h4>Evaluation</h4>
+      <p>
+        Systems are evaluated using <strong>micro F1-score</strong> over predicted
+        relation labels. Official scores are computed using the released
+        evaluation script.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="checklist">
+  <h2>Verification Checklist</h2>
+
+  <ol class="checklist">
+    <li>Run the released validation script before uploading predictions.</li>
+    <li>Confirm that the file is encoded in UTF-8.</li>
+    <li>Confirm that the output format is valid CoNLL or TXT as required.</li>
+    <li>Check that every test example has exactly the expected number of predictions.</li>
+    <li>Check that all predicted labels belong to the official label inventory.</li>
+    <li>Keep a copy of the submitted outputs, model configuration, prompts, and post-processing scripts.</li>
+    <li>Email the organizers before the deadline if Codabench rejects a valid file.</li>
+  </ol>
+</section>
+
+<section id="contact">
+  <h2>Submission Support</h2>
+
+  <div class="box">
+    <p>
+      For submission issues, validation errors, or Codabench problems, contact
+      the organizers before the official deadline.
+    </p>
+
+    <p>
+      Email:
+      <a href="mailto:KnowledgeGraphEval@gmail.com">
+        KnowledgeGraphEval@gmail.com
+      </a>
+    </p>
+  </div>
+
+  <a class="button" href="index.html#submission">
+    Back to Submission Section
+  </a>
+</section>
+
+</main>
+
+<footer>
+  <p>
+    KnowledgeGraphEval 2026 — Arabic Knowledge Graph Construction Shared Task
+  </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

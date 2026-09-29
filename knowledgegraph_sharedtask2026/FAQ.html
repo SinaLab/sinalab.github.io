@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | KnowledgeGraphEval 2026</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="https://arabicnlp2026.sigarab.org/"
+     target="_blank"
+     class="conference-link">
+     ↗ ArabicNLP 2026 Conference
+  <a href="index.html#registration">Registration</a>
+  <a href="index.html#overview">Overview</a>
+  <a href="index.html#subtasks">Subtasks</a>
+  <a href="index.html#dates">Dates</a>
+  <a href="paper_guidelines.html">Paper Guidelines</a>
+  <a href="submission_rules.html">Submission</a>
+  <a href="FAQ.html" class="active">FAQ</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="https://forms.gle/xGuSr76W6jnxV7At9" class="register-link">Register</a>
+</nav>
+
+<main>
+
+<section class="page-title">
+  <h1>Frequently Asked Questions</h1>
+  <p>
+    Participant support for KnowledgeGraphEval 2026, including task scope,
+    subtasks, datasets, evaluation, submission formats, timeline, and contact details.
+  </p>
+</section>
+
+<div class="faq-layout">
+
+  <aside class="faq-sidebar">
+    <h3>FAQ Topics</h3>
+    <a href="#general">General</a>
+    <a href="#participation">Participation</a>
+    <a href="#data">Data and Resources</a>
+    <a href="#evaluation">Evaluation</a>
+    <a href="#submission-faq">Submission</a>
+    <a href="#timeline-faq">Timeline</a>
+    <a href="#contact-faq">Contact</a>
+  </aside>
+
+  <div>
+
+    <section id="general" class="faq-group">
+      <h2>General</h2>
+
+      <div class="faq-item open">
+        <button class="faq-question" type="button">
+          <span>What is KnowledgeGraphEval 2026?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            KnowledgeGraphEval 2026 is an ArabicNLP 2026 shared task on Arabic
+            knowledge graph construction and domain adaptation. It focuses on
+            extracting entities and semantic relations from Arabic text to build
+            structured, machine-readable knowledge representations.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>What is the main goal of the shared task?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            The goal is to evaluate Arabic information extraction systems under
+            realistic settings. The task measures how well systems recognize
+            entities, classify semantic relations, and produce subject-relation-object
+            triples from Arabic text.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Why is this task important?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Arabic knowledge graph construction remains underexplored. This task
+            supports research on Arabic NER, relation extraction, domain adaptation,
+            LLM-based extraction, RAG systems, semantic search, and knowledge-intensive
+            NLP applications.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="participation" class="faq-group">
+      <h2>Participation</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Can a team participate in only one subtask?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Yes. Teams may participate in Subtask 1, Subtask 2,
+            or any combination of them.
+          </p>
+        </div>
+      </div>
+
+<div class="faq-item">
+  <button class="faq-question">
+    What are the requirements for team names?
+    <i class="bi bi-chevron-down"></i>
+  </button>
+
+  <div class="faq-answer">
+    <p>
+      Team names must be <strong>one word only</strong> and should be
+      <strong>meaningful and appropriate</strong>. Avoid using spaces,
+      special symbols, or offensive terms.
+    </p>
+  </div>
+</div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Who can participate?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+  The shared task is open to academic, industry, and independent research teams
+  interested in Arabic NLP, information extraction, domain adaptation, and
+  knowledge graph construction.
+</p>
+
+<div class="notice-box">
+  <strong>Important:</strong>
+  At least one author in each participating team is expected to have experience
+  with academic research and scientific writing, preferably at the
+  <strong>PhD level</strong> or with prior <strong>publication experience</strong>,
+  to ensure high-quality system description papers.
+</div>        
+</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Are external resources allowed?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Participants may use external resources when allowed by the official
+            rules of each subtask. The use of external data, pretrained models,
+            LLMs, and retrieval resources must be reported in the system description
+            paper.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="data" class="faq-group">
+      <h2>Data and Resources</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Which dataset is used for Subtask 1?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Subtask 1 uses Konooz, a large-scale Arabic NER benchmark for
+            cross-domain and cross-dialect evaluation. It covers 10 domains,
+            16 Arabic dialects, and Modern Standard Arabic.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Which domains are covered in Subtask 1?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            The domains are Sports, Economics, Health, Agriculture, Art, Finance,
+            History, Law, Politics, and Science.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Which dataset is used for Subtask 2?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Subtask 2 uses WojoodRelations, an Arabic benchmark for semantic
+            relation extraction. It extends the Wojood NER corpus with annotated
+            relations between entity pairs.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>What formats are used for the datasets?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <ul>
+            <li><strong>Subtask 1:</strong> CoNLL sequence-labeling format.</li>
+            <li><strong>Subtask 2:</strong> Structured JSON format with predefined entity mentions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="evaluation" class="faq-group">
+      <h2>Evaluation</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>How is Subtask 1 ranked?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Subtask 1 is evaluated using entity-level micro F1-score. A prediction
+            is correct only when both the entity span and entity type exactly match
+            the gold annotation.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>How is Subtask 2 ranked?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Subtask 2 is evaluated using micro F1-score over predicted relation
+            labels. Systems must classify each candidate entity pair as one relation
+            type or no-relation.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="submission-faq" class="faq-group">
+      <h2>Submission</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Where will systems be submitted?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Submissions will be handled through Codabench. The Codabench links
+            will be added to the shared task website when they are available.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>What should the submitted files contain?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <ul>
+            <li><strong>Subtask 1:</strong> BIO sequence-labeling output.</li>
+            <li><strong>Subtask 2:</strong> Sentence ID and predicted relation label.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Will baseline code be provided?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Yes. Baseline code, evaluation scripts, and submission rules will be
+            released with the training and development data.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline-faq" class="faq-group">
+      <h2>Timeline</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>When will the data be available?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Training and development data, baseline code, and evaluation scripts
+            are scheduled for June 5, 2026. Blind test data will be released on
+            July 20, 2026.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>When is the registration deadline?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            The current website timeline lists July 20, 2026 as the registration
+            deadline and blind test data release date.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>When will final results be released?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Final official results and rankings are scheduled for July 30, 2026.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-faq" class="faq-group">
+      <h2>Contact</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Who should I contact?</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            For shared task questions, datasets, submissions, or participation,
+            contact the organizers by email.
+          </p>
+          <ul>
+            <li>Alaa Aljabari: <a href="mailto:aaljabari@birzeit.edu">aaljabari@birzeit.edu</a></li>
+            <li>Nagham Hamad: <a href="mailto:nhamad@birzeit.edu">nhamad@birzeit.edu</a></li>
+            <li>Shared task email: <a href="mailto:KnowledgeGraphEval@gmail.com">KnowledgeGraphEval@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="support-box">
+        <strong>Participant Support</strong>
+        <p>
+          Updates about registration, Codabench links, data release, evaluation scripts,
+          and submission rules will be announced through the official shared task website.
+        </p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <p>KnowledgeGraphEval 2026 — Arabic Knowledge Graph Construction Shared Task</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.querySelectorAll('.faq-question').forEach((button) => {
+    button.addEventListener('click', () => {
+      const item = button.closest('.faq-item');
+      item.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paper Guidelines | KnowledgeGraphEval 2026</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="https://arabicnlp2026.sigarab.org/"
+     target="_blank"
+     class="conference-link">
+     ↗ ArabicNLP 2026 Conference
+  <a href="index.html#registration">Registration</a>
+  <a href="index.html#overview">Overview</a>
+  <a href="index.html#subtasks">Subtasks</a>
+  <a href="index.html#dates">Dates</a>
+  <a href="paper_guidelines.html" class="active">Paper Guidelines</a>
+  <a href="submission_rules.html">Submission</a>
+  <a href="FAQ.html">FAQ</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="https://forms.gle/xGuSr76W6jnxV7At9" class="register-link">Register</a>
+</nav>
+
+
+<main>
+
+<section id="paper-guidelines">
+  <h2>Paper Guidelines</h2>
+
+  <div class="page-intro">
+    <p>
+      Participants who submit official runs to <strong>KnowledgeGraphEval 2026</strong>
+      are invited to submit a system description paper. The paper should explain the
+      submitted system clearly enough for readers to understand the approach,
+      reproduce the main configuration, and interpret the official results.
+    </p>
+
+    <p>
+      System papers should focus on the methods used for Arabic knowledge graph
+      construction, including named entity recognition, relation extraction,
+      joint entity-relation extraction, domain adaptation, prompting, retrieval,
+      fine-tuning, and post-processing when applicable.
+    </p>
+  </div>
+
+  <div class="page-nav">
+    <a href="#update">Guidelines Update</a>
+    <a href="#submission-guidelines">Submission Guidelines</a>
+    <a href="#structure">Recommended Structure</a>
+    <a href="#formatting">Formatting</a>
+    <a href="#principles">Key Principles</a>
+    <a href="#dates">Key Dates</a>
+  </div>
+</section>
+
+<section id="update">
+  <h2>Guidelines Update</h2>
+
+  <div class="notice-box">
+    <p>
+      Final conference-specific instructions may be updated closer to the
+      system-paper deadline. Participants should check this page before preparing
+      the final camera-ready version.
+    </p>
+  </div>
+</section>
+
+<section id="submission-guidelines">
+  <h2>Paper Submission Guidelines</h2>
+
+  <div class="guidelines-grid">
+    <div class="guideline-card">
+      <div class="guideline-icon">
+        <i class="bi bi-file-earmark-text"></i>
+      </div>
+      <h3>Length</h3>
+      <p>
+        System description papers should be at most <strong>4 pages</strong>,
+        excluding references. References are unlimited.
+      </p>
+    </div>
+
+    <div class="guideline-card">
+      <div class="guideline-icon">
+        <i class="bi bi-diagram-3"></i>
+      </div>
+      <h3>Scope</h3>
+      <p>
+        The paper should describe the submitted system, participated subtask,
+        data usage, model configuration, official scores, and main findings.
+      </p>
+    </div>
+
+    <div class="guideline-card">
+      <div class="guideline-icon">
+        <i class="bi bi-code-slash"></i>
+      </div>
+      <h3>Reproducibility</h3>
+      <p>
+        Authors should report enough implementation details to reproduce the
+        main system configuration, including preprocessing, hyperparameters,
+        libraries, and external resources.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="structure">
+  <h2>Recommended Paper Structure</h2>
+
+  <ol class="structure-list">
+    <li>
+      <strong>Abstract.</strong>
+      Briefly summarize the system, selected subtask or subtasks, method,
+      official results, and main findings.
+    </li>
+
+    <li>
+      <strong>Introduction.</strong>
+      Describe the KnowledgeGraphEval 2026 task, the Arabic information extraction
+      setting addressed by your system, the system strategy, ranking, challenges,
+      and code URL when available.
+    </li>
+
+    <li>
+      <strong>Background.</strong>
+      Summarize the task setup, input and output format, dataset details,
+      participated subtasks, and relevant related work.
+    </li>
+
+    <li>
+      <strong>System Overview.</strong>
+      Describe the model architecture, algorithms, prompting strategy,
+      fine-tuning approach, retrieval method, external resources, and how the
+      system addresses entity recognition, relation extraction, or joint extraction.
+      Distinguish multiple submitted systems or configurations clearly.
+    </li>
+
+    <li>
+      <strong>Experimental Setup.</strong>
+      Report data split usage, preprocessing, tokenization, hyperparameters,
+      external tools and libraries with versions, decoding, post-processing,
+      and the official task metrics.
+    </li>
+
+    <li>
+      <strong>Results.</strong>
+      Present official metrics and rankings. Include ablations, comparisons,
+      per-domain analysis, per-relation analysis, error analysis, and post-submission
+      experiments when useful. Clearly separate official results from later experiments.
+    </li>
+
+    <li>
+      <strong>Conclusion.</strong>
+      Summarize the system, limitations, results, and future work.
+    </li>
+
+    <li>
+      <strong>Acknowledgments.</strong>
+      Thank contributors, grants, reviewers, institutions, and supporting
+      organizations where appropriate.
+    </li>
+
+    <li>
+      <strong>Appendix.</strong>
+      Include low-level implementation details, extended hyperparameters,
+      prompts, extra examples, and additional results that support replication
+      but are not essential to the main paper.
+    </li>
+  </ol>
+</section>
+
+<section id="formatting">
+  <h2>Formatting Requirements</h2>
+
+  <div class="subtask-card">
+    <ul>
+      <li>
+        Use the official <strong>ACL-style conference template</strong>.
+      </li>
+
+      <li>
+        Follow
+        <a href="https://acl-org.github.io/ACLPUB/formatting.html"
+          target="_blank">
+          ACL formatting guidelines
+        </a>
+        for page size, margins, fonts, tables, figures, citations,
+        and references.
+      </li>
+
+      <li>
+        Do not modify the style files or use templates from other conferences.
+      </li>
+
+      <li>
+        Recommended title format:
+        <strong>&lt;Team Name&gt; at KnowledgeGraphEval-2026: &lt;Your Contribution&gt;</strong>. 
+
+      </li>
+<li>
+  Team names must be <strong>simple and one word only.</strong> <br>
+  <b>The organizers may request participants to change the team name later.</b>
+</li>
+
+      <li>
+        Cite the relevant KnowledgeGraphEval datasets and task resources used
+        in your submitted system.
+      </li>
+
+      <li>
+        Mention whether the system participated in Subtask 1, Subtask 2,
+        Subtask 3, or multiple subtasks.
+      </li>
+    </ul>
+
+    <a class="button"
+       href="https://github.com/acl-org/acl-style-files"
+       target="_blank">
+       ACL Conference Template
+    </a>
+  </div>
+</section>
+
+<section id="principles">
+  <h2>Key Principles</h2>
+
+  <div class="principles-list">
+    <div class="principle-item">
+      <h4>Replicability</h4>
+      <p>
+        Provide enough implementation detail to reproduce the submitted system.
+      </p>
+    </div>
+
+    <div class="principle-item">
+      <h4>Analysis</h4>
+      <p>
+        Emphasize findings, ablations, multiple runs, and error analysis rather
+        than reporting rankings only.
+      </p>
+    </div>
+
+    <div class="principle-item">
+      <h4>Clarity</h4>
+      <p>
+        Summarize the task briefly and avoid duplicating the shared task overview paper.
+      </p>
+    </div>
+
+    <div class="principle-item">
+      <h4>Specificity</h4>
+      <p>
+        For standard algorithms, a citation is usually enough. Use detailed space
+        for KnowledgeGraphEval-specific choices.
+      </p>
+    </div>
+
+    <div class="principle-item">
+      <h4>Space Management</h4>
+      <p>
+        Move detailed parameters, prompts, and extended hyperparameters to the
+        appendix when space is limited.
+      </p>
+    </div>
+
+    <div class="principle-item">
+      <h4>Result Transparency</h4>
+      <p>
+        Clearly distinguish official results from post-submission experiments
+        or additional analyses.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="submission-info">
+  <h2>Submission Information</h2>
+
+  <div class="resource-list">
+    <a href="https://github.com/acl-org/acl-style-files"
+       target="_blank" class="resource-item">
+      <span class="resource-icon">
+        <i class="bi bi-file-earmark-text"></i>
+      </span>
+      <span>ACL Conference Template</span>
+    </a>
+
+    <a href="#" target="_blank" class="resource-item">
+      <span class="resource-icon">
+        <i class="bi bi-upload"></i>
+      </span>
+      <span>Submission Portal Coming Soon</span>
+    </a>
+
+    <a href="index.html#subtasks" class="resource-item">
+      <span class="resource-icon">
+        <i class="bi bi-diagram-3"></i>
+      </span>
+      <span>Subtask Details</span>
+    </a>
+
+    <a href="FAQ.html" class="resource-item">
+      <span class="resource-icon">
+        <i class="bi bi-question-circle"></i>
+      </span>
+      <span>FAQ</span>
+    </a>
+  </div>
+</section>
+
+
+</main>
+
+<footer>
+  <p>
+    KnowledgeGraphEval 2026 — Paper Guidelines
+  </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

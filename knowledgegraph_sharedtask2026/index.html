@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KnowledgeGraphEval 2026</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .dates-list {
+      margin: 20px 0 0;
+      padding-left: 24px;
+      line-height: 1.8;
+    }
+
+    .dates-list li {
+      margin-bottom: 12px;
+    }
+
+    .organizers-list {
+      margin: 20px 0 0;
+      padding-left: 24px;
+      line-height: 1.8;
+    }
+
+    .organizers-list li {
+      margin-bottom: 10px;
+    }
+
+    /* =========================
+       Responsive Fixes
+       ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .table-responsive {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border-radius: 10px;
+    }
+
+    .table-responsive table {
+      width: max-content;
+      min-width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table-responsive th,
+    .table-responsive td {
+      white-space: nowrap;
+    }
+
+    .resource-list {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .resource-list a,
+    .resource-list span {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .ner-example-box img,
+    .relation-example-box img {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 10px;
+      }
+
+      nav a {
+        font-size: 15px;
+        padding: 8px 10px;
+      }
+
+      .conference-link {
+        width: 100%;
+        text-align: center;
+      }
+
+      main {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      section,
+      .box,
+      .subtask-card,
+      .subtask-panel,
+      .overview-text-box,
+      .ner-example-box,
+      .relation-example-box {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .subtask-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .ner-example-box img,
+      .relation-example-box img {
+        width: 100% !important;
+      }
+
+      .resource-list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+
+      .resource-item {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .table-responsive {
+        border: 1px solid #ddd;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="https://arabicnlp2026.sigarab.org/"
+     target="_blank"
+     class="conference-link">
+     &#8599; ArabicNLP 2026 Conference  </a>
+
+  <a href="index.html#registration">Registration</a>
+  <a href="index.html#overview">Overview</a>
+  <a href="index.html#subtasks">Subtasks</a>
+  <a href="index.html#dates">Dates</a>
+  <a href="paper_guidelines.html">Paper Guidelines</a>
+  <a href="submission_rules.html">Submission</a>
+  <a href="FAQ.html">FAQ</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="https://forms.gle/xGuSr76W6jnxV7At9" class="register-link">Register</a>
+</nav>
+
+<header>
+  <div class="logo-container">
+    <img src="logo.png" alt="KnowledgeGraphEval 2026 Logo">
+  </div>
+</header>
+
+<main>
+
+<section id="registration">
+  <h2>Registration</h2>
+
+  <div class="box">
+    <p>
+      Registration for <strong>KnowledgeGraphEval 2026</strong> is now open until
+      <strong>20 July 2026</strong>.
+      Registered participants will receive access to the datasets,
+      detailed task guidelines, and Codabench submission links.
+    </p>
+
+    <p>
+      For further details you can reach us by
+      <a href="mailto:KnowledgeGraphEval@gmail.com">
+        KnowledgeGraphEval@gmail.com
+      </a>
+    </p>
+
+    <a class="button"
+       href="https://forms.gle/xGuSr76W6jnxV7At9"
+       target="_blank">
+       Registration Link
+    </a>
+  </div>
+</section>
+
+<section id="overview">
+  <h2>Overview</h2>
+
+  <p>
+    <strong>KnowledgeGraphEval 2026</strong> is a new and innovative shared task,
+    and the first at ArabicNLP dedicated to knowledge graph construction from text.
+    The task focuses on extracting entities and semantic relations from Arabic text
+    in order to build structured and machine-readable knowledge representations.
+  </p>
+
+  <p>
+    Knowledge graphs have become a fundamental component of modern AI and NLP systems.
+    They are widely used in web search, question answering, semantic search,
+    information retrieval, and Retrieval-Augmented Generation (RAG) systems
+    built on Large Language Models (LLMs).
+  </p>
+
+  <p>
+    Despite their growing importance, Arabic knowledge graph construction remains
+    significantly underexplored. KnowledgeGraphEval 2026 aims to bridge this gap
+    by introducing realistic and challenging evaluation scenarios for Arabic
+    information extraction and structured knowledge generation.
+  </p>
+
+  <div class="overview-text-box" style="margin-top: 26px; background: #f8fbfb; border: 1px solid #dfeaea; border-left: 5px solid #22b8aa; border-radius: 10px; padding: 22px;">
+    <p>
+      <strong>Arabic knowledge graph construction:</strong>
+      The first ArabicNLP shared task dedicated to extracting structured knowledge graphs from Arabic text.
+    </p>
+
+    <p>
+      <strong>Cross-domain evaluation:</strong>
+      Systems are evaluated under both in-domain and out-of-domain settings to measure robustness and generalization.
+    </p>
+
+    <p>
+      <strong>Entity and relation extraction:</strong>
+      The shared task decomposes knowledge graph construction into named entity recognition and semantic relation extraction.
+    </p>
+
+    <p style="margin-bottom: 0;">
+      <strong>LLM and retrieval-ready benchmark:</strong>
+      Supports modern NLP pipelines including LLMs, RAG systems, and scalable knowledge-intensive applications.
+    </p>
+  </div>
+</section>
+
+<section id="subtasks">
+  <h2>Subtasks</h2>
+
+  <p>
+    KnowledgeGraphEval 2026 includes two complementary subtasks. Participants may
+    participate in any subset of the subtasks.
+  </p>
+
+  <div class="subtask-card">
+    <div class="subtask-header">
+      <div class="subtask-icon">1</div>
+      <div class="subtask-title">
+        <h3>
+          AdaptNER
+          <span style="color:#f28c18; font: inherit;">|</span>
+          Cross-Domain Named Entity Recognition
+        </h3>
+        <span>Adapting NER across different domains</span>
+      </div>
+    </div>
+
+    <p>
+      This subtask focuses on <strong>cross-domain adaptation for Arabic Named Entity Recognition (NER)</strong>.
+      Participants are required to develop NER systems that can adapt from the
+      <strong><a href="https://aclanthology.org/2022.lrec-1.387.pdf">Wojood NER corpus</a></strong>
+      to unseen domains in
+      <strong><a href="https://aclanthology.org/2025.findings-acl.382/">Konooz</a></strong>.
+      The goal is to evaluate how effectively <strong>BERT-based NER</strong> models generalize across different Arabic domains.
+      Participants are expected to use the training and development splits of Wojood to build their systems.
+      The models will then be evaluated on <strong>ten unseen domains from Konooz</strong>.
+      Participants are encouraged to apply domain adaptation methodologies existing in the literature to improve model robustness and cross-domain generalization.
+    </p>
+
+    <div class="subtask-grid">
+      <div class="subtask-panel">
+        <h4>Dataset</h4>
+
+        <p>
+          Participants will be provided with the training and development splits of the
+          <strong>
+            <a href="https://aclanthology.org/2022.lrec-1.387.pdf" target="_blank">
+              Wojood NER corpus
+            </a>
+          </strong>,
+          which contain approximately <strong>448K tokens</strong> and
+          <strong>72K entity mentions</strong> annotated with
+          <strong>21 entity types</strong>.
+          These splits will be used to train the NER models. The trained models should
+          then be adapted. The evaluation should be conducted on
+          <strong>
+            <a href="https://aclanthology.org/2025.findings-acl.382/" target="_blank">
+              Konooz MSA
+            </a>
+          </strong>,
+          which covers <strong>10 domains</strong> and contains approximately
+          <strong>50K tokens</strong> selected from the Konooz dataset.
+        </p>
+      </div>
+
+      <div class="subtask-panel">
+        <h4>Format and Evaluation</h4>
+
+        <p>
+          The datasets are provided in standard <strong>CoNLL format</strong>, and
+          participants must generate predictions using sequence-labeling schemes such as
+          <strong>BIO tagging</strong>. Evaluation will be conducted on
+          <strong>nested NER</strong> across <strong>10 different MSA domains</strong> using
+          <strong>entity-level micro F1-score</strong>. A prediction is considered
+          correct only if both the entity span and entity type exactly match the gold
+          annotation.
+        </p>
+      </div>
+
+      <div class="subtask-panel">
+        <h4>Baselines and Resources</h4>
+
+        <p>
+          We provide a baseline system in which a BERT-based model is trained on
+          <strong>Wojood</strong> and evaluated on <strong>Konooz</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="ner-example-box" style="margin: 26px 0 28px; background: #ffffff; border: 1px solid #dfeaea; border-radius: 10px; padding: 18px; box-shadow: 0 3px 10px rgba(0,0,0,0.04);">
+      <h4 style="margin: 0 0 12px; color: #4b4b4b; font-size: 18px;">
+        Figure 1: Example of Arabic Named Entity Recognition Annotation
+      </h4>
+      <img src="NER-example.png" alt="Arabic NER annotation example" style="width: 70%; height: auto; display: block; background: #ffffff; margin: auto;">
+    </div>
+
+    <div class="table-responsive">
+      <table>
+        <tr>
+          <th rowspan="2">Method</th>
+          <th colspan="11">Domains</th>
+        </tr>
+        <tr>
+          <th>Agriculture</th>
+		  <th>Art</th>
+          <th>Economics</th>
+		  <th>Finance</th>
+          <th>Health</th>          
+          <th>History</th>
+          <th>Law</th>
+          <th>Politics</th>
+          <th>Science</th>
+		  <th>Sport</th>
+		  <th>All</th>
+        </tr>
+        <tr>
+          <td>BERT w/o adaptation (AraBERTv02)</td>
+          <td>0.43</td>
+          <td>0.67</td>
+          <td>0.68</td>
+          <td>0.61</td>
+          <td>0.66</td>
+          <td>0.67</td>
+          <td>0.66</td>
+          <td>0.67</td>
+          <td>0.65</td>
+          <td>0.58</td>
+		  <td>0.63</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="resource-list">
+      <a href="https://www.codabench.org/competitions/17349/" target="_blank" class="resource-item">
+        <span class="resource-icon">
+          <i class="bi bi-trophy"></i>
+        </span>
+        <span>CodaBench Competition</span>
+      </a>
+
+      <a href="https://github.com/SinaLab/ArabicNER.git" target="_blank" class="resource-item">
+        <span class="resource-icon">
+          <i class="bi bi-code-slash"></i>
+        </span>
+        <span>Baseline Code</span>
+      </a>
+
+      <a href="submission_rules.html" target="_blank" class="resource-item">
+        <span class="resource-icon">
+          <i class="bi bi-file-earmark-text"></i>
+        </span>
+        <span>Submission Rules</span>
+      </a>
+    </div>
+
+    <div class="resource-list">
+      <span style="font-size:14pt; color:#22b8aa">
+        <i class="bi bi-book"></i><strong> Konooz Paper:</strong>
+      </span>
+
+      <a href="https://aclanthology.org/2025.findings-acl.382.pdf" target="_blank">
+        <span>https://aclanthology.org/2025.findings-acl.382.pdf</span>
+      </a>
+    </div>
+
+    <div class="resource-list">
+      <span style="font-size:14pt; color:#22b8aa">
+        <i class="bi bi-book"></i><strong> Wojood Paper:</strong>
+      </span>
+
+      <a href="https://aclanthology.org/2022.lrec-1.387.pdf" target="_blank">
+        <span>https://aclanthology.org/2022.lrec-1.387.pdf</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="subtask-card">
+    <div class="subtask-header">
+      <div class="subtask-icon">2</div>
+      <div class="subtask-title">
+        <h3>
+          RE
+          <span style="color:#f28c18; font: inherit;">|</span>
+          Relation Extraction
+        </h3>
+        <span>Semantic relation classification between predefined entities</span>
+      </div>
+    </div>
+
+    <p>
+      This subtask focuses on extracting semantic relations between entities in
+      Arabic text. For each sentence, the entity spans are already provided, and
+      participants must predict the correct relation label between each entity pair
+      from a predefined set of relation types, or assign
+      no-relation when no valid relation exists. Using the example in Figure 1,
+      participants are expected to extract the relations shown in Figure 2.
+    </p>
+
+    <div class="subtask-grid">
+      <div class="subtask-panel">
+        <h4>Dataset</h4>
+
+        <p>
+          Participants will use
+          <strong><a href="https://aclanthology.org/2025.emnlp-main.1741.pdf">WojoodRelations</a></strong>,
+          a large-scale Arabic benchmark for semantic relation extraction that extends the original
+          <strong>Wojood NER corpus</strong> with annotated semantic relations between
+          entities. The dataset includes <strong>40 fine-grained relation types</strong>,
+          where each instance is represented as a structured
+          <strong>(subject, relation, object)</strong> triple. The corpus is divided into
+          <strong>70% training</strong> and
+          <strong>30% test</strong> splits. The final official
+          evaluation will be conducted on the held-out
+          <strong>30% test set</strong>.
+        </p>
+      </div>
+
+      <div class="subtask-panel">
+        <h4>Format and Evaluation</h4>
+
+        <p>
+          Participants will be provided with the
+          <strong>WojoodRelations test set</strong>, where each sentence contains
+          predefined entity mentions and requires predicting a relation label
+          from a fixed set of relation types or
+          <strong>no-relation</strong>. Submissions must be formatted as a
+          <strong>text file</strong>, with each line containing the
+          <strong>sentence ID</strong> and
+          <strong>predicted relation label</strong>. System performance will be evaluated
+          using <strong>micro F1-score</strong>, where a prediction is correct
+          only if it exactly matches the gold relation label.
+        </p>
+      </div>
+
+      <div class="subtask-panel">
+        <h4>Baselines and Resources</h4>
+
+        <p>
+          To support participation in the shared task, we provide two baselines:
+        </p>
+
+        <ul>
+          <li>
+            A fine-tuned <strong>BERT-based</strong> model for sentence-level
+            relation classification.
+          </li>
+
+          <li>
+            An <strong>LLM-based</strong> few-shot retrieval-augmented generation
+            (RAG) approach that uses retrieved examples to predict the relation label.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="relation-example-box" style="margin: 26px 0 28px; background: #ffffff; border: 1px solid #dfeaea; border-radius: 10px; padding: 18px; box-shadow: 0 3px 10px rgba(0,0,0,0.04);">
+      <h4 style="margin: 0 0 12px; color: #4b4b4b; font-size: 18px;">
+        Figure 2: Example of Arabic Relation Extraction Annotation
+      </h4>
+      <img src="relation-example-highres.png" alt="Arabic relation extraction annotation example" style="width: 70%; height: auto; display: block; background: #ffffff; image-rendering: auto; margin: auto;">
+    </div>
+
+    <div class="table-responsive">
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>F1-Score</th>
+        </tr>
+        <tr>
+          <td>BERT baseline (ArBERTv2)</td>
+          <td>88.91</td>
+          <td>88.65</td>
+          <td>88.61</td>
+        </tr>
+        <tr>
+          <td>LLM baseline (gpt-4o)</td>
+          <td>89.25</td>
+          <td>83.66</td>
+          <td>85.78</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="resource-list">
+<a href="https://www.codabench.org/competitions/17338/" target="_blank" class="resource-item">
+  <span class="resource-icon">
+    <i class="bi bi-trophy"></i>
+  </span>
+  <span>CodaBench Competition</span>
+</a>
+<a href="https://github.com/SinaLab/ArabicNLI-RE" target="_blank" class="resource-item">
+  <span class="resource-icon">
+    <i class="bi bi-code-slash"></i>
+  </span>
+  <span>Baseline Code</span>
+</a>
+      <a href="submission_rules.html" target="_blank" class="resource-item">
+        <span class="resource-icon">
+          <i class="bi bi-file-earmark-text"></i>
+        </span>
+        <span>Submission Rules</span>
+      </a>
+    </div>
+
+    <div class="resource-list">
+      <span style="font-size:14pt; color:#22b8aa">
+        <i class="bi bi-book"></i><strong> WojoodRelations Paper:</strong>
+      </span>
+
+      <a href="https://aclanthology.org/2025.emnlp-main.1741.pdf" target="_blank">
+        <span>https://aclanthology.org/2025.emnlp-main.1741.pdf</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="dates">
+  <h2>Important Dates</h2>
+
+  <ul class="dates-list">
+    <li>
+      <strong>May 16, 2026:</strong>
+      Release of the shared task website and registration form.
+    </li>
+
+    <li>
+      <strong>June 5, 2026:</strong>
+      Release of training/development data and evaluation scripts.
+    </li>
+
+    <li>
+      <strong>July 20, 2026:</strong>
+      Registration Deadline and Blind Test Data Release.
+    </li>
+
+    <li>
+      <strong>July 30, 2026:</strong>
+      Official results and rankings are released.
+    </li>
+
+    <li>
+      <strong>August 22, 2026:</strong>
+      Deadline for Camera-ready for Participant System Description Papers.
+    </li>
+
+    <li>
+      <strong>October 24-29, 2026:</strong>
+      ArabicNLP 2026 / EMNLP 2026 - Shared task overview and participant systems presented in Budapest, Hungary.
+    </li>
+  </ul>
+</section>
+
+<section id="organizers">
+  <h2>Organizers</h2>
+
+  <ul class="organizers-list">
+    <li>
+      <strong>Alaa Aljabari</strong>,
+      Birzeit University, Palestine
+    </li>
+
+    <li>
+      <strong>Nagham Hamad</strong>,
+      Birzeit University, Palestine
+    </li>
+
+    <li>
+      <strong>Abdellah El Mekki</strong>,
+      University of British Columbia, Canada
+    </li>
+
+    <li>
+      <strong>Muhammad Abdul-Mageed</strong>,
+      University of British Columbia, Canada
+    </li>
+
+    <li>
+      <strong>Imed Zitouni</strong>,
+      Meta
+    </li>
+
+    <li>
+      <strong>Sanjay Chawla</strong>,
+      QCRI, Hamad Bin Khalifa University (HBKU), Qatar
+    </li>
+
+    <li>
+      <strong>Mustafa Jarrar</strong>,
+      Hamad Bin Khalifa University (HBKU), Qatar
+    </li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>
+    KnowledgeGraphEval 2026 &mdash; Arabic Knowledge Graph Construction Shared Task
+  </p>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

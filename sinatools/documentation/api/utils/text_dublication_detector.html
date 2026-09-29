@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sinatools.utils.text_dublication_detector &mdash; SinaTools 1 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="sinatools.arabiner" href="../arabiner.html" />
+    <link rel="prev" title="sinatools.utils.text_transliteration" href="text_transliteration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SinaTools
+          </a>
+              <div class="version">
+                Latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+  <li class="toctree-l1"><a class="reference internal" href="../../Overview.html">Overview</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../../installation.html">Getting Started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modules:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">Python API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../morphology.html">sinatools.morphology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataDownload.html">sinatools.DataDownload</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../utils.html">sinatools.utils</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="parser.html">sinatools.utils.parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implication.html">sinatools.utils.implication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="similarity.html">sinatools.utils.similarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text_transliteration.html">sinatools.utils.text_transliteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tokenizer.html">sinatools.utils.tokenizer</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">sinatools.utils.text_dublication_detector</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ner.html">sinatools.ner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../relations.html">sinatools.relations</a>
+<li class="toctree-l2"><a class="reference internal" href="../wsd.html">sinatools.wsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synonyms.html">sinatools.synonyms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../semantic_relatedness.html">sinatools.semantic_relatedness</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli_tools.html">sinatools Command Line</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="../../License.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SinaTools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api.html">Python API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../utils.html">sinatools.utils</a></li>
+      <li class="breadcrumb-item active">sinatools.utils.text_dublication_detector</li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-sinatools.utils.text_dublication_detector">
+<span id="SinaTools-utils-text_dublication_detector"></span><h1>sinatools.utils.text_dublication_detector<a class="headerlink" href="#module-sinatools.utils.text_dublication_detector" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="sinatools.utils.text_dublication_detector">
+<code class="sig-prename descclassname">sinatools.utils.text_dublication_detector.</code><code class="sig-name descname">removal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_file</span></em>, <em class="sig-param"><span class="n">column_name</span></em>, <em class="sig-param"><span class="n">final_file_name</span></em>, <em class="sig-param"><span class="n">deleted_file_name</span></em>, <em class="sig-param"><span class="n">similarity_threshold</span></em> <span class="sig-paren">)</span><a class="headerlink" href="#sinatools.utils.tokenizer.tokenizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is designed to identify dublicate text in a given corpora/text. It processes a CSV file of sentences to identify and remove duplicate sentences based on a specified threshold. We used cosine similarity to measure similarity between words and sentences. The method saves the filtered results and the identified duplicates to separate files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>csv_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The CSV file contains Arabic text that needs to be cleaned.</p></li>
+<li><p><strong>column_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – This is the name of the column containing the text that needs to be checked for duplicate removal.</p></li>
+<li><p><strong>final_file_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – This is the name of the CSV file that will contain the data after duplicate removal.</p></li>
+<li><p><strong>deleted_file_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – This is the name of the file that will contain all the duplicate records that are deleted.</p></li>
+<li><p><strong>similarity_threshold</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – This is a floating-point number. The default value is 0.8, indicating the percentage of similarity that the function should use when deleting duplicates from the text column.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>csv files.</p>
+</dd>
+</dl>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sinatools.utils.text_dublication_detector</span> <span class="kn">import</span> <span class="n">removal</span>
+<span class="n">removal</span><span class="p">(</span><span class="s2">&quot;/path/to/csv/file1&quot;</span><span class="p">,</span> <span class="s2">sentences</span><span class="p">,</span> <span class="s2">&quot;/path/to/csv/file2&quot;</span><span class="p">,</span> <span class="s2">0.8</span><span class="p">)</span></pre></div>
+</div>
+</dd></dl>
+
+</div>
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tokenizer.html" class="btn btn-neutral float-left" title="sinatools.utils.text_transliteration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ner.html" class="btn btn-neutral float-right" title="sinatools.ner" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Birzeit University.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

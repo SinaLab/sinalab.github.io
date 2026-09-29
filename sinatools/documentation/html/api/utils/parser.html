@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sinatools.utils.parser &mdash; SinaTools 1 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="sinatools.utils.implication" href="implication.html" />
+    <link rel="prev" title="sinatools.utils" href="../utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SinaTools
+          </a>
+              <div class="version">
+                1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli_tools.html">SinaTools Command Line</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">Python API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../morphology.html">sinatools.morphology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataDownload.html">sinatools.DataDownload</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../utils.html">sinatools.utils</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">sinatools.utils.parser</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="implication.html">sinatools.utils.implication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jaccard.html">sinatools.utils.jaccard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text_transliteration.html">sinatools.utils.text_transliteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tokenizer.html">sinatools.utils.tokenizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tokenizer.html">sinatools.utils.corpus_tokenizer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arabiner.html">sinatools.arabiner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../salma.html">sinatools.salma</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../License.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SinaTools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api.html">Python API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../utils.html">sinatools.utils</a></li>
+      <li class="breadcrumb-item active">sinatools.utils.parser</li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-sinatools.utils.parser">
+<span id="SinaTools-utils-parser"></span><h1>sinatools.utils.parser<a class="headerlink" href="#module-sinatools.utils.parser" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="sinatools.utils.parser.arStrip">
+<code class="sig-prename descclassname">sinatools.utils.parser.</code><code class="sig-name descname">arStrip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">diacs</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">smallDiacs</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">shaddah</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">digit</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">alif</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">specialChars</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sinatools.utils.parser.arStrip" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes Arabic diacritics, small diacritcs, shaddah, Latin and Arabic digits, and unify alif.
+And remove special characters, spaces, underscore and Arabic tatwelah from the input text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – Arabic text to be processed.</p></li>
+<li><p><strong>diacs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – flag to remove Arabic diacretics [ ًٌٍَُِْ] (default is True).</p></li>
+<li><p><strong>smallDiacs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – flag to remove small diacretics (default is True).</p></li>
+<li><p><strong>shaddah</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – flag to remove shaddah (default is True).</p></li>
+<li><p><strong>digit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – flag to remove Latin and Arabic digits (default is True).</p></li>
+<li><p><strong>alif</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – flag to unify alif (default is True).</p></li>
+<li><p><strong>specialChars</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – flag to remove special characters (default is True).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>stripped text.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sinatools.utils</span> <span class="kn">import</span> <span class="n">parser</span>
+<span class="n">processed_text</span> <span class="o">=</span><span class="n">parser</span><span class="o">.</span><span class="n">arStrip</span><span class="p">(</span><span class="s1">&#39;2023الجو جميلُ&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">processed_text</span><span class="p">)</span>
+
+<span class="c1">#putput</span>
+<span class="n">الجو</span> <span class="n">جميل</span>
+
+<span class="n">name</span> <span class="o">=</span><span class="n">parser</span><span class="o">.</span><span class="n">arStrip</span><span class="p">(</span><span class="s1">&#39;أَلَمۡ یَأۡنِ لِلَّذِینَ ءَامَنُوۤا۟ أَن تَخۡشَعَ قُلُوبُهُمۡ لِذِكۡرِ ٱللَّهِ وَمَا نَزَلَ مِنَ ٱلۡحَقِّ وَلَا یَكُونُوا۟ كَٱلَّذِینَ أُوتُوا۟ ٱلۡكِتَـٰبَ مِن قَبۡلُ فَطَالَ عَلَیۡهِمُ ٱلۡأَمَدُ فَقَسَتۡ قُلُوبُهُمۡۖ وَكَثِیر مِّنۡهُمۡ فَـسِقُونَ&#39;</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span>  <span class="kc">True</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="c1">#putput</span>
+<span class="n">الم</span> <span class="n">یان</span> <span class="n">للذین</span> <span class="n">ءامنوا</span> <span class="n">ان</span> <span class="n">تخشع</span> <span class="n">قلوبهم</span> <span class="n">لذكر</span> <span class="n">الله</span> <span class="n">وما</span> <span class="n">نزل</span> <span class="n">من</span> <span class="n">الحق</span> <span class="n">ولا</span> <span class="n">یكونوا</span> <span class="n">كالذین</span> <span class="n">اوتوا</span> <span class="n">الكتٰب</span> <span class="n">من</span> <span class="n">قبل</span> <span class="n">فطال</span> <span class="n">علیهم</span> <span class="n">الامد</span> <span class="n">فقست</span> <span class="n">قلوبهم</span> <span class="n">وكثیر</span> <span class="n">منهم</span> <span class="n">فسقون</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sinatools.utils.parser.remove_latin">
+<code class="sig-prename descclassname">sinatools.utils.parser.</code><code class="sig-name descname">remove_latin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sinatools.utils.parser.remove_latin" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes all Latin characters from the input text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The input text.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The text without Latin characters.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>outputString (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>)</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If an error occurs during processing, the original text is returned.</p>
+</div>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>from sinatools.utils import parser
+return parser.remove_latin(&quot;miojkdujhvaj1546545spkdpoqfoiehwv nWEQFGWERHERTJETAWIKUYFC&quot;)
+
+#output
+1546545
+
+output = parser.remove_latin(&quot;أصل المسمى «تخطيط موارد المؤسسة» هو تعريب لمسمى التخطيط باللغة الإنجليزية Enterprise Resource Planning&quot;)
+print(output)
+
+#output
+أصل المسمى «تخطيط موارد المؤسسة» هو تعريب لمسمى التخطيط باللغة الإنجليزية
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sinatools.utils.parser.remove_punctuation">
+<code class="sig-prename descclassname">sinatools.utils.parser.</code><code class="sig-name descname">remove_punctuation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sinatools.utils.parser.remove_punctuation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes punctuation marks from the text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The input text.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The output text without punctuation marks.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sinatools.utils</span> <span class="kn">import</span> <span class="n">parser</span>
+<span class="k">return</span> <span class="n">parser</span><span class="o">.</span><span class="n">remove_punctuation</span><span class="p">(</span><span class="s2">&quot;te!@#،$</span><span class="si">%%</span><span class="s2">؟st&quot;</span><span class="p">)</span>
+
+<span class="c1">#output</span>
+<span class="n">test</span>
+
+<span class="n">output</span><span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">remove_punctuation</span><span class="p">(</span><span class="s2">&quot; {يَا أَيُّهَا الَّذِينَ آمَنُوا لِيَسْتَأْذِنْكُمُ ....}&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+
+<span class="c1">#output</span>
+<span class="n">يَا</span> <span class="n">أَيُّهَا</span> <span class="n">الَّذِينَ</span> <span class="n">آمَنُوا</span> <span class="n">لِيَسْتَأْذِنْكُمُ</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../utils.html" class="btn btn-neutral float-left" title="sinatools.utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="implication.html" class="btn btn-neutral float-right" title="sinatools.utils.implication" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Birzeit University.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

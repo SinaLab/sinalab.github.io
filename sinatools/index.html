@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/ico" href="./favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/Fira-Sans-font.css" />
+    <link rel="stylesheet" href="../main.css?v=11" />
+    <link rel="stylesheet" href="./sinatools.css?v=11" />
+    <script src="./sinatools.js?v=13"></script>
+
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1, viewport-fit=cover"
+    />
+    <!--viewport-fit=cover - for iPhone X notch-->
+
+    <meta
+      property="og:image"
+      content="https://sina.birzeit.edu/Images/v2.jpg"
+    />
+    <!-- <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" /> -->
+    <meta property="og:image:alt" content="SinaLab logo" />
+    <meta property="header" content="SinaTools" />
+    <meta property="og:url" content="https://sina.birzeit.edu/sinatools/" />
+    <meta property="og:type" content="WebSite" />
+    <meta
+      property="og:description"
+      content="Open-source toolkit for Arabic NLP and NLU,  available through Python APIs, command line interfaces, Colab notebooks, and online demos, allowing easy integration into system workflows.
+    "
+    />
+    <meta property="og:title" content="SinaTools: Toolkit for Arabic NLP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://sina.birzeit.edu/Images/v2.jpg"
+    />
+
+    <meta
+      property="image"
+      content="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+    />
+    <meta property="image:width" content="200" />
+    <meta property="image:height" content="200" />
+
+    <meta property="image:alt" content="SinaLab logo" />
+    <meta property="url" content="https://sina.birzeit.edu/sinatools/" />
+    <meta property="type" content="WebSite" />
+    <meta
+      property="description"
+      content="Open-source toolkit for Arabic NLP and NLU,  available through Python APIs, command line interfaces, Colab notebooks, and online demos, allowing easy integration into system workflows."
+    />
+    <meta name="author" content="SinaLab - Birzeit University" />
+    <meta
+      name="keywords"
+      content="Free, online, open sources, SinaTools, relation extraction, LLMs, algorithms, ALMA, Annotation tools, Arabic, Arabic Dictionary, Arabic Lexicographic Database, Arabic Lexicon, articles, Baladi, BERT, bias, Birzeit University, cleaning, Corpora, Corpus, Curras, Currasat, Data visualisation, dataset, datasets, Deep Learning, Demo, diacratics, Diacritics-aware, dialect, Dialect Lemma, Dialect Lemma, Dialects, dictionaries, Dictionary, Digital archives, Digitisation, Discourse analysis, Document classification, Duplication, emotional content extraction, English, entity, Entity linking, event argument extraction, Event detection, events, Guideline, Hate speech, Hebrew, implication, information retrieval, intents, intersection, Iraqi, Iraqi Dialect Corpus, jaccard similarity, Knowledge Graphs, Knowledge representation, language corpora, Languages, Large Language Models, Lebanese, Lebanese Dialect Corpus, Lemmas, Lemmatization, Lexicon, Lexicons, Libyan, Libyan Dialect Corpus, Linked Data, Lisan, Machine translation, matching, Media, metadata, Middle Eastern history, misinformation, models, Modern Standard Arabic, Morphological Solution, Morphology, MSA, MSA, MSA lemma, Mustafa Jarrar, Nabra, Nakba narratives, Nakba testimonies, Named Entity Recognition, narratives, Natural Language Generation, NER, Nested, News, NLP, NLU, offensive language, online, ontologies, Open-Source, organizations, Palestine, Palestinian, Palestinian Dialect Corpus, Palestinian Nakba, paraphrasing, Part-Of-Speech, Part-of-speech Tagging, POS, Pre-trained model, Prefix, Projects, Qabas, relationship extraction, Research, resources, SALMA, Semantic Relatedness, semantic tagging, sense, Sentiment analysis, similarity, SinaLab, stem, Sudanese, Sudanese Dialect Corpus, suffix, summarisation, Synonyms, Synonyms Evaluate, Synonyms Extraction, Syrian, Syrian Dialect Corpus, Tool, topic modeling, union, Vocabularies, Welsh, Wojood, Word Sense Disambiguation, Workshop, WSD, Yemeni, Yemeni Dialect Corpus, أخبار, ألمى, اتحاد, استخراج المترادفات, التعرف على الكينونات, اللغة العربية, اللغة العربية المعاصرة, انجليزي, بحث علمي, تقاطع, جامعة بيرزيت, خصائص صرفية, خوارزميات, دليل معياري, ذم, سلمى, سينا, شبكة بيانات, شبكة بيانات معجمية, عامية, عامية إماراتية, عامية سودانية, عامية سورية, عامية عراقية, عامية فلسطينية, عامية لبنانية, عامية ليبية, عامية مصرية, عامية يمنية, عربي, فصحى, فصحى حديثة, فلسطين, فهم الدلالة, قاموس عربي, قبس, قسم الكلام, كراسات, كراهية, محلل دلالي, مدخلات, مدخلات معجمية, مدخلة, مدخلة عامية, مدخلة فصحى, مدونات, مدونات عامية, مدونة, مصادر, مصطفى جرار, معاجم, معالجة اللغة الطبيعية, معجم, معجم اللغة العربية, معجم عربي, معجم مجاني, مفتوح المصدر, مقارنة, مكنز, مكنز شجري صرفي, نكبة, نموذج, وجود, "
+    />
+    <link
+      rel="shortcut icon"
+      href="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+      type="image/x-icon"
+    />
+    <title>SinaTools: Toolkit for Arabic NLP</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-SV0Y0V4JTT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SV0Y0V4JTT');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  </head>
+
+  <body
+    id="myPage"
+    data-spy="scroll"
+    data-target=".navbar"
+    data-offset="60"
+    style=""
+  >
+    <div class="contect-section" id="content">
+      <nav class="navbar navbar-default bg-light">
+        <div class="sina-header">
+          <div class="image-holder" onclick="window.open('../index.html');">
+            <img
+              src="../Images/arOntLogo.png"
+              class="img-responsive logo"
+              alt="logo"
+            />
+            <div class="vertical-line"></div>
+            <p class="title">SinaLab</p>
+          </div>
+        </div>
+        <div class="menu">
+          <ul class="nav text-center navigation-bar">
+            <li><a href="../news/index.html">News</a></li>
+            <li><a href="../index.html#team">Team</a></li>
+            <li><a href="../resources/index.html">Resources</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="intro-section" style="padding-top: 20px">
+        <p class="intro-section-title">SinaTools</p>
+        <p style="font-size: 120%;">
+          <b>Open-source Toolkit for Arabic NLP</b>
+        </p>
+        <p>Python APIs, command lines, colabs, online demos, and many datasets. Outperformed all related tools in all tasks.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 5px">
+          <a href="./documentation" class="icons_list1">Documentation</a>
+          <a href="https://github.com/SinaLab/sinatools" class="icons_list1"
+            >GitHub</a
+          >
+          <a href="https://colab.research.google.com/drive/1KKj4tVRR45sYrN5mEvLAdMFzS-HnPFYf?usp=sharing" class="icons_list1"
+            >Colab</a
+          >		  
+          <a
+            href="https://sina.birzeit.edu/sinatools/documentation/cli_tools/DataDownload/DataDownload.html"
+            class="icons_list1"
+            >Download</a
+          >
+          <a
+            href="https://sina.birzeit.edu/sinatools/documentation/License.html"
+            class="icons_list1"
+            >MIT License</a
+          >
+          <a
+            href="https://github.com/SinaLab/sinatools/issues"
+            class="icons_list1"
+          >
+            Discussion
+            <!--<img src="../Images/icons8-discussion-24.png"
+          />-->
+            <img src="../Images/BlueIcon.png"
+          /></a>
+        </div>
+      </div>
+      <!--
+		<div style="text-align: center;">	
+			<div class="settings-container">
+				<img src="../Images/SinaToolsModules.jpg" alt="Settings Gear" class="settings-gear">
+				<div class="hole" id="sina_tools">				
+					<span class="name" style="font-size: 19px;">SinaTools</span>
+				</div>
+				<div class="hole" id="lema_pos">				
+					<a href="https://sina.birzeit.edu/alma/" class="name">Lemmatization & POS Tagging</a>
+				</div>
+				<div class="hole" id="ner">
+					<a href="https://sina.birzeit.edu/wojood/" class="name">Named Entity Recognition</a>
+				</div>
+				<div class="hole" id="wsd">
+					<a href="https://sina.birzeit.edu/salma/" class="name">Word Sense Disambiguation</a>
+				</div>
+				<div class="hole" id="semantic_relatednes">
+					<a href="#" class="name" style="font-size:12px;">Semantic Relatednes</a>
+				</div>
+				<div class="hole" id="synonyms">
+					<a href="https://sina.birzeit.edu/synonyms/" class="name" style="font-size:12px;">Synonyms Extraction</a>
+				</div>
+				<div class="hole" id="others">
+					<a href="https://sina.birzeit.edu/resources/index.html" class="name" style="font-size:12px;">Other Modules</a>
+				</div>
+				<div class="hole" id="lemmatizar_module_title">
+					<span class="name" style="font-size: 14px; font-weight:bold;">Lemmatizer & POS tagger:</span>
+				</div>
+				<div class="hole" id="lemmatizar_module_description">
+					<span class="name">quickly and accurately identify the base forms and parts of speech of words using a dictionary of pre-computed word forms and their most frequent morphological solutions, implemented as an efficient hashmap lookup.</span>
+				</div>
+				<div class="hole" id="ner_module_title">
+					<span class="name" style="font-size: 14px; font-weight:bold;">NER:</span>
+				</div>
+				<div class="hole" id="ner_module_description">
+					<span class="name">The NER task in SinaTools identifies and categorizes 21 key entities, like names of people, and organizations.</span>
+				</div>
+				<div class="hole" id="wsd_module_title">
+					<span class="name" style="font-size: 14px; font-weight:bold;">WSD:</span>
+				</div>
+				<div class="hole" id="wsd_module_description">
+					<span class="name">The WSD task in SinaTools determines the correct meaning of a word based on its context in a sentence.</span>
+				</div>
+				<div class="hole" id="semantic_module_title">
+					<span class="name" style="font-size: 14px; font-weight:bold;">Semantic Relatednes:</span>
+				</div>
+				<div class="hole" id="semantic_module_description">
+					<span class="name">Given two sentences, the semantic relatedness task aims to assess the degree of association between two sentences across various dimensions, including meaning, underlying concepts, domain-specificity, topic overlap, or viewpoint alignment.</span>
+				</div>
+				<div class="hole" id="synonyms_module_title">
+					<span class="name" style="font-size: 14px; font-weight:bold;">Synonyms Extraction:</span>
+				</div>
+				<div class="hole" id="synonyms_module_description">
+					<span class="name">The algorithm is designed to extract synonyms from multilingual dictionaries and thesauri.</span>
+				</div>
+				<div class="hole" id="others_module_title">
+					<span class="name" style="font-size: 14px; font-weight:bold;">Other Modules:</span>
+				</div>
+				<div class="hole" id="others_module_description">
+					<span class="name">SinaTools includes utility modules for sentence splitting, diacritic-based matching, text duplicate removal, Arabic Jaccard similarity metrics, Arabic diacritic removal, and transliteration between Arabic and Buckwalter schemas.</span>
+				</div>
+			</div>
+		</div>
+		-->
+
+      <div class="sina-tools-section" style="margin-top: 12px">
+        <div class="settings-container sina-modules-section">
+          <!--<img src="../Images/SinaToolsTest.svg" alt="SinaTools Modules" class="settings-gear"> -->
+          <!--<img src="../Images/SinaToolsModules.jpg" alt="SinaTools Modules" class="settings-gear"> -->
+          <img
+            src="../Images/SinaToolsImg.PNG"
+            alt="SinaTools Modules"
+            class="settings-gear"
+          />
+          <!-- <img src="../Images/SinaToolsModules2.jpg" alt="SinaTools Modules" class="settings-gear"> -->
+          <!-- <div class="hole" id="sina_tools">				
+					<span class="name" style="font-size: 19px;">SinaTools</span>
+				</div>
+				<div class="hole" id="lema_pos">				
+					<a href="https://sina.birzeit.edu/alma/" class="name">Lemmatization & POS Tagging</a>
+				</div>
+				<div class="hole" id="ner">
+					<a href="https://sina.birzeit.edu/wojood/" class="name">Named Entity Recognition</a>
+				</div>
+				<div class="hole" id="wsd">
+					<a href="https://sina.birzeit.edu/salma/" class="name">Word Sense Disambiguation</a>
+				</div>
+				<div class="hole" id="semantic_relatednes">
+					<a href="#" class="name" style="font-size:12px;">Semantic Relatednes</a>
+				</div>
+				<div class="hole" id="synonyms">
+					<a href="https://sina.birzeit.edu/synonyms/" class="name" style="font-size:12px;">Synonyms Extraction</a>
+				</div>
+				<div class="hole" id="others">
+					<a href="https://sina.birzeit.edu/resources/index.html" class="name" style="font-size:12px;">Other Modules</a>
+				</div>-->
+        </div>
+
+        <div class="settings-container sina-modules-description-section">
+          <div class="wojood-container">
+            <span class="intro-section-title" style="font-size: 120% !important"
+              >Modules:</span
+            >
+            <div class="form-horizontal">
+              <div class="normalText">
+                <ul class="services-list">
+                  <li>
+                    <div class="services-list-item">
+                      <input
+                        type="checkbox"
+                        id="p-morph"
+                        class="p-unfolder p-unfolder0"
+                        onclick="change_border('p-morph')"
+                      />
+                      <label
+                        for="p-morph"
+                        class="p-toggle-label"
+                        id="p-morph-label"
+                        style="
+                          border-bottom-left-radius: 2px;
+                          border-bottom-right-radius: 2px;
+                        "
+                        ><span class="p-unfold-icon">+</span
+                        ><span class="p-fold-icon">-</span>
+                        <p class="p-label-title">Morphology Tagging</p>
+                      </label>
+                      <div class="p-fold description_fold">
+                        <div class="p-fold description-p">
+                          <div>
+                            Lemmatizer and POS tagger, outperform all related
+                            tools [<a
+                              href="https://www.jarrar.info/publications/JAH24.pdf"
+                              >1</a
+                            >]. <br />
+                            <span style="font-weight: bold">Performance:</span>
+                            Speed (33K tokens/sec), lemmatization(90.5%),
+                            POS(93.8%) <br />
+                          </div>
+                          <div class="list_div">
+                            <a
+                              href="https://sina.birzeit.edu/alma/"
+                              class="icons_list"
+                              >DEMO</a
+                            >
+                            <a
+                              href="https://sina.birzeit.edu/sinatools/documentation/api/morphology/morph_analyzer.html"
+                              class="icons_list"
+                              >Documentation</a
+                            >
+                            <a
+                              href="../ALMA/index.html#benchmarks"
+                              class="icons_list"
+                              >Benchmarks</a
+                            >
+                            <a
+                              href="https://www.jarrar.info/publications/JAH24.pdf"
+                              class="icons_list"
+                              >Article</a
+                            >
+                          </div>
+                          <div>
+                            <div class="highlight-python notranslate">
+                              <div class="highlight code-block">
+                                <pre><span class="kn">from</span> <span class="nn">sinatools.morphology</span> <span class="kn">import</span> <span class="n">morph_analyzer</span>
+<span class="n">morph_analyzer</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="s1">'ذهب الولد إلى المدرسة'</span><span class="p">)</span>
+<span class="p">[{ </span>
+<span class="s1">    "token"</span><span class="p">:</span> <span class="s1">"ذهب"</span><span class="p">,</span>
+<span>    <span class="s1">"lemma"</span><span class="p">:</span> <span class="s1">"ذَهَبَ"</span><span class="p">,</span>
+<span>    <span class="s1">"lemma_id"</span><span class="p">:</span> <span class="s1">"202001617"</span><span class="p">,</span>
+<span>    <span class="s1">"root"</span><span class="p">:</span> <span class="s1">"ذ ه ب"</span><span class="p">,</span>
+<span>    <span class="s1">"pos"</span><span class="p">:</span> <span class="s1">"فعل ماضي"</span><span class="p">,</span>
+<span>    <span class="s1">"frequency"</span><span class="p">:</span> <span class="s1">"82202"</span>
+<span class="p">  },{ </span>
+    <span class="s1">"token"</span><span class="p">:</span> <span class="s1">"الولد"</span><span class="p">,</span>
+    <span class="s1">"lemma"</span><span class="p">:</span> <span class="s1">"وَلَدٌ"</span><span class="p">,</span>
+    <span class="s1">"lemma_id"</span><span class="p">:</span> <span class="s1">"202003092"</span><span class="p">,</span>
+    <span class="s1">"root"</span><span class="p">:</span> <span class="s1">"و ل د"</span><span class="p">,</span>
+    <span class="s1">"pos"</span><span class="p">:</span> <span class="s1">"اسم"</span><span class="p">,</span>
+    <span class="s1">"frequency"</span><span class="p">:</span> <span class="s1">"19066"</span>
+<span class="p">  },{ </span>
+    <span class="s1">"token"</span><span class="p">:</span> <span class="s1">"إلى"</span><span class="p">,</span>
+    <span class="s1">"lemma"</span><span class="p">:</span> <span class="s1">"إِلَى"</span><span class="p">,</span>
+    <span class="s1">"lemma_id"</span><span class="p">:</span> <span class="s1">"202000856"</span><span class="p">,</span>
+    <span class="s1">"root"</span><span class="p">:</span> <span class="s1">"إ ل ى"</span><span class="p">,</span>
+    <span class="s1">"pos"</span><span class="p">:</span> <span class="s1">"حرف جر"</span><span class="p">,</span>
+    <span class="s1">"frequency"</span><span class="p">:</span> <span class="s1">"7367507"</span>
+<span class="p">  },{ </span>
+    <span class="s1">"token"</span><span class="p">:</span> <span class="s1">"المدرسة"</span><span class="p">,</span>
+    <span class="s1">"lemma"</span><span class="p">:</span> <span class="s1">"مَدْرَسَةٌ"</span><span class="p">,</span>
+    <span class="s1">"lemma_id"</span><span class="p">:</span> <span class="s1">"202002620"</span><span class="p">,</span>
+    <span class="s1">"root"</span><span class="p">:</span> <span class="s1">"د ر س"</span><span class="p">,</span>
+    <span class="s1">"pos"</span><span class="p">:</span> <span class="s1">"اسم"</span><span class="p">,</span>
+    <span class="s1">"frequency"</span><span class="p">:</span> <span class="s1">"145285"</span>
+<span class="p">}]</span>
+<!-- <span class="p">[[</span><span class="s1">'ذهب'</span><span class="p">,</span> <span class="s1">'ذَهَبَ۪ 1'</span><span class="p">,</span> <span class="s1">'فعل'</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">'الولد'</span><span class="p">,</span> <span class="s1">'وَلَد 1'</span><span class="p">,</span> <span class="s1">'اسم'</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">'الى'</span><span class="p">,</span> <span class="s1">'إِلَى 1'</span><span class="p">,</span> <span class="s1">'كلمة وظيفية'</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">'المدرسة'</span><span class="p">,</span> <span class="s1">'مَدْرَسَة 1'</span><span class="p">,</span> <span class="s1">'اسم'</span><span class="p">]]</span>
+--></span></span></span></span></span></pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li></li>
+                    <div class="services-list-item">
+                      <input
+                        type="checkbox"
+                        id="p-wsd"
+                        class="p-unfolder p-unfolder0"
+                        onclick="change_border('p-wsd')"
+                      />
+                      <label
+                        for="p-wsd"
+                        class="p-toggle-label"
+                        id="p-wsd-label"
+                        style="
+                          border-bottom-left-radius: 2px;
+                          border-bottom-right-radius: 2px;
+                        "
+                        ><span class="p-unfold-icon">+</span
+                        ><span class="p-fold-icon">-</span>
+                        <p class="p-label-title">Word Sense Disambiguation</p>
+                      </label>
+                      <div class="p-fold description_fold">
+                        <div class="p-fold description-p">
+                          <div>
+                            Performs three tasks together. Given a sentence as
+                            input it tags (single-word WSD, multi-word WSD, and
+                            NER) in this sentence. <br />
+                            <span style="font-weight: bold">Performance:</span>
+                            single-word WSD (81.73%) multi-word WSD (88.92%) -
+                            SALMA corpus See [<a
+                              href="https://www.jarrar.info/publications/JMHK23.pdf"
+                              >5</a
+                            >].
+                          </div>
+                          <div class="list_div">
+                            <a
+                              href="https://sina.birzeit.edu/salma/"
+                              class="icons_list"
+                              >DEMO</a
+                            >
+                            <a
+                              href="https://sina.birzeit.edu/sinatools/documentation/api/wsd.html"
+                              class="icons_list"
+                              >Documentation</a
+                            >
+                            <a
+                              href="../salma/index.html#benchmarks"
+                              class="icons_list"
+                              >Benchmarks</a
+                            >
+                            <span class="icons_list" style="color: #14a79c"
+                              >Articles
+                              <a
+                                href="https://www.jarrar.info/publications/JMHK23.pdf"
+                                >5</a
+                              >,
+                              <a
+                                href="https://www.jarrar.info/publications/MJK23.pdf"
+                                >6</a
+                              >,
+                              <a
+                                href="https://www.jarrar.info/publications/HJ21b.pdf"
+                                >7</a
+                              >,
+                              <a
+                                href="https://www.jarrar.info/publications/HJ21.pdf"
+                                >8</a
+                              ></span
+                            >
+                            <a
+                              href="https://www.youtube.com/watch?v=Vf8wOlrssmY&amp;list=PLSu_tNkEO5Y1fW4VLR1GXv6yvSHZaHLLm&amp;index=3"
+                              class="icons_list"
+                              >Video</a
+                            >
+                          </div>
+
+                          <div>
+                            <div class="highlight-python notranslate">
+                              <div class="highlight code-block">
+                                <pre><span></span><span class="kn">from</span> <span class="nn">sinatools.wsd.disambiguator</span> <span class="kn">import</span> <span class="n">disambiguate</span>
+<span class="n">disambiguate</span><span class="p">(</span><span class="s1">'تمشيت بين الجداول والأنهار'</span><span class="p">)</span>
+<span class="p">[{</span>
+    <span class="s1">'concept_id'</span><span class="p">:</span> <span class="s1">'303051631'</span>,
+    <span class="s1">'word'</span><span class="p">:</span> <span class="s1">'تمشيت'</span>,
+    <span class="s1">'undiac_lemma'</span><span class="p">:</span> <span class="s1">'تمشى'</span>,
+    <span class="s1">'diac_lemma'</span><span class="p">:</span> <span class="s1">'تَمَشَّى'</span>
+},{
+    <span class="s1">'word'</span><span class="p">:</span> <span class="s1">'بين'</span>,
+    <span class="s1">'undiac_lemma'</span><span class="p">:</span> <span class="s1">'بين'</span>,
+    <span class="s1">'diac_lemma'</span><span class="p">:</span> <span class="s1">'بَيْنَ'</span>
+},{
+    <span class="s1">'concept_id'</span><span class="p">:</span> <span class="s1">'303007335'</span>,
+    <span class="s1">'word'</span><span class="p">:</span> <span class="s1">'الجداول'</span>,
+    <span class="s1">'undiac_lemma'</span><span class="p">:</span> <span class="s1">'جدول'</span>,
+    <span class="s1">'diac_lemma'</span><span class="p">:</span> <span class="s1">'جَدْوَلٌ'</span>
+},{
+    <span class="s1">'concept_id'</span><span class="p">:</span> <span class="s1">'303056588'</span>,
+    <span class="s1">'word'</span><span class="p">:</span> <span class="s1">'والأنهار'</span>,
+    <span class="s1">'undiac_lemma'</span><span class="p">:</span> <span class="s1">'نهر'</span>,
+    <span class="s1">'diac_lemma'</span><span class="p">:</span> <span class="s1">'نَهْرٌ'</span>
+}]
+</pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="services-list-item">
+                      <input
+                        type="checkbox"
+                        id="p-ner"
+                        class="p-unfolder p-unfolder0"
+                        onclick="change_border('p-ner')"
+                      />
+                      <label
+                        for="p-ner"
+                        class="p-toggle-label"
+                        id="p-ner-label"
+                        style="
+                          border-bottom-left-radius: 2px;
+                          border-bottom-right-radius: 2px;
+                        "
+                        ><span class="p-unfold-icon">+</span
+                        ><span class="p-fold-icon">-</span>
+                        <p class="p-label-title">Named Entity Recognition</p>
+                      </label>
+                      <div class="p-fold description_fold">
+                        <div class="p-fold description-p">
+                          <div>
+                            Nested and Flat NER, 21 entity classes, and 31
+                            entity subtypes. <br />
+                            <span style="font-weight: bold">Performance:</span>
+                            Nested(89.42%) Flat(87.33%) - Wojood corpus, See [<a
+                              href="https://www.jarrar.info/publications/JKG22.pdf"
+                              >2</a
+                            >,
+                            <a
+                              href="https://www.jarrar.info/publications/LJKOA23.pdf"
+                              >3</a
+                            >,
+                            <a
+                              href="https://www.jarrar.info/publications/JAKBEHO23.pdf"
+                              >4</a
+                            >].
+                          </div>
+                          <div class="list_div">
+                            <a
+                              href="https://sina.birzeit.edu/wojood/"
+                              class="icons_list"
+                              >DEMO</a
+                            >
+                            <a
+                              href="https://sina.birzeit.edu/sinatools/documentation/api/ner.html"
+                              class="icons_list"
+                              >Documentation</a
+                            >
+                            <a
+                              href="../Wojood/index.html#benchmarks"
+                              class="icons_list"
+                              >Benchmarks</a
+                            >
+                            <span class="icons_list" style="color: #14a79c"
+                              >Articles
+                              <a
+                                href="https://www.jarrar.info/publications/JKG22.pdf"
+                                >2</a
+                              >,
+                              <a
+                                href="https://www.jarrar.info/publications/LJKOA23.pdf"
+                                >3</a
+                              >,
+                              <a
+                                href="https://www.jarrar.info/publications/JAKBEHO23.pdf"
+                                >4</a
+                              ></span
+                            >
+                            <a
+                              href="https://www.youtube.com/watch?v=0y4lbo8YcfE&amp;list=PLSu_tNkEO5Y1fW4VLR1GXv6yvSHZaHLLm&amp;index=7"
+                              class="icons_list"
+                              >Video</a
+                            >
+                          </div>
+
+                          <div>
+                            <div class="highlight-python notranslate">
+                              <div class="highlight code-block">
+                                <pre><span class="kn">from</span> <span class="nn">sinatools.ner.entity_extractor</span> <span class="kn">import</span> <span class="n">extract</span>
+<span class="n">extract</span><span class="p">(</span><span class="s1">'ذهب محمد إلى جامعة بيرزيت'</span><span class="p">)</span>
+<span class="p">[{</span>
+<span class="s1">    "word"</span>:<span class="s1">"ذهب"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"O"</span>
+  },{
+<span class="s1">    "word"</span>:<span class="s1">"محمد"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"B-PERS"</span>
+  },{
+<span class="s1">    "word"</span>:<span class="s1">"إلى"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"O"</span>
+  },{
+<span class="s1">    "word"</span>:<span class="s1">"جامعة"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"B-ORG"</span>
+  },{
+<span class="s1">    "word"</span>:<span class="s1">"بيرزيت"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"B-GPE I-ORG"</span>
+<span class="p">}]</span>
+</pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="services-list-item">
+                      <input
+                        type="checkbox"
+                        id="p-re"
+                        class="p-unfolder p-unfolder0"
+                        onclick="change_border('p-c')"
+                      />
+                      <label for="p-re" class="p-toggle-label" id="p-c-label"
+                        ><span class="p-unfold-icon">+</span
+                        ><span class="p-fold-icon">-</span>
+                        <p class="p-label-title">Relation Extraction</p>
+                      </label>
+                      <div class="p-fold description_fold">
+                        <div class="p-fold description-p">
+                          <p class="p-description-p1">
+                            Extract events and their corresponding arguments
+                            (agents, locations, and dates).
+                            <br />
+                            <b>Performance:</b>
+                            <br />
+                            Wojood<sup>Hadath</sup> (93.99%)
+                            <br />
+                            Wojood<sup>OutOfDoman</sup> (74.90%)
+                          </p>
+
+                          <!-- <input type="checkbox" id="p-toggle153" class="p-unfolder p-unfolder0"> -->
+                          <div class="list_div">
+                            <!-- <p class="p-label-sub-title1" style="color: #AE6A6A;"></p> -->
+                            <p class="icons_list" style="color: #ae6a6a">
+                              <a href="https://sina.birzeit.edu/relations/"
+                                >Online Demo</a
+                              >
+                            </p>
+                            <p class="icons_list" style="color: #ae6a6a">
+                              <a href="https://sina.birzeit.edu/relations/"
+                                >Download Corpus</a
+                              >
+                            </p>
+                            <p class="icons_list" style="color: #ae6a6a">
+                              <a href="https://sina.birzeit.edu/relations/"
+                                >Download Code</a
+                              >
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="highlight code-block">
+                          <pre><span></span><span class="kn">from</span> <span class="nn">sinatools.relations.relation_extractor</span> <span class="kn">import</span> <span class="n">event_argument_relation_extraction</span>
+<span class="n">event_argument_relation_extraction</span><span class="p">(</span><span class="s1">'اندلعت انتفاضة الأقصى في 28 سبتمبر&nbsp;2000'</span>)
+<span class="c1">#the output</span>
+<span class="p">[{</span>
+ <span class="s1">    "TripleID"</span>:<span class="s1">"1"</span>,
+<span class="s1">    "Subject"</span>:{<span class="s1">"ID"</span>: <span class="s1">1</span>, <span class="s1">"Type"</span>: <span class="s1">"EVENT"</span>, <span class="s1">"Label"</span>: <span class="s1">"انتفاضة الأقصى"</span><span class="p">}
+<span class="s1">    "Relation"</span>:<span class="s1">"location"</span>,
+<span class="s1">    "Object"</span>:<span class="p">{</span><span class="s1">"ID"</span>: <span class="s1">2</span>, <span class="s1">"Type"</span>: <span class="s1">"FAC"</span>, <span class="s1">"Label"</span>: <span class="s1">"الأقصى"</span><span class="p">}</span>
+},{
+<span class="s1">    "TripleID"</span>:<span class="s1">"2"</span>,
+<span class="s1">    "Subject"</span>:{</span><span class="s1">"ID"</span>: <span class="s1">1</span>, <span class="s1">"Type"</span>: <span class="s1">"EVENT"</span>, <span class="s1">"Label"</span>: <span class="s1">"انتفاضة الأقصى"</span><span class="p">}
+<span class="s1">    "Relation"</span>:<span class="s1">"happened at"</span>,
+<span class="s1">    "Object"</span>:<span class="p">{</span><span class="s1">"ID"</span>: <span class="s1">3</span>, <span class="s1">"Type"</span>: <span class="s1">"DATE"</span>, <span class="s1">"Label"</span>: <span class="s1">"28 سبتمبر 2000"</span><span class="p">}</span>    
+<span class="p">}]</span>
+</span></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="services-list-item">
+                      <input
+                        type="checkbox"
+                        id="p-se"
+                        class="p-unfolder p-unfolder0"
+                        onclick="change_border('p-se')"
+                      />
+                      <label for="p-se" class="p-toggle-label" id="p-se-label"
+                        ><span class="p-unfold-icon">+</span
+                        ><span class="p-fold-icon">-</span>
+                        <p class="p-label-title">Synonyms</p>
+                      </label>
+                      <div class="p-fold description_fold">
+                        <div class="p-fold description-p">
+                          <div>
+                            <a
+                              href="https://sina.birzeit.edu/sinatools/documentation/api/utils.html"
+                              style="color: #14a79c"
+                              >Extend</a
+                            >: Given one or more synonyms this module extends it
+                            with more synonyms.
+                            <br />
+                            <span style="font-weight: bold">Performance:</span>
+                            3rd level (98.7%), 4th level (92%) - Algorithm, See
+                            [<a
+                              href="https://www.jarrar.info/publications/GJJB23.pdf"
+                              >10</a
+                            >].
+                          </div>
+
+                          <div class="list_div">
+                            <a
+                              href="https://sina.birzeit.edu/synonyms/"
+                              class="icons_list"
+                              >DEMO</a
+                            >
+                            <a
+                              href="https://sina.birzeit.edu/sinatools/documentation/api/synonyms/synonyms_generator.html"
+                              class="icons_list"
+                              >Documentation</a
+                            >
+                            <a
+                              href="https://www.jarrar.info/publications/GJJB23.pdf"
+                              class="icons_list"
+                              >Article</a
+                            >
+                          </div>
+                          <div>
+                            <div class="highlight-python notranslate">
+                              <div class="highlight code-block">
+                                <pre><span class="kn">from</span> <span class="nn">sinatools.synonyms.synonyms_generator</span> <span class="kn">import</span> <span class="n">extend_synonyms</span>
+<span style="direction:rtl;"><span class="n">extend_synonyms</span><span style="direction: ltr; display: inline-flex;"><span class="p">(</span><span class="s1">'ممر | طريق'</span>,<span class="s1">2</span><span class="p">)</span></span></span>
+<span class="p" style="direction: ltr; display: inline-flex;">[[<span class="s1">"مَسْلَك"</span>,<span class="s1">"61%"</span>],[<span class="s1">"سبيل"</span>,<span class="s1">"61%"</span>],[<span class="s1">"وَجْه"</span>,<span class="s1">"30%"</span>],[<span class="s1">"نَهْج"</span>, <span class="s1">"30%"</span>],[<span class="s1">"نَمَطٌ"</span>,<span class="s1">"30%"</span>],[<span class="s1">"مِنْهَج"</span>,<span class="s1">"30%"</span>],[<span class="s1">"مِنهاج"</span>, <span class="s1">"30%"</span>],[<span class="s1">"مَوْر"</span>,<span class="s1">"30%"</span>],[<span class="s1">"مَسَار"</span>,<span class="s1">"30%"</span>],[<span class="s1">"مَرصَد"</span>, <span class="s1">"30%"</span>],[<span class="s1">"مَذْهَبٌ"</span>,<span class="s1">"30%"</span>],[<span class="s1">"مَدْرَج"</span>,<span class="s1">"30%"</span>],[<span class="s1">"مَجَاز"</span>,<span class="s1">"30%"</span>]]</span>
+</pre>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div>
+                            <a
+                              href="https://sina.birzeit.edu/sinatools/documentation/cli_tools/utils.html"
+                              style="color: #14a79c"
+                              >Evaluate</a
+                            >: Given a set of synonyms this module evaluates how
+                            much these synonyms are really synonyms in this set,
+                            See [<a
+                              href="https://www.jarrar.info/publications/KAEMKRTM23.pdf"
+                              >11</a
+                            >]
+                          </div>
+                          <div>
+                            <div class="highlight-python notranslate">
+                              <div class="highlight code-block">
+                                <pre><span class="kn">from</span> <span class="nn">sinatools.synonyms.synonyms_generator</span> <span class="kn">import</span> <span class="n">evaluate_synonyms</span>
+<span class="n">evaluate_synonyms</span><span class="p">(</span><span class="s1">'ممر | طريق | مَسْلَك | سبيل'</span><span class="p">)</span>
+<span class="p" style="direction: ltr; display: inline-flex;">[[<span class="s1">"مَسْلَك"</span>,<span class="s1">"61%"</span>],[<span class="s1">"سبيل"</span>,<span class="s1">"60%"</span>],[<span class="s1">"طريق"</span>,<span class="s1">"40%"</span>],[<span class="s1">"ممر"</span>, <span class="s1">"40%"</span>]]</span>
+</pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  
+
+                  <li>
+                    <div class="services-list-item">
+                      <input
+                        type="checkbox"
+                        id="p-sr"
+                        class="p-unfolder p-unfolder0"
+                        onclick="change_border('p-sr')"
+                      />
+                      <label
+                        for="p-sr"
+                        class="p-toggle-label"
+                        id="p-sr-label"
+                        style="
+                          border-bottom-left-radius: 2px;
+                          border-bottom-right-radius: 2px;
+                        "
+                        ><span class="p-unfold-icon">+</span
+                        ><span class="p-fold-icon">-</span>
+                        <p class="p-label-title">Semantic Relatedness</p>
+                      </label>
+                      <div class="p-fold description_fold">
+                        <div class="p-fold description-p">
+                          <div>
+                            Computes the degree of association between two
+                            sentences across various dimensions, meaning,
+                            underlying concepts, domain-specificity, topic
+                            overlap, and viewpoint alignment.<br />
+                            <span style="font-weight: bold">Performance:</span>
+                            correlation score (49%), See [<a
+                              href="https://www.jarrar.info/publications/MJK24.pdf"
+                              >9</a
+                            >].
+                          </div>
+                          <div class="list_div">
+                            <a href="#" class="icons_list">DEMO</a>
+                            <a
+                              href="https://sina.birzeit.edu/sinatools/documentation/api/semantic_relatedness/compute_relatedness.html"
+                              class="icons_list"
+                              >Documentation</a
+                            >
+                            <a
+                              href="https://www.jarrar.info/publications/MJK24.pdf"
+                              class="icons_list"
+                              >Article</a
+                            >
+                          </div>
+
+                          <div>
+                            <div class="highlight-python notranslate">
+                              <div class="highlight code-block">
+                                <pre><span class="kn">from</span> <span class="nn">sinatools.semantic_relatedness.compute_relatedness</span> <span class="kn">import</span> <span class="n">get_similarity_score</span>
+<span class="n">sentence1 = <span class="s1">"تبلغ سرعة دوران الأرض حول الشمس حوالي 110 كيلومتر في الساعة."</span></span>
+<span class="n">sentence2 = <span class="s1">"تدور الأرض حول محورها بسرعة تصل تقريبا 1670 كيلومتر&nbsp;في&nbsp;الساعة."</span></span>
+<span class="n">get_similarity_score</span><span class="p">(sentence1, sentence2)</span>
+<span class="p">Score = <span class="s1">0.90</span>
+</span></pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                 
+
+                  <li>
+                    <div class="services-list-item">
+                      <input
+                        type="checkbox"
+                        id="p-d"
+                        class="p-unfolder p-unfolder0"
+                        onclick="change_border('p-d')"
+                      />
+                      <label
+                        for="p-d"
+                        class="p-toggle-label"
+                        id="p-d-label"
+                        style="
+                          border-bottom-left-radius: 2px;
+                          border-bottom-right-radius: 2px;
+                        "
+                        ><span class="p-unfold-icon">+</span
+                        ><span class="p-fold-icon">-</span>
+                        <p class="p-label-title">Diacritic-Based Matching</p>
+                      </label>
+                      <div class="p-fold description_fold">
+                        <div class="p-fold description-p">
+                          Decides whether two Arabic words are the same or not,
+                          taking into account diacratization compatibility -
+                          Algorithm, See [<a
+                            href="https://www.jarrar.info/publications/JZAA18.pdf"
+                            >12</a
+                          >].
+                          <div class="list_div">
+                            <a
+                              href="https://sina.birzeit.edu/resources/Implication.html"
+                              class="icons_list"
+                              >DEMO</a
+                            >
+                            <a
+                              href="https://sina.birzeit.edu/sinatools/documentation/api/utils/implication.html"
+                              class="icons_list"
+                              >Documentation</a
+                            >
+                            <a
+                              href="https://www.jarrar.info/publications/JZAA18.pdf"
+                              class="icons_list"
+                              >Article</a
+                            >
+                          </div>
+
+                          <div class="highlight code-block">
+                            <pre><span class="kn">from</span> <span class="nn">sinatools.utils.implication</span> <span class="kn">import</span> <span class="n">Implication</span>
+<span class="n">word1</span> <span class="o">=</span> <span class="s2">"قالَ"</span>
+<span class="n">word2</span> <span class="o">=</span> <span class="s2">"قْال"</span>
+<span class="n">implication</span> <span class="o">=</span> <span class="n">Implication</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span> <span class="n">word2</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">implication</span><span class="o">.</span><span class="n">get_result</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="n">Output</span><span class="p">:</span> <span class="s2">"Same"</span>
+</pre>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                 
+
+                  <li>
+                    <div class="services-list-item">
+                      <input
+                        type="checkbox"
+                        id="p-u"
+                        class="p-unfolder p-unfolder0"
+                        onclick="change_border('p-u')"
+                      />
+                      <label
+                        for="p-u"
+                        class="p-toggle-label"
+                        id="p-u-label"
+                        style="
+                          border-bottom-left-radius: 0px;
+                          border-bottom-right-radius: 0px;
+                        "
+                        ><span class="p-unfold-icon">+</span
+                        ><span class="p-fold-icon">-</span>
+                        <p class="p-label-title">Utilites</p>
+                      </label>
+                      <div class="p-fold description_fold">
+                        <div class="p-fold description-p">
+                          A set of useful NLP methods for sentence splitting,
+                          duplicate word removal, Arabic Jaccard similarity
+                          metrics, transliteration, and others.
+                          <div class="list_div">
+                            <a
+                              href="https://sina.birzeit.edu/resources/index.html"
+                              class="icons_list"
+                              >DEMO</a
+                            >
+                            <a
+                              href="https://sina.birzeit.edu/sinatools/documentation/api/utils.html"
+                              class="icons_list"
+                              >Documentation</a
+                            >
+                          </div>
+                        </div>
+
+                        <div class="p-fold description-p">
+                          <div>
+                            <a
+                              href="https://sina.birzeit.edu/sinatools/documentation/cli_tools/utils/jaccard_similarity.html"
+                              style="color: #14a79c"
+                              >Jaccard Similarity Function</a
+                            >: Calculates and returns the Jaccard similarity values (union, intersection, or Jaccard similarity) between two lists of Arabic words, considering the differences in their diacritization.
+                          </div>
+                          <div class="highlight-none notranslate">
+                            <div class="highlight code-block">
+                              <pre><span>jaccard_similarity --list1="WORD1, WORD2"  --list2="WORD1,WORD2" --delimiter="DELIMITER"  --selection="SELECTION" </span></pre>
+                            </div>
+                          </div>
+                          <div>
+                            <a
+                              href="https://sina.birzeit.edu/sinatools/documentation/cli_tools/utils/corpus_tokenizer.html"
+                              style="color: #14a79c"
+                              >Corpus Tokenizer</a
+                            >: Receives a directory of files as input, splits
+                            the text into sentences and tokens, and assigns an
+                            auto-incrementing ID, sentence ID, and global
+                            sentence ID to each token.
+                          </div>
+                          <div class="highlight-none notranslate">
+                            <div class="highlight code-block">
+                              <pre><span>corpus_tokenizer --dir_path "/path/to/text/directory/of/files" --output_csv  "outputFile.csv"</span></pre>
+                            </div>
+                          </div>
+
+                          <div>
+                            <a
+                              href="https://sina.birzeit.edu/sinatools/documentation/cli_tools/utils/text_dublication_detector.html"
+                              style="color: #14a79c"
+                              >Text Duplication Detector</a
+                            >: Processes a CSV file of sentences to identify and
+                            remove duplicate sentences based on a specified
+                            threshold and cosine similarity. It saves the
+                            filtered results and the identified duplicates into
+                            separate files.
+                          </div>
+                          <div class="highlight-none notranslate">
+                            <div class="highlight code-block">
+                              <pre><span>text_dublication_detector --csv_file "/path/to/text/file" --column_name "name of the column" --final_file_name "Final.csv" --deleted_file_name "deleted.csv" --similarity_threshold 0.8  </span></pre>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom: 45px; margin-right: 32px; margin-left: 20px">
+        <span style="font-weight: bold">Publication:</span> <br />Tymaa
+        Hammouda, Mustafa Jarrar, Mohammed Khalilia:
+        <a href="https://www.jarrar.info/publications/HJK24.pdf"
+          >SinaTools: Open Source Toolkit for Arabic Natural Language
+          Understanding</a
+        >. In Proceedings of the 2024 AI in Computational Linguistics (ACLING
+        2024), Procedia Computer Science, Dubai. ELSEVIER.
+        <p><a href="https://pepy.tech/project/sinatools"><img src="https://static.pepy.tech/badge/sinatools" alt="Downloads"></a></p>
+      </div>
+      <br />
+    </div>
+
+    <!-- Birzeit Footer -->
+    <!--<footer class="footer">
+      <div class="footer-content">
+        <div class="footer-content-div">
+          <span class="footer-copyrights">
+            <a href="http://www.birzeit.edu/" target="_blank">
+              <img src="../Images/bzu-logo2.png" />
+            </a>
+          </span>
+          <span class="ng-binding"> Copyright © 2023 Birzeit University </span>
+        </div>
+      </div>
+    </footer> -->
+  </body>
+</html>

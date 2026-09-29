@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sinatools.ner &mdash; SinaTools 1 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SinaTools Command Line" href="../cli_tools.html" />
+    <link rel="prev" title="sinatools.sent_tokenize" href="wsd.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SinaTools
+          </a>
+              <div class="version">
+                Latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+  <li class="toctree-l1"><a class="reference internal" href="../Overview.html">Overview</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../installation.html">Getting Started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modules:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">Python API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="morphology.html">sinatools.morphology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DataDownload.html">sinatools.DataDownload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">sinatools.utils</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="ner.html">sinatools.ner</a>
+<li class="toctree-l2"><a class="reference internal" href="relations.html">sinatools.relations</a>
+
+<li class="toctree-l2"><a class="reference internal" href="wsd.html">sinatools.wsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="synonyms.html">sinatools.synonyms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="semantic_relatedness.html">sinatools.semantic_relatedness</a></li>
+
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cli_tools.html">SinaTools Command Line</a></li>
+<li class="toctree-l1"><a class="current reference internal" href="../License.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">SinaTools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">Python API Reference</a></li>
+      <li class="breadcrumb-item active">sinatools.ner</li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-sinatools.ner">
+<span id="SinaTools-ner"></span><h1>sinatools.ner.entity_extractor<a class="headerlink" href="#module-sinatools.ner" title="Permalink to this headline">¶</a></h1>
+
+<dl class="py function">
+<dt id="sinatools.ner">
+<code class="sig-prename descclassname">sinatools.ner.entity_extractor.</code><code class="sig-name descname">extract</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">ner_method</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sinatools.ner" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method processes an input text and returns named entites for each token within the text. It support 21 class of entites. The method also support flat and nested NER. You can try the demo <a href="https://sina.birzeit.edu/wojood/">online</a>. See <a href="https://www.jarrar.info/publications/JKG22.pdf">article</a> for details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The Arabic text to be tagged.</p></li>
+<li><p><strong>ner_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#str" title="(in Python v3.11)"><em>str</em></a>) – The NER method can produce either flat or nested output formats. The default method is nested. 
+  <dl class="simple">
+    <p>
+      <li>nested method: If the method is nested, the output will include nested tags.</li>
+      <li>flat method: If the method is flat, the output will consist of only flat tags.</li>
+      The choice between flat and nested methods determines the structure and detail of the named entity recognition output.
+  </p>
+  </dl>  
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A list of JSON objects, where each object could be contains:</dt><dd>
+  <p>token: The token from the original text.<br>
+  NER tag: The label pairs for each segment.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)">list</a></p>
+</dd>
+</dl>
+<div class="admonition note">
+  <p class="admonition-title">Note</p>
+  <p>The NER BERT model should be installed using (<span style="font-weight: bold;">download_files -f ner</span>) command.</p>
+</div>
+<p><strong>Example 1:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sinatools.ner.entity_extractor</span> <span class="kn">import</span> <span class="n">extract</span>
+<span class="c1">#Example of nested ner. Notice that the last word in this sentense contains nested tags.</span>
+<span class="n">extract</span><span class="p">(</span><span class="s1">&#39;ذهب محمد الى جامعة بيرزيت&#39;</span>)</span>
+<span class="c1">#the output</span>
+<span class="p">[{</span>
+<span class="s1">    "token"</span>:<span class="s1">"ذهب"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"O"</span>
+  },{
+<span class="s1">    "token"</span>:<span class="s1">"محمد"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"B-PERS"</span>
+  },{
+<span class="s1">    "token"</span>:<span class="s1">"إلى"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"O"</span>
+  },{
+<span class="s1">    "token"</span>:<span class="s1">"جامعة"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"B-ORG"</span>
+  },{
+<span class="s1">    "token"</span>:<span class="s1">"بيرزيت"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"B-GPE I-ORG"</span>
+<span class="p">}]</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+
+<p><strong>Example 2:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sinatools.ner.entity_extractor</span> <span class="kn">import</span> <span class="n">extract</span>
+<span class="c1">#Example of flat ner</span>
+<span class="n">extract</span><span class="p">(</span><span class="s1">&#39;ذهب محمد الى جامعة بيرزيت&#39;</span>,<span class="s1">&#39;flat&#39;</span><span class="p">)</span>
+<span class="c1">#the output</span>
+<span class="p">[{</span>
+<span class="s1">    "token"</span>:<span class="s1">"ذهب"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"O"</span>
+  },{
+<span class="s1">    "token"</span>:<span class="s1">"محمد"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"B-PERS"</span>
+  },{
+<span class="s1">    "token"</span>:<span class="s1">"إلى"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"O"</span>
+  },{
+<span class="s1">    "token"</span>:<span class="s1">"جامعة"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"B-ORG"</span>
+  },{
+<span class="s1">    "token"</span>:<span class="s1">"بيرزيت"</span>,
+<span class="s1">    "tags"</span>:<span class="s1">"I-ORG"</span>
+<span class="p">}]</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="./utils/text_dublication_detector.html" class="btn btn-neutral float-left" title="sinatools.sent_tokenize" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="relations.html" class="btn btn-neutral float-right" title="SinaTools Command Line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Birzeit University.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

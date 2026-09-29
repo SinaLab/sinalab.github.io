@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sinatools.utils.jaccard &mdash; SinaTools 1 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="sinatools.utils.text_transliteration" href="text_transliteration.html" />
+    <link rel="prev" title="sinatools.utils.implication" href="implication.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SinaTools
+          </a>
+              <div class="version">
+                Latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+  <li class="toctree-l1"><a class="reference internal" href="../../Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Getting Started</a></li>  
+</ul>
+<p class="caption"><span class="caption-text">Modules:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">Python API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../morphology.html">sinatools.morphology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataDownload.html">sinatools.DataDownload</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../utils.html">sinatools.utils</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="parser.html">sinatools.utils.parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implication.html">sinatools.utils.implication</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">sinatools.utils.jaccard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text_transliteration.html">sinatools.utils.text_transliteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tokenizer.html">sinatools.utils.tokenizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text_dublication_detector.html">sinatools.utils.text_dublication_detector</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ner.html">sinatools.ner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../relations.html">sinatools.relations</a>
+<li class="toctree-l2"><a class="reference internal" href="../wsd.html">sinatools.wsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synonyms.html">sinatools.synonyms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../semantic_relatedness.html">sinatools.semantic_relatedness</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli_tools.html">SinaTools Command Line</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="../../License.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SinaTools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api.html">Python API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../utils.html">sinatools.utils</a></li>
+      <li class="breadcrumb-item active">sinatools.utils.jaccard</li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-sinatools.utils.jaccard">
+<span id="SinaTools-utils-jaccard"></span><h1>sinatools.utils.jaccard<a class="headerlink" href="#module-sinatools.utils.jaccard" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="sinatools.utils.jaccard.get_intersection">
+<code class="sig-prename descclassname">sinatools.utils.jaccard.</code><code class="sig-name descname">get_intersection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">list1</span></em>, <em class="sig-param"><span class="n">list2</span></em>, <em class="sig-param"><span class="n">ignore_all_diacratics_but_not_shadda</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ignore_shadda_diacritic</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sinatools.utils.jaccard.get_intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the intersection of two lists after normalization and ignoring diacratics based on input flags. You can try the demo <a href="https://sina.birzeit.edu/resources/jaccardFunction.html">online</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list1</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>) – The first list.</p></li>
+<li><p><strong>list2</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>) – The second list.</p></li>
+<li><p><strong>ignore_all_diacratics_but_not_shadda</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – A flag to ignore all diacratics except for the shadda. Defaults to False.</p></li>
+<li><p><strong>ignore_shadda_diacritic</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, optional) – A flag to ignore the shadda diacritic. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The intersection of the two lists after normalization and ignoring diacratics.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sinatools.utils.jaccard.get_non_preferred_word">
+<code class="sig-prename descclassname">sinatools.utils.jaccard.</code><code class="sig-name descname">get_non_preferred_word</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">word1</span></em>, <em class="sig-param"><span class="n">word2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sinatools.utils.jaccard.get_non_preferred_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the non-preferred word between the two input words.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>word1</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The first word.</p></li>
+<li><p><strong>word2</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The second word.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The non-preferred word. If there is no non-preferred word, the ‘#’ is returned.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sinatools.utils.jaccard.get_preferred_word">
+<code class="sig-prename descclassname">sinatools.utils.jaccard.</code><code class="sig-name descname">get_preferred_word</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">word1</span></em>, <em class="sig-param"><span class="n">word2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sinatools.utils.jaccard.get_preferred_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the preferred word among two given words based on their implication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>word1</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The first word.</p></li>
+<li><p><strong>word2</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The second word.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The preferred word among the two given words.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sinatools.utils.jaccard.get_union">
+<code class="sig-prename descclassname">sinatools.utils.jaccard.</code><code class="sig-name descname">get_union</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">list1</span></em>, <em class="sig-param"><span class="n">list2</span></em>, <em class="sig-param"><span class="n">ignore_all_diacratics_but_not_shadda</span></em>, <em class="sig-param"><span class="n">ignore_shadda_diacritic</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sinatools.utils.jaccard.get_union" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Finds the union of two lists by removing duplicates and normalizing words.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list1</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The first list.</p></li>
+<li><p><strong>list2</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The second list.</p></li>
+<li><strong>ignore_all_diacratics_but_not_shadda</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>): Whether to ignore all diacratics except shadda or not.</li>
+<li><strong>ignore_shadda_diacritic</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>): Whether to ignore shadda diacritic or not.</p></li>
+
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The union of the two lists after removing duplicates and normalizing words.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sinatools.utils.jaccard.jaccard">
+<code class="sig-prename descclassname">sinatools.utils.jaccard.</code><code class="sig-name descname">jaccard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">delimiter</span></em>, <em class="sig-param"><span class="n">str1</span></em>, <em class="sig-param"><span class="n">str2</span></em>, <em class="sig-param"><span class="n">selection</span></em>, <em class="sig-param"><span class="n">ignoreAlldiacraticsButNotShadda</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">ignoreShaddaDiacritic</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sinatools.utils.jaccard.jaccard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the Jaccard similarity, union, or intersection of two sets of strings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>delimiter</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The delimiter used to split the input strings.</p></li>
+<li><p><strong>str1</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The first input string to compare.</p></li>
+<li><p><strong>str2</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The second input string to compare.</p></li>
+<li><p><strong>selection</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The desired operation to perform on the two sets of strings.
+Must be one of <em>intersection</em>, <em>union</em>, <em>jaccardSimilarity</em>, or <em>jaccardAll</em>.</p></li>
+<li><p><strong>ignoreAlldiacraticsButNotShadda</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – If True, ignore all diacratics except for the Shadda diacritic. (Defualt is True)</p></li>
+<li><p><strong>ignoreShaddaDiacritic</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – If True, ignore the Shadda diacritic.(Default is True)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Jaccard similarity, union, or intersection of the two sets of strings,
+depending on the value of the <cite>selection</cite> argument.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sinatools.utils.jaccard.jaccard_similarity">
+<code class="sig-prename descclassname">sinatools.utils.jaccard.</code><code class="sig-name descname">jaccard_similarity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">list1</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)">list</a></span></em>, <em class="sig-param"><span class="n">list2</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)">list</a></span></em>, <em class="sig-param"><span class="n">ignore_all_diacratics_but_not_shadda</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)">bool</a></span></em>, <em class="sig-param"><span class="n">ignore_shadda_diacritic</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)">bool</a></span></em><span class="sig-paren">)</span> <a class="headerlink" href="#sinatools.utils.jaccard.jaccard_similarity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the Jaccard similarity coefficient between two lists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list1</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>) – The first list.</p></li>
+<li><p><strong>list2</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>) – The second list.</p></li>
+<li><p><strong>ignore_all_diacratics_but_not_shadda</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – A flag indicating whether to ignore all diacratics except for shadda.</p></li>
+<li><p><strong>ignore_shadda_diacritic</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – A flag indicating whether to ignore the shadda diacritic.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Jaccard similarity coefficient between the two lists.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sinatools.utils.jaccard.normalize_word">
+<code class="sig-prename descclassname">sinatools.utils.jaccard.</code><code class="sig-name descname">normalize_word</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">word</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)">str</a></span></em>, <em class="sig-param"><span class="n">ignore_all_diacratics_but_not_shadda</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)">bool</a></span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">ignore_shadda_diacritic</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)">bool</a></span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> <a class="headerlink" href="#sinatools.utils.jaccard.normalize_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize a given Arabic word by removing diacratics and/or shadda diacritic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>word</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – The input text.</p></li>
+<li><p><strong>ignore_all_diacratics_but_not_shadda</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – A boolean flag indicating whether to remove all diacratics except shadda (default is True).</p></li>
+<li><p><strong>ignore_shadda_diacritic</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – A boolean flag indicating whether to remove shadda diacritic (default is True).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> Normalized Arabic word.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="implication.html" class="btn btn-neutral float-left" title="sinatools.utils.implication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="text_transliteration.html" class="btn btn-neutral float-right" title="sinatools.utils.text_transliteration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Birzeit University.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sinatools.relations &mdash; SinaTools 1 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SinaTools Command Line" href="../cli_tools.html" />
+    <link rel="prev" title="sinatools.sent_tokenize" href="wsd.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SinaTools
+          </a>
+              <div class="version">
+                Latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+  <li class="toctree-l1"><a class="reference internal" href="../Overview.html">Overview</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../installation.html">Getting Started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modules:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">Python API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="morphology.html">sinatools.morphology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DataDownload.html">sinatools.DataDownload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">sinatools.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ner.html">sinatools.ner</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="relations.html">sinatools.relations</a>
+
+<li class="toctree-l2"><a class="reference internal" href="wsd.html">sinatools.wsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="synonyms.html">sinatools.synonyms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="semantic_relatedness.html">sinatools.semantic_relatedness</a></li>
+
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cli_tools.html">SinaTools Command Line</a></li>
+<li class="toctree-l1"><a class="current reference internal" href="../License.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">SinaTools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">Python API Reference</a></li>
+      <li class="breadcrumb-item active">sinatools.relations</li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-sinatools.relations">
+<span id="SinaTools-relations"></span><h1>sinatools.relations.relation_extractor<a class="headerlink" href="#module-sinatools.relations" title="Permalink to this headline">¶</a></h1>
+
+<dl class="py function">
+<dt id="sinatools.relations">
+<code class="sig-prename descclassname">sinatools.relations.relation_extractor.</code><code class="sig-name descname">event_argument_relation_extraction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sinatools.relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method processes a given text to identify and extract events and their corresponding arguments (agents, locations, and dates) within a sentence. In other words, this methods extracts the relationships (hasAgent, hasLocation, and hasDate) between each event and other named entities. Named entities are identified first then relations are extracted. Try demo <a href="https://sina.birzeit.edu/relations/">online</a>. (See <a href="https://www.jarrar.info/publications/ADJK24.pdf">article</a>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The Arabic text to be tagged.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A list of JSON objects, where each object could be contains:</dt><dd>
+  <p>TripleID (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) - A unique identifier for the extracted event-argument relation triple.<br>
+    Subject (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) - The event that serves as the subject in the relation.<br>
+    <ul>
+      <li>ID (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#int" title="(in Python v3.11)"><em>int</em></a>) - A unique identifierfor the subject entity.</li>
+      <li>Type (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) - Subject entity type (i.e. EVENT).</li>
+      <li>Label (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) - The surface text of the subject in the text.</li>
+    </ul>
+    Relation (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) - The type of relationship between the Subject and the Object.<br>
+    Object (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) - The Named Entity that serves as the object in the relation.</p>
+    <ul>
+      <li>ID (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#int" title="(in Python v3.11)"><em>int</em></a>) - A unique identifierfor the object entity.</li>
+      <li>Type (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) - Subject entity type.</li>
+      <li>Label (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) - The surface text of the object entity in the text.</li>
+    </ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)">list</a></p>
+</dd>
+</dl>
+<div class="admonition note">
+  <p class="admonition-title">Note</p>
+  <p>The relation BERT model should be installed using (<span style="font-weight: bold;">download_files -f relation</span>) command.</p>
+</div>
+<p><strong>Example:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sinatools.relations.relation_extractor</span> <span class="kn">import</span> <span class="n">event_argument_relation_extraction</span>
+<span class="n">event_argument_relation_extraction</span><span class="p">(</span><span class="s1">&#39;اندلعت انتفاضة الأقصى في 28 سبتمبر 2000&#39;</span>)</span>
+<span class="c1">#the output</span>
+<span class="p">[{</span>
+<span class="s1">    "TripleID"</span>:<span class="s1">"1"</span>,
+<span class="s1">    "Subject"</span>:{</span><span class="s1">"ID"</span>: <span class="s1">1</span>, <span class="s1">"Type"</span>: <span class="s1">"EVENT"</span>, <span class="s1">"Label"</span>: <span class="s1">"انتفاضة الأقصى"</span><span class="p">}
+<span class="s1">    "Relation"</span>:<span class="s1">"location"</span>,
+<span class="s1">    "Object"</span>:<span class="p">{</span><span class="s1">"ID"</span>: <span class="s1">2</span>, <span class="s1">"Type"</span>: <span class="s1">"FAC"</span>, <span class="s1">"Label"</span>: <span class="s1">"الأقصى"</span><span class="p">}</span>
+},{
+<span class="s1">    "TripleID"</span>:<span class="s1">"2"</span>,
+<span class="s1">    "Subject"</span>:{</span><span class="s1">"ID"</span>: <span class="s1">1</span>, <span class="s1">"Type"</span>: <span class="s1">"EVENT"</span>, <span class="s1">"Label"</span>: <span class="s1">"انتفاضة الأقصى"</span><span class="p">}
+<span class="s1">    "Relation"</span>:<span class="s1">"happened at"</span>,
+<span class="s1">    "Object"</span>:<span class="p">{</span><span class="s1">"ID"</span>: <span class="s1">3</span>, <span class="s1">"Type"</span>: <span class="s1">"DATE"</span>, <span class="s1">"Label"</span>: <span class="s1">"28 سبتمبر 2000"</span><span class="p">}</span>    
+<span class="p">}]</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ner.html" class="btn btn-neutral float-left" title="sinatools.sent_tokenize" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wsd.html" class="btn btn-neutral float-right" title="SinaTools Command Line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Birzeit University.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sinatools.synonyms.synonyms_generator &mdash; SinaTools 1 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="sinatools.DataDownload" href="../DataDownload.html" />
+    <link rel="prev" title="sinatools.morphology" href="../morphology.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SinaTools
+          </a>
+              <div class="version">
+                Latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+  <li class="toctree-l1"><a class="reference internal" href="../../Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Getting Started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modules:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">Python API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../morphology.html">sinatools.morphology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataDownload.html">sinatools.DataDownload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../utils.html">sinatools.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ner.html">sinatools.ner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../relations.html">sinatools.relations</a>
+<li class="toctree-l2"><a class="reference internal" href="../wsd.html">sinatools.wsd</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../synonyms.html">sinatools.synonyms</a><ul class="current">
+    <li class="toctree-l3 current"><a class="current reference internal" href="#">sinatools.synonyms.synonyms_generator</a></li>
+  </ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../semantic_relatedness.html">sinatools.semantic_relatedness</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli_tools.html">SinaTools Command Line</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="../../License.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SinaTools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api.html">Python API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../synonyms.html">sinatools.synonyms</a></li>
+      <li class="breadcrumb-item active">sinatools.synonyms.synonyms_generator</li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-extend_synonyms">
+<span id="extend_synonyms"></span><h1>sinatools.synonyms.synonyms_generator<a class="headerlink" href="#module-extend_synonyms" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="sinatools.synonyms.synonyms_generator">
+<code class="sig-prename descclassname">sinatools.synonyms.synonyms_generator.</code><code class="sig-name descname">extend_synonyms</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">synset</span></em>, <em class="sig-param"><span class="n">level</span></em><span class="sig-paren">)</span><a class="headerlink" href="#module-extend_synonyms" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method receives a set of one or more synonyms and a level number, then extends this set with additional synonyms. The more synonyms in the input, the more accurate in the results. Each synonym in the output is assigned a fuzzy value to indicate how much it is likely to be a synonymy. You can try the demo <a href="https://sina.birzeit.edu/synonyms/">online</a>. Read the <a href="https://www.jarrar.info/publications/GJJB23.pdf">article</a> for more details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>synset</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – A set of initial synonyms to be extended (string of synonyms seperated by |).</p></li>
+<li><p><strong>level</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – The level number indicates the depth of the synonym graph that the method should explore. The level could be 2 or 3. The 3rd level is richer, but the 2nd is faster.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A list of lists, where each list could be contains:</dt><dd>
+  <ul>
+  <li>synonym: Synonym related to the given synset (set of synonyms).</li>
+	<li>fuzzy_value: The synonyms strength as a percentage out of 100.</li>
+  </ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>)</p>
+</dd>
+</dl>
+<p><strong>Example:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sinatools.synonyms.synonyms_generator</span> <span class="kn">import</span> <span class="n">extend_synonyms</span>
+
+<span style="direction:rtl;"><span class="n">extend_synonyms</span><span style="direction: ltr; display: inline-flex;"><span class="p">(</span><span class="s1">'ممر | طريق'</span>,<span class="s1">2</span><span class="p">)</span></span></span>
+<span class="p" style="direction: ltr; display: inline-flex;">[[<span class="s1">"مَسْلَك"</span>,<span class="s1">"61%"</span>],[<span class="s1">"سبيل"</span>,<span class="s1">"61%"</span>],[<span class="s1">"وَجْه"</span>,<span class="s1">"30%"</span>],[<span class="s1">"نَهْج"</span>, <span class="s1">"30%"</span>],[<span class="s1">"نَمَطٌ"</span>,<span class="s1">"30%"</span>],[<span class="s1">"مِنْهَج"</span>,<span class="s1">"30%"</span>],[<span class="s1">"مِنهاج"</span>, <span class="s1">"30%"</span>],[<span class="s1">"مَوْر"</span>,<span class="s1">"30%"</span>],[<span class="s1">"مَسَار"</span>,<span class="s1">"30%"</span>],[<span class="s1">"مَرصَد"</span>, <span class="s1">"30%"</span>],[<span class="s1">"مَذْهَبٌ"</span>,<span class="s1">"30%"</span>],[<span class="s1">"مَدْرَج"</span>,<span class="s1">"30%"</span>],[<span class="s1">"مَجَاز"</span>,<span class="s1">"30%"</span>]]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+<div class="admonition note">
+  <p class="admonition-title">Note</p>
+  <p>The models should be installed using (<span style="font-weight: bold;">download_files -f synonyms</span>) command.</p>
+</div>
+
+<div class="section" id="module-evaluate_synonyms">
+  <dl class="py function">
+  <dt id="evaluate_synonyms">
+  <code class="sig-prename descclassname">sinatools.synonyms.synonyms_generator.</code><code class="sig-name descname">evaluate_synonyms</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">synset</span></em>, <em class="sig-param"><span class="n">level</span></em><span class="sig-paren">)</span><a class="headerlink" href="#module-evaluate_synonyms" title="Permalink to this definition">¶</a></dt>
+  <dd><p>This method receives a set of synonyms and a level number, then evaluates how much each of these input synonyms is really a synonym (i.e., how much it belongs to the set). You can try the demo <a href="https://sina.birzeit.edu/synonyms/">online</a>.</p>
+  <dl class="field-list simple">
+  <dt class="field-odd">Parameters</dt>
+  <dd class="field-odd"><ul class="simple">
+  <li><p><strong>synset</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – A set of initial synonyms to be evaluated (string of synonyms seperated by |).</p></li>
+  <li><p><strong>level</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – The level number indicating the depth of synonym graph that the method will explore, which could be 2 or 3.</p></li>
+  </ul>
+  </dd>
+  <dt class="field-even">Returns</dt>
+  <dd class="field-even"><p><dl class="simple">
+  <dt>A list of lists, where each list could be contains:</dt><dd>
+    <ul>
+    <li>synonym: The input synonym.</li>
+    <li>fuzzy_value: The synonyms strength as a percentage out of 100.</li>
+    </ul>
+  </dd>
+  </dl>
+  </p>
+  </dd>
+  <dt class="field-odd">Return type</dt>
+  <dd class="field-odd"><p>list (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>)</p>
+  </dd>
+  </dl>
+  <p><strong>Example:</strong></p>
+  <blockquote>
+  <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sinatools.synonyms.synonyms_generator</span> <span class="kn">import</span> <span class="n">evaluate_synonyms</span>
+  
+<span class="n">evaluate_synonyms</span><span class="p">(</span><span class="s1">'ممر | طريق | مَسْلَك | سبيل'</span><span class="p">)</span>
+<span class="p" style="direction: ltr; display: inline-flex;">[[<span class="s1">"مَسْلَك"</span>,<span class="s1">"61%"</span>],[<span class="s1">"سبيل"</span>,<span class="s1">"60%"</span>],[<span class="s1">"طريق"</span>,<span class="s1">"40%"</span>],[<span class="s1">"ممر"</span>, <span class="s1">"40%"</span>]]</span></pre></div>
+  </div>
+  </div></blockquote>
+  </dd></dl>
+  
+  </div>
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../synonyms.html" class="btn btn-neutral float-left" title="sinatools.morphology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../semantic_relatedness.html" class="btn btn-neutral float-right" title="sinatools.DataDownload" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Birzeit University.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

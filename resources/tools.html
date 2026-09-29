@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="./favicon.ico">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/Fira-Sans-font.css">
+    <link rel="stylesheet" href="../main.css?v=8" />
+    <link rel="stylesheet" href="./downloads.css" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, viewport-fit=cover"> 
+	
+    <meta property="og:image" content="https://sina.birzeit.edu/Images/SinaLogo.jpg">
+    <meta property="og:image:width" content="200">
+    <meta property="og:image:height" content="200">
+    <meta property="og:image:alt" content="SinaLab logo">
+	
+	<meta property="header" content="SinaLab NLP Tools">
+
+    <meta property="og:url" content="https://sina.birzeit.edu/resources/tools.html">
+    <meta property="og:type" content="WebSite">
+    <meta property="og:description" content="Library of tools, demos, APIs, datasets, corpora, and lexicons, for Arabic NLP by SinaLab.">
+    <meta property="og:title" content="SinaLab NLP Tools">
+
+	<meta property="image" content="https://sina.birzeit.edu/Images/SinaLogo.jpg">
+    <meta property="image:width" content="200">
+    <meta property="image:height" content="200">
+    <meta property="image:alt" content="SinaLab logo">
+		
+    <meta property="url" content="https://sina.birzeit.edu/resources/tools.html">
+	<meta property="type" content="WebSite">
+	<meta property="description" content="Library of tools, demos, APIs, datasets, corpora, and lexicons, for Arabic NLP by SinaLab.">
+    
+    <meta name="author" content="Birzeit University">
+    <meta name="keywords" content="Tools, resources , News , Media , articles ,  Arabic, Open-source, Tool ,  Named Entity Recognition ,  NER ,  Word Sense Disambiguation , WSD , Semantic Relatedness , Synonymy Extractions , Lemmatization , Part-of-speech Tagging , Arabic , Palestine , Wojood , SALMA, ALMA , Mustafa Jarrar , Morphology , NLP , NLU,  عربي , التعرف على الكينونات , محلل دلالي , سلمى , وجود , قسم الكلام , استخراج المترادفات , فهم الدلالة , مدخلات , فلسطين , عربي , مصطفى جرار , ألمى , أخبار , مصادر">
+
+	<link rel="shortcut icon" href="https://sina.birzeit.edu/Images/SinaLogo.jpg" type="image/x-icon">
+	<title>SinaLab NLP Tools</title>	
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Y0V4JTT"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	
+	gtag('config', 'G-SV0Y0V4JTT');
+	</script>	
+</head> 
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default bg-light">
+        <div class="sina-header" onclick="window.open('../index.html');">
+            <div class="image-holder">
+                <img src="../Images/arOntLogo.png" class="img-responsive logo" alt="logo">
+                <div class="vertical-line"></div>
+                <p class="title">SinaLab</p>
+            </div>
+        </div>
+        <div class="menu">
+            <ul class="nav text-center navigation-bar">
+                <li><a href="../news/index.html">News</a></li>
+                <li><a href="../index.html#team">Team</a></li>
+                <li><a href="./index.html">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+  <div>
+
+    <div class="intro-section">
+      <p class="intro-section-title">Sina Arabic Tools and Resources</p>
+    </div>
+
+
+    <div class="downloads-container">
+
+      <div class="download-div">
+        <div><a href="./lexapi.html">LexAPI - Arabic Lexicographic Web Services</a></div>
+        <p>A set of RESTful web services that all together form an API for other third-party software developers to
+          directly retrieve linguistic data from the lexicographic database (150 multilingual lexicons + Arabic
+          Ontology)..</p>
+      </div>
+
+      <div class="download-div">
+        <div><a href="./Implication.html">Implication Function</a></div>
+        <p>A web service that computes whether two Arabic words are the same or not, <i>taking into account their
+            (in/)compatible diacritics</i>. The output contains implication direction, distance, number of conflicts,
+          and other outputs.</p>
+      </div>
+
+      <div class="download-div">
+        <div><a href="./duplicateCleaner.html">Word-Duplicates Cleaner</a></div>
+        <p>A web service that takes a set of delimited Arabic words and smartly removes duplicates, regardless on how
+          they are discretized. Some diacritics are combined if needed</p>
+      </div>
+
+      <div class="download-div">
+        <div><a href="./duplicateCleanerFromFile.html">Word-Duplicates Cleaner from file</a>
+        </div>
+        <p>A web service that reads a file, and smartly remove word-duplicates in each line.</p>
+      </div>
+
+      <div class="download-div">
+        <div><a href="./jaccardFunction.html">Arabic Jaccard Function</a></div>
+        <p>A web service that takes two sets of words and outputs the union, intersection, and similarity between
+          them.</p>
+      </div>
+
+      <div class="download-div">
+        <div><a href="../pdf/ADJ18.pdf">A framework and 30 parsers for digitizing lexicons.</a>
+        </div>
+        <p> 30 parsers to handle a broad set of delicate issues in both Arabic and English lexical entries of various
+          types of lexicons. We used them in digitizing, restructuring, and normalization 150 lexicons.</p>
+      </div>
+
+      <div class="download-div">
+        <div><a href="https://sina.birzeit.edu/currasat/">Curras - Corpus for
+            Palestinian Dialect</a></div>
+        <p>Download and search a well-annotated coprus Palestinian Dialect (~60k words)</p>
+      </div>
+
+      <div class="download-div">
+        <div><a href="../pdf/HR15.pdf">CODE for Palestinian Dialect orthography </a></div>
+        <p> a set of spelling guidlines on how the Palestinian dialect can be written.</p>
+      </div>
+
+
+      <div class="download-div">
+        <div><a href="https://github.com/mjarrar2/Processontology/wiki">Method for ontological
+            Classification of Processes </a></div>
+        <p> Five ontological notions {Homeomericity, Cumulativity, Telicity, Instantaneity, Atomicity} that can be
+          used describe and classify ontologies + full annotation of the Gene Ontology Top Level Processes.</p>
+      </div>
+
+      <div class="download-div">
+        <div><a href="http://sina.birzeit.edu/mashql/">MashQL - a Query Mashup Language</a>
+        </div>
+        <p> A novel query formulation language for querying the Data Web, graph databases, and data mashups. Its
+          indexing (Graph Signature) of big data is way faster than e.g., Oracle's graph database.</p>
+      </div>
+      <br>
+
+    </div>
+
+
+  </div>
+
+  <!-- Birzeit Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-content-div">
+            <span class="footer-copyrights">
+                <a href="http://www.birzeit.edu/" target="_blank">
+                    <img src="../Images/bzu-logo2.png"> </a>
+            </span>
+            <span class="ng-binding">
+                Copyright © 2023 Birzeit University
+            </span>
+        </div>
+    </div>
+  </footer>            
+
+</body>
+
+</html>

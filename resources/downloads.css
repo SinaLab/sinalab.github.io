@@ -1,0 +1,26 @@
+
+.download-div{
+   margin-bottom: 30px;
+}
+
+.downloads-container{
+  background-color: white;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  padding-right: 45px;
+  padding-left: 45px;
+}
+
+@media screen and (max-width:600px) {
+  .downloads-container {
+    background-color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+}

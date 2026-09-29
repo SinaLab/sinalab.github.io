@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./BankIntent.css">
+    <script src="./BankIntent.js"></script>
+
+</head>
+
+<body>
+    <div class="container intro-section" id="container-div">
+        <div class="row">
+            <div class="col-sm-3">
+                <img class="ontology-img" src="https://ontology.birzeit.edu/seo-img/arOntLogo.png">
+
+            </div>
+            <div class="col-sm-6 text-center">
+                <h1>Demo 77</h1>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+    </div>
+    <div class="container">
+
+        <div class="form-horizontal">
+            <label class="lable_Code"> Enter Code : </label>
+            <input type="password" id="inp_pswd" />
+            <button id="confirm_btn" onclick="checkCode()">Confirm</button>
+            <br>
+            <div class="form-group">
+                <textarea maxlength="700" id="text"> لمّا تصلني بطاقتي أين هي ؟
+                    </textarea>
+
+                <div id="myBtnContainer">
+                    <!-- <button class="btn" id="nerId" onclick="filterSelection('NER')">NER</button> -->
+                    <button style="pointer-events: unset; opacity: 1;" id="GoButton" onclick="BankIntentService()">
+                        <i class="fa fa-spinner" aria-hidden="true" id="loading_icon"
+                            style="display:none; animation: 0s ease 0s 1 normal none running none;"> </i> <span
+                            id="go_text">Go
+                        </span> </button>
+
+                </div>
+                <div id="output">
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id="myDiv">
+            <div class="container" style="font-size: 16px;">
+                <div class="model">
+                    <div class="p-intro">
+                        <div class="services-list-item">
+                            <input type="checkbox" id="p-toggle138" class="p-unfolder p-unfolder14">
+                            <label for="p-toggle138" class="p-toggle-label"
+                                style="border: none;background: none;padding-left: 0rem;padding-right: 0rem;"><span
+                                    class="p-unfold-icon">+</span><span class="p-fold-icon">-</span>
+                                Dataset And Downloads
+                            </label>
+                            <div class="p-fold description_fold">
+                                <div class="p-fold description-p-wojood">
+                                    <p class="p-description-p">
+
+                                        <a style="color: #000000; text-decoration:none;">Please email Prof. Mustafa
+                                            Jarrar
+                                            (mjarrar AT birzeit.edu) if you have any question.</a>
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="font-size: 16px;">
+                <div class="model">
+                    <div class="p-intro">
+                        <div class="services-list-item">
+                            <input type="checkbox" id="p-toggle2" class="p-unfolder p-unfolder0">
+                            <label for="p-toggle2" class="p-toggle-label"
+                                style="border: none;background: none;padding-left: 0rem;padding-right: 0rem;">
+                                <span class="p-unfold-icon">+</span><span class="p-fold-icon">-</span> API
+                            </label>
+                            <div class="p-fold description_fold">
+                                <div class="p-fold description-p-wojood">
+                                    <div class="table-responsive">
+                                        <p class="p-description-p">
+                                            test
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="font-size: 16px;">
+                <div class="model">
+                    <div class="p-intro">
+                        <div class="services-list-item">
+                            <input type="checkbox" id="p-toggle139" class="p-unfolder p-unfolder14">
+                            <label for="p-toggle139" class="p-toggle-label"
+                                style="border: none;background: none;padding-left: 0rem;padding-right: 0rem;"><span
+                                    class="p-unfold-icon">+</span><span class="p-fold-icon">-</span>
+                                Publications
+                            </label>
+                            <div class="p-fold description_fold">
+                                <div class="p-fold description-p-wojood">
+                                    <p class="p-description-p">
+
+                                        <br><br>
+                                        <a href="http://www.jarrar.info/publications/GJJB23.pdf"
+                                            style="color: #00aca7; text-decoration:none;">PDF</a> -
+                                        <a href="http://www.jarrar.info/Talks/"
+                                            style="color: #00aca7; text-decoration:none;">Slides</a> -
+                                        <a href="https://www.youtube.com/watch?v=GlXq7Su5t_c&list=PLSu_tNkEO5Y1fW4VLR1GXv6yvSHZaHLLm"
+                                            style="color: #00aca7; text-decoration:none;">Video</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</body>
+<br>
+<!-- <div class="tools-footer-alam">
+     <span class="footer-copyrights">
+	 <a href="http://www.birzeit.edu/" target="_blank">
+         <img class="bzu-img"  src="https://ontology.birzeit.edu/seo-img/bzu-logo.png">
+     </a>
+	 </span>
+    <br>
+    <span class="footer-text">Copyright © 2022 Birzeit University</span>
+</div> -->
+
+</html>

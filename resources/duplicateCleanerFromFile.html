@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="duplicateCleaner.js"></script>
+    <link rel="icon" type="image/ico" href="./favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/Fira-Sans-font.css" />
+    <link rel="stylesheet" href="../main.css?v=8" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="duplicateCleanerFromFile.js"></script>
+
+    <meta
+      property="og:image"
+      content="https://sina.birzeit.edu/Images/OGLogo.jpg"
+    />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+    <meta property="og:image:alt" content="SinaLab logo" />
+
+    <meta property="header" content="Arabic Duplicates Cleaner from File" />
+
+    <meta
+      property="og:url"
+      content="https://sina.birzeit.edu/resources/duplicateCleanerFromFile.html"
+    />
+    <meta property="og:type" content="WebSite" />
+    <meta
+      property="og:description"
+      content="Smartly removes duplicates among a set of delimited Arabic words (in a file), taking into account thier diacritics."
+    />
+    <meta property="og:title" content="Arabic Duplicates Cleaner from File" />
+
+    <meta
+      property="image"
+      content="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+    />
+    <meta property="image:width" content="200" />
+    <meta property="image:height" content="200" />
+    <meta property="image:alt" content="SinaLab logo" />
+
+    <meta
+      property="url"
+      content="https://sina.birzeit.edu/resources/duplicateCleanerFromFile.html"
+    />
+    <meta property="type" content="WebSite" />
+    <meta
+      name="description"
+      content="Smartly removes duplicates among a set of delimited Arabic words (in a file), taking into account thier diacritics."
+    />
+
+    <meta name="author" content="SinaLab - Birzeit University" />
+    <meta
+      name="keywords"
+      content="Free, online, open sources, SinaTools, relation extraction, LLMs, algorithms, ALMA, Annotation tools, Arabic, Arabic Dictionary, Arabic Lexicographic Database, Arabic Lexicon, articles, Baladi, BERT, bias, Birzeit University, cleaning, Corpora, Corpus, Curras, Currasat, Data visualisation, dataset, datasets, Deep Learning, Demo, diacratics, Diacritics-aware, dialect, Dialect Lemma, Dialect Lemma, Dialects, dictionaries, Dictionary, Digital archives, Digitisation, Discourse analysis, Document classification, Duplication, emotional content extraction, English, entity, Entity linking, event argument extraction, Event detection, events, Guideline, Hate speech, Hebrew, implication, information retrieval, intents, intersection, Iraqi, Iraqi Dialect Corpus, jaccard similarity, Knowledge Graphs, Knowledge representation, language corpora, Languages, Large Language Models, Lebanese, Lebanese Dialect Corpus, Lemmas, Lemmatization, Lexicon, Lexicons, Libyan, Libyan Dialect Corpus, Linked Data, Lisan, Machine translation, matching, Media, metadata, Middle Eastern history, misinformation, models, Modern Standard Arabic, Morphological Solution, Morphology, MSA, MSA, MSA lemma, Mustafa Jarrar, Nabra, Nakba narratives, Nakba testimonies, Named Entity Recognition, narratives, Natural Language Generation, NER, Nested, News, NLP, NLU, offensive language, online, ontologies, Open-Source, organizations, Palestine, Palestinian, Palestinian Dialect Corpus, Palestinian Nakba, paraphrasing, Part-Of-Speech, Part-of-speech Tagging, POS, Pre-trained model, Prefix, Projects, Qabas, relationship extraction, Research, resources, SALMA, Semantic Relatedness, semantic tagging, sense, Sentiment analysis, similarity, SinaLab, stem, Sudanese, Sudanese Dialect Corpus, suffix, summarisation, Synonyms, Synonyms Evaluate, Synonyms Extraction, Syrian, Syrian Dialect Corpus, Tool, topic modeling, union, Vocabularies, Welsh, Wojood, Word Sense Disambiguation, Workshop, WSD, Yemeni, Yemeni Dialect Corpus, أخبار, ألمى, اتحاد, استخراج المترادفات, التعرف على الكينونات, اللغة العربية, اللغة العربية المعاصرة, انجليزي, بحث علمي, تقاطع, جامعة بيرزيت, خصائص صرفية, خوارزميات, دليل معياري, ذم, سلمى, سينا, شبكة بيانات, شبكة بيانات معجمية, عامية, عامية إماراتية, عامية سودانية, عامية سورية, عامية عراقية, عامية فلسطينية, عامية لبنانية, عامية ليبية, عامية مصرية, عامية يمنية, عربي, فصحى, فصحى حديثة, فلسطين, فهم الدلالة, قاموس عربي, قبس, قسم الكلام, كراسات, كراهية, محلل دلالي, مدخلات, مدخلات معجمية, مدخلة, مدخلة عامية, مدخلة فصحى, مدونات, مدونات عامية, مدونة, مصادر, مصطفى جرار, معاجم, معالجة اللغة الطبيعية, معجم, معجم اللغة العربية, معجم عربي, معجم مجاني, مفتوح المصدر, مقارنة, مكنز, مكنز شجري صرفي, نكبة, نموذج, وجود"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+      type="image/x-icon"
+    />
+    <title>Arabic Duplicates Cleaner from File</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SV0Y0V4JTT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SV0Y0V4JTT');
+    </script>
+  </head>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default bg-light">
+      <div class="sina-header" onclick="window.open('../index.html');">
+        <div class="image-holder">
+          <img
+            src="../Images/arOntLogo.png"
+            class="img-responsive logo"
+            alt="logo"
+          />
+          <div class="vertical-line"></div>
+          <p class="title">SinaLab</p>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="nav text-center navigation-bar">
+          <li><a href="../news/index.html">News</a></li>
+          <li><a href="../index.html#team">Team</a></li>
+          <li><a href="./index.html">Resources</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="intro-section" style="padding-bottom: 0">
+      <p class="intro-section-title text-left">Word-Duplicate Cleaner</p>
+      <p style="margin-right: 0; margin-bottom: 0">
+        This form takes a set of delimited Arabic words and smartly removes
+        duplicates, regardless on how they are diacritized. The full details in
+        this
+        <a
+          href="http://www.jarrar.info/publications/JZAA18.pdf"
+          target="content"
+          >article</a
+        >.<br />Each line in the uploaded text file contains [SetID#SetOfWords],
+        where SetID and SetOfWords delimited by # sign. Words in SetOfWords are
+        separated by any character provided by the user in the form below
+      </p>
+    </div>
+    <div class="main-container-implication">
+      <div>
+        <div class="flex-container">
+          <div class="table-div">
+            <table class="myTable" style="margin: 0 auto">
+              <tr class="first-row-jaccard">
+                <!-- Flexbox with gap -->
+                <td style="text-align: left; vertical-align: top">
+                  <label for="word1" style="display: block; margin-bottom: 0"
+                    >Input:</label
+                  >
+                  <input type="file" id="openFile" />
+                  <textarea
+                    class="textAreaStyle"
+                    name="input"
+                    id="input"
+                    rows="8"
+                    cols="50"
+                  ></textarea>
+                </td>
+                <td style="text-align: left; vertical-align: top">
+                  <span class="text_inpAndout">Output:</span>
+                  <br /><a
+                    href="#"
+                    onClick="downloadOutputFile();return false;"
+                    id="status"
+                    >Download</a
+                  >
+                  <p class="outputRes" name="outputRes" id="outputRes"></p>
+                  <input type="hidden" name="output" id="output" />
+                  <!-- <label for="word2" style="display: block; margin-bottom: 0"
+                    >Output:</label
+                  >
+                  <input
+                    class="inp-word-j"
+                    dir="rtl"
+                    style="text-align: right"
+                    type="text"
+                    name="output"
+                    id="output"
+                  /> -->
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="sec-div-j">
+            <table class="myTable">
+              <tr>
+                <td colspan="2" style="padding-top: 10px">
+                  <span class="text_inpAndout">Separated by:</span>
+                  <input
+                    class="inp-delimiter"
+                    type="text"
+                    size="1"
+                    name="delimiter"
+                    id="delimiter"
+                    style="border: solid 1px #9f9e9e"
+                  />
+                  <br />
+                  <!-- <span class="text_inpAdvan">Advanced Options:</span><br> -->
+                  <input id="ignoreLastLetterDiacs" type="checkbox" /><span
+                    class="inp-checkbox"
+                  >
+                    Ignore diacritics on last letter</span
+                  ><br />
+                  <input id="ignoreShadda" type="checkbox" /><span
+                    class="inp-checkbox"
+                  >
+                    Ignore Shadda ( ّ ) on any letter</span
+                  ><br />
+                  <input id="ignorefirstLetterHamza" type="checkbox" /><span
+                    class="inp-checkbox"
+                  >
+                    Ignore Hamza (ء) on the first Letter</span
+                  ><br />
+                  <input id="ignoreAL" type="checkbox" /><span
+                    class="inp-checkbox"
+                  >
+                    Ignore (ال التعريف) from the beginning of the word</span
+                  >
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div style="text-align: center">
+            <input
+              class="btnStyle"
+              type="button"
+              id="removeDuplicatesFromFile"
+              name="removeDuplicatesFromFile"
+              value="Remove Duplicates >>"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="alma-container">
+        <div class="form-horizontal">
+          <div class="normalText">
+            <ul class="services-list-impl">
+              <li>
+                <div class="services-list-item-impl">
+                  <input
+                    type="checkbox"
+                    id="p-toggle9"
+                    class="p-unfolder p-unfolder14"
+                  />
+                  <label for="p-toggle9" class="p-toggle-label-impl">
+                    <span class="p-unfold-icon" style="width: fit-content"
+                      >+</span
+                    >
+                    <span class="p-fold-icon" style="width: fit-content"
+                      >-</span
+                    >
+                    <span class="p-label-title-impl">Download</span>
+                  </label>
+                  <div class="p-fold description_fold">
+                    <div class="p-fold description-p">
+                      <p class="p-description-p">
+                        <a
+                          href="https://github.com/SinaInstitute/ImpliMorph"
+                          target="content"
+                          >Source Code</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="services-list-item-impl">
+                  <input
+                    type="checkbox"
+                    id="p-toggle10"
+                    class="p-unfolder p-unfolder14"
+                  />
+                  <label for="p-toggle10" class="p-toggle-label-impl">
+                    <span class="p-unfold-icon" style="width: fit-content"
+                      >+</span
+                    >
+                    <span class="p-fold-icon" style="width: fit-content"
+                      >-</span
+                    >
+                    <span class="p-label-title-impl">Publication</span>
+                  </label>
+                  <div class="p-fold description_fold">
+                    <div class="p-fold description-p">
+                      <p class="p-description-p">
+                        <span>
+                          Mustafa Jarrar, Fadi Zaraket, Rami Asia, Hamzeh
+                          Amayreh:
+                          <a
+                            href="http://www.jarrar.info/publications/JZAA18.pdf"
+                            target="content"
+                          >
+                            Diacritic-Based Matching of Arabic Words</a
+                          >. ACM Asian and Low-Resource Language Information
+                          Processing. Volume 18, No 2, Pages(10:1--10:21), ACM,
+                          December 2018. ISSN 2375-4699.</span
+                        >
+                        <br />
+                        <br />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="services-list-item-impl">
+                  <input
+                    type="checkbox"
+                    id="p-toggle11"
+                    class="p-unfolder p-unfolder14"
+                  />
+                  <label for="p-toggle11" class="p-toggle-label-impl">
+                    <span class="p-unfold-icon" style="width: fit-content"
+                      >+</span
+                    >
+                    <span class="p-fold-icon" style="width: fit-content"
+                      >-</span
+                    >
+                    <span class="p-label-title-impl">Projects</span>
+                  </label>
+                  <div class="p-fold description_fold">
+                    <div class="p-fold description-p">
+                      <p class="p-description-p">
+                        <a href="./Implication.html" target="content"
+                          >Implication Function</a
+                        >
+                        ,
+                        <a href="https://ontology.birzeit.edu" target="content"
+                          >Arabic Ontology</a
+                        >
+                        ,
+                        <a
+                          href="https://sina.birzeit.edu/currasat/"
+                          target="content"
+                          >Curras</a
+                        >
+                        ,
+                        <a
+                          href="http://zinnar.pna.ps/InteroperabilityPortal/"
+                          target="content"
+                          >Zinnar</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="main-container">
+  <div class="intro-section">
+    <p class="intro-section-title text-center">Word-Duplicate Cleaner</p>
+  </div>
+  <div>
+    <div class="flex-container">
+      <table class="outerTable">
+        <tr>
+          <td width="13%">
+            <br>
+          </td>
+          <td width="9%">
+          </td>
+          <td width="15%">
+          </td>
+          <td width="15%">
+          </td>
+          <td width="35%">
+          </td>
+          <td width="13%">
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td colspan="4" align="left">
+            <span align="left">This form takes a set of delimited Arabic words and smartly removes duplicates, regardless on how they are diacritized. The full details in this <a
+                 href="http://www.jarrar.info/publications/JZAA18.pdf" target="content">article</a>.<br>Each line in the uploaded text file contains [SetID#SetOfWords], where SetID and SetOfWords delimited by # sign. Words in SetOfWords are separated by any character provided by the user in the form below</span>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td><br></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td colspan="4">
+            <table class="myTable">
+              <tr>
+                <td width="44%" valign="top">
+                  <span class="text_inpAndout" >Input:</span>
+                </td>
+                <td width="1%"></td>
+                <td height="100%" width="10%" rowspan="3" valign="center">
+                  <input class="btnStyle"
+                      type="button" id="removeDuplicatesFromFile" name="removeDuplicatesFromFile"
+                      value="Remove Duplicates >>"/>
+                </td>
+                <td width="1%"></td>
+                <td width="44%">
+                  <span class="text_inpAndout">Output:</span>
+                  <br><a href="#" onClick="downloadOutputFile();return false;" id="status">Download</a>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <input type="file" id="openFile">
+                  <textarea class="textAreaStyle"  name="input" id="input" rows="8"
+                            cols="50"></textarea>
+                </td>
+                <td></td>
+                <td></td>
+                <td valign="top">
+                  <p  class="outputRes"
+                     name="outputRes" id="outputRes"></p>
+                  <input type="hidden" name="output" id="output">
+                </td>
+              </tr>
+              <tr>
+                <td align="left" valign="top">
+                  <span class="text_inpAndout">Words separated by </span>
+                  <input class="inp-delimiter" type="text"  size="10" name="delimiter" id="delimiter"/>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td align="right">
+                  <a href="#" onClick="copyText();return false;">Copy to Clipboard</a>
+                </td>
+              </tr>
+              <tr>
+                <td><br></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <span class="text_inpAdvan">Advanced Options:</span>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <input id="ignoreLastLetterDiacs" type="checkbox"/><span class="inp-checkbox"> Ignore diacritics on last letter</span><br>
+                  <input id="ignoreShadda" type="checkbox"/><span class="inp-checkbox"> Ignore Shadda ( ّ ) on any letter</span><br>
+                  <input id="ignorefirstLetterHamza" type="checkbox"/><span class="inp-checkbox"> Ignore Hamza (ء) on the first Letter</span><br>
+                  <input id="ignoreAL" type="checkbox"/><span class="inp-checkbox"> Ignore (ال التعريف) from the beginning of the word</span>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td><br></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td style="vertical-align: super;">
+            <span class="text-style">Download: </span>
+          </td>
+          <td colspan="3" align="left">
+            <a  href="https://github.com/SinaInstitute/ImpliMorph" target="content">Source
+              Code</a>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td style="vertical-align: super;">
+            <span class="text-style">Publication: </span>
+          </td>
+          <td colspan="3" align="left">
+								<span >
+                  Mustafa Jarrar, Fadi Zaraket, Rami Asia, Hamzeh Amayreh:
+                  <a  href="http://www.jarrar.info/publications/JZAA18.pdf" target="content">
+                  Diacritic-Based Matching of Arabic Words</a>. ACM Asian
+            and Low-Resource Language Information Processing. Volume 18, No 2, Pages(10:1--10:21), ACM, December 2018.
+            ISSN 2375-4699.</span>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td style="vertical-align: super;">
+            <span class="text-style">Other Projects: </span>
+          </td>
+          <td colspan="3" align="left">
+            <a  href="./Implication.html" target="content">Implication Function</a> ,
+            <a  href="https://ontology.birzeit.edu" target="content">Arabic Ontology</a> ,
+            <a  href="https://sina.birzeit.edu/currasat/"
+               target="content">Curras</a> ,
+            <a  href="http://zinnar.pna.ps/InteroperabilityPortal/" target="content">Zinnar</a>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div> -->
+    <!-- <div class="tools-footer-alam">
+      <span class="footer-copyrights">
+        <a href="http://www.birzeit.edu/" target="_blank">
+          <img class="bzu-img" src="../Images/bzu-logo.png" />
+        </a>
+      </span>
+      <br />
+      <span class="footer-text">Copyright © 2022 Birzeit University</span>
+    </div> -->
+  </body>
+</html>

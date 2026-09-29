@@ -1,0 +1,461 @@
+textarea {
+  background-color: white;
+  width: 70%;
+  height: 92px;
+  text-align: right;
+  direction: rtl;
+  padding: 12px 20px;
+}
+/* Small, responsive images */
+.responsive-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: Zoom and shadow */
+.hoverable:hover {
+  transform: scale(1.05); /* Slight zoom-in */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Lightbox container (hidden by default) */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Lightbox image */
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.output-textarea {
+  /*padding: 12px 20px;*/
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+  font-size: 16px;
+  margin: 2cm;
+  text-align: right;
+  direction: rtl;
+  margin-top: 0.5cm;
+  width: 70%;
+  height: 10cm;
+  border: none;
+}
+th {
+  padding: 5px;
+  background-color: whitesmoke;
+}
+td {
+  padding: 3px;
+}
+.top-bar-1 {
+  background-color: #efefef;
+}
+
+.container {
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* Style the buttons */
+.btn {
+  border: solid;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  border-width: thin;
+  border-color: #d7d7d7;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+span {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.select {
+  /* // A reset of styles, including removing the default dropdown arrow */
+  appearance: none;
+  /* // Additional resets for further consistency */
+  background-color: transparent;
+  margin: 2px;
+  width: 2px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+.audio-arrow-box {
+  position: fixed;
+  top: 30%;
+  background: white;
+  border-radius: 6px;
+  display: block;
+  /* replaced box-shadow with filter */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  width: 284px;
+  height: 200px;
+  z-index: 99;
+  margin-left: 50px;
+}
+
+.audio-arrow-box::before {
+  z-index: 10;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-left: 0;
+  bottom: 0;
+  top: calc(25% - 5px);
+  left: 0;
+  box-sizing: border-box;
+  border: 5px solid black;
+  border-color: transparent transparent #fff #fff;
+  transform-origin: 0 0;
+  transform: rotate(45deg);
+}
+
+#output ul {
+  list-style-type: none;
+  float: right;
+  text-align: right;
+  direction: rtl;
+  width: 100%;
+}
+
+#output ul li {
+  margin-bottom: 15px;
+  margin-right: 160px;
+}
+/* 
+span {
+padding-left: 7px;
+padding-right: 7px;
+margin: 0px;
+border-radius: 0.3em;
+/* border-bottom: solid; */
+/* unicode-bidi: plaintext;
+border-left-style: solid;
+border-right-style: solid;
+border-left-color: white;
+border-right-color: white;
+border-width: thin;
+} */
+
+.combo {
+  text-align: center;
+  margin-top: 10px;
+}
+
+[data-entity]:after {
+  box-sizing: border-box;
+  content: attr(data-entity);
+  font-size: 0.55em;
+  line-height: 1;
+  padding: 0.35 em 0.35em;
+  border-radius: 0.35em;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.2;
+  margin: 0 0 0.15 rem 0.5 rem;
+  background: #fff;
+  font-weight: bold;
+}
+
+.buttonClassB {
+  background: red;
+}
+
+.audio-arrow-box {
+  position: fixed;
+  top: 30%;
+  background: white;
+  border-radius: 6px;
+  display: block;
+
+  /* replaced box-shadow with filter */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+
+  width: 284px;
+  height: 200px;
+  z-index: 99;
+  margin-left: 50px;
+}
+
+.audio-arrow-box::after {
+  z-index: -99;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-left: 0;
+  bottom: 0;
+  top: calc(25% - 5px);
+  left: 0;
+  box-sizing: border-box;
+  border: 5px solid #fff;
+  border-color: transparent transparent #fff #fff;
+  transform-origin: 0 0;
+  transform: rotate(45deg);
+
+  /* removed box-shadow rule */
+}
+
+.center-align {
+  text-align: center;
+}
+
+.alma-container {
+  background-color: white;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  padding-right: 45px;
+  padding-left: 45px;
+  margin-top: 20px;
+}
+
+.services-list-item {
+  margin-bottom: 25px;
+}
+
+.p-toggle-label {
+  max-width: 100%;
+  font-weight: bold;
+  display: table;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0px 10px;
+  border: 1px solid grey;
+  background-color: whitesmoke;
+  width: 100%;
+}
+.p-toggle-label-res {
+  max-width: 100%;
+  font-weight: bold;
+  display: inline;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0px 10px;
+  border: 1px solid grey;
+  background-color: whitesmoke;
+  width: 100%;
+}
+
+.p-unfold-icon,
+.p-fold-icon {
+  margin-right: 5px;
+  color: black;
+  display: table-cell;
+  font-size: 160%;
+  width: 25px;
+  font-family: sans-serif;
+  vertical-align: middle;
+  border: none;
+}
+.a-description {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* span {
+  padding-left: 7px;
+  padding-right: 7px;
+  margin: 0px;
+  border-radius: 0.3em;
+  unicode-bidi: plaintext;
+  /* border-left-style: solid;
+  border-right-style: solid; */
+/* border-left-color: white;
+  border-right-color: white;
+  border-width: thin; */
+/* } */
+*/ .p-unfolder0 ~ label .p-fold-icon {
+  display: none;
+}
+
+.p-label-title {
+  margin: 1px;
+  padding-left: 1rem;
+  font-weight: bold;
+  text-align: left;
+  /* font-size: 100%; */
+  line-height: 2.5;
+  line-height: 1.5;
+  vertical-align: middle;
+  display: table-cell;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+.p-unfolder0 ~ .p-fold {
+  display: none;
+}
+
+.description_fold {
+  padding-left: 0rem;
+}
+
+.p-fold {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  padding-left: 15px;
+}
+
+.description-p {
+  margin-left: 25px;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+.description-p-table {
+  margin-left: 25px;
+
+  padding-right: 15px;
+}
+
+.p-description-p {
+  text-align: left;
+}
+
+.remove-padding {
+  padding: 0rem;
+}
+
+.p-unfolder0 ~ label .p-fold-icon {
+  display: none;
+}
+
+.p-unfolder0:checked ~ .p-fold {
+  display: block;
+}
+
+.p-unfolder0:checked ~ label .p-fold-icon {
+  display: table-cell;
+}
+
+.p-unfolder0:checked ~ label .p-unfold-icon {
+  display: none;
+}
+
+.services-list {
+  padding-bottom: 121px;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.p-unfolder14 ~ .p-fold {
+  display: block;
+}
+
+.p-unfolder14 ~ label .p-fold-icon {
+  display: inline-block;
+}
+
+.p-unfolder14 ~ label .p-unfold-icon {
+  display: none;
+}
+
+.p-unfolder14:checked ~ .p-fold {
+  display: none;
+}
+
+.p-unfolder14:checked ~ label .p-fold-icon {
+  display: none;
+}
+
+.p-unfolder14:checked ~ label .p-unfold-icon {
+  display: inline-block;
+}
+.resultLable {
+  margin-left: 13%;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: -25px;
+  font-weight: 700;
+}
+.intro-section {
+  background-color: white;
+  padding-right: 20px;
+  padding-left: 45px;
+  padding-top: 35px;
+  margin: 0px;
+  background-image: url(Images/header_image.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+@media screen and (max-width: 730px) {
+  textarea {
+    width: 92%;
+  }
+  .alma-container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .description-p {
+    padding-left: 0;
+    margin-left: 15px;
+  }
+  textarea {
+    padding: 3px;
+  }
+  .resultLable {
+    margin-left: 3%;
+  }
+  .intro-section {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .p-fold {
+    padding-left: 0px;
+  }
+}

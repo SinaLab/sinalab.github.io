@@ -1,0 +1,290 @@
+textarea {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    background-color: white;
+    margin-bottom: 0.5cm;
+    width: 65%;
+    height: 3.5cm;
+    text-align: right;
+    font-size: 16px;
+    direction: rtl;
+    justify-content: center;
+    visibility: hidden;
+}
+
+#myDiv {
+    visibility: hidden;
+}
+
+.lable_Code {
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Helvetica, Arial, sans-serif;
+}
+
+#container-div {
+    margin-right: 0rem;
+    margin-left: 0rem;
+    width: 100%;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 35px;
+    border-bottom: none;
+    margin-bottom: auto;
+    color: #333;
+    padding-bottom:10px;
+}
+
+#inp_pswd {
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    height: 27px;
+    direction: rtl;
+    font-size: 19px;
+    padding-right: 2px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#GoButton {
+    border-radius: 10px;
+    height: 32px;
+    min-width: 90px;
+    align-items: center;
+    justify-content: center;
+    background: #d3d2d2;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 2%;
+    cursor: pointer;
+    margin-left: 5%;
+    color: rgb(44, 43, 43);
+    border-color: #ada9a9;
+    visibility: hidden;
+
+}
+ img{
+    margin: 8px;
+ }
+#confirm_btn {
+    border-radius: 10px;
+    height: 32px;
+    min-width: 70px;
+    align-items: center;
+    justify-content: center;
+    background: #d3d2d2;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 1%;
+    cursor: pointer;
+    margin-left: 2%;
+    color: rgb(44, 43, 43);
+    border-color: #ada9a9;
+
+}
+
+.form-group {
+    text-align: center;
+}
+
+#output {
+    font-size: 18px;
+    line-height: 50px;
+    unicode-bidi: plaintext;
+}
+
+.p-intro {
+    width: auto;
+    text-align: justify;
+}
+
+.p-intro h1 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 3em;
+    border-bottom: none;
+    margin-bottom: auto;
+}
+
+
+
+.services-list-item>h4 {
+    margin-left: 20px;
+}
+
+.p-fold {
+    /*margin-left: 5px;*/
+    /*margin-right: 5px;*/
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    padding-left: 15px;
+}
+
+.p-unfolder {
+    display: none;
+}
+
+.description-p-wojood {
+    margin-left: 0rem;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.p-unfold-icon,
+.p-fold-icon {
+    color: black;
+    /*margin-right: 5px;*/
+    display: inline-table;
+    font-size: 28px;
+    /*vertical-align: top;*/
+    width: 25px;
+}
+
+.p-unfolder0~.p-fold {
+    display: none;
+}
+
+.p-unfolder0~label .p-fold-icon {
+    display: none;
+}
+
+.p-unfolder0:checked~.p-fold {
+    display: block;
+}
+
+.p-unfolder0:checked~label .p-fold-icon {
+    display: table-cell;
+}
+
+.p-unfolder0:checked~label .p-unfold-icon {
+    display: none;
+}
+
+.p-toggle-label {
+    max-width: 100%;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    display: table;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 1px solid grey;
+    /*padding: 5px;*/
+    background-color: whitesmoke;
+    width: 100%;
+}
+
+.p-fold-table-wojood {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+.p-fold-table-wojood,
+th,
+td {
+    border: 0.5px solid #8e8e8e;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: -25px;
+}
+
+.description_fold {
+    padding-left: 0rem;
+}
+
+.p-description-p {
+    text-align: left;
+}
+
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+}
+
+#checkboxes label {
+    display: block;
+}
+
+#checkboxes label:hover {
+    background-color: #1e90ff;
+}
+
+
+/* this line  add  */
+.multiselect {
+    width: 200px;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    font-weight: bold;
+}
+
+
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border: 0.5px solid #000;
+}
+
+.table-bordered {
+    border: 1px solid #000;
+}
+
+.table_values {
+    font-weight: normal;
+}
+
+
+.p-unfolder14~.p-fold {
+    display: block;
+}
+
+.p-unfolder14~label .p-fold-icon {
+    display: inline-block;
+}
+
+.p-unfolder14~label .p-unfold-icon {
+    display: none;
+}
+
+.p-unfolder14:checked~.p-fold {
+    display: none;
+}
+
+.p-unfolder14:checked~label .p-fold-icon {
+    display: none;
+}
+
+.p-unfolder14:checked~label .p-unfold-icon {
+    display: inline-block;
+}

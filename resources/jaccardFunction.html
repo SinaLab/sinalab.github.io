@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="icon" type="image/ico" href="./favicon.ico">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/Fira-Sans-font.css">
+    <link rel="stylesheet" href="../main.css?v=8" />
+    <link rel="stylesheet" href="./downloads.css" />
+    <script src="jaccardFunction.js"></script> 
+
+    <meta property="og:image" content="https://sina.birzeit.edu/Images/OGLogo.jpg">
+    <meta property="og:image:width" content="200">
+    <meta property="og:image:height" content="200">
+    <meta property="og:image:alt" content="SinaLab logo">
+    <meta property="og:url" content="https://sina.birzeit.edu/resources/jaccardFunction.html">
+    <meta property="og:type" content="WebSite">
+    <meta property="og:description" content="Takes two sets of Arabic words and outputs the union, intersection, and similarity between them.">
+    <meta property="og:title" content="Jaccard Similarity for Arabic Words">
+    <meta property="image" content="https://sina.birzeit.edu/Images/SinaLogo.jpg">
+    <meta property="image:width" content="200">
+    <meta property="image:height" content="200">
+    <meta property="image:alt" content="SinaLab logo">
+    <meta property="url" content="https://sina.birzeit.edu/resources/jaccardFunction.html">
+    <meta property="type" content="WebSite">
+    <meta name="description" content="Takes two sets of Arabic words and outputs the union, intersection, and similarity between them.">
+    <meta name="author" content="SinaLab - Birzeit University">
+    <meta name="keywords" content="Calculate Jaccard Similarity, Free, online, open sources, SinaTools, relation extraction, LLMs, algorithms, ALMA, Annotation tools, Arabic, Arabic Dictionary, Arabic Lexicographic Database, Arabic Lexicon, articles, Baladi, BERT, bias, Birzeit University, cleaning, Corpora, Corpus, Curras, Currasat, Data visualisation, dataset, datasets, Deep Learning, Demo, diacratics, Diacritics-aware, dialect, Dialect Lemma, Dialect Lemma, Dialects, dictionaries, Dictionary, Digital archives, Digitisation, Discourse analysis, Document classification, Duplication, emotional content extraction, English, entity, Entity linking, event argument extraction, Event detection, events, Guideline, Hate speech, Hebrew, implication, information retrieval, intents, intersection, Iraqi, Iraqi Dialect Corpus, jaccard similarity, Knowledge Graphs, Knowledge representation, language corpora, Languages, Large Language Models, Lebanese, Lebanese Dialect Corpus, Lemmas, Lemmatization, Lexicon, Lexicons, Libyan, Libyan Dialect Corpus, Linked Data, Lisan, Machine translation, matching, Media, metadata, Middle Eastern history, misinformation, models, Modern Standard Arabic, Morphological Solution, Morphology, MSA, MSA, MSA lemma, Mustafa Jarrar, Nabra, Nakba narratives, Nakba testimonies, Named Entity Recognition, narratives, Natural Language Generation, NER, Nested, News, NLP, NLU, offensive language, online, ontologies, Open-Source, organizations, Palestine, Palestinian, Palestinian Dialect Corpus, Palestinian Nakba, paraphrasing, Part-Of-Speech, Part-of-speech Tagging, POS, Pre-trained model, Prefix, Projects, Qabas, relationship extraction, Research, resources, SALMA, Semantic Relatedness, semantic tagging, sense, Sentiment analysis, similarity, SinaLab, stem, Sudanese, Sudanese Dialect Corpus, suffix, summarisation, Synonyms, Synonyms Evaluate, Synonyms Extraction, Syrian, Syrian Dialect Corpus, Tool, topic modeling, union, Vocabularies, Welsh, Wojood, Word Sense Disambiguation, Workshop, WSD, Yemeni, Yemeni Dialect Corpus, أخبار, ألمى, اتحاد, استخراج المترادفات, التعرف على الكينونات, اللغة العربية, اللغة العربية المعاصرة, انجليزي, بحث علمي, تقاطع, جامعة بيرزيت, خصائص صرفية, خوارزميات, دليل معياري, ذم, سلمى, سينا, شبكة بيانات, شبكة بيانات معجمية, عامية, عامية إماراتية, عامية سودانية, عامية سورية, عامية عراقية, عامية فلسطينية, عامية لبنانية, عامية ليبية, عامية مصرية, عامية يمنية, عربي, فصحى, فصحى حديثة, فلسطين, فهم الدلالة, قاموس عربي, قبس, قسم الكلام, كراسات, كراهية, محلل دلالي, مدخلات, مدخلات معجمية, مدخلة, مدخلة عامية, مدخلة فصحى, مدونات, مدونات عامية, مدونة, مصادر, مصطفى جرار, معاجم, معالجة اللغة الطبيعية, معجم, معجم اللغة العربية, معجم عربي, معجم مجاني, مفتوح المصدر, مقارنة, مكنز, مكنز شجري صرفي, نكبة, نموذج, وجود">
+    <link rel="shortcut icon" href="https://sina.birzeit.edu/Images/SinaLogo.jpg" type="image/x-icon">
+    <title>Jaccard Similarity for Arabic Words</title>    
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SV0Y0V4JTT"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SV0Y0V4JTT');
+    </script>    
+</head> 
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default bg-light">
+        <div class="sina-header">
+            <div class="image-holder" onclick="window.open('../index.html');">
+                <img src="../Images/arOntLogo.png" class="img-responsive logo" alt="logo">
+                <div class="vertical-line"></div>
+                <p class="title">SinaLab</p>
+            </div>
+        </div>
+        <div class="menu">
+            <ul class="nav text-center navigation-bar">
+                <li><a href="../news/index.html">News</a></li>
+                <li><a href="../index.html#team">Team</a></li>
+                <li><a href="./index.html">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="intro-section" style="padding-bottom:0;">
+        <p class="intro-section-title text-left">Jaccard Similarity Function</p>
+        <p style="margin-right: 0; margin-bottom: 0;" >	Calculates and returns the Jaccard similarity values (union, intersection, or Jaccard similarity) between two lists of Arabic words, considering the differences in their diacritization.</p>
+    </div>
+    <div class="main-container-implication">
+        <div>
+            <div class="flex-container">
+                <div class="table-div">
+                    <table class="myTable" style="margin: 0 auto;">
+                        <tr class="first-row-jaccard"> <!-- Flexbox with gap -->
+                            <td style="text-align: left; vertical-align: top; ">
+                                <label for="word1" style="display: block; margin-bottom: 0;">Set A:</label>
+                                <input class="inp-word-j" dir="rtl" type="text" style=" text-align: right;" name="list1" id="list1" required value="فَعَلَ | فَعل | كتب" />
+                            </td>
+                            <td style="text-align: left; vertical-align: top;">
+                                <label for="word2" style="display: block; margin-bottom: 0;">Set B:</label>
+                                <input class="inp-word-j" dir="rtl" style=" text-align: right;" type="text" name="list2" id="list2" value="فَعّل | كتب" />
+                            </td>
+                        </tr>
+                    
+                        </table>
+                    </div>
+                    <div class="sec-div-j">
+                        <table class="myTable">
+                        <tr>
+                            <td colspan="2" style="padding-top: 10px;">
+                                <span class="text_inpAndout">Separated by:</span>
+                                <input class="inp-delimiter" type="text" size="1" name="delimiter" id="delimiter" style="border: solid 1px #9F9E9E;" value="|" />
+                                <br>
+                                <!-- <span class="text_inpAdvan">Advanced Options:</span><br> -->
+                                <input id="ignoreAllDiacriticsButNotShadda" type="checkbox" checked />
+                                <span class="inp-checkbox">Ignore all diacritics but not shadda</span><br>
+                                <input id="ignoreShaddaDiacritic" type="checkbox" checked />
+                                <span class="inp-checkbox">Ignore diacritics and Shadda ( ّ )</span>
+                            </td>
+                        </tr>
+                        </table>
+                    </div>
+                    <div style="text-align: center;">
+                        <input class="btn" type="button" id="jaccard" name="jaccard" value="Compute" onclick="jaccard()" />
+
+                    </div>
+                    <div style="text-align: center;">
+                    <div style="margin-top: 10px; display: none;" id="result" >
+                      
+                        <label style="font-weight: bold; width: 90px; color: #504C4C; text-align: right;">Similarity:</label>
+                        <input type="text" style="width: 50%; font-size: x-large; padding: 5px; margin-bottom: 10px;border-radius: 5px; border: 1px solid #ccc; " id="similarity" readonly >
+                        <br>
+                        <label style="font-weight: bold;  width: 90px; color: #504C4C; text-align: right;">Intersection:</label>
+                        <input type="text" style="width: 50%; height: 40px; font-size: x-large; padding: 5px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;" dir="rtl" id="intersection" readonly>
+                        <br>
+                        <label style="font-weight: bold;  width: 90px; color: #504C4C; text-align: right;">Union:</label>
+                        <!-- <textarea readonly class="outputRes" name="union" id="union" rows="4" cols="20" style="height: 50px; width: 90%; border: solid 1px;" dir="rtl"></textarea> -->
+                        <input type="text" style="width: 50%; height: 40px; font-size: x-large; padding: 5px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;" dir="rtl" name="union" id="union" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alma-container">
+            <div class="form-horizontal">
+                <div class="normalText">              
+                    <ul class="services-list-impl">
+                        <li>
+                            <div class="services-list-item-impl">
+                                <input type="checkbox" id="p-toggle10" class="p-unfolder p-unfolder14">
+                                <label for="p-toggle10" class="p-toggle-label-impl">
+                                    <span class="p-unfold-icon" style="width: fit-content;">+</span>
+                                    <span class="p-fold-icon" style="width: fit-content;">-</span>
+                                    <span class="p-label-title-impl">Publication</span>
+                                </label>
+                                <div class="p-fold description_fold">
+                                    <div class="p-fold description-p">
+                                        <p class="p-description-p">
+                                            <span> Mustafa Jarrar, Fadi Zaraket, Rami Asia, Hamzeh Amayreh:
+                                                <a href="http://www.jarrar.info/publications/JZAA18.pdf" target="content">
+                                                    Diacritic-Based Matching of Arabic Words</a>. ACM Asian
+                                                and Low-Resource Language Information Processing. Volume 18, No 2, Pages(10:1--10:21), ACM, December
+                                                2018. ISSN 2375-4699.</span>          
+                                                <br>
+                                                <br>
+                                                <span>
+                                                    Tymaa Hammouda, Mustafa Jarrar, Mohammed Khalilia: <a href="https://www.jarrar.info/publications/HJK24.pdf">SinaTools: Open Source Toolkit for Arabic Natural Language Understanding.</a> In Proceedings of the 2024 AI in Computational Linguistics (ACLING 2024), Procedia Computer Science, Dubai. ELSEVIER.
+                                                </span>                                  
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    </div>
+   <!-- <div class="tools-footer-alam">
+        <span class="footer-copyrights">
+            <a href="http://www.birzeit.edu/" target="_blank">
+                <img class="bzu-img" src="../Images/bzu-logo.png" alt="Birzeit University logo">
+            </a>
+        </span>
+        <br>
+        <span class="footer-text">Copyright © 2022 Birzeit University</span>
+    </div> -->
+</body>
+
+</html>

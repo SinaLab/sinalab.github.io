@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Arabic Relation Extraction Tools, datasets and models</title>
+    <link rel="icon" type="image/ico" href="./favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/Fira-Sans-font.css" />
+    <link rel="stylesheet" href="../main.css?v=8" />
+    <link rel="stylesheet" href="./relations.css" />
+    <script src="./relation.js"></script>
+    <!-- 
+    <meta property="og:image:width" content="100">
+    <meta property="og:image:height" content="100"> -->
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1, viewport-fit=cover"
+    />
+    <!--viewport-fit=cover - for iPhone X notch-->
+
+    <meta property="header" content="Wojood" />
+
+    <meta
+      property="og:title"
+      content="Arabic Relation Extraction Tools, datasets and models"
+    />
+    <meta
+      property="og:image"
+      content="https://sina.birzeit.edu/Images/OGLogo.jpg"
+    />
+    <meta property="og:url" content="https://sina.birzeit.edu/relations" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Arabic Relation Extraction Tools, datasets and models"
+    />
+    <meta
+      name="description"
+      content="Arabic Relation Extraction Tools, datasets and models"
+    />
+    <meta
+      property="title"
+      content="Arabic Relation Extraction Tools, datasets and models"
+    />
+    <meta name="author" content="SinaLab - Birzeit University" />
+    <meta
+      name="keywords"
+      content="Free, online, open sources, SinaTools, relation extraction, LLMs, algorithms, ALMA, Annotation tools, Arabic, Arabic Dictionary, Arabic Lexicographic Database, Arabic Lexicon, articles, Baladi, BERT, bias, Birzeit University, cleaning, Corpora, Corpus, Curras, Currasat, Data visualisation, dataset, datasets, Deep Learning, Demo, diacratics, Diacritics-aware, dialect, Dialect Lemma, Dialect Lemma, Dialects, dictionaries, Dictionary, Digital archives, Digitisation, Discourse analysis, Document classification, Duplication, emotional content extraction, English, entity, Entity linking, event argument extraction, Event detection, events, Guideline, Hate speech, Hebrew, implication, information retrieval, intents, intersection, Iraqi, Iraqi Dialect Corpus, jaccard similarity, Knowledge Graphs, Knowledge representation, language corpora, Languages, Large Language Models, Lebanese, Lebanese Dialect Corpus, Lemmas, Lemmatization, Lexicon, Lexicons, Libyan, Libyan Dialect Corpus, Linked Data, Lisan, Machine translation, matching, Media, metadata, Middle Eastern history, misinformation, models, Modern Standard Arabic, Morphological Solution, Morphology, MSA, MSA, MSA lemma, Mustafa Jarrar, Nabra, Nakba narratives, Nakba testimonies, Named Entity Recognition, narratives, Natural Language Generation, NER, Nested, News, NLP, NLU, offensive language, online, ontologies, Open-Source, organizations, Palestine, Palestinian, Palestinian Dialect Corpus, Palestinian Nakba, paraphrasing, Part-Of-Speech, Part-of-speech Tagging, POS, Pre-trained model, Prefix, Projects, Qabas, relationship extraction, Research, resources, SALMA, Semantic Relatedness, semantic tagging, sense, Sentiment analysis, similarity, SinaLab, stem, Sudanese, Sudanese Dialect Corpus, suffix, summarisation, Synonyms, Synonyms Evaluate, Synonyms Extraction, Syrian, Syrian Dialect Corpus, Tool, topic modeling, union, Vocabularies, Welsh, Wojood, Word Sense Disambiguation, Workshop, WSD, Yemeni, Yemeni Dialect Corpus, أخبار, ألمى, اتحاد, استخراج المترادفات, التعرف على الكينونات, اللغة العربية, اللغة العربية المعاصرة, انجليزي, بحث علمي, تقاطع, جامعة بيرزيت, خصائص صرفية, خوارزميات, دليل معياري, ذم, سلمى, سينا, شبكة بيانات, شبكة بيانات معجمية, عامية, عامية إماراتية, عامية سودانية, عامية سورية, عامية عراقية, عامية فلسطينية, عامية لبنانية, عامية ليبية, عامية مصرية, عامية يمنية, عربي, فصحى, فصحى حديثة, فلسطين, فهم الدلالة, قاموس عربي, قبس, قسم الكلام, كراسات, كراهية, محلل دلالي, مدخلات, مدخلات معجمية, مدخلة, مدخلة عامية, مدخلة فصحى, مدونات, مدونات عامية, مدونة, مصادر, مصطفى جرار, معاجم, معالجة اللغة الطبيعية, معجم, معجم اللغة العربية, معجم عربي, معجم مجاني, مفتوح المصدر, مقارنة, مكنز, مكنز شجري صرفي, نكبة, نموذج, وجود, "
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+      type="image/x-icon"
+    />
+    <!-- <title>Wojood مدونة وجود لاستخراج الكينونات</title> -->
+  </head>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default bg-light">
+      <div class="sina-header">
+        <div class="image-holder" onclick="window.open('../index.html');">
+          <img
+            src="../Images/arOntLogo.png"
+            class="img-responsive logo"
+            alt="logo"
+          />
+          <div class="vertical-line"></div>
+          <p class="title">SinaLab</p>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="nav text-center navigation-bar">
+          <li><a href="../news/index.html">News</a></li>
+          <li><a href="../index.html#team">Team</a></li>
+          <li><a href="../resources/index.html">Resources</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="intro-section">
+      <p class="intro-section-title">Relation Extraction</p>
+
+      <p>
+		Two corpora: (1) Relation Extraction corpus supporting 40 relation types (Wojood<sup>Relations</sup>), see <a href="https://www.jarrar.info/publications/JKJ25.pdf">article</a>, 
+		and (2) Event-Argument Relation Extraction corpus supporting 3 relation types (Wojood<sup>Hadath</sup>), see <a href="https://www.jarrar.info/publications/ADJK24.pdf">article</a>. 
+      </p>
+	  <p><b>Performance</b>: Wojood<sup>Relations</sup> (88.61%),  Wojood<sup>Hadath</sup> (93.99%) Wojood<sup>OutOfDomain</sup> (74.90%).</p>
+    </div>
+
+    <div class="wojood-container center-align">
+      <textarea id="text">
+شاركت هيئة سوق رأس المال الفلسطينية في فعاليات الملتقى الدولي السادس للمؤسسات المالية والاستثمارية، والذي عقد في دمشق بتاريخ 18 / 11 / 2008.
+
+ وشارك في الملتقى السيد براق النابلسي مدير عام هيئة سوق رأس المال الفلسطينية، والسيد جيرارد شوديور ممثلاً لبورصة فيينا</textarea
+      >
+
+  <div id="myBtnContainer">
+  <button class="btn" id="nerId" onclick="getRelation()">
+    Extract All Relations
+  </button>
+
+  <button class="btn" id="eventRelationId" onclick="getEventRelation()">
+    Extract Event Arguments Only
+  </button>
+</div>
+      <div id="combo">
+        <label>output format :</label>
+        <select id="output_format">
+          <option value="Table">Table</option>
+          <option value="highlighted">Highlighted</option>
+          <option value="JSON">JSON</option>
+        </select>
+      </div>
+
+      <div id="output"></div>
+    </div>
+
+    <div class="wojood-container">
+      <div class="form-horizontal">
+        <div class="normalText">
+          <ul class="services-list">
+            <li>
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle138"
+                  class="p-unfolder p-unfolder14"
+                />
+                <label for="p-toggle138" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Description</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+                    <p class="p-description-p">
+					  <span class="a-description">Models:</span> NLI<sup>RE</sup> and NLI<sup>EAE</sup> BERT-based models. <br><br>
+
+
+                      <span class="a-description">Method: </span>We formulated both the Relation Extraction and Event-Argument Extraction tasks as Natural Language Inference (NLI) problems.
+For each task, a BERT-based model was fine-tuned using a large set of NLI-style sentence pairs automatically derived from the corresponding datasets — Wojood<sup>Relations</sup> and Wojood<sup>Hadath</sup>. <br><br>
+
+					  <span class="a-description">Wojood<sup>Relations</sup> Corpus:</span> 550K tokens, 40 relations (Relation Extraction).<br><br>
+
+                      <span class="a-description">Wojood<sup>Hadath</sup> Corpus:</span> 550K tokens, 3 relations (Event-Argument Extraction).<br><br>
+					  
+					  <span class="a-description">Wojood<sup>OutOfDomain</sup> Corpus:</span> 80K tokens, 3 relations (Event-Argument Extraction).<br><br>
+
+                      <span class="a-description">Relations (Wojood<sup>Relations</sup> - 40 Types):</span><br />
+                    </p>
+
+					
+                    <div
+                      class="table-responsive"
+                      style="border: none !important"
+                    >
+                      <table>
+                        <tbody>
+							<tr>
+								<td class="td_class">leader_of</td>
+								<td class="td_class middle_column">manager_of</td>
+								<td class="td_class">president_of</td>
+								<td class="td_class">employee_of</td>
+							</tr>
+							
+							<tr>
+								<td class="td_class">member_of</td>
+								<td class="td_class middle_column">owner_of</td>
+								<td class="td_class">president_of</td>
+								<td class="td_class">student_at</td>
+							</tr>
+							
+							<tr>
+								<td class="td_class">has_compititor</td>
+								<td class="td_class middle_column">has_conflict_with</td>
+								<td class="td_class">has_partner_with</td>
+								<td class="td_class">has_parent</td>
+							</tr>
+							
+							<tr>
+								<td class="td_class">has_relative</td>
+								<td class="td_class middle_column">has_sibling</td>
+								<td class="td_class">has_spouse</td>
+								<td class="td_class">capital_of</td>
+							</tr>
+							
+							<tr>
+								<td class="td_class">has_currency</td>
+								<td class="td_class middle_column">has_population</td>
+								<td class="td_class">official_language</td>
+								<td class="td_class">has_border_with</td>
+							</tr>
+
+							<tr>
+								<td class="td_class">headquartered_in</td>
+								<td class="td_class middle_column">lives_in</td>
+								<td class="td_class">located_in</td>
+								<td class="td_class">nearby</td>
+							</tr>							
+
+							<tr>
+								<td class="td_class">branch_count</td>
+								<td class="td_class middle_column">employs</td>
+								<td class="td_class">found_on</td>
+								<td class="td_class">has_alternate_name</td>
+							</tr>		
+							
+							<tr>
+								<td class="td_class">has_property</td>
+								<td class="td_class middle_column">subsidary</td>
+								<td class="td_class">geopolitical_division</td>
+								<td class="td_class">birth_date</td>
+							</tr>						
+							
+							<tr>
+								<td class="td_class">birth_place</td>
+								<td class="td_class middle_column">death_date</td>
+								<td class="td_class">has_occupation</td>
+								<td class="td_class">builder_of</td>
+							</tr>
+
+							<tr>
+								<td class="td_class">founder_of</td>
+								<td class="td_class middle_column">manufacturer_of</td>
+							</tr>						
+						</tbody>
+					   </table>	
+
+						<br>
+						<div>
+						<span class="a-description">Relations (Wojood<sup>Hadath</sup> - 3 Types):</span><br />
+							
+						<p>has Agent: participant(s) involved in the event. <br>
+						hasLocation: where the event occurred. <br>
+						hasDate: when the event occurred.</p>
+
+						</div>						
+                    </div>
+
+                    <a style="color: #000000; text-decoration: none"
+                      >Please email Prof. Jarrar (mjarrar AT birzeit.edu) for
+                      the annotation guidelines
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="download">
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle1"
+                  class="p-unfolder p-unfolder0"
+                />
+                <label for="p-toggle1" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Downloads</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+                    <p class="p-description-p">
+                      <a href="https://sina.birzeit.edu/sinatools/"
+                        >SinaTools:</a
+                      >
+                      Relation Extraction module as python library.
+                      <br />
+                      <br />
+                      <a href="https://huggingface.co/SinaLab/arabic-relation-extraction-model"
+                        >Hugging Face:</a
+                      >
+                      NLI-based fine-tuned BERT module.
+                      <br />
+                      <br />
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdtN7OtVQBkRYktpnHd8xmyLi_KP2eZHc4T41IaWtIAptM4mw/viewform"
+                        >Wojood<sup>Relations</sup>
+                      </a>
+                      (Corpus only)
+                      <br />
+                      <br />
+					  <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScknCEDDe44mOKzKPkYApPZ9N_jQ6iflIRzEwOJsYY_jvK2vA/viewform"
+                        >Wojood<sup>Hadath</sup>
+                      </a>
+                      (Corpus only)
+                      <br />
+                      <br />
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScknCEDDe44mOKzKPkYApPZ9N_jQ6iflIRzEwOJsYY_jvK2vA/viewform"
+                        >Wojood<sup>OutOfDomain</sup></a
+                      >
+                      (Corpus only)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- <li>
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle10"
+                  class="p-unfolder p-unfolder0"
+                />
+                <label for="p-toggle10" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Shared Task</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">Coming soon</div>
+                </div>
+              </div>
+            </li> -->
+            <li>
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle139"
+                  class="p-unfolder p-unfolder14"
+                />
+                <label for="p-toggle139" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Publications</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+                    <p class="p-description-p">
+                      Alaa Aljabari, Mohammed Khalilia, Mustafa Jarrar:
+                      <a href="https://www.jarrar.info/publications/JKJ25.pdf">WojoodRelations: Arabic Relation Extraction Corpus and Modeling</a>
+                      In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing 2025 (ENMLP), China, ACL.
+                    </p>
+					
+					<br>
+					
+					<p class="p-description-p">
+                      Alaa Aljabari, Lina Duaibes, Mustafa Jarrar, Mohammed
+                      Khalilia:
+                      <a href="https://www.jarrar.info/publications/ADJK24.pdf"
+                        >Event-Arguments Extraction Corpus and Modeling using
+                        BERT for Arabic.</a
+                      >
+                      In Proceedings of the Second Arabic Natural Language
+                      Processing Conference (ArabicNLP 2024), Bangkok, Thailand.
+                      Association for Computational Linguistics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9mrcepCnz386QEkMK8vUoFU1aW3qqBoPjZVJFo8beXGxhfA/viewform?embedded=true" width="640" height="581" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+        </div>
+      </div>
+    </div>
+    <!-- Birzeit Footer -->
+    <!-- <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-content-div">
+          <span class="footer-copyrights">
+            <a href="http://www.birzeit.edu/" target="_blank">
+              <img src="../Images/bzu-logo2.png" alt="bzu logo" />
+            </a>
+          </span>
+          <span class="ng-binding"> Copyright © 2025 Birzeit University </span>
+        </div>
+      </div>
+    </footer> -->
+  </body>
+</html>

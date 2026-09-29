@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1000; user-scalable=0;" />
+
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./style_two.css?v=33" />
+    <link rel="stylesheet" type="text/css" href="./curras.css?v=33" />
+    <script src="scripts/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="./curras_home_page.js?v=33"></script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BF9N4G9KR2"
+    ></script>
+    <!-- to disable compatibility mode in Internet Explorer-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, viewport-fit=cover"> viewport-fit=cover - for iPhone X notch -->
+
+    <!-- to always open links in new tabs -->
+    <!-- <base href="/"> -->
+
+    <link rel="icon" href="images/Currasat_Logo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="images/Currasat_Logo.png"
+      type="image/x-icon"
+    />
+
+    <meta
+      property="og:image"
+      content="https://sina.birzeit.edu/Images/OGLogo.jpg"
+    />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+    <meta property="og:image:alt" content="SinaLab logo" />
+
+    <meta property="header" content="SinaTools" />
+
+    <meta
+      property="og:url"
+      content="https://sina.birzeit.edu/currasat/pub.html"
+    />
+    <meta property="og:type" content="WebSite" />
+    <meta
+      property="og:description"
+      content="Seven dialectal Arabic corpora with full morphological annotations (Search and Download). Dialects: Palestinian, Lebanese, Syrian, Iraqi Libyan, Sudanese, and Yemeni  "
+    />
+    <meta property="og:title" content="Arabic Dialect Corpora Publications" />
+
+    <meta
+      property="image"
+      content="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+    />
+    <meta property="image:width" content="200" />
+    <meta property="image:height" content="200" />
+    <meta property="image:alt" content="SinaLab logo" />
+
+    <meta property="url" content="https://sina.birzeit.edu/currasat/pub.html" />
+    <meta property="type" content="WebSite" />
+    <meta
+      name="description"
+      content="Seven dialectal Arabic corpora with full morphological annotations (Search and Download). Dialects: Palestinian, Lebanese, Syrian, Iraqi Libyan, Sudanese, and Yemeni  "
+    />
+
+    <meta name="author" content="SinaLab - Birzeit University" />
+    <meta
+      name="keywords"
+      content="Free, online, open sources, SinaTools, relation extraction, LLMs, algorithms, ALMA, Annotation tools, Arabic, Arabic Dictionary, Arabic Lexicographic Database, Arabic Lexicon, articles, Baladi, BERT, bias, Birzeit University, cleaning, Corpora, Corpus, Curras, Currasat, Data visualisation, dataset, datasets, Deep Learning, Demo, diacratics, Diacritics-aware, dialect, Dialect Lemma, Dialect Lemma, Dialects, dictionaries, Dictionary, Digital archives, Digitisation, Discourse analysis, Document classification, Duplication, emotional content extraction, English, entity, Entity linking, event argument extraction, Event detection, events, Guideline, Hate speech, Hebrew, implication, information retrieval, intents, intersection, Iraqi, Iraqi Dialect Corpus, jaccard similarity, Knowledge Graphs, Knowledge representation, language corpora, Languages, Large Language Models, Lebanese, Lebanese Dialect Corpus, Lemmas, Lemmatization, Lexicon, Lexicons, Libyan, Libyan Dialect Corpus, Linked Data, Lisan, Machine translation, matching, Media, metadata, Middle Eastern history, misinformation, models, Modern Standard Arabic, Morphological Solution, Morphology, MSA, MSA, MSA lemma, Mustafa Jarrar, Nabra, Nakba narratives, Nakba testimonies, Named Entity Recognition, narratives, Natural Language Generation, NER, Nested, News, NLP, NLU, offensive language, online, ontologies, Open-Source, organizations, Palestine, Palestinian, Palestinian Dialect Corpus, Palestinian Nakba, paraphrasing, Part-Of-Speech, Part-of-speech Tagging, POS, Pre-trained model, Prefix, Projects, Qabas, relationship extraction, Research, resources, SALMA, Semantic Relatedness, semantic tagging, sense, Sentiment analysis, similarity, SinaLab, stem, Sudanese, Sudanese Dialect Corpus, suffix, summarisation, Synonyms, Synonyms Evaluate, Synonyms Extraction, Syrian, Syrian Dialect Corpus, Tool, topic modeling, union, Vocabularies, Welsh, Wojood, Word Sense Disambiguation, Workshop, WSD, Yemeni, Yemeni Dialect Corpus, أخبار, ألمى, اتحاد, استخراج المترادفات, التعرف على الكينونات, اللغة العربية, اللغة العربية المعاصرة, انجليزي, بحث علمي, تقاطع, جامعة بيرزيت, خصائص صرفية, خوارزميات, دليل معياري, ذم, سلمى, سينا, شبكة بيانات, شبكة بيانات معجمية, عامية, عامية إماراتية, عامية سودانية, عامية سورية, عامية عراقية, عامية فلسطينية, عامية لبنانية, عامية ليبية, عامية مصرية, عامية يمنية, عربي, فصحى, فصحى حديثة, فلسطين, فهم الدلالة, قاموس عربي, قبس, قسم الكلام, كراسات, كراهية, محلل دلالي, مدخلات, مدخلات معجمية, مدخلة, مدخلة عامية, مدخلة فصحى, مدونات, مدونات عامية, مدونة, مصادر, مصطفى جرار, معاجم, معالجة اللغة الطبيعية, معجم, معجم اللغة العربية, معجم عربي, معجم مجاني, مفتوح المصدر, مقارنة, مكنز, مكنز شجري صرفي, نكبة, نموذج, وجود"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+      type="image/x-icon"
+    />
+    <title>Arabic Dialect Corpora Publications</title>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BF9N4G9KR2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-BF9N4G9KR2');
+    </script>
+    <style>
+      title {
+        color: #8a0000;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      style="
+        display: inline-flex;
+        width: 100%;
+        background-color: #ededed;
+        font-family: Calibri, Candara, Segoe, Optima, Arial, sans-serif;
+        font-size: 0.9rem;
+        min-width: 1000px;
+      "
+    >
+      <div class="space_div"></div>
+      <div
+        class="top-bar-1"
+        style="
+          background-color: #ededed;
+          height: 160px;
+          font-size: 0.9rem;
+          width: 100%;
+        "
+      >
+        <div
+          style="display: flex; height: 118px; width: 100%; text-align: center"
+        >
+          <div style="width: 30%; margin-top: 0.5rem; text-align: left">
+            <img
+              style="height: 110px; width: 282px"
+              src="./images/Currasat_Logo.png"
+              alt="currasat logo"
+              onclick="location.href='./index.html';"
+            />
+          </div>
+          <div
+            style="
+              min-width: 500px;
+              width: 50%;
+              align-items: center;
+              margin-top: 1rem;
+            "
+          >
+            <div>
+              <div>
+                <input
+                  id="searchbar_main"
+                  class="searchbar"
+                  type="text"
+                  style="
+                    direction: ltr;
+                    font-family: Calibri, Candara, Segoe, Optima, Arial,
+                      sans-serif;
+                    font-size: 0.9rem;
+                  "
+                  placeholder="Search for a word in Arabic/English"
+                />
+                <button class="searchbutton" onclick="GetResult()">
+                  <span
+                    id="search_text"
+                    style="
+                      display: block;
+                      font-size: 84%;
+                      color: rgb(100, 100, 100);
+                    "
+                    >Search</span
+                  >
+                  <i
+                    class="fa fa-spinner"
+                    aria-hidden="true"
+                    id="search_spinner"
+                    style="
+                      display: none;
+                      animation: 0s ease 0s 1 normal none running none;
+                      color: black;
+                    "
+                  ></i>
+                </button>
+              </div>
+              <div
+                class="radios"
+                id="search_btns"
+                style="direction: ltr; color: #767676; min-width: 510px"
+              >
+                <input
+                  type="checkbox"
+                  id="surface"
+                  class="input_filers_style_en"
+                  value="CODA"
+                  checked=""
+                />Word
+                <input
+                  type="checkbox"
+                  id="stem_search"
+                  class="input_filers_style_en"
+                  value="stem_str"
+                  checked=""
+                />Stem
+                <input
+                  type="checkbox"
+                  id="msa"
+                  class="input_filers_style_en"
+                  value="MSALemma_strip"
+                  checked=""
+                />Lemma
+                <input
+                  type="checkbox"
+                  id="gloss"
+                  class="input_filers_style_en"
+                  value="Gloss"
+                  checked=""
+                />Gloss
+                <br />
+                <input
+                  type="radio"
+                  name="stringmatch"
+                  class="input_filers_style_en"
+                  id="whole"
+                  value="equal"
+                  checked=""
+                />Whole Word
+                <input
+                  type="radio"
+                  name="stringmatch"
+                  class="input_filers_style_en"
+                  id="substring"
+                  value="contains"
+                />Substring
+                <br />
+                <input
+                  type="checkbox"
+                  id="pal"
+                  class="input_filers_style_en"
+                  value="Curras"
+                  checked=""
+                />Palestinian
+                <input
+                  type="checkbox"
+                  id="leb"
+                  class="input_filers_style_en"
+                  value="Baladi"
+                  onclick="checkbox_clicked()"
+                  checked=""
+                />Lebanese
+                <input
+                  type="checkbox"
+                  id="nabra"
+                  class="input_filers_style_en"
+                  value="Nabra2"
+                  onclick="checkbox_clicked()"
+                  checked=""
+                />Syrian
+                <input
+                  type="checkbox"
+                  id="iraqi"
+                  class="input_filers_style_en"
+                  value="Iraqi"
+                  onclick="checkbox_clicked()"
+                  checked=""
+                />Iraqi
+                <input
+                  type="checkbox"
+                  id="libyan"
+                  class="input_filers_style_en"
+                  value="Libyan"
+                  onclick="checkbox_clicked()"
+                  checked=""
+                />Libyan
+                <input
+                  type="checkbox"
+                  id="sudanese"
+                  class="input_filers_style_en"
+                  value="Sudanese"
+                  onclick="checkbox_clicked()"
+                  checked=""
+                />Sudanese
+                <input
+                  type="checkbox"
+                  id="yemeni"
+                  class="input_filers_style_en"
+                  value="Yemeni"
+                  onclick="checkbox_clicked()"
+                  checked=""
+                />Yemeni
+              </div>
+            </div>
+          </div>
+
+          <div style="width: 20%; text-align: right; margin-top: 1rem">
+            <div>
+              <div style="display: inline-flex">
+                <div style="margin-right: 0.5rem">
+                  <span
+                    onclick="change_language_to_arabic()"
+                    style="color: #23a99e"
+                    id="ar_btn"
+                    >ع</span
+                  >
+                  |
+                  <span
+                    onclick="change_language_to_english()"
+                    style="color: gray"
+                    id="en_btn"
+                    >EN</span
+                  >
+                </div>
+                <div>
+                  <img
+                    src="https://ontology.birzeit.edu/seo-img/app-icon.png"
+                    alt="seo"
+                    onclick="show_hide_projects()"
+                    id="app_icon_id"
+                    style="width: 22px"
+                  />
+                </div>
+              </div>
+
+              <div
+                id="popup_id"
+                style="
+                  top: 9px;
+                  right: 60px;
+                  display: block;
+                  visibility: hidden;
+                "
+                class="popover apps-popover ng-scope am-fade left"
+              >
+                <div class="arrow" style="top: 3.53459%"></div>
+                <h5
+                  style="direction: rtl; margin-left: 5px; color: gray"
+                  id="popup_header"
+                  class="ng-scope"
+                >
+                  مشاريع ذات علاقة
+                </h5>
+                <div class="ao-apps-outer-box">
+                  <div class="ao-apps-inner-row">
+                    <!--
+										<a href="http://portal.sina.birzeit.edu/curras/index.html" target="_blank">
+										<img src="https://ontology.birzeit.edu/seo-img/1.png" class="ao-apps-img"></a>
+										-->
+                    <a href="https://ontology.birzeit.edu/" target="_blank">
+                      <img
+                        src="https://ontology.birzeit.edu/seo-img/ao-logo.png"
+                        alt="logo"
+                        class="ao-apps-img"
+                    /></a>
+                    <a
+                      href="https://ontology.birzeit.edu/tools/index.html"
+                      target="_blank"
+                    >
+                      <img
+                        src="https://ontology.birzeit.edu/seo-img/2-2.png"
+                        alt="logo"
+                        class="ao-apps-img"
+                    /></a>
+                  </div>
+                  <div class="ao-apps-inner-row">
+                    <a href="http://sina.birzeit.edu/SIERA/" target="_blank">
+                      <img
+                        src="https://ontology.birzeit.edu/seo-img/3.png"
+                        alt="logo"
+                        class="ao-apps-img"
+                    /></a>
+                    <a
+                      href="https://ontology.birzeit.edu/Wojood/"
+                      target="_blank"
+                    >
+                      <img
+                        src="./images/Wojood_logo.jpeg"
+                        class="ao-apps-img"
+                        alt="wojood logo"
+                    /></a>
+                  </div>
+                  <div class="ao-apps-inner-row">
+                    <a href="http://zinnar.pna.ps/" target="_blank">
+                      <img
+                        src="https://ontology.birzeit.edu/seo-img/5.png"
+                        alt="logo"
+                        class="ao-apps-img"
+                    /></a>
+                    <a href="http://www.egovacademy.ps/" target="_blank">
+                      <img
+                        src="https://ontology.birzeit.edu/seo-img/6-2.png"
+                        alt="logo"
+                        class="ao-apps-img"
+                    /></a>
+                  </div>
+                  <div
+                    style="
+                      text-align: center;
+                      flex-flow: row;
+                      flex-direction: row;
+                      justify-content: space-between;
+                    "
+                  >
+                    <button
+                      onclick="location.href='https://ontology.birzeit.edu/projects';"
+                      type="button"
+                      class="btn btn-outline-warning more-btn"
+                      onmouseover="mouseover_change_more_project_style()"
+                      onmouseout="mouseout_change_more_project_style()"
+                      id="more_projects_btn"
+                      style="
+                        color: rgb(0, 128, 197);
+                        border: 2px solid rgb(0, 128, 197);
+                        border-radius: 11px;
+                      "
+                    >
+                      More Projects
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu_bar">
+          <a
+            class="links"
+            id="about"
+            href="./about-en.html"
+            onmouseout="reset_menu_bar_style(this)"
+            onmouseover="add_menu_bar_style(this)"
+            >About</a
+          >
+          <a
+            class="links"
+            id="pub"
+            href="./pub.html"
+            onmouseout="reset_menu_bar_style(this)"
+            onmouseover="add_menu_bar_style(this)"
+            >Publications</a
+          >
+          <!-- <a class="links" id="download" href="./download.html" onmouseout="reset_menu_bar_style(this)" onmouseover="add_menu_bar_style(this)">Download</a> -->
+        </div>
+      </div>
+      <div class="space_div"></div>
+    </div>
+
+    <!--        <div id="content">    -->
+
+    <div style="display: inline-flex">
+      <div class="space_div"></div>
+      <div class="section bg-img-3 related-section">
+        <div class="box-container">
+          <div class="box related-box para-box" style="min-width: 900px">
+            <h4>Articles:</h4>
+            <ul>
+              <li>
+                Amal Nayouf, Tymaa Hammouda, Mustafa Jarrar, Fadi zaraket,
+                Mohamad-Bassam Kurdy:
+                <b>
+                  <a href="http://www.jarrar.info/publications/NHJZK23.pdf">
+                    Nâbra: Syrian Arabic Dialects with Morphological Annotations
+                  </a></b
+                >. In Proceedings of the 1st Arabic Natural Language Processing
+                Conference (ArabicNLP), Part of the EMNLP 2023. ACL.<br />
+                <b
+                  ><a
+                    class="c36"
+                    href="https://www.jarrar.info/Talks/NabraSlides.pdf"
+                    target="_blank"
+                    >Slides</a
+                  ></b
+                >
+              </li>
+
+              <li>
+                Mustafa Jarrar, Fadi Zaraket, Tymaa Hammouda, Daanish Masood,
+                Martin Waehlisch:
+                <b>
+                  <a href="https://www.jarrar.info/publications/JZHNW22.pdf"
+                    >Lisan: Yemeni, Iraqi, Libyan, and Sudanese Arabic Dialect
+                    Corpora with Morphological Annotations</a
+                  ></b
+                >. The 20th ACS/IEEE International Conference on Computer
+                Systems and Applications (AICCSA). Pages(-). IEEE. Egypt. 2023
+                arXiv, DOI 10.48550/ARXIV.2212.06468. 2023<br />
+                <b
+                  ><a
+                    class="c36"
+                    href="https://www.jarrar.info/Talks/LisanSlides.pdf"
+                    target="_blank"
+                    >Slides</a
+                  ></b
+                >
+              </li>
+              <li>
+                Karim El Haff, Mustafa Jarrar, Tymaa Hammouda, Fadi Zaraket:
+                <b
+                  ><a href="http://www.jarrar.info/publications/EJHZ22.pdf">
+                    Curras + Baladi: Towards a Levantine Corpus.
+                  </a></b
+                >In Proceedings of the International Conference on Language
+                Resources and Evaluation (LREC 2022), Marseille, France. 2022
+                <br />
+                <b
+                  ><a
+                    class="c36"
+                    href="http://www.jarrar.info/Talks/LREC2022_CurrasBaladi_slides.pdf"
+                    target="_blank"
+                    >Slides</a
+                  ></b
+                >&nbsp;-&nbsp;
+                <b
+                  ><a
+                    class="c36"
+                    href="http://www.jarrar.info/Talks/LREC2022_CurrasBaladi_poster.pdf"
+                    target="_blank"
+                    >Poster</a
+                  ></b
+                >&nbsp;-&nbsp;
+                <b
+                  ><a
+                    class="c36"
+                    href="https://www.youtube.com/watch?v=B0r77HPevtw&feature=youtu.be"
+                    target="_blank"
+                    >Video</a
+                  ></b
+                >
+              </li>
+              <li>
+                Mustafa Jarrar, Nizar Habash, Faeq Alrimawi, Diyam Akra, Nasser
+                Zalmout:
+                <b
+                  ><a href="http://www.jarrar.info/publications/JHRAZ17.pdf">
+                    Curras: An Annotated Corpus for the Palestinian Arabic
+                    Dialect</a
+                  ></b
+                >. Journal Language Resources and Evaluation. Pages(745-775)
+                Volume(51), Issue(3). Springer. 2017. <br />
+                <b
+                  ><a href="http://www.jarrar.info/publications/JHRAZ17.pdf"></a
+                ></b>
+              </li>
+              <li>
+                Mustafa Jarrar, Faeq Alrimawi:
+                <a href="http://www.jarrar.info/publications/JR15.pdf"
+                  >Mustafa Jarrar, Faeq Alrimawi: Statistics and inter-annotator
+                  agreement calculations of the Palestinian dialect corpus
+                  -Curras</a
+                >. Technical Report. Birzeit University, Palestine, August,
+                2015. <br />
+                <b
+                  ><a href="http://www.jarrar.info/publications/JR15.pdf"></a
+                ></b>
+              </li>
+              <li>
+                Nizar Habash, Mustafa Jarrar, Faeq Alrimawi, Diyam Akra, et
+                al:<b
+                  ><a href="http://www.jarrar.info/publications/HR15.pdf">
+                    Palestinian Arabic Conventional Orthography Guidelines</a
+                  ></b
+                >. Technical Report. Birzeit University, Palestine, August,
+                2015.<br />
+                <b
+                  ><a href="http://www.jarrar.info/publications/HR15.pdf"></a
+                ></b>
+              </li>
+
+              <li>
+                Mustafa Jarrar, Nizar Habash, Diyam Akra, Nasser Zalmout:
+                <b
+                  ><a href="http://www.jarrar.info/publications/JHAZ14.pdf"
+                    >Building A Corpus For Palestinian Arabic: A Preliminary
+                    Study</a
+                  ></b
+                >. In proceedings of the EMNLP 2014 Workshop on Arabic Natural
+                Language Processing. Association for Computational Linguistics
+                (ACL), Pages (18-27). October 25, 2014, Doha, Qatar. ISBN:
+                978-1-937284-96-1 <br />
+
+                <b
+                  ><a
+                    class="c36"
+                    href="https://www.youtube.com/watch?v=Kw3R3DQVc8E"
+                    target="_blank"
+                    >Slides</a
+                  ></b
+                >&nbsp;-&nbsp;
+                <b
+                  ><a
+                    class="c36"
+                    href="https://www.youtube.com/watch?v=Kw3R3DQVc8E"
+                    target="_blank"
+                    >Video</a
+                  ></b
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="space_div"></div>
+    </div>
+
+    <!--
+
+    
+        <BR/>
+        
+  <B>Early Article: </B> <BR/>  
+    <p>
+        Mustafa Jarrar, Nizar Habash, Diyam Akra, Nasser Zalmout: <a href="http://www.jarrar.info/publications/JHAZ14.pdf" style="color: #0000AA;">Building A Corpus For Palestinian Arabic: A Preliminary Study</a>. In proceedings of the EMNLP 2014 Workshop on Arabic Natural Language Processing. Association for Computational Linguistics (ACL), Pages (18-27). October 25, 2014, Doha, Qatar. ISBN: 978-1-937284-96-1 <br>
+        <BR/>
+        <a class="c36" href="https://www.youtube.com/watch?v=Kw3R3DQVc8E" target="_blank" style="color: #0000AA;">Slides</a>&nbsp;-&nbsp;
+        <a class="c36" href="https://www.youtube.com/watch?v=Kw3R3DQVc8E" target="_blank" style="color: #0000AA;">Video</a>&nbsp;-&nbsp;
+        <a class="c36" href="http://scholar.google.com/scholar?as_ylo=2014&amp;q=mustafa+jarrar&amp;hl=en&amp;as_sdt=0,5" target="_blank" style="color: #0000AA;">Cited By</a>
+    </p>
+</div>
+        </div> 
+		-->
+    <script>
+      function sendres(url) {
+        var search_text = document
+          .getElementById('searchbar_main')
+          .value.trim();
+        window.open(url + '?' + encodeURIComponent(search_text));
+        console.log(url);
+      }
+
+      $(function () {
+        document
+          .getElementById('searchbar_main')
+          .addEventListener('keyup', function (event) {
+            var search_text = document
+              .getElementById('searchbar_main')
+              .value.trim();
+            if (event.keyCode === 13) {
+              window.open(
+                './search.html' + '?' + encodeURIComponent(search_text)
+              );
+            }
+          });
+      });
+    </script>
+    <!--</div>-->
+    <!--</div>-->
+  </body>
+</html>

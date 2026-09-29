@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        <title>Downloads: Corpus for Palestinian Dialectic Arabic</title>
+        <link rel="stylesheet" type="text/css" href="./style_two.css?v=31" />
+        
+       <script src="scripts/jquery.min.js"></script>
+     
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+		<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+		  
+    </head>
+    
+    <body>
+        <div class="top-bar-1" style="background-color: #f7f7f7;height: 160px;">
+		<div align="center" style="display: flex;height: 118px;">
+			<div style="direction: rtl;/* margin-left: 1.5rem; */width: 20%;">
+				<img style="/* width: 220px; */height: 100%;width: 100%;" src="./images/CurrasLogo.jpeg">
+			</div>
+			<div style="width: 60%;align-items: center;margin-top: 1rem;">
+			    <div>
+					<div>
+						<input id="searchbar_main" class="searchbar" type="text" placeholder="Search">
+						<button class="searchbutton" onclick="javascript:sendres('./search.html')">
+							<a id="search_text" style="display: block; font-size: 84%;color:#646464;">ابحث</a> 
+							<i class="fa fa-spinner" aria-hidden="true" id="search_spinner" style="display: none; animation: 0s ease 0s 1 normal none running none; color: black;"></i>
+						</button>
+						
+					</div>
+					<div class="radios" id="search_btns" style="direction: rtl;color: #767676;">
+                        <input type="checkbox" class="input_filers_style_ar" id="surface" value="CODA" checked="">كلمة
+						<input type="checkbox" class="input_filers_style_ar" id="stem_search" value="stem_str" checked="">ساق
+                        <input type="checkbox" class="input_filers_style_ar" id="msa" value="MSALemma_strip" checked="">مدخلة
+                        <input type="checkbox" class="input_filers_style_ar" id="gloss" value="Gloss" checked="">تعريف
+						<br>
+						<input type="radio" class="input_filers_style_ar" name="stringmatch" id="whole" value="equal" checked="">الكلمة كاملة
+						<input type="radio" class="input_filers_style_ar" name="stringmatch" id="substring" value="contains">جزء من الكلمة
+						<br>
+						<input type="checkbox" class="input_filers_style_ar" id="pal" value="Curras" checked="">فلسطينية
+						<input type="checkbox" class="input_filers_style_ar" id="leb" value="Baladi" checked="">لبنانية
+						<input type="checkbox" class="input_filers_style_ar" id="iraqi" value="Iraqi" checked="">عراقية
+						<input type="checkbox" class="input_filers_style_ar" id="libyan" value="Libyan" checked="">ليبية
+						<input type="checkbox" class="input_filers_style_ar" id="sudanese" value="Sudanese" checked="">سوادنية
+						<input type="checkbox" class="input_filers_style_ar" id="yemeni" value="Yemeni" checked="">يمنية
+					</div>
+				</div>
+			</div>
+		
+			<div style="width: 20%;text-align: right;visibility: hidden;">
+				<div>
+					<span onclick="change_language_to_arabic()" style="color:gray" id="ar_btn">ع</span> | <span onclick="change_language_to_english()" style="color:#23a99e;" id="en_btn">EN</span>
+				</div>
+			</div>	
+		</div>    
+		
+		<div class="menu_bar">
+				<a class="links" id="about" href="./about-en.html" onmouseout="reset_menu_bar_style(this)" onmouseover="add_menu_bar_style(this)">About</a> 
+				<a class="links" id="pub" href="./pub.html" onmouseout="reset_menu_bar_style(this)" onmouseover="add_menu_bar_style(this)">Publications</a>
+				<a class="links" id="download" href="./download.html" onmouseout="reset_menu_bar_style(this)" onmouseover="add_menu_bar_style(this)">Download</a>	
+		</div>
+	</div>
+<div id="content" style="text-align:center; position: absolute; top:210px; padding:10px; z-index:10; ">
+<div style="margin-top:0px; text-align:justify; margin-left:auto; margin-right:auto; " >
+
+<div style= "font-size: 110%;">
+   <div style="text-align:center; font-size: 120%;"><B>© Copyright and user license Note</B></div>
+   <ul>
+    <li><B>Copyright:</B> All data, corpus, annotations, data structures, tags, translations, design, know-how, layout, user-experience design, software, and documentation, in this portal is fully copyrighted to Birzeit University.</li><BR/>
+    <li><B>Usage:</B> people may search and use our data <i> for (personal use) only</i>, but they are not allowed to copy, share, remix, or (re)use any part of the data anywhere and for any other purpose.</li><BR/>
+    <li><B>Download a licensed copy:</B> people may download a licensed copy of Curras (for academic or other purposes) through <a style="color:blue; text-shadow:none; padding: 0px 0px;"  href="https://forms.gle/23KTkukXA7PM9nBN8" target="_blank">this link</a>.</li><BR/>
+    <li><B>Citation:</B> Users and researchers of our data and ideas must acknowledge and cite this article  <a style="color:blue; text-shadow:none; padding: 0px 0px;"  href="http://www.jarrar.info/publications/JHRAZ17.pdf" target="_blank">[1]</a> in a proper and clear way.</li><BR/>
+    <li><B>Not agreeing on the above </B> means that your use of the data is illegal. </li>
+   </ul>
+</div>
+
+<br/>
+<br/>
+<div style="font-weight: bold;font-size: 120%;">What you can request to download:</div>
+<div>
+  <ul>
+    <li><B>Curras raw text:</B> the full corpus (~60K words, ~50 documents) text files of Palestinian raw text.</li><BR/>
+    <li><B>Curras Annotations:</B> the full corpus and the annotations of each word, in CSV format.</li><BR/>
+    <li><B>Words Frequencies:</B> a table (csv file) with every word and its frequency in the whole corpus. </li><BR/>
+    <li><B>MSA Lemmas:</B> a table (csv file) with every dialect word and its corresponding MSA lemma. </li><BR/>
+    <li><B>MSA lemma Glosses:</B> a table (csv file) with every dialect word (i.e. token), its corresponding MSA lemma, and a gloss to describe their meaning in English.</li><BR/>
+    <li><B>Experimental data</B> that we used in <a style="color:blue; text-shadow:none; padding: 0px 0px;"  href="http://www.jarrar.info/publications/JHRAZ17.pdf" target="_blank">this article </a>.</li><BR/>
+    <li><B>Web Service: </B> a very fast RESTFull web service to lookup a term and retrieve its response in JOSN format.</li><BR/>
+  </ul>
+</div>
+
+    </div>
+    </div>
+	<script>
+			function sendres(url){
+    var search_text = document.getElementById("searchbar_main").value.trim();
+	window.open(url+"?"+encodeURIComponent(search_text));
+	console.log(url);
+}
+
+$(function () {
+    document.getElementById("searchbar_main").addEventListener("keyup", function(event) {
+		var search_text = document.getElementById("searchbar_main").value.trim();
+		if (event.keyCode === 13) {
+			window.open("./search.html"+"?"+encodeURIComponent(search_text));
+		}
+	});
+});
+			</script>
+</body>
+</html>

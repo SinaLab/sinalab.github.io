@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes"> -->
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+
+
+
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="curras.css?v=45" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="curras.js?v=45"></script>
+    <!-- to disable compatibility mode in Internet Explorer-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, viewport-fit=cover"> viewport-fit=cover - for iPhone X notch -->
+
+    <meta
+      property="og:image"
+      content="https://sina.birzeit.edu/Images/OGLogo.jpg"
+    />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+    <meta property="og:image:alt" content="SinaLab logo" />
+
+    <meta property="header" content="Currasat" />
+
+    <meta
+      property="og:url"
+      content="https://sina.birzeit.edu/currasat/search.html"
+    />
+    <meta property="og:type" content="Lexicon" />
+    <meta
+      property="og:description"
+      content="Seven dialectal Arabic corpora with full morphological annotations (Search and Download). Dialects: Palestinian, Lebanese, Syrian, Iraqi Libyan, Sudanese, and Yemeni"
+    />
+    <meta
+      property="og:title"
+      content="Currasat: Search for Arabic Dialect word"
+    />
+
+    <meta
+      property="url"
+      content="https://sina.birzeit.edu/currasat/search.html"
+    />
+    <meta property="type" content="Lexicon" />
+    <meta
+      name="description"
+      content="Seven dialectal Arabic corpora with full morphological annotations (Search and Download). Dialects: Palestinian, Lebanese, Syrian, Iraqi Libyan, Sudanese, and Yemeni"
+    />
+
+    <meta name="author" content="SinaLab - Birzeit University" />
+    <meta
+      name="keywords"
+      content="Free, online, open sources, SinaTools, relation extraction, LLMs, algorithms, ALMA, Annotation tools, Arabic, Arabic Dictionary, Arabic Lexicographic Database, Arabic Lexicon, articles, Baladi, BERT, bias, Birzeit University, cleaning, Corpora, Corpus, Curras, Currasat, Data visualisation, dataset, datasets, Deep Learning, Demo, diacratics, Diacritics-aware, dialect, Dialect Lemma, Dialect Lemma, Dialects, dictionaries, Dictionary, Digital archives, Digitisation, Discourse analysis, Document classification, Duplication, emotional content extraction, English, entity, Entity linking, event argument extraction, Event detection, events, Guideline, Hate speech, Hebrew, implication, information retrieval, intents, intersection, Iraqi, Iraqi Dialect Corpus, jaccard similarity, Knowledge Graphs, Knowledge representation, language corpora, Languages, Large Language Models, Lebanese, Lebanese Dialect Corpus, Lemmas, Lemmatization, Lexicon, Lexicons, Libyan, Libyan Dialect Corpus, Linked Data, Lisan, Machine translation, matching, Media, metadata, Middle Eastern history, misinformation, models, Modern Standard Arabic, Morphological Solution, Morphology, MSA, MSA, MSA lemma, Mustafa Jarrar, Nabra, Nakba narratives, Nakba testimonies, Named Entity Recognition, narratives, Natural Language Generation, NER, Nested, News, NLP, NLU, offensive language, online, ontologies, Open-Source, organizations, Palestine, Palestinian, Palestinian Dialect Corpus, Palestinian Nakba, paraphrasing, Part-Of-Speech, Part-of-speech Tagging, POS, Pre-trained model, Prefix, Projects, Qabas, relationship extraction, Research, resources, SALMA, Semantic Relatedness, semantic tagging, sense, Sentiment analysis, similarity, SinaLab, stem, Sudanese, Sudanese Dialect Corpus, suffix, summarisation, Synonyms, Synonyms Evaluate, Synonyms Extraction, Syrian, Syrian Dialect Corpus, Tool, topic modeling, union, Vocabularies, Welsh, Wojood, Word Sense Disambiguation, Workshop, WSD, Yemeni, Yemeni Dialect Corpus, أخبار, ألمى, اتحاد, استخراج المترادفات, التعرف على الكينونات, اللغة العربية, اللغة العربية المعاصرة, انجليزي, بحث علمي, تقاطع, جامعة بيرزيت, خصائص صرفية, خوارزميات, دليل معياري, ذم, سلمى, سينا, شبكة بيانات, شبكة بيانات معجمية, عامية, عامية إماراتية, عامية سودانية, عامية سورية, عامية عراقية, عامية فلسطينية, عامية لبنانية, عامية ليبية, عامية مصرية, عامية يمنية, عربي, فصحى, فصحى حديثة, فلسطين, فهم الدلالة, قاموس عربي, قبس, قسم الكلام, كراسات, كراهية, محلل دلالي, مدخلات, مدخلات معجمية, مدخلة, مدخلة عامية, مدخلة فصحى, مدونات, مدونات عامية, مدونة, مصادر, مصطفى جرار, معاجم, معالجة اللغة الطبيعية, معجم, معجم اللغة العربية, معجم عربي, معجم مجاني, مفتوح المصدر, مقارنة, مكنز, مكنز شجري صرفي, نكبة, نموذج, وجود"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+      type="image/x-icon"
+    />
+    <title>Currasat: Search for Arabic Dialect word</title>
+
+    <link rel="copyright" href="/download.html" />
+
+    <!-- to always open links in new tabs -->
+    <!-- <base href="/"> -->
+
+    <link rel="icon" href="images/Currasat_Logo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="images/Currasat_Logo.png"
+      type="image/x-icon"
+    />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BF9N4G9KR2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-BF9N4G9KR2');
+    </script>
+    <!-- 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  --></head>
+
+  <body style="margin: 0rem" id="body">
+    <div id="myprogressBar"></div>
+    <div
+      style="
+        display: inline-flex;
+        width: 100%;
+        background-color: #f6f6f6;
+        font-family: Calibri, Candara, Segoe, Optima, Arial, sans-serif;
+        font-size: 0.9rem;
+      "
+    >
+      <div class="space_div"></div>
+      <div class="top-bar-1">
+        <div
+          style="display: flex; height: 118px; width: 100%; text-align: center"
+        >
+          <div style="width: 30%; margin-top: 0.5rem; text-align: left">
+            <img
+              class="currasat_log_style"
+              alt="currasat logo"
+              src="./images/Currasat_Logo.png"
+              onclick="location.href='./index.html';"
+            />
+          </div>
+          <div style="width: 50%; align-items: center; margin-top: 1rem">
+            <div>
+              <div>
+                <input
+                  id="searchbar_main"
+                  class="searchbar"
+                  type="text"
+                  style="
+                    font-family: Calibri, Candara, Segoe, Optima, Arial,
+                      sans-serif;
+                    font-size: 0.9rem;
+                    -webkit-user-select: text;
+                    -khtml-user-select: text;
+                    -moz-user-select: text;
+                    -ms-user-select: text;
+                    user-select: text;
+                  "
+                  placeholder="Search for a word in Arabic/English"
+                />
+                <button
+                  class="searchbutton"
+                  onclick="getRes()"
+                  id="searchButton"
+                >
+                  <span
+                    id="search_text"
+                    style="
+                      display: block;
+                      font-size: 84%;
+                      color: rgb(100, 100, 100);
+                    "
+                    >Search</span
+                  >
+                  <i
+                    class="fa fa-spinner"
+                    aria-hidden="true"
+                    id="search_spinner"
+                    style="
+                      display: none;
+                      animation: 0s ease 0s 1 normal none running none;
+                      color: black;
+                    "
+                  ></i>
+                </button>
+              </div>
+              <div
+                class="radios"
+                id="search_btns"
+                style="direction: ltr; color: #767676"
+              >
+                <input
+                  type="checkbox"
+                  id="surface"
+                  class="input_filers_style_en"
+                  value="CODA"
+                  checked=""
+                />Word
+                <input
+                  type="checkbox"
+                  id="stem_search"
+                  class="input_filers_style_en"
+                  value="stem_str"
+                 
+                />Stem
+                <input
+                  type="checkbox"
+                  id="msa"
+                  class="input_filers_style_en"
+                  value="MSALemma_strip"
+                 
+                />Lemma
+                <input
+                  type="checkbox"
+                  id="gloss"
+                  class="input_filers_style_en"
+                  value="Gloss"
+                
+                />Gloss
+                <br />
+                <input
+                  type="radio"
+                  name="stringmatch"
+                  class="input_filers_style_en"
+                  id="whole"
+                  value="equal"
+                  checked=""
+                />Whole Word
+                <input
+                  type="radio"
+                  name="stringmatch"
+                  class="input_filers_style_en"
+                  id="substring"
+                  value="contains"
+                />Substring
+                <br />
+                <input
+                  type="checkbox"
+                  id="pal"
+                  class="input_filers_style_en"
+                  value="Curras"
+                  checked=""
+                />Palestinian
+                <input
+                  type="checkbox"
+                  id="leb"
+                  class="input_filers_style_en"
+                  value="Baladi"
+                  onclick="checkbox_clicked()"
+                  checked=""
+                />Lebanese
+                <input
+                  type="checkbox"
+                  id="nabra"
+                  class="input_filers_style_en"
+                  value="Nabra2"
+                  onclick="checkbox_clicked()"
+                  checked=""
+                />Syrian
+                <input
+                  type="checkbox"
+                  id="iraqi"
+                  class="input_filers_style_en"
+                  value="Iraqi"
+                  onclick="checkbox_clicked()"
+                  checked=""
+                />Iraqi
+                <input
+                  type="checkbox"
+                  id="libyan"
+                  class="input_filers_style_en"
+                  value="Libyan"
+                  onclick="checkbox_clicked()"
+                  checked=""
+                />Libyan
+                <input
+                  type="checkbox"
+                  id="sudanese"
+                  class="input_filers_style_en"
+                  value="Sudanese"
+                  onclick="checkbox_clicked()"
+                  checked=""
+                />Sudanese
+                <input
+                  type="checkbox"
+                  id="yemeni"
+                  class="input_filers_style_en"
+                  value="Yemeni"
+                  onclick="checkbox_clicked()"
+                  checked=""
+                />Yemeni
+              </div>
+            </div>
+          </div>
+
+          <div style="width: 20%; text-align: right; margin-top: 1rem">
+            <div>
+              <div style="display: inline-flex">
+                <div style="margin-right: 0.5rem">
+                  <span
+                    onclick="change_language_to_arabic()"
+                    style="color: #23a99e"
+                    id="ar_btn"
+                    >ع</span
+                  >
+                  |
+                  <span
+                    onclick="change_language_to_english()"
+                    style="color: gray"
+                    id="en_btn"
+                    >EN</span
+                  >
+                </div>
+                <div>
+                  <img
+                    src="https://ontology.birzeit.edu/seo-img/app-icon.png"
+                    alt="seo"
+                    onclick="show_hide_projects()"
+                    id="app_icon_id"
+                    style="width: 22px"
+                  />
+                </div>
+              </div>
+
+              <div
+                id="popup_id"
+                style="
+                  top: 9px;
+                  right: 60px;
+                  display: block;
+                  visibility: hidden;
+                "
+                class="popover apps-popover ng-scope am-fade left"
+              >
+                <div class="arrow" style="top: 3.53459%"></div>
+                <h5
+                  style="direction: rtl; margin-left: 5px; color: gray"
+                  id="popup_header"
+                  class="ng-scope"
+                >
+                  مشاريع ذات علاقة
+                </h5>
+                <div class="ao-apps-outer-box">
+                  <div class="ao-apps-inner-row">
+                    <!--
+										<a href="http://portal.sina.birzeit.edu/curras/index.html" target="_blank">
+										<img src="https://ontology.birzeit.edu/seo-img/1.png" class="ao-apps-img"></a>
+										-->
+                    <a href="https://ontology.birzeit.edu/" target="_blank">
+                      <img
+                        src="https://ontology.birzeit.edu/seo-img/ao-logo.png"
+                        alt="logo"
+                        class="ao-apps-img"
+                    /></a>
+                    <a
+                      href="https://ontology.birzeit.edu/tools/index.html"
+                      target="_blank"
+                    >
+                      <img
+                        src="https://ontology.birzeit.edu/seo-img/2-2.png"
+                        alt="seo-img"
+                        class="ao-apps-img"
+                    /></a>
+                  </div>
+                  <div class="ao-apps-inner-row">
+                    <a href="http://sina.birzeit.edu/SIERA/" target="_blank">
+                      <img
+                        src="https://ontology.birzeit.edu/seo-img/3.png"
+                        alt="seo"
+                        class="ao-apps-img"
+                    /></a>
+                    <a
+                      href="https://ontology.birzeit.edu/Wojood/"
+                      target="_blank"
+                    >
+                      <img
+                        src="./images/Wojood_logo.jpeg"
+                        alt="wojood logo"
+                        class="ao-apps-img"
+                    /></a>
+                  </div>
+                  <div class="ao-apps-inner-row">
+                    <a href="http://zinnar.pna.ps/" target="_blank">
+                      <img
+                        src="https://ontology.birzeit.edu/seo-img/5.png"
+                        alt="seo"
+                        class="ao-apps-img"
+                    /></a>
+                    <a href="http://www.egovacademy.ps/" target="_blank">
+                      <img
+                        src="https://ontology.birzeit.edu/seo-img/6-2.png"
+                        alt="seo"
+                        class="ao-apps-img"
+                    /></a>
+                  </div>
+                  <div
+                    style="
+                      text-align: center;
+                      flex-flow: row;
+                      flex-direction: row;
+                      justify-content: space-between;
+                    "
+                  >
+                    <button
+                      onclick="location.href='https://ontology.birzeit.edu/projects';"
+                      type="button"
+                      class="btn btn-outline-warning more-btn"
+                      onmouseover="mouseover_change_more_project_style()"
+                      onmouseout="mouseout_change_more_project_style()"
+                      id="more_projects_btn"
+                      style="
+                        color: rgb(0, 128, 197);
+                        border: 2px solid rgb(0, 128, 197);
+                        border-radius: 11px;
+                      "
+                    >
+                      More Projects
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu_bar">
+          <a
+            class="links"
+            id="about"
+            href="./about-en.html"
+            style="text-align: left; margin-left: 0rem"
+            onmouseout="reset_menu_bar_style(this)"
+            onmouseover="add_menu_bar_style(this)"
+            >About</a
+          >
+          <a
+            class="links"
+            id="pub"
+            href="./pub.html"
+            onmouseout="reset_menu_bar_style(this)"
+            onmouseover="add_menu_bar_style(this)"
+            >Publications</a
+          >
+          <!-- <a class="links" id="download" href="./download.html" onmouseout="reset_menu_bar_style(this)" onmouseover="add_menu_bar_style(this)">Download</a> -->
+        </div>
+      </div>
+      <div class="space_div"></div>
+    </div>
+
+    <div id="no_result_div" style="position: relative; z-index: 10;">
+      <div class="space_div" style="pointer-events: none;"></div>
+      <div class="datagrid" style="width: 100%; text-align: left; font-size: 80%;">
+          0 results
+          <p>
+              We don't seem to have that word. If you'd like to add it, please click
+              <a href="https://docs.google.com/forms/d/157hlt5P8Z0xGhVuMOcR4AgTgfoD9y2J9JqaNyRSDXw0/viewform?fbzx=-2312587332243322400"
+                 target="_blank" style="color: blue;">here</a>.
+          </p>
+      </div>
+      <div class="space_div" style="pointer-events: none;"></div>
+  </div>
+  
+    <div style="width: 100%">
+      <div id="table_results" class="table_results_style">
+          <div style="display: inline-flex">
+              <div
+                  style="text-align: left; font-size: 80%; margin-left: 0rem"
+                  id="count_results"
+                  class="links"
+              ></div>
+              <div
+                  style="text-align: left; font-size: 80%; margin-left: 0rem"
+                  id="user_message"
+                  class="links"
+              ></div>
+          </div>
+  
+          <div
+              class="datagrid"
+              style="
+                  bottom: 42px;
+                  top: 187px;
+                  position: fixed;
+                  text-align: center;
+                  border-top: 0px;
+                  overflow: auto; /* min-width: 850px; */">
+              <div id="searchresults" style="text-align: center">
+                  <table id="annotations_table" style="display:none;">
+                      <thead id="thead">    
+                          <!-- <tr>
+                              <th id="context" class="table_first_head">Context</th>
+                              <th id="CODA" class="table_first_head">Word</th>
+                              <th id="prefixes" class="table_first_head">Prefix</th>
+                              <th id="stem" class="table_first_head">Stem</th>
+                              <th id="suffixes" class="table_first_head">Suffix</th> 
+                              <th id="POS" class="table_first_head">POS</th>                    
+                              <th id="MSALemma" class="table_first_head">Lemma</th>
+                              <th id="Gloss" class="table_first_head">Gloss</th>
+                          </tr> -->
+                      </thead>
+                      <tbody id="tbody">
+                      </tbody>
+                  </table>
+                  <!-- <div id="pagination"></div> -->
+              </div>
+  
+              <!-- Container for displaying the number of results -->
+              <div id="count_results" style="margin-top: 10px;"></div>
+  
+              <!-- Pagination controls -->
+              <div id="pagination" style="margin-top: 30px; margin-bottom: 30px;"></div>
+  
+              <!-- Spinner for loading indicator -->
+              <div id="search_spinner" style="display:none;">
+                  <i class="fa fa-spinner fa-spin"></i> Loading...
+              </div>
+          </div>
+      </div>
+  </div>
+  
+
+    <!-- 
+	<div style="display: inline-flex;">
+		<div class="space_div"></div>
+		<div id="table_results" style="width: 100%;right: 82px;left: 82px;top: 143px;position: fixed;">
+		
+		<div style="text-align: center;margin: 0 auto;border-top: 0px;overflow: auto;">
+			<div style="text-align:left;font-size: 80%;/*margin-left: 1rem;*/" id="count_results" class="links"></div>
+		</div>
+
+		
+		<div>
+			<div class="datagrid" style="bottom: 42px;top: 160px;right: 80px;position: fixed;/* width: 100%; */text-align: center;border-top: 0px;overflow: auto;left: 80px;">
+				<div id="searchresults" style="text-align: center;/* overflow-y: scroll; */"><table id="annotations_table"></table></div>
+			</div>
+        </div>
+		
+		</div>
+		<div class="space_div"></div>
+	</div> -->
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-content-div">
+          <span class="footer-copyrights">
+            <a href="http://www.birzeit.edu/" target="_blank">
+              <img src="../Images/bzu-logo2.png" alt="bzu logo" />
+            </a>
+          </span>
+          <span class="ng-binding"> Rights Reserved © 2023 </span>
+        </div>
+        <div class="menu">
+          <label id="notification_text">In cooperation with: </label>
+          <div class="nav text-center navigation-bar">
+            <img
+              style="
+                width: 61px; /* margin-right: 0.5rem; */ /* vertical-align: middle; */
+              "
+              id="Bu_logo"
+              src="./images/Brirut_University.jpeg"
+              alt="Birzeit Univerity"
+            />
+            <img
+              style="width: 61px; vertical-align: middle"
+              id="UN_logo"
+              src="./images/United_nation.jpeg"
+              alt="United_nation"
+            />
+            <div class="space_div"></div>
+          </div>
+          <span class="ng-binding" id="copy_right"> Rights Reserved © 2023 </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <div class="footer"> -->
+    <!-- <div style="display: flex;width: 100%;" class="footer-content"> -->
+    <!-- <div class="space_div"></div> -->
+    <!-- <div style="width: 30%;text-align: left;">     -->
+    <!-- </div> -->
+    <!--  -->
+    <!-- <div style="width: 40%;text-align: center;"> -->
+    <!-- <div style="width: 40%;text-align: center;"> -->
+    <!-- <img style="width: 61px;" src="./images/bzu-logo.png"> -->
+    <!-- </div> -->
+    <!-- <div> -->
+    <!-- <span style="color: #5c5c5c;"> -->
+    <!-- Rights Reserved © 2022 -->
+    <!-- </span> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div style="width: 30%;"> -->
+    <!--  -->
+    <!-- <div style="width: 100%;text-align: right;padding-top: 0.5rem;display: block;">	 -->
+    <!-- <label style="vertical-align: middle;margin-right: 0.5rem;" id="notification_text">In cooperation with: </label> -->
+    <!-- <img style="width: 61px;margin-right: 0.5rem;vertical-align: middle;" id="Bu_logo" src="./images/Brirut_University.jpeg"> -->
+    <!-- <img style="width: 61px;vertical-align: middle;" id="UN_logo" src="./images/United_nation.jpeg"> -->
+    <!-- </div> -->
+    <!-- <div style="text-align: right;width: 100%; color: #5c5c5c;" id="copy_right"> -->
+    <!-- <span style="margin-right: 0.6rem;">Rights Reserved © 2022</span> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!--  -->
+    <!--  -->
+    <!-- <div class="space_div"></div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+
+    <script>
+      function removeDiacritics(text) {
+        var diacriticsRegex =
+          /[\u0610-\u061A\u064B-\u065F\u06D6-\u06DC\u06DF-\u06E8\u06EA-\u06ED]/g;
+        return text.replace(diacriticsRegex, '');
+      }
+
+      function updateTitle(searchTerm) {
+        document.title =
+          'معنى كلمة ' + searchTerm + ' باللهجات العربية - كراسات';
+      }
+
+      function updateCanonicalLink(searchTerm) {
+        let cleanedTerm = removeDiacritics(searchTerm);
+        let canonicalLink = document.querySelector('link[rel="canonical"]');
+
+        if (!canonicalLink) {
+          canonicalLink = document.createElement('link');
+          canonicalLink.rel = 'canonical';
+          document.head.appendChild(canonicalLink);
+        }
+        canonicalLink.href =
+          'https://sina.birzeit.edu/currasat/search.html?' + cleanedTerm;
+      }
+
+      function performSearch(newSearchTerm) {
+        let cleanedSearchTerm = removeDiacritics(newSearchTerm);
+
+        // Update the URL without reloading the page
+        let newUrl =
+          window.location.pathname +
+          '?' +
+          encodeURIComponent(cleanedSearchTerm);
+        history.pushState(null, '', newUrl);
+
+        // Update search input, title, and canonical link
+        document.getElementById('searchbar_main').value = newSearchTerm;
+        updateTitle(newSearchTerm);
+        updateCanonicalLink(newSearchTerm);
+
+        getRes();
+      }
+
+      // Handle initial page load with query parameter
+      let res = decodeURIComponent(window.location.search.substr(1));
+      if (res !== '') {
+        document.getElementById('searchbar_main').value = res;
+        updateTitle(res);
+        updateCanonicalLink(res);
+        getRes();
+      }
+
+      // Search button click event
+      document
+        .getElementById('searchButton')
+        .addEventListener('click', function () {
+          let newSearchTerm = document.getElementById('searchbar_main').value;
+          performSearch(newSearchTerm);
+        });
+
+      // Search on pressing Enter key
+      document
+        .getElementById('searchbar_main')
+        .addEventListener('keydown', function (event) {
+          if (event.key === 'Enter') {
+            let newSearchTerm = this.value;
+            performSearch(newSearchTerm);
+          }
+        });
+    </script>
+  </body>
+</html>

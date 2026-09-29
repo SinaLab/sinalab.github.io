@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/ico" href="./favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/Fira-Sans-font.css" />
+    <link rel="stylesheet" href="../main.css?v=8" />
+    <link rel="stylesheet" href="./downloads.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="semantic_reladedness.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      property="og:image"
+      content="https://sina.birzeit.edu/Images/OGLogo.jpg"
+    />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+    <meta property="og:image:alt" content="SinaLab logo" />
+    <meta property="header" content="Implication" />
+    <meta
+      property="og:url"
+      content="https://sina.birzeit.edu/resources/Implication.html "
+    />
+    <meta property="og:type" content="WebSite" />
+    <meta
+      property="og:description"
+      content="Diacritic-aware Arabic words matching Algorithm. Decides whether two Arabic words are the same or not, taking into account diacratization compatibility."
+    />
+    <meta
+      property="og:title"
+      content="Diacritic-aware Arabic matching Online"
+    />
+    <meta
+      property="image"
+      content="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+    />
+    <meta property="image:width" content="200" />
+    <meta property="image:height" content="200" />
+    <meta property="image:alt" content="SinaLab logo" />
+    <meta
+      property="url"
+      content="https://sina.birzeit.edu/resources/Implication.html "
+    />
+    <meta property="type" content="WebSite" />
+    <meta
+      name="description"
+      content="Diacritic-aware Arabic words matching Algorithm. Decides whether two Arabic words are the same or not, taking into account diacratization compatibility."
+    />
+    <meta name="author" content="SinaLab - Birzeit University" />
+    <meta
+      name="keywords"
+      content="Free, online, open sources, SinaTools, relation extraction, LLMs, algorithms, ALMA, Annotation tools, Arabic, Arabic Dictionary, Arabic Lexicographic Database, Arabic Lexicon, articles, Baladi, BERT, bias, Birzeit University, cleaning, Corpora, Corpus, Curras, Currasat, Data visualisation, dataset, datasets, Deep Learning, Demo, diacratics, Diacritics-aware, dialect, Dialect Lemma, Dialect Lemma, Dialects, dictionaries, Dictionary, Digital archives, Digitisation, Discourse analysis, Document classification, Duplication, emotional content extraction, English, entity, Entity linking, event argument extraction, Event detection, events, Guideline, Hate speech, Hebrew, implication, information retrieval, intents, intersection, Iraqi, Iraqi Dialect Corpus, jaccard similarity, Knowledge Graphs, Knowledge representation, language corpora, Languages, Large Language Models, Lebanese, Lebanese Dialect Corpus, Lemmas, Lemmatization, Lexicon, Lexicons, Libyan, Libyan Dialect Corpus, Linked Data, Lisan, Machine translation, matching, Media, metadata, Middle Eastern history, misinformation, models, Modern Standard Arabic, Morphological Solution, Morphology, MSA, MSA, MSA lemma, Mustafa Jarrar, Nabra, Nakba narratives, Nakba testimonies, Named Entity Recognition, narratives, Natural Language Generation, NER, Nested, News, NLP, NLU, offensive language, online, ontologies, Open-Source, organizations, Palestine, Palestinian, Palestinian Dialect Corpus, Palestinian Nakba, paraphrasing, Part-Of-Speech, Part-of-speech Tagging, POS, Pre-trained model, Prefix, Projects, Qabas, relationship extraction, Research, resources, SALMA, Semantic Relatedness, semantic tagging, sense, Sentiment analysis, similarity, SinaLab, stem, Sudanese, Sudanese Dialect Corpus, suffix, summarisation, Synonyms, Synonyms Evaluate, Synonyms Extraction, Syrian, Syrian Dialect Corpus, Tool, topic modeling, union, Vocabularies, Welsh, Wojood, Word Sense Disambiguation, Workshop, WSD, Yemeni, Yemeni Dialect Corpus, أخبار, ألمى, اتحاد, استخراج المترادفات, التعرف على الكينونات, اللغة العربية, اللغة العربية المعاصرة, انجليزي, بحث علمي, تقاطع, جامعة بيرزيت, خصائص صرفية, خوارزميات, دليل معياري, ذم, سلمى, سينا, شبكة بيانات, شبكة بيانات معجمية, عامية, عامية إماراتية, عامية سودانية, عامية سورية, عامية عراقية, عامية فلسطينية, عامية لبنانية, عامية ليبية, عامية مصرية, عامية يمنية, عربي, فصحى, فصحى حديثة, فلسطين, فهم الدلالة, قاموس عربي, قبس, قسم الكلام, كراسات, كراهية, محلل دلالي, مدخلات, مدخلات معجمية, مدخلة, مدخلة عامية, مدخلة فصحى, مدونات, مدونات عامية, مدونة, مصادر, مصطفى جرار, معاجم, معالجة اللغة الطبيعية, معجم, معجم اللغة العربية, معجم عربي, معجم مجاني, مفتوح المصدر, مقارنة, مكنز, مكنز شجري صرفي, نكبة, نموذج, وجود"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+      type="image/x-icon"
+    />
+    <title>Diacritic-aware Arabic matching Online</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SV0Y0V4JTT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-SV0Y0V4JTT');
+    </script>
+  </head>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default bg-light">
+      <div class="sina-header">
+        <div class="image-holder" onclick="window.open('../index.html');">
+          <img
+            src="../Images/arOntLogo.png"
+            class="img-responsive logo"
+            alt="logo"
+          />
+          <div class="vertical-line"></div>
+          <p class="title">SinaLab</p>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="nav text-center navigation-bar">
+          <li><a href="../news/index.html">News</a></li>
+          <li><a href="../index.html#team">Team</a></li>
+          <li><a href="./index.html">Resources</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="intro-section" style="line-height: 0.5">
+      <p class="intro-section-title text-left">Semantic Relatedness</p>
+      <!-- <p class="sub_page_title_implication">
+        A diacritic-aware Arabic matching Algorithm
+      </p> -->
+    </div>
+    <div class="secDiv">
+      <span>Computes the degree of association between two sentences across various dimensions, meaning, underlying concepts, domain-specificity, topic overlap, and viewpoint alignment.</span
+      >
+      <br>
+      <span><b>Performance:</b> correlation score (49%), See  <a
+        href="https://www.jarrar.info/publications/MJK24.pdf"
+        target="content"
+        >article</a
+      >.</span>
+    </div>
+
+    <!-- <p class="secDiv" style="font-weight: 550" dir="rtl">
+      خوارزمية مقارنة الكلمات العربية: إذا أعطيت كلمتين مختلفتين في التشكيل،
+      فسيتم تحديد ما إذا كانت الكلمتين هي نفس الكلمة أم لا، وأي منهما تتضمن
+      الأخرى، مقدار الإختلاف، مقدار التعارض، بالإضافة إلى معطيات أخرى
+    </p> -->
+
+    <div class="main-container-implication" style="line-height: 1.3">
+      <div>
+        <div class="flex-container">
+          <div class="table-div">
+            <table class="myTable-impl" style="margin: 0 auto">
+              <tr>
+                <td colspan="2">
+                  <!-- <span class="text_inpAndout">Input:</span> -->
+                </td>
+              </tr>
+              <tr style="text-align: center">
+                <!-- Flexbox with gap -->
+                <td style="text-align: center; vertical-align: top">
+                  <label for="sentence1" style="position: absolute; "
+                    >Sentence1:</label
+                  >
+                  <textarea
+                    class="inp-sent"
+                    dir="rtl"
+                    type="text"
+                    name="sentence1"
+                    id="sentence1"
+                  >تدور الأرض حول محورها بسرعة تصل تقريبا 1670 كيلومتر في الساعة.</textarea>
+                </td>
+              </tr>
+              <tr style="text-align: center">
+                <td style="text-align: center; vertical-align: top">
+                  <label for="sentence2" style="position: absolute;"
+                    >Sentence2:</label
+                  >
+                  <textarea
+                    class="inp-sent"
+                    dir="rtl"
+                    type="text"
+                    name="sentence2"
+                    id="sentence2">تبلغ سرعة دوران الأرض حول الشمس حوالي 110 كيلومتر في الساعة.</textarea>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    padding-bottom: 20px;
+                    padding-top: 10px;
+                  "
+                  colspan="2"
+                >
+                  <input
+                    class="btn"
+                    type="button"
+                    id="compute_relatedness"
+                    name="compute_relatedness"
+                    value="Compute Relatedness"
+                  />
+                </td>
+              </tr>
+              <tr style="text-align: center">
+                <td colspan="2" style="position: relative">
+                  <label for="output" class="output">Output:</label>
+                  <textarea
+                    class="textAreaStyle-sr "
+                    style="
+                      border: 1px solid #bfbfbf;
+                      display: block;
+                      margin: 0 auto;
+                    "
+                    name="output"
+                    id="output"
+                    rows="5"
+                  ></textarea>
+                </td>
+              </tr>
+              <!-- <tr style="text-align: center;">
+                            <td colspan="2">
+                                <a href="#" onClick="copyText();return false;">Copy to Clipboard</a>
+                            </td>
+                        </tr> -->
+            </table>
+          </div>
+
+          <!-- <table class="outerTable">
+                    <tr>
+                        <td style="width: 13%;"><br></td>
+                        <td style="width: 9%;"></td>
+                        <td style="width: 15%;"></td>
+                        <td style="width: 15%;"></td>
+                        <td style="width: 35%;"></td>
+                        <td style="width: 13%;"></td>
+                    </tr>
+                    <tr>
+                      
+                        <td colspan="4" >
+                            
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        
+                        <td colspan="4" style="text-align: right;">
+                            
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="4">
+                            
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="vertical-align: super;">
+                            <span class="text-style">Download: </span>
+                        </td>
+                        <td colspan="3" style="text-align: left;">
+                            <a href="https://github.com/SinaInstitute/ImpliMorph" target="content">Source Code</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="vertical-align: super;">
+                            <span class="text-style">Publication: </span>
+                        </td>
+                        <td colspan="3" style="text-align: left;">
+                            <span> Mustafa Jarrar, Fadi Zaraket, Rami Asia, Hamzeh Amayreh:
+                                <a href="http://www.jarrar.info/publications/JZAA18.pdf" target="content">
+                                    Diacritic-Based Matching of Arabic Words</a>. ACM Asian
+                                and Low-Resource Language Information Processing. Volume 18, No 2, Pages(10:1--10:21), ACM, December
+                                2018. ISSN 2375-4699.</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="vertical-align: super;">
+                            <span class="text-style">Other Projects: </span>
+                        </td>
+                        <td colspan="3" style="text-align: left;">
+                            <a href="./duplicateCleaner.html" target="content">Duplicate Cleaner</a> ,
+                            <a href="https://ontology.birzeit.edu" target="content">Arabic Ontology</a> ,
+                            <a href="https://sina.birzeit.edu/currasat/" target="content">Curras</a> ,
+                            <a href="http://zinnar.pna.ps/InteroperabilityPortal/" target="content">Zinnar</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table> -->
+        </div>
+      </div>
+      <div class="alma-container">
+        <div class="form-horizontal">
+          <div class="normalText">
+            <ul class="services-list-impl">
+              <li>
+                <div class="services-list-item-impl">
+                  <input
+                    type="checkbox"
+                    id="p-toggle1"
+                    class="p-unfolder p-unfolder14"
+                  />
+                  <label for="p-toggle1" class="p-toggle-label-impl">
+                    <span class="p-unfold-icon" style="width: fit-content"
+                      >+</span
+                    >
+                    <span class="p-fold-icon" style="width: fit-content"
+                      >-</span
+                    >
+                    <span class="p-label-title-impl">Download</span>
+                  </label>
+                  <div class="p-fold description_fold">
+                    <div class="p-fold description-p">
+                      <p class="p-description-p">
+                        <span class="remove-padding"
+                          >Part of
+                          <a href="https://sina.birzeit.edu/sinatools/"
+                            >SinaTools</a
+                          ></span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="services-list-item-impl">
+                  <input
+                    type="checkbox"
+                    id="p-toggle10"
+                    class="p-unfolder p-unfolder14"
+                  />
+                  <label for="p-toggle10" class="p-toggle-label-impl">
+                    <span class="p-unfold-icon" style="width: fit-content"
+                      >+</span
+                    >
+                    <span class="p-fold-icon" style="width: fit-content"
+                      >-</span
+                    >
+                    <span class="p-label-title-impl">Publication</span>
+                  </label>
+                  <div class="p-fold description_fold">
+                    <div class="p-fold description-p">
+                      <p class="p-description-p">
+                        <span>
+                          Sanad Malaysha, Mustafa Jarrar, Mohammed Khalilia: <a href="https://www.jarrar.info/publications/MJK24.pdf">NLU-STR at SemEval-2024 Task 1: Generative-based Augmentation and Encoder-based Scoring for Semantic Textual Relatedness</a> In Proceedings of the SemEval 2024 Shared Task 1 (Semantic Relatedness). ACL 2024.</span
+                        >
+                        <br />
+                        <br />
+                        <span>
+                          Tymaa Hammouda, Mustafa Jarrar, Mohammed Khalilia:
+                          <a
+                            href="https://www.jarrar.info/publications/HJK24.pdf"
+                            >SinaTools: Open Source Toolkit for Arabic Natural
+                            Language Understanding.</a
+                          >
+                          In Proceedings of the 2024 AI in Computational
+                          Linguistics (ACLING 2024), Procedia Computer Science,
+                          Dubai. ELSEVIER.
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="tools-footer-alam">
+      <span class="footer-copyrights">
+        <a href="http://www.birzeit.edu/" target="_blank">
+          <img class="bzu-img" src="../Images/bzu-logo.png" alt="bzu logo" />
+        </a>
+      </span>
+      <br />
+      <span class="footer-text">Copyright © 2022 Birzeit University</span>
+    </div> -->
+  </body>
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Wojood - Arabic NER Online Demo وجود لاستخراج الاعلام</title>
+    <link rel="icon" type="image/ico" href="./favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/Fira-Sans-font.css" />
+    <link rel="stylesheet" href="../main.css?v=8" />
+    <link rel="stylesheet" href="./Wojood.css?v=8" />
+    <script src="./Wojood.js?v=13"></script>
+    <!-- 
+    <meta property="og:image:width" content="100">
+    <meta property="og:image:height" content="100"> -->
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1, viewport-fit=cover"
+    />
+    <!--viewport-fit=cover - for iPhone X notch-->
+
+    <meta property="header" content="Wojood" />
+
+    <meta
+      property="og:title"
+      content="Wojood - Arabic NER Online Demo   وجود لاستخراج الاعلام"
+    />
+    <meta
+      property="og:image"
+      content="https://sina.birzeit.edu/Images/OGLogo.jpg"
+    />
+    <meta property="og:url" content="https://sina.birzeit.edu/wojood/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Nested and flat Named Entity Recognition (corpus, model, and tools) for Arabic."
+    />
+    <meta
+      name="description"
+      content="Nested and flat Named Entity Recognition (corpus, model, and tools) for Arabic."
+    />
+    <meta
+      property="title"
+      content="Wojood - Arabic NER Online Demo   وجود لاستخراج الاعلام"
+    />
+    <meta name="author" content="SinaLab - Birzeit University" />
+    <meta
+      name="keywords"
+      content="Free, online, open sources, SinaTools, relation extraction, LLMs, algorithms, ALMA, Annotation tools, Arabic, Arabic Dictionary, Arabic Lexicographic Database, Arabic Lexicon, articles, Baladi, BERT, bias, Birzeit University, cleaning, Corpora, Corpus, Curras, Currasat, Data visualisation, dataset, datasets, Deep Learning, Demo, diacratics, Diacritics-aware, dialect, Dialect Lemma, Dialect Lemma, Dialects, dictionaries, Dictionary, Digital archives, Digitisation, Discourse analysis, Document classification, Duplication, emotional content extraction, English, entity, Entity linking, event argument extraction, Event detection, events, Guideline, Hate speech, Hebrew, implication, information retrieval, intents, intersection, Iraqi, Iraqi Dialect Corpus, jaccard similarity, Knowledge Graphs, Knowledge representation, language corpora, Languages, Large Language Models, Lebanese, Lebanese Dialect Corpus, Lemmas, Lemmatization, Lexicon, Lexicons, Libyan, Libyan Dialect Corpus, Linked Data, Lisan, Machine translation, matching, Media, metadata, Middle Eastern history, misinformation, models, Modern Standard Arabic, Morphological Solution, Morphology, MSA, MSA, MSA lemma, Mustafa Jarrar, Nabra, Nakba narratives, Nakba testimonies, Named Entity Recognition, narratives, Natural Language Generation, NER, Nested, News, NLP, NLU, offensive language, online, ontologies, Open-Source, organizations, Palestine, Palestinian, Palestinian Dialect Corpus, Palestinian Nakba, paraphrasing, Part-Of-Speech, Part-of-speech Tagging, POS, Pre-trained model, Prefix, Projects, Qabas, relationship extraction, Research, resources, SALMA, Semantic Relatedness, semantic tagging, sense, Sentiment analysis, similarity, SinaLab, stem, Sudanese, Sudanese Dialect Corpus, suffix, summarisation, Synonyms, Synonyms Evaluate, Synonyms Extraction, Syrian, Syrian Dialect Corpus, Tool, topic modeling, union, Vocabularies, Welsh, Wojood, Word Sense Disambiguation, Workshop, WSD, Yemeni, Yemeni Dialect Corpus, أخبار, ألمى, اتحاد, استخراج المترادفات, التعرف على الكينونات, اللغة العربية, اللغة العربية المعاصرة, انجليزي, بحث علمي, تقاطع, جامعة بيرزيت, خصائص صرفية, خوارزميات, دليل معياري, ذم, سلمى, سينا, شبكة بيانات, شبكة بيانات معجمية, عامية, عامية إماراتية, عامية سودانية, عامية سورية, عامية عراقية, عامية فلسطينية, عامية لبنانية, عامية ليبية, عامية مصرية, عامية يمنية, عربي, فصحى, فصحى حديثة, فلسطين, فهم الدلالة, قاموس عربي, قبس, قسم الكلام, كراسات, كراهية, محلل دلالي, مدخلات, مدخلات معجمية, مدخلة, مدخلة عامية, مدخلة فصحى, مدونات, مدونات عامية, مدونة, مصادر, مصطفى جرار, معاجم, معالجة اللغة الطبيعية, معجم, معجم اللغة العربية, معجم عربي, معجم مجاني, مفتوح المصدر, مقارنة, مكنز, مكنز شجري صرفي, نكبة, نموذج, وجود, "
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+      type="image/x-icon"
+    />
+    <!-- <title>Wojood مدونة وجود لاستخراج الكينونات</title> -->
+  </head>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default bg-light">
+      <div class="sina-header">
+        <div class="image-holder" onclick="window.open('../index.html');">
+          <img
+            src="../Images/arOntLogo.png"
+            class="img-responsive logo"
+            alt="logo"
+          />
+          <div class="vertical-line"></div>
+          <p class="title">SinaLab</p>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="nav text-center navigation-bar">
+          <li><a href="../news/index.html">News</a></li>
+          <li><a href="../index.html#team">Team</a></li>
+          <li><a href="../resources/index.html">Resources</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="intro-section">
+      <p class="intro-section-title">Wojood (وجود)</p>
+     <p class="intro-section-title">Arabic Named Entity Recognition</p>
+
+      <p>
+        Nested and Flat NER, 21 entity types, and 31 entity subtypes. (Open
+        Source)<br>  Performance (on Wojood only): Nested(89.42%) Flat(87.33%)
+        <BR>
+          <B> Datasets</B> (1.3M tokens):  <b>Wojood </b> (550K tokens MSA),<b><span style="color:#cd8b37">Konooz كنوز</span></b>(777K tokens dialects), <b>Wojood<sub>Fine</sub> </b>(fine-grained), <b>Wojood<sup>Gaza</sup></b> (50K tokens on Gaza genocide), <b><i>WojoodOntology</i></b> (55 Concepts, 40 Relations). 
+      </p>
+    </div>
+
+    <div class="wojood-container center-align">
+      <textarea id="text">
+جامعة بيرزيت وبالتعاون مع مؤسسة ادوارد سعيد تنظم مهرجان للفن الشعبي سيبدأ الساعة الرابعة عصرا، بتاريخ 16/5/2016.
+بورصة فلسطين تسجل ارتفاعا بنسبة 0.08% ، في جلسة بلغت قيمة تداولاتها أكثر من نصف مليون دولار .
+إنتخاب رئيس هيئة سوق رأس المال وتعديل مادة (4) في القانون الأساسي.
+مسيرة قرب باب العامود والذي 700 متر عن المسجد الأقصى.</textarea
+      >
+
+      <div id="myBtnContainer">
+        <button class="btn" id="nerId" onclick="ExcuteWojood()">NER</button>
+      </div>
+      <div id="combo">
+        <label>output format :</label>
+        <select id="output_format">
+          <option id="highlight">highlighted</option>
+          <option id="JSON_IBO">JSON IBO</option>
+          <option id="JSON_entities">JSON entities</option>
+          <option id="xml_format">XML</option>
+        </select>
+      </div>
+      <div id="output"></div>
+    </div>
+
+    <div class="wojood-container">
+      <div class="form-horizontal">
+        <div class="normalText">
+          <ul class="services-list">
+            <li>
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle138"
+                  class="p-unfolder p-unfolder14"
+                />
+                <label for="p-toggle138" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Description</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+                    <p class="p-description-p">
+                      <span class="a-description">Models: </span>Flat, Nested,
+                      and Fine-grain BERT models.<br /><br />
+                      <span class="a-description">Wojood Corpus: </span>
+                      560K tokens (MSA and dialect), manually annotated with 21
+                      entity types, annotated with nested and flat entities (See
+                      <a href="https://www.jarrar.info/publications/JKG22.pdf"
+                        >Article</a
+                      >). covers multiple domains (Media, History, Culture,
+                      Health, Finance, ICT, Law, Elections, Politics, Migration,
+                      Terrorism, social media).<br /><br />
+					  <span class="a-description">Konooz Corpus:</span> Multi-domain Multi-dialect - 777K tokens in 16 Arabic dialects across 10 domains, 160 distinct corpora. (See
+                      <a href="https://www.jarrar.info/publications/HKJ25.pdf">Article</a>).<br><br>
+                      <span class="a-description"
+                        >Wojood<sub>Fine</sub> Corpus: </span
+                      >Same as Wojood but extended with subtypes of entities (51
+                      tags in total), (See
+                      <a href="https://www.jarrar.info/publications/LJKOA23.pdf"
+                        >Article</a
+                      >). <br /><br />
+                      <span class="a-description"
+                        >Wojood<sup>Gaza</sup> Corpus:</span
+                      >
+                      60K tokens related to Israeli War on Gaza in domains (See
+                      <a
+                        href="https://www.jarrar.info/publications/JHKTEA24.pdf"
+                        >Article</a
+                      >).<br /><br />
+					  
+					  <span class="a-description">WojoodOntology:</span>
+					  55 concepts (named entity types) and 40 relationships, including subclass and equivalent class relations 
+					  (See <a href="https://www.jarrar.info/publications/JHKJ25.pdf">Article</a>). <br><br> 
+
+                      <span class="a-description">Tags and Guidelines: </span
+                      ><br />
+                    </p>
+
+                    <div
+                      class="table-responsive"
+                      style="border: none !important"
+                    >
+                      <table>
+                        <tbody>
+                          <!-- <tr>
+												<td class="td_class">PERS <span class="entity_description">(person)</span>
+												</td>
+												<td class="td_class middle_column">EVENT</td>
+												<td class="td_class">CARDINAL</td>
+											</tr> -->
+                          <tr>
+                            <td class="td_class">
+                              NORP
+                              <span class="entity_description"
+                                >(group of people)</span
+                              >
+                            </td>
+                            <td class="td_class middle_column">DATE</td>
+                            <td class="td_class">ORDINAL</td>
+                          </tr>
+                          <tr>
+                            <td class="td_class">
+                              OCC
+                              <span class="entity_description">
+                                (occupation)
+                              </span>
+                            </td>
+                            <td class="td_class middle_column">TIME</td>
+                            <td class="td_class">PERCENT</td>
+                          </tr>
+                          <tr>
+                            <td class="td_class">
+                              ORG
+                              <span class="entity_description"
+                                >(organization)
+                                <a onclick="toggle_visibility('ORG')"
+                                  >subtypes</a
+                                ></span
+                              >
+                            </td>
+                            <td class="td_class middle_column">LANGUAGE</td>
+                            <td class="td_class">QUANTITY</td>
+                          </tr>
+                          <tr>
+                            <td class="td_class">
+                              GPE
+                              <span class="entity_description"
+                                >(geopolitical entity)
+                                <a onclick="toggle_visibility('GPE')"
+                                  >subtypes</a
+                                ></span
+                              >
+                            </td>
+                            <td class="td_class middle_column">WEBSITE</td>
+                            <td class="td_class">UNIT</td>
+                          </tr>
+                          <tr>
+                            <td class="td_class">
+                              LOC
+                              <span class="entity_description"
+                                >(geographical location)
+                                <a onclick="toggle_visibility('LOC')"
+                                  >subtypes</a
+                                ></span
+                              >
+                            </td>
+                            <td class="td_class middle_column">LAW</td>
+                            <td class="td_class">MONEY</td>
+                          </tr>
+                          <tr>
+                            <td class="td_class">
+                              FAC
+                              <span class="entity_description"
+                                >(facility: landmarks places)
+                                <a onclick="toggle_visibility('FAC')"
+                                  >subtypes</a
+                                ></span
+                              >
+                            </td>
+                            <td class="td_class middle_column">PRODUCT</td>
+                            <td class="td_class">
+                              CURR
+                              <span class="entity_description">(currency)</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div
+                        id="block-ORG"
+                        class="block_subtypes entity_description"
+                      >
+                        <b> ORG:</b><br />
+                        GOV <br />
+                        COM <br />
+                        EDU <br />
+                        ENT <br />
+                        NONGOV <br />
+                        MED <br />
+                        REL <br />
+                        SCI <br />
+                        SPO <br />
+                        ORG_FAC
+                      </div>
+                      <div
+                        id="block-GPE"
+                        class="block_subtypes entity_description"
+                      >
+                        <b> GPE:</b><br />
+                        COUNTRY <br />
+                        STATE-OR-PROVINCE <br />
+                        TOWN <br />
+                        NEIGHBORHOOD <br />
+                        CAMP <br />
+                        GPE_ORG <br />
+                        SPORT
+                      </div>
+                      <div
+                        id="block-LOC"
+                        class="block_subtypes entity_description"
+                      >
+                        <b> LOC:</b><br />
+                        CONTINENT <br />
+                        CLUSTER <br />
+                        ADDRESS <br />
+                        BOUNDARY <br />
+                        CELESTIAL <br />
+                        WATER-BODY <br />
+                        LAND-REGION-NATURAL <br />
+                        REGION-GENERAL <br />
+                        REGION-INTERNATIONAL
+                      </div>
+                      <div
+                        id="block-FAC"
+                        class="block_subtypes entity_description"
+                      >
+                        <b> FAC:</b><br />
+                        PLANT <br />
+                        AIRPORT <br />
+                        BUILDING-OR-GROUNDS <br />
+                        SUBAREA-FACILITY <br />
+                        PATH
+                      </div>
+                      <!-- <br>
+									<span class="a-description">Versions:
+									</span>Wojood 1.1 is the same as Wojood-V1 but we corrected some annotations. For the baselines of Wojood-V1 please refer to [<a href="http://www.jarrar.info/publications/JKG22.pdf">1</a>], and for Wojood-V1.1 please refer to [<a href="http://www.jarrar.info/publications/JAKBEHO23.pdf">2</a>]<br> -->
+                    </div>
+
+                    <br />
+                    <a style="color: #000000; text-decoration: none"
+                      >Please email Prof. Jarrar (mjarrar AT birzeit.edu) for
+                      the annotation guidelines
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="download">
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle1"
+                  class="p-unfolder p-unfolder14"
+                />
+                <label for="p-toggle1" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Downloads</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+                    <p class="p-description-p">
+                      <a href="https://sina.birzeit.edu/sinatools/"
+                        >SinaTools:</a
+                      >
+                      NER module as python library.
+                      <br />
+                      <br />
+                      <a href="https://github.com/SinaLab/ArabicNER">GitHub:</a>
+                      training source code + sample data (~35K tokens).
+                      <br />
+                      <br />
+                      <a href="https://huggingface.co/SinaLab/ArabicNER-Wojood"
+                        >Hugging Face:</a
+                      >
+                      fine-tuned BERT model using Wojood.
+                      <br />
+                      <br />
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfitQatN9pJaQMzwjbJGgXsJDktq9eSgScADXd6CO8gyOUkFg/viewform?usp=sf_link"
+                        target="_blank"
+                        >Wojood Corpus
+                      </a>
+                      (Corpus only)
+                      <br />
+                      <br />
+					  <a style="color:#cd8b37" href="https://docs.google.com/forms/d/e/1FAIpQLSdSHxIMGbaBp84cvG6RK8zzlPP5_D_0OdOyOJz2t0Xm1rS_mQ/viewform?usp=sf_link" target="_blank">Konooz Corpus</a>
+                      (Corpus only)
+					  <br />
+                      <br />
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeW9sKCGq9z63nA51cJlnquvterOLf1T_uMEQgipzEatlj8gA/viewform?usp=sf_link"
+                        target="_blank"
+                        >Wojood<sub>Gaza</sub> Corpus</a
+                      >
+                      (Corpus only)
+                      <br />
+                      <br />
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScnSuXdp0ghxefTjfgRlPU8_unwJzZZmtemCHcEwBr3kbjiCQ/viewform?usp=sf_link"
+                        target="_blank"
+                        >Wojood<sup>Fine</sup> Corpus</a
+                      >
+                      (Corpus only)
+					  <br />
+                      <br />
+                      
+					  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwGupC8f--w61YKEqBeMG4pLGanipGnuXcckF1v7tfu4VMkw/viewform?usp=publish-editor"
+						target="_blank">WojoodOntology</a> (Ontology only)
+					  
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="services-list-item" id="benchmarks">
+              <input
+                type="checkbox"
+                id="p-toggle66"
+                class="p-unfolder p-unfolder0"
+              />
+              <label for="p-toggle66" class="p-toggle-label"
+                ><span class="p-unfold-icon">+</span>
+                <span class="p-fold-icon">-</span>
+                <span class="p-label-title"
+                  >Benchmarks
+                  
+                </span>
+              </label>
+              <div class="p-fold description_fold">
+                <div class="p-fold description-p">
+                  <span style="font-weight: bold;">Evaluation of SinaTools NER module</span>
+                  <div class="p-fold description-p" style="padding-top: 0px;">
+                    <span style="padding-left: 0px;">We benchmarked SinaTools using three datasets: (Wojood Test-set) and two additional out-of-domain datasets (Wojood<sup>Gaza</sup> and Politics). We evaluated three NER scenarios: 3 tags (PERS, LOC and ORG), 21 Flat tags, and 21 Nested tags. See article [<a href="https://www.jarrar.info/publications/HJK24.pdf">1</a>] for the details.</span>
+                  </div>
+                  <div class="p-fold description-p" style="padding-top: 0px;">
+                    <img
+                      src="../Images/wojoodBenchmarks.jpg"
+                      alt="Wojood Benchmarks"
+                      class="thumbnail-img"
+                      onclick="openFullScreen(this)"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            </li>
+            
+            <!-- Full-Screen Modal -->
+            <div id="imgModal" class="modal" onclick="closeFullScreen()">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="fullImg" />
+            </div>
+            
+            
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle10"
+                  class="p-unfolder p-unfolder0"
+                />
+                <label for="p-toggle10" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Shared Task</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+                    <span class="a-description">WojoodNER-2024,</span> The first
+                    Arabic Named Entity Recognition (NER) Shared Task.
+                    <br />
+                    <a href="https://dlnlp.ai/st/wojood/">Page</a> -
+                    <a href="https://www.jarrar.info/publications/JHKTEA24.pdf"
+                      >Article</a
+                    >
+                    <br />
+                    <br />
+                    <span class="a-description">WojoodNER-2023,</span> The first
+                    Arabic Named Entity Recognition (NER) Shared Task.
+                    <br />
+                    <a href="https://dlnlp.ai/st/wojood/2023/">Page</a> -
+                    <a href="https://www.jarrar.info/publications/JAKBEHO23.pdf"
+                      >Article</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- <li>
+						<div class="services-list-item">
+							<input type="checkbox" id="p-toggle0" class="p-unfolder p-unfolder0">
+							<label for="p-toggle0" class="p-toggle-label" ><span
+									class="p-unfold-icon">+</span><span class="p-fold-icon">-</span>
+								<p class="p-label-title">API</p>
+							</label>
+							<div class="p-fold description_fold">
+								<div class="p-fold description-p">
+									<p class="p-description-p">
+										<a href="https://docs.google.com/forms/d/e/1FAIpQLSdDxXNhAD9XUcHOdcRdfbLpztOo6Ul0aqSN88AgasmkAySW-A/viewform">Request API Token</a> to access Wojood web service online <br><br>
+									</p>
+									<div class="table-responsive">
+										<table class="table table-bordered">
+											<tbody>
+												<tr>
+													<td class="firstColumn-wojood">
+														<strong>Actors</strong>
+													</td>
+													<td class="secondColumn-wojood-api">
+														Authenticated user.
+													</td>
+												</tr>
+												<tr>
+													<td class="firstColumn-wojood">
+														<strong>URL schema</strong>
+													</td>
+													<td class="secondColumn-wojood-api">
+														https://{domain}/sina/v2/api/wojood/?apikey={key}
+													</td>
+												</tr>
+												<tr>
+													<td class="firstColumn-wojood">
+														<strong>Pre-conditions</strong>
+													</td>
+													<td class="secondColumn-wojood-api">
+														The user has registered and provided their API Token.
+													</td>
+												</tr>
+												<tr>
+													<td class="firstColumn-wojood">
+														<strong>API Parameters</strong>
+													</td>
+													<td class="secondColumn-wojood-api">
+														<ol>
+															<span class="remove-padding">Mode and sentence are received through the body</span>
+															<li><strong>mode:</strong> output format (1) JSON IBO format, (2)
+																XML format, or (3) entities and their positions in JSON.</li>
+															<li><strong>sentence:</strong> arabic text</li>
+															<li><strong>apikey:</strong> a key (provided offline) to access the
+																API.</li>
+														</ol>
+													</td>
+												</tr>
+												<tr>
+													<td class="firstColumn-wojood">
+														<strong>Flow of events</strong>
+													</td>
+													<td class="secondColumn-wojood-api">
+														<ol>
+															<li>The system checks if the API Key (i.e., Token) is authenticated
+																or not.</li>
+															<li>If not authenticated, the system returns (-3) error code in JSON
+																format.</li>
+															<li>If authenticated, and the access limit is not exceeded (if
+																exceeded returns -1 in JSON format), then the system logs the
+																request.</li>
+															<li>If so the system extracts the entities from text.</li>
+															<li>Otherwise, the system returns (-4) error code.</li>
+															<li>The system returns the results in the specified format.</li>
+														</ol>
+													</td>
+												</tr>
+												<tr>
+													<td class="firstColumn-wojood">
+														<strong>Retrieved Data</strong>
+													</td>
+													<td class="secondColumn-wojood-api">
+														returns the results in the specified format.
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li> -->
+            <li>
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle139"
+                  class="p-unfolder p-unfolder14"
+                />
+                <label for="p-toggle139" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Publications</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+				  
+					<p class="p-description-p">
+						Alaa Aljabari, Nagham Hamad, Mohammed Khalilia, Mustafa Jarrar: <a href="https://www.jarrar.info/publications/JHKJ25.pdf">WojoodOntology: Ontology-Driven LLM Prompting for Unified Information Extraction Tasks.</a> In Proceedings of the Third Arabic Natural Language Processing Conference (ArabicNLP), China, ACL.
+					</p>
+					<br/>
+					
+				    <p class="p-description-p">
+                       Nagham Hamad, Mohammed Khalilia, Mustafa Jarrar: <a href="https://www.jarrar.info/publications/HKJ25.pdf">Konooz: Multi-domain Multi-dialect Corpus for Named Entity Recognition.</a> In Proceedings of ACL 2025, Austria, ACL. 
+                    </p>
+					<br/>
+					
+                    <p class="p-description-p">
+                      Mustafa Jarrar, Nagham Hamad, Mohammed Khalilia, Bashar
+                      Talafha, AbdelRahim Elmadany, Muhammad Abdul-Mageed: <a
+                        href="https://www.jarrar.info/publications/JHKTEA24.pdf"
+                        >WojoodNER 2024: The Second Arabic Named Entity
+                        Recognition Shared Task.</a
+                      > In Proceedings of the Second Arabic Natural Language
+                      Processing Conference (ArabicNLP 2024), Bangkok, Thailand.
+                      Association for Computational Linguistics.
+                    </p>
+                    <br />
+
+                    <p class="p-description-p">
+                      Mustafa Jarrar, Muhammad Abdul-Mageed, Mohammed Khalilia,
+                      Bashar Talafha, AbdelRahim El-madany, Nagham Hamad, Alaa’
+                      Omar:<a
+                        href="https://www.jarrar.info/publications/JAKBEHO23.pdf"
+                        > WojoodNER 2023: The First Arabic Named Entity
+                        Recognition Shared Task.</a
+                      >
+                      In Proceedings of the 1st Arabic Natural Language
+                      Processing Conference (Arabic- NLP), Part of the EMNLP
+                      2023. ACL.
+                    </p>
+                    <br />
+
+                    <p class="p-description-p">
+                      Haneen Liqreina, Mustafa Jarrar, Mohammed Khalilia, Ahmed
+                      Oumar El-Shangiti, Muhammad AbdulMageed:<a
+                        href="https://www.jarrar.info/publications/LJKOA23.pdf"
+                        >Arabic Fine-Grained Entity Recognition.</a
+                      >  In Proceedings of the 1st Arabic Natural Language
+                      Processing Conference (ArabicNLP), Part of the EMNLP 2023.
+                      ACL.
+                    </p>
+                    <br />
+                    <p class="p-description-p">
+                      Mustafa Jarrar, Mohammed Khalilia, Sana Ghanem:<a
+                        href="https://www.jarrar.info/publications/JKG22.pdf"
+                      >
+                        Wojood: Nested Arabic Named Entity Corpus and
+                        Recognition using BERT.</a
+                      > In Proceedings of the International Conference on
+                      Language Resources and Evaluation (LREC 2022), Marseille,
+                      France. 2022
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9mrcepCnz386QEkMK8vUoFU1aW3qqBoPjZVJFo8beXGxhfA/viewform?embedded=true" width="640" height="581" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+        </div>
+      </div>
+    </div>
+    <!-- Birzeit Footer -->
+    <!-- <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-content-div">
+          <span class="footer-copyrights">
+            <a href="http://www.birzeit.edu/" target="_blank">
+              <img src="../Images/bzu-logo2.png" alt="bzu logo" />
+            </a>
+          </span>
+          <span class="ng-binding"> Copyright © 2023 Birzeit University </span>
+        </div>
+      </div>
+    </footer> -->
+  </body>
+</html>

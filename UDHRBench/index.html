@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Benchmarking Human Rights in Large Language Models</title>
+    <link rel="icon" type="image/ico" href="./favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/Fira-Sans-font.css" />
+    <link rel="stylesheet" href="../main.css?v=8" />
+    <link rel="stylesheet" href="./UDHRBench.css?v=9" />
+    <script src="./UDHRBench.js?v=14"></script>
+
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1, viewport-fit=cover"
+    />
+
+    <meta property="header" content="UDHRBench" />
+
+    <meta
+      property="og:title"
+      content="UDHRBench - Detect and Resolve conflicts in ArSR"
+    />
+    <meta
+      property="og:image"
+      content="https://sina.birzeit.edu/Images/OGLogo.jpg"
+    />
+    <meta property="og:url" content="https://sina.birzeit.edu/UDHRBench/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Benchmarking Human Rights in Large Language Models"
+    />
+    <meta
+      name="description"
+      content="Benchmarking Human Rights in Large Language Models"
+    />
+    <meta
+      property="title"
+      content="UDHRBench - Benchmarking Human Rights in Large Language Models"
+    />
+    <meta name="author" content="SinaLab - Birzeit University" />
+    <meta
+      name="keywords"
+      content="UDHRBench, Benchmarking, Human Rights, LLMs, Birzeit University, Demo, Datasets, language corpora, Languages, Large Language Models, Machine translation, Natural Language Generation, NLP, NLU, Open-Source, organizations, Palestine, Palestinian"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://sina.birzeit.edu/Images/SinaLogo.jpg"
+      type="image/x-icon"
+    />
+	
+	<style>
+
+
+.container{
+max-width:900px;
+margin:40px;
+margin-top: 0px;
+}
+
+label{
+    font-weight:bold;
+    display:block;
+    margin-top:15px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    background:#2c7be5;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1a5fc1;
+}
+
+.hidden{
+    display:none;
+}
+
+table{
+    margin-top:30px;
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:8px;
+}
+
+th{
+    background:#f3f3f3;
+}
+
+#errorMessage{
+    color:red;
+    margin-top:10px;
+}
+
+#warningMessage{
+    color:orange;
+    margin-top:10px;
+}
+
+#status{
+    margin-top:15px;
+}
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        align-items: start;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .form-group select,
+    .form-group input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+	
+	.form-group {
+		margin-bottom: 0px !important;
+	}
+
+    #warningMessage {
+        margin-top: 8px;
+        color: red;
+        font-size: 14px;
+    }
+
+    .hidden {
+        display: none;
+    }
+	
+
+.bars {
+    margin: 14px 0;
+}
+
+.tablewrap {
+    overflow-x: auto;
+}
+
+.barrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 9px 0;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 6px;
+    font-size: .85rem;
+    color: var(--muted);
+}
+
+.legend span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.barrow .name {
+    width: 92px;
+    font-weight: 700;
+    font-size: 12px;
+    flex: none;
+}
+
+.stack {
+    flex: 1;
+    display: flex;
+    height: 24px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+}
+
+.seg {
+    height: 100%;
+}
+
+.swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+</style>
+  </head>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default bg-light">
+      <div class="sina-header">
+        <div class="image-holder" onclick="window.open('../index.html');">
+          <img
+            src="../Images/arOntLogo.png"
+            class="img-responsive logo"
+            alt="logo"
+          />
+          <div class="vertical-line"></div>
+          <p class="title">SinaLab</p>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="nav text-center navigation-bar">
+          <li><a href="../news/index.html">News</a></li>
+          <li><a href="../index.html#team">Team</a></li>
+          <li><a href="../resources/index.html">Resources</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="intro-section">
+      <p class="intro-section-title">UDHRBench</p>
+      <p>
+		Benchmarking Human Rights in Large Language Models <br>
+		مؤشر التزام النماذج اللغوية في الإعلان الدولي لحقوق الإنسان <br>
+	  
+        Large-scale benchmark for operationalising the evaluation of large language model compliance with the Universal Declaration of Human Rights.<br>
+		
+		<b>Dataset:</b> <b>1,124</b> questions and <b>4,496</b> responses from four LLMs (ChatGPT, Grok, Gemini, and Fanar), manually annotated by experts - covering all <b>30</b> UDHR articles.<br>
+		<b>Method:</b> LLM-as-a-Judge to evaluate new models automatically with <b>90%</b> F1.
+      </p>
+    </div>
+
+    <div class="wojood-container">
+      <div class="form-horizontal">
+        <div class="normalText">
+          <ul class="services-list">
+            <li id="download">
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle1"
+                  class="p-unfolder p-unfolder14"
+                />
+                <label for="p-toggle1" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Downloads</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+                    <p class="p-description-p">
+                      
+                      <a href="https://forms.gle/mbAKvnAS3mTF4ZLVA">Download the dataset</a>
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+			
+			<li id="benchmark">
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle2"
+                  class="p-unfolder p-unfolder14"
+                />
+                <label for="p-toggle2" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Results & Benchmarks</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+                    <p class="p-description-p">
+					<div class="content">
+        <h4 class="margin: 18px 0 6px; font-size: 16px !important;">Alignment distribution per model</h4>
+        <div class="bars">
+          <div class="barrow"><span class="name">ChatGPT</span>
+            <div class="stack" title="ChatGPT">
+              <div class="seg" style="width:73.1%;background:#15803d"></div>
+              <div class="seg" style="width:15.5%;background:#b45309"></div>
+              <div class="seg" style="width:11.2%;background:#b91c1c"></div>
+              <div class="seg" style="width:0.1%;background:#6b7280"></div>
+            </div>
+          </div>
+          <div class="barrow"><span class="name">Grok</span>
+            <div class="stack" title="Grok">
+              <div class="seg" style="width:45.4%;background:#15803d"></div>
+              <div class="seg" style="width:12.5%;background:#b45309"></div>
+              <div class="seg" style="width:42.1%;background:#b91c1c"></div>
+            </div>
+          </div>
+          <div class="barrow"><span class="name">Gemini</span>
+            <div class="stack" title="Gemini">
+              <div class="seg" style="width:48.8%;background:#15803d"></div>
+              <div class="seg" style="width:15.5%;background:#b45309"></div>
+              <div class="seg" style="width:35.8%;background:#b91c1c"></div>
+            </div>
+          </div>
+          <div class="barrow"><span class="name">Fanar</span>
+            <div class="stack" title="Fanar">
+              <div class="seg" style="width:50.3%;background:#15803d"></div>
+              <div class="seg" style="width:27%;background:#b45309"></div>
+              <div class="seg" style="width:10.2%;background:#b91c1c"></div>
+              <div class="seg" style="width:12.5%;background:#6b7280"></div>
+            </div>
+          </div>
+          <div class="legend">
+            <span style="font-size: 12px;"><i class="swatch" style="background:#15803d"></i>Aligned</span>
+            <span style="font-size: 12px;"><i class="swatch" style="background:#b45309"></i>Partially Aligned</span>
+            <span style="font-size: 12px;"><i class="swatch" style="background:#b91c1c"></i>Misaligned</span>
+            <span style="font-size: 12px;"><i class="swatch" style="background:#6b7280"></i>Not Applicable</span>
+          </div>
+        </div>
+
+        <div class="tablewrap">
+        <table>
+          <thead><tr><th class="l">Label</th><th>ChatGPT</th><th>Grok</th><th>Gemini</th><th>Fanar</th></tr></thead>
+          <tbody>
+            <tr><td class="l">Aligned</td><td>73.1%</td><td>45.4%</td><td>48.8%</td><td>50.3%</td></tr>
+            <tr><td class="l">Partially Aligned</td><td>15.5%</td><td>12.5%</td><td>15.5%</td><td>27.0%</td></tr>
+            <tr><td class="l">Misaligned</td><td>11.2%</td><td>42.1%</td><td>35.8%</td><td>10.2%</td></tr>
+            <tr><td class="l">Not Applicable</td><td>0.1%</td><td>0%</td><td>0%</td><td>12.5%</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+	  <br>
+					  See <a href="https://www.jarrar.info/publications/RMSAJ26.pdf">article</a> for additional statistics and results.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+			
+			
+
+            <li>
+              <div class="services-list-item">
+                <input
+                  type="checkbox"
+                  id="p-toggle139"
+                  class="p-unfolder p-unfolder14"
+                />
+                <label for="p-toggle139" class="p-toggle-label"
+                  ><span class="p-unfold-icon">+</span
+                  ><span class="p-fold-icon">-</span>
+                  <p class="p-label-title">Publications</p>
+                </label>
+                <div class="p-fold description_fold">
+                  <div class="p-fold description-p">
+	
+                    <p class="p-description-p">
+					Alak Raad, Noreldin Morssy, Zeerak Suhail, Serin Atiani, Mustafa Jarrar:
+					  <a href="https://www.jarrar.info/publications/RMSAJ26.pdf">UDHRBench: Benchmarking Human Rights in Large Language Models</a>. Under review. 2026.
+                    </p>
+                  
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Birzeit Footer -->
+    <!-- <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-content-div">
+          <span class="footer-copyrights">
+            <a href="http://www.birzeit.edu/" target="_blank">
+              <img src="../Images/bzu-logo2.png" alt="bzu logo" />
+            </a>
+          </span>
+          <span class="ng-binding"> Copyright © 2023 Birzeit University </span>
+        </div>
+      </div>
+    </footer> -->
+  </body>
+  
+</html>

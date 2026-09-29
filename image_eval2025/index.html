@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://dlnlp.ai/st/wojood/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Image Captioning Shared Task 2025</title>
+
+<!-- Latest minified bootstrap css -->
+<link rel="stylesheet" href="./imgs/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="./imgs/jquery.min.js.download"></script>
+<!-- Latest minified bootstrap js -->
+<script src="./imgs/bootstrap.min.js.download"></script>
+<!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/turjuman_logo.ico"> -->
+<link rel="stylesheet" type="text/css" href="./imgs/style.min.css">
+<script defer="" src="./imgs/script.js.download"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
+		onload="renderMathInElement(document.body);"></script>
+
+<style>
+.header {
+   background:#757575;
+}
+/* .header .menu>.menu-item>.sub-menu>.menu-item>a {color:#f5f813} */
+/* .header .menu>.menu-item>.sub-menu>.menu-item>a:hover{color:#f5f813} */
+.header .menu>.menu-item>a .expand::before,.header .menu>.menu-item>a .expand::after{background:#fff}
+.header .menu>.menu-item:hover>a{color:#f5f813}
+.menu>.menu-item>.sub-menu>.menu-item>a:hover{color:#f5f813}
+.header .menu>.menu-item:hover>a .expand::before,.header .menu>.menu-item:hover>a .expand::after{background:#f5f813}
+.header .menu>.menu-item>a{
+   color:#fff;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-top: 30px;
+    border: 1px solid transparent;
+}
+    .brand {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -1px;
+  color: #fff;
+  text-transform:none;
+}
+body{
+   background:#eff1f2;
+}
+.container{
+        width:100%;
+        
+}   
+
+  option{
+    text-align: left;
+}
+  fieldset {
+    dir:rtl;
+    margin: 8px;
+    border: 1px solid silver;
+    padding: 8px;    
+    border-radius: 4px;
+}
+
+legend {
+    padding: 2px; 
+    font-size:8px;   
+}
+
+th, td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+tr{
+	font-family:Droid Serif;
+	font-size:12pt;
+	color:#666666;
+}
+table{
+    border-spacing: 40px;
+    /*margin-left:100px;*/
+}
+.loadingMask {
+    background: url(./imgs/Ajux_loader.gif) center 50% no-repeat #000000;
+    top:0;
+    left:0;
+    position:fixed;
+    height:100%;
+    width:100%;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    z-index:12030
+ }
+   ul.custom-list , ol.custom-list {
+    list-style-position: outside;
+    padding-left: 1.2em;
+  }
+
+  ul.custom-list li,  ol.custom-list li{
+    padding-left: 0.5em;
+    /* text-indent: -0.5em; */
+  }
+
+#old{
+text-decoration: line-through;
+}
+</style>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sina.birzeit.edu/image_eval2025/index.html">
+<meta name="keywords" content="Arabic image captioning, NLP, shared task, AI, Arabic NLP, multimodal, datathon, deep learning">
+<meta property="og:image" content="https://sina.birzeit.edu/image_eval2025/imgs/og_img.jpg">
+<meta property="og:title" content="Image Captioning Shared Task 2025">
+<meta property="og:description" content="The Arabic Image Captioning Shared Task - to develop and evaluate open sources image captions in Arabic.">
+</head>
+
+
+<body data-new-gr-c-s-check-loaded="14.1154.0" data-gr-ext-installed="">
+<!-- Section: Header -->
+<header class="header">
+      <section class="container">
+         <div class="wrapper">
+            <a  href=" https://arabicnlp2025.sigarab.org/"><img src="./imgs/small.jpg" width="220" height="60px" vertical-align="middle" align="left"></a>
+
+            <!-- <button type="button" class="burger" id="burger">
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+            </button> -->
+			<span class="brand"> <a style="color:white;" href="index.html" >Image Captioning Shared Task </a></span>
+            <nav class="navbar" id="navbar">
+               <ul class="menu">
+               <!-- <li class="menu-item"><a  href="https://forms.gle/UCCrVNZ2LaPviCZS6">Registration</a></p></li> -->
+               <!-- <li class="menu-item"><a  href="Leaderboard.html">leaderboards</a></p></li> -->
+                <li class="menu-item"><a  href="./Leaderboard.html">Leaderboards</a></li>
+			   <li class="menu-item"><a  href="./SubmissionGuidelines.html">Submission Guidelines</a></li>
+               <li class="menu-item menu-item-child">
+                     <a data-toggle="sub-menu">CodaLab<i class="expand"></i></a>
+                     <ul class="sub-menu">
+                        <li class="menu-item"><a  href="https://www.codabench.org/competitions/9447/">SubTask-1 Image Captioning Datathon</a></li>
+                        <li class="menu-item"><a  href="https://www.codabench.org/competitions/9450/">SubTask-2 Image Captioning Models Evaluation</a></li>
+				  </ul>
+                </p></li>
+                  
+                 
+                   <!--<li class="menu-item"><a  href="paper-submission-guidelines.html">Paper Submission Guidelines</a></p></li> -->
+                  <li class="menu-item"><a  href="./FAQ.html">FAQ</a></p></li>
+                  
+               </ul>
+            </nav>
+         </div>
+      </section>
+   </header>
+<br style="height:1px;">
+<div class="container" style="margin-top:50px;">
+
+<style>
+.lists {
+	 list-style-type: disc !important;
+	  padding-left: 40px !important;
+}
+  ol, ul {
+    padding-left: 20px;
+    list-style: disc inside; 
+  }
+  ol {
+    /* list-style: decimal inside;  */
+    list-style-type: decimal; /* Ensures numbers show */
+
+  }
+  .col-sm-3 {
+    width: 100%;
+}
+.form-control{
+  width:350px;
+}
+
+.form-horizontal .control-label {
+  font-size: 14px;
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: left;
+}
+.jumbotron{
+  background:#fff;
+
+}
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.jumbotron hr {
+  border-top: 1px dashed red;
+}
+.jumbotron .output {
+    font-size: 14px;
+}
+.jumbotron .output .source{
+  color:#cd2027;
+    font-weight :bold;
+}
+.jumbotron .output .target{
+  color:#075154;
+    font-weight :bold;
+}
+.jumbotron .output .targets{
+  direction:rtl;
+}
+.jumbotron .brand {
+    font-size: 18px;
+    color:#e67521;
+}
+
+.jumbotron a {
+  font-size: 16px;
+    color:#2b75ad;
+    font-weight :bold;
+}
+.jumbotron a:hover {
+    color:#cd2027;
+}
+.modal-title{
+  text-align:center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+
+
+  <!-- <img class ='err_message' src="http://206.12.100.168/images/error.jpg" width="30px" height="30px"> -->
+  
+  <div class="container" with="100%">
+    <div class="jumbotron" style="font-size: 12px;">
+    <center>
+      <img src="./imgs/img_eval.jpg" alt="ImageCaptioning" height="200" width="600">        
+</center>
+<p class="brand"><b>REGISTRATION</b></p>
+<p>
+Registration is now open until 20 July 2025. To register your team please use this <a href="https://forms.gle/kwpLXzezEkrQDYQG6 ">link</a>.
+</p><p>For further details you can reach us by <a href="https://join.slack.com/t/imageeval2025/shared_invite/zt-36gz2eyhc-AJbQAE2MuuUy3j9s40GNDQ">Slack</a> or <a href= "mailto:NLUSharedtask2024@gmail.com">imageeval2025@gmail.com.</a>.
+</p>	   	    
+<p class="brand"><b>INTRODUCTION</b></p>
+
+<p>
+Image captioning, the automatic generation of natural language descriptions for images, is a key technology powering applications such as accessibility tools, image search, social media automation, and human-robot interaction. While significant advancements have been achieved in English and other widely spoken languages, Arabic image captioning remains underexplored.  The task poses unique linguistic challenges—not only due to Arabic’s complex morphology and syntax, but also because of its rich cultural diversity and wide range of dialectal variations. This shared task aims to advance Arabic image captioning by achieving two key goals: (1) creating the first open-source, manually-captioned dataset developed natively in Arabic. and (2) fostering progress in Arabic NLP by encouraging researchers to develop novel multimodal models in this emerging and impactful field.
+</p>
+
+<p><b><u>Subtask 1:</u></b> <span class="brand"> Image Captioning Datathon</span><br>
+
+<p><b>Objective:</b>
+<span class="text-justify">This subtask aims to create an open-source image dataset with captions that are culturally appropriate and naturally written in Arabic. The goal is to support the development of Arabic-native image captioning resources by encouraging participants to manually craft meaningful, context-aware descriptions that reflect Arabic culture and language use.
+</span></p>
+<p><b>Dataset:</b>
+<span class="text-justify">Participating teams will be provided with 4,000 open-source images, divided into 16 batches of 250 images each. All teams are required to caption Batch 1 and Batch 2, and any additional batch they choose must be completed in full. Image batches will be distributed via Google Drive after registration.<br>
+Captions must be written manually—<b>without the use of generative AI tools</b>—and should be natural, culturally appropriate, and contextually aligned with the image content. Participants will receive minimal captioning guidelines along with the image collection labels. For example, a label like “kids’ theater in a refugee camp” provides insight into a collection of 50 images, helping teams craft meaningful captions for the images in this collection. 
+</spanp></p>
+<p><b>Submission Format:</b>
+<span class="text-justify">Participants should submit a CSV file containing the manually written captions. This file must include the following columns:<br>
+</span></p>
+<ul style="font-size: 16px;" class="lists">
+  <li><b>batch_id</b></li>
+  <li><b>image_id</b></li>
+  <li><b>caption</b></li>
+</ul>
+<p class="text-justify">The CSV file should be uploaded to <a href="https://www.codabench.org/competitions/9447/">CodaLab</a>. Submissions will be automatically validated to ensure that all images in the selected batches are captioned. Incomplete submissions (e.g., missing images in a batch) will be flagged.</p>
+
+<p><b>Evaluation:</b>
+<span class="text-justify">Submissions will be evaluated on three criteria:</span>
+</p>
+<ol style="font-size: 16px; list-style-type: decimal;" class="custom-list" >
+  <li><p><strong>Quantity</strong> - The number of images captioned (more is better)</p></li>
+  <li><p><strong>Quality</strong> - Caption accuracy measured using metrics such as ROUGE, BLEU, and LLM as a judge to compare submissions against our confidential subset of images with ground truth captions.</p></li>
+  <li><p><strong>Captioning Guidelines</strong> - Each team must provide their own comprehensive guidelines that address:
+    <ul>
+      <li>Main and corner cases (with examples)</li>
+      <li>Handling of ambiguities</li>
+      <li>Consistency measures</li>
+      <li>Ethical and cultural considerations</li>
+      <li>Training and support procedures</li>
+    </ul>
+  </p></li>
+</ol>
+
+<p>The guidelines will be assessed on their soundness and thoroughness. The more robust your guidelines, the higher your evaluation score.</p>
+</p>
+<p>You may refer to a <a href="https://drive.google.com/drive/folders/1UK5DXHKEagi7hlVjL53obWGFueSEstHz?usp=sharing">sample set of images</a> and their captions.</p>
+
+
+
+
+<p><b><u>Subtask 2:</u></b> <span class="brand">Image Captioning Models Evaluation</span><br><p>
+
+
+
+<p><b>Objective:</b>
+<span class="text-justify">The goal of this subtask is to develop Arabic image captioning models that produce culturally relevant and contextually accurate descriptions of images. Participants will receive training data to develop their models, while evaluation will be conducted on a private, unseen test set hosted on CodaLab. Participants may fine-tune their models using the provided training data or apply zero- or few-shot approaches to generate captions directly for the test set.
+</span></p>
+<p><b>Dataset:</b>
+<span class="text-justify">Participating teams will be provided with a manually-captioned dataset consisting of 3471 images, split into 2718 images for training and 753 for testing. The training set will be shared with participants to develop their models. It can be downloaded from <a href="https://huggingface.co/datasets/SinaLab/ImageEval2025Task2TrainDataset">Huggingface</a>.<br>
+
+  At a later stage, the test set (753 images) will be released for automatic captioning. Participants will then submit their generated captions via CodaLab. These submissions will be evaluated against the ground truth captions using established evaluation metrics.
+</span></p>
+<p><b>Submission Format:</b>
+<span class="text-justify">Participants should submit a CSV file containing the automatically generated captions for the test set. This file must include the following columns:
+<br>
+</span></p>
+<ul style="font-size: 16px;">
+  <li><b>image_id</b></li>
+  <li><b>caption</b></li>
+</ul>
+<p class="text-justify">The CSV file should be uploaded to <a href="https://www.codabench.org/competitions/9450/">CodaLab</a>.
+</p>
+<p><b>Evaluation Metrics:</b></p>
+<ol style="font-size: 16px; list-style-type: decimal;" class="custom-list" >
+  <li><p>LLM as a judge to evaluate and score equivalence against the ground truth test set.  A large language model will be used to evaluate and score the semantic equivalence of generated outputs against the ground truth in the test set. </p></li>
+  <li><p>ROUGE (Recall-Oriented Understudy for Gisting Evaluation)</p></li>
+  <li><p>BLEU (Bilingual Evaluation Understudy)</p></li>
+</ol>
+<p><b>Baseline:</b>
+<span>Two baseline models are provided: one using a zero-shot approach and the other fine-tuned on our dataset.<br> 
+  The code used to produce these baselines is available on <a href="https://github.com/SinaLab/ImageCaptionSharedTask2025">GitHub</a>, <a href="https://huggingface.co/SinaLab/Qwen-2.5-VL-7B-Instruct-Image-Captioning">Fine-tuned Model</a>.
+</span></p>
+
+<p><b>Google Colab notebook:</b>
+<span>To allow participants to experiment and reproduce baseline results, we provide three Google Colab notebooks that demonstrate how to train and evaluate our baseline models.
+</span></p>
+
+<p>
+<span>
+ [1] Zero-shot Model: This notebook demonstrates how to use the Qwen 2.5-VL 7B model in a zero-shot setting, without fine-tuning. We evaluated the model using the test dataset (which will be shared with participants during the testing phase). See <a href="https://github.com/SinaLab/ImageCaptionSharedTask2025/blob/main/ZeroShotModel.ipynb">Colab Notebook for zero-shot image captioning.</a> 
+
+</span></p>
+
+<p><span> The model’s performance is summarized and presented in the table below using the official evaluation metrics. See Colab Notebook for evaluation.
+ </span> </p>
+ <table border="1" cellpadding="6" cellspacing="0" align="center" style="margin: 0 auto;">
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Results</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>bleu1_mean</td><td>0.0992</td></tr>
+    <tr><td>bleu2_mean</td><td>0.0323</td></tr>
+    <tr><td>bleu3_mean</td><td>0.019</td></tr>
+    <tr><td>bleu4_mean</td><td>0.0133</td></tr>
+    <tr><td>rouge1_mean</td><td>0.0</td></tr>
+    <tr><td>rouge2_mean</td><td>0.0</td></tr>
+    <tr><td>rougeL_mean</td><td>0.0</td></tr>
+    <tr><td>cosine_similarity_mean</td><td>0.5577/td></tr>
+  </tbody>
+</table>
+
+
+<!-- <p>To support reproducibility and fair comparison, both the baseline outputs and the evaluation scripts will be made publicly available.
+</p> -->
+<br>
+
+<p>
+<span>
+ [2] Fine-tune Model: This notebook can be used to fine-tune Qwen 2.5-VL 7B model, using the training data provided in Subtask 2, and evaluate its performance on the test dataset. See <a href="https://github.com/SinaLab/ImageCaptionSharedTask2025/blob/main/FineTuneModel.ipynb">Colab Notebook for fine-tuning Qwen2.5-VL 7B model for image captioning</a>.
+</span></p>
+
+<p><span> The evaluation results and corresponding metrics are presented in the following table.
+
+ </span> </p>
+ <table border="1" cellpadding="6" cellspacing="0" align="center" style="margin: 0 auto;">
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Results</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>bleu1_mean</td><td>0.1698</td></tr>
+    <tr><td>bleu2_mean</td><td>0.0862</td></tr>
+    <tr><td>bleu3_mean</td><td>0.0543</td></tr>
+    <tr><td>bleu4_mean</td><td>0.0305</td></tr>
+    <tr><td>rouge1_mean</td><td>0.0</td></tr>
+    <tr><td>rouge2_mean</td><td>0.0</td></tr>
+    <tr><td>rougeL_mean</td><td>0.0</td></tr>
+    <tr><td>cosine_similarity_mean</td><td> 0.5846</td></tr>
+  </tbody>
+</table>
+
+<br>
+<p>
+<span>
+[3] Evaluate Image Captioning Models: This notebook uses the baseline results to evaluate model performance on the test dataset. It supports evaluation for both zero-shot and fine-tuned models.See<a href="https://github.com/SinaLab/ImageCaptionSharedTask2025/blob/main/Evaluate.ipynb"> Google Colab for Evaluating Image Captioning Models.</a>
+
+ </span></p>
+<p> 
+<span>
+
+LLM as a Judge: <br>
+In addition to standard metrics, we also use a large language model GPT 4o model as an automatic judge to assess caption quality and compute model accuracy through pairwise comparison with ground truth captions.
+
+ </span></p>
+ <p>
+ <span>
+ 
+The evaluation results are in the following table:
+
+ </span></p>
+
+
+  <table border="1" cellpadding="6" cellspacing="0" align="center" style="margin: 0 auto;">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>LLM-as-a-Judge Average Score (GPT 4o),<br>temperature = 0.0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Zero-shot Qwen 2.5-VL 7B</td><td>27.11 %</td></tr>
+    <tr><td>Fine-tuned Qwen 2.5-VL 7B</td><td> 30.82%</td></tr>
+   
+  </tbody>
+</table>
+<br>
+<p class="brand"><b>Guidelines for Participating Teams</b></p>
+<p class="text-justify">
+	<ul style="font-size: 16px;" class="custom-list">
+  <li><p>Participants may choose to participate in one or both subtasks.</p></li>
+  <li><p>All participants must register through the official website to receive access to datasets and updates. Registration is required to gain access to the image batches (for Subtask 1) and the test set (for Subtask 2).</p></li>
+  <li><p>Upon requesting access to the data, participants must agree to submit a 4-page system description paper detailing their approach, methodology, data usage (if external data is used - specify rules!), and findings.</p></li>
+  <li><p>Submissions will be peer-reviewed, and selected papers will be published in the Arabic NLP 2025 Conference Proceedings, indexed in the ACL Anthology.</p></li>
+  <li><p>Participants are required to create an OpenReview account for paper submission and review processes.</p></li>
+  <li><p>All submitted captions from all participants will be published in a shared GitHub repository under the CC-BY-4.0 License.</p></li>
+</ul>
+</p>
+<p class="brand"><b>IMPORTANT DATES</b></p>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>June 1, 2025:</b> Data-sharing and Evaluation on Development Set Available<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>July 20, 2025:</b> Shared Task Registration Deadline and Test Set Release<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>July 25, 2025:</b> Evaluation on Test Set (TEST) Deadline<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>July 30, 2025:</b> Final Results Announcement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>August 15, 2025:</b> Shared Task System Paper Submission Due<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>August 25, 2025:</b> Notification of Acceptance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>September 5, 2025:</b> Camera-ready Version Due<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <b>November 5–9, 2025:</b> ArabicNLP Main Conference<br>
+
+</p>
+<p class='brand'><b>Contact</b></p>
+<p class="text-justify">
+For any questions related to this task, please contact the organizers directly using the following email address: <a href="mailto:imageeval2025@gmail.com">imageeval2025@gmail.com</a>.
+</p>
+
+<p class="brand"><b>ORGANIZERS</b></p>
+<p>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Ahlam Bashiti, <a href="mailto:abashiti@birzeit.edu">abashiti@birzeit.edu</a>, Birzeit University<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Alaa Aljabari, <a href="mailto:aaljabari@birzeit.edu">aaljabari@birzeit.edu</a>, Birzeit University<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Mustafa Jarrar, <a href="mailto:mjarrar@birzeit.edu">mjarrar@birzeit.edu</a>, Hamad Bin Khalifa University / Birzeit University.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Fadi Zaraket, <a href="mailto:fadi.zaraket@dohainstitute.edu.qa">fadi.zaraket@dohainstitute.edu.qa</a>, Arab Center for Research and Policy Studies / American University of Beirut.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Bilal Shalash, <a href="mailto:bilal.shalash@dohainstitute.org">bilal.shalash@dohainstitute.org</a>, Arab Center for Research and Policy Studies.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- George Mikros, <a href="mailto:gmikros@hbku.edu.qa">gmikros@hbku.edu.qa</a>, Hamad Bin Khalifa University.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Wajdi Zaghouani, <a href="mailto:wajdi.zaghouani@northwestern.edu">wajdi.zaghouani@northwestern.edu</a>, Northwestern University in Qatar.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Ehsaneddin Asgari, <a href="mailto:easgari@hbku.edu.qa">easgari@hbku.edu.qa</a>, Hamad Bin Khalifa University.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Hadi Hamoud, <a href="mailto: hhamoud@dohainstitute.edu.qa"> hhamoud@dohainstitute.edu.qa</a>,  Arab Center for Research and Policy Studies.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Md. Rafiul Biswas, <a href="mailto: hhamoud@dohainstitute.edu.qa"> mbiswas@hbku.edu.qa</a>,  Hamad Bin Khalifa University.<br>
+</p>
+
+</b></div><b>
+
+</b></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

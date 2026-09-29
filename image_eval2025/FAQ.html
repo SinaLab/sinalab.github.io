@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://dlnlp.ai/st/wojood/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Image Captioning Shared Task 2025</title>
+
+<!-- Latest minified bootstrap css -->
+<link rel="stylesheet" href="./imgs/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="./imgs/jquery.min.js.download"></script>
+<!-- Latest minified bootstrap js -->
+<script src="./imgs/bootstrap.min.js.download"></script>
+<!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/turjuman_logo.ico"> -->
+<link rel="stylesheet" type="text/css" href="./imgs/style.min.css">
+<script defer="" src="./imgs/script.js.download"></script>
+<style>
+.header {
+   background:#757575;
+}
+/* .header .menu>.menu-item>.sub-menu>.menu-item>a {color:#f5f813} */
+/* .header .menu>.menu-item>.sub-menu>.menu-item>a:hover{color:#f5f813} */
+.header .menu>.menu-item>a .expand::before,.header .menu>.menu-item>a .expand::after{background:#fff}
+.header .menu>.menu-item:hover>a{color:#f5f813}
+.menu>.menu-item>.sub-menu>.menu-item>a:hover{color:#f5f813}
+.header .menu>.menu-item:hover>a .expand::before,.header .menu>.menu-item:hover>a .expand::after{background:#f5f813}
+.header .menu>.menu-item>a{
+   color:#fff;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-top: 30px;
+    border: 1px solid transparent;
+}
+    .brand {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -1px;
+  color: #fff;
+  text-transform:none;
+}
+body{
+   background:#eff1f2;
+}
+.container{
+        width:100%;
+        
+}   
+
+  option{
+    text-align: left;
+}
+  fieldset {
+    dir:rtl;
+    margin: 8px;
+    border: 1px solid silver;
+    padding: 8px;    
+    border-radius: 4px;
+}
+
+legend {
+    padding: 2px; 
+    font-size:8px;   
+}
+
+th, td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+table{
+    border-spacing: 40px;
+}
+.loadingMask {
+    background: url(./imgs/Ajux_loader.gif) center 50% no-repeat #000000;
+    top:0;
+    left:0;
+    position:fixed;
+    height:100%;
+    width:100%;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    z-index:12030
+ }
+</style>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sina.birzeit.edu/image_eval2025/index.html">
+<meta name="keywords" content="Arabic image captioning, NLP, shared task, AI, Arabic NLP, multimodal, datathon, deep learning">
+<meta property="og:image" content="https://sina.birzeit.edu/image_eval2025/imgs/og_img.jpg">
+<meta property="og:title" content="Image Captioning Shared Task 2025">
+<meta property="og:description" content="The Arabic Image Captioning Shared Task - to develop and evaluate open sources image captions in Arabic.">
+
+</head>
+
+
+<body data-new-gr-c-s-check-loaded="14.1154.0" data-gr-ext-installed="">
+<!-- Section: Header -->
+<header class="header">
+      <section class="container">
+         <div class="wrapper">
+            <!-- <a  href="https://arabicnlp2024.sigarab.org/"><img src="./imgs/logo_small.png" width="220" height="60px" vertical-align="middle" align="left"></a> -->
+            <a  href=" https://arabicnlp2025.sigarab.org/"><img src="./imgs/small.jpg" width="220" height="60px" vertical-align="middle" align="left"></a>
+            
+            <!-- <button type="button" class="burger" id="burger">
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+               <span class="burger-line"></span>
+            </button> -->
+			<span class="brand"> <a style="color:white;" href="index.html" >Image Captioning Shared Task</a></span>
+            <nav class="navbar" id="navbar">
+               <ul class="menu">
+               <!-- <li class="menu-item"><a  href="https://forms.gle/UCCrVNZ2LaPviCZS6">Registration</a></li> -->
+               <!-- <li class="menu-item"><a  href="Leaderboard.html">leaderboards</a></li> -->
+                 <li class="menu-item"><a  href="./Leaderboard.html">Leaderboards</a></li>
+               <li class="menu-item"><a  href="SubmissionGuidelines.html">Submission Guidelines</a></li>
+               <li class="menu-item menu-item-child">
+                     <a data-toggle="sub-menu">CodaLab<i class="expand"></i></a>
+                     <ul class="sub-menu">
+                        <li class="menu-item"><a  href="">SubTask-1 Image Captioning Datathon</a></li>
+                        <li class="menu-item"><a  href="">SubTask-2 Image Captioning Models Evaluation</a></li>
+				  </ul>
+                  </li>
+                  
+                  <!-- <li class="menu-item"><a  href="leaderboard.html">Leaderboard</a></li>
+                  <li class="menu-item"><a  href="paper-submission-guidelines.html">Paper Submission Guidelines</a></li> -->
+                  <li class="menu-item"><a  href="FAQ.html">FAQ</a></li>
+                  
+               </ul>
+            </nav>
+         </div>
+      </section>
+   </header>
+<br style="height:1px;">
+<div class="container" style="margin-top:50px;">
+
+<style>
+  .col-sm-3 {
+    width: 100%;
+}
+.form-control{
+  width:350px;
+}
+
+.form-horizontal .control-label {
+  font-size: 14px;
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: left;
+}
+.jumbotron{
+  background:#fff;
+
+}
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.jumbotron hr {
+  border-top: 1px dashed red;
+}
+.jumbotron .output {
+    font-size: 14px;
+}
+.jumbotron .output .source{
+  color:#cd2027;
+    font-weight :bold;
+}
+.jumbotron .output .target{
+  color:#075154;
+    font-weight :bold;
+}
+.jumbotron .output .targets{
+  direction:rtl;
+}
+.jumbotron .brand {
+    font-size: 18px;
+    color:#e67521;
+}
+
+.jumbotron a {
+  font-size: 16px;
+    color:#2b75ad;
+    font-weight :bold;
+}
+.jumbotron a:hover {
+    color:#cd2027;
+}
+.modal-title{
+  text-align:center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+  <!-- <img class ='err_message' src="http://206.12.100.168/images/error.jpg" widtd="30px" height="30px"> -->
+  
+  <div class="container" witd="100%">
+    <div class="jumbotron" style="font-size: 12px;">
+    <!-- <center>
+      <img src="./assets/ner.jpg" alt="logo" />        
+</center>
+<br><br> -->
+<div class="text-seft mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" style="color: #e67521; padding-bottom: 10px;">Frequently Asked Questions (FAQ) </h2>
+               
+                <!-- <p class="text-xl text-gray-600 max-w-3xl mx-auto">Leading researchers in Arabic NLP and speech technologies.</p> -->
+</div>
+
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md mx-auto space-y-4 text-gray-800">
+               
+
+                        
+
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Who can participate in shared tasks?</h4>
+                        <p >A: Anyone who wants to can participate, either independently or by forming a team.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Is there a fee to participate in a task?</h4>
+                        <p >A: No, participation is completely free but at least one team member should pay to register for the conference.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: How can I sign up to participate in a task?</h4>
+                        <p >A: Please see instructions on the website for the task (e.g., on CodaLab or other evaluation platforms).</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Can I participate in multiple shared tasks (separate competitions)?</h4>
+                        <p >A: Yes, you can participate in multiple different tasks.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Can I participate in multiple teams under the same shared task (same competition)?</h4>
+                        <p >A: This depends on the task. Check with the task organizers to see whether they allow an individual to be part of multiple teams within the task.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: What does "evaluation period" mean?</h4>
+                        <p >A: The evaluation period is the time window in which the official part of each task competition takes place. Task organizers will release evaluation data to participants at the beginning of the evaluation period, and system outputs will be due before the end of the evaluation period.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: How many runs can be submitted for a task?</h4>
+                        <p >A: This depends on the task. Task organizers often specify how many submissions by each team will be evaluated. Contact your task organizers if these details are not already stated on the task webpage.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Where can I find datasets from past shared tasks?</h4>
+                        <p >A: Task datasets are distributed by task organizers. Check the task website or contact the organizers. Many recent tasks archive their datasets on platforms such as GitHub.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Do I need to write a paper?</h4>
+                        <p >A: Yes, if you register and request the dataset, you agree to submit a paper. It's not just encouraged—<b><u>it's a binding commitment you make when receiving the data.</u></b></p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: What happens if I register but don't submit a paper?</h4>
+                        <p >A: This is strictly prohibited. You agree to register and submit a paper when requesting the dataset. Abandoning the task after receiving data may result in banning participants from future participation.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: What is the paper format?</h4>
+                        <p >A: Shared task papers must follow the format for short papers at ArabicNLP 2025. Papers must follow official EMNLP (ACL) LaTeX or Word templates, be up to 4 pages (excluding unlimited references). Check the dedicated paper submission guidelines URL below for more details: <a href="https://github.com/acl-org/acl-style-files" class="text-blue-600 underline">https://github.com/acl-org/acl-style-files</a></p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: How should the paper title be formatted?</h4>
+                        <p >A: Use this format: <code
+                            style="background-color: #ffffff; color: #007502; padding: 2px 4px; border-radius: 4px;">&lt;Team Name&gt; at &lt;Task Name&gt;: &lt;Your Contribution&gt;</code>
+                            <p>Example: "Scholarly at XYZ Shared Task: LLMs in Detection for Identifying Manipulative Strategies"</p></p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Must I cite the task overview paper?</h4>
+                        <p >A: Yes, each team is required to cite the shared task overview paper in their system paper.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Must someone from my team attend the conference?</h4>
+                        <p >A: Yes, at least one of the shared task team members should register and attend the conference.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Must papers be presented at the conference?</h4>
+                        <p >A: Yes, all accepted papers must be presented at the conference (in-person or virtual). Papers without at least one presenting author registered by the early registration deadline may be subject to desk rejection.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Do I need an OpenReview account?</h4>
+                        <p >A: Yes, all participants and organizers are required to create an OpenReview account.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Are the papers anonymous?</h4>
+                        <p >A: No, shared task papers (both system and overview papers) are <b>not anonymous.</b></p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: What happens if I exceed the page limit or miss required sections?</h4>
+                        <p >A: Submissions that exceed length requirements will be <b>desk rejected.</b></p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Will I need to review other papers?</h4>
+                        <p >A: Yes, shared task teams are expected to serve as reviewers, and their reviews will be checked by one member of the shared task organizers.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Can I post my paper on arXiv?</h4>
+                        <p >A: Yes, authors are free to submit papers to arXiv at any time. Since papers are not anonymous, this won't interfere with the review process.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Can I make changes for the camera-ready version?</h4>
+                        <p >A: No additions/revisions or name changes are allowed after the review period for the camera-ready version.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: What if my research raises ethical concerns?</h4>
+                        <p >A: If your research raises ethical considerations (e.g., potential for misuse), these should be discussed in the paper.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: Should I release my code?</h4>
+                        <p >A: You are highly encouraged to release the code or data used and include the URL in the paper. This promotes reproducibility.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-s font-bold text-black">Q: My question isn't answered here. Who should I contact?</h4>
+                        <p >A:</p>
+                        <ul class="list-disc pl-5 space-y-2" style="font-size: 20px;"></ul>
+                            <li style="font-size: 16px;"><b>For task-specific questions:</b> Consult the task website and contact task organizers.</li>
+                            <li style="font-size: 16px;"><b>For workshop logistics: </b>Contact the shared task organizers.</li>
+                            <li style="font-size: 16px;"><b>For OpenReview technical issues:</b> Contact OpenReview support.</li>
+                        </ul>
+                    </div>
+                </div>
+
+</div>
+</div>
+</div>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

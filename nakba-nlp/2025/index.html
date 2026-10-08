@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <title>Nakba-NLP 2025 - International Workshop on Nakba Narratives as Language Resources</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <meta property="og:title" content="Nakba-NLP 2025 - International Workshop on Nakba Narratives as Language Resources">
+  <!-- <meta property="og:image" content="https://sina.birzeit.edu/Images/OGLogo.jpg"> -->
+  <meta property="og:url" content="https://sina.birzeit.edu/nakba-nlp/">
+  <meta property="og:image" content="https://sina.birzeit.edu/nakba-nlp/img/opTwo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Nakba-NLP Workshop - Nakba Narratives as Language Resources, Digitisation, language corpora, datasets, Digital archives, metadata, semantic/content mark-up, Annotation tools and annotation guidelines, Document classification, topic modeling, information retrieval, Named entity recognition for identifying people, places, organizations, events, Entity linking, relationship extraction, Event detection, event argument extraction, Knowledge Graphs, Linked Data, Vocabularies, dictionaries, ontologies, Data visualisation, Knowledge representation, Machine translation, summarisation, paraphrasing, Natural Language Generation, Large Language Models, Sentiment analysis, emotional content extraction, Discourse analysis, bias, offensive language, and misinformation, akba narratives, narratives, Palestinian Nakba, Palestine">
+  <meta name="description" content="Nakba-NLP Workshop - Nakba Narratives as Language Resources, Digitisation, language corpora, datasets, Digital archives, metadata, semantic/content mark-up, Annotation tools and annotation guidelines, Document classification, topic modeling, information retrieval, Named entity recognition for identifying people, places, organizations, events, Entity linking, relationship extraction, Event detection, event argument extraction, Knowledge Graphs, Linked Data, Vocabularies, dictionaries, ontologies, Data visualisation, Knowledge representation, Machine translation, summarisation, paraphrasing, Natural Language Generation, Large Language Models, Sentiment analysis, emotional content extraction, Discourse analysis, bias, offensive language, and misinformation, akba narratives, narratives, Palestinian Nakba, Palestine">
+  <meta name="author" content="SinaLab - Birzeit University">
+  <meta name="keywords" content="Free, online, open sources, SinaTools, relation extraction, LLMs, algorithms, ALMA, Annotation tools, Arabic, Arabic Dictionary, Arabic Lexicographic Database, Arabic Lexicon, articles, Baladi, BERT, bias, Birzeit University, cleaning, Corpora, Corpus, Curras, Currasat, Data visualisation, dataset, datasets, Deep Learning, Demo, diacratics, Diacritics-aware, dialect, Dialect Lemma, Dialect Lemma, Dialects, dictionaries, Dictionary, Digital archives, Digitisation, Discourse analysis, Document classification, Duplication, emotional content extraction, English, entity, Entity linking, event argument extraction, Event detection, events, Guideline, Hate speech, Hebrew, implication, information retrieval, intents, intersection, Iraqi, Iraqi Dialect Corpus, jaccard similarity, Knowledge Graphs, Knowledge representation, language corpora, Languages, Large Language Models, Lebanese, Lebanese Dialect Corpus, Lemmas, Lemmatization, Lexicon, Lexicons, Libyan, Libyan Dialect Corpus, Linked Data, Lisan, Machine translation, matching, Media, metadata, Middle Eastern history, misinformation, models, Modern Standard Arabic, Morphological Solution, Morphology, MSA, MSA, MSA lemma, Mustafa Jarrar, Nabra, Nakba narratives, Nakba testimonies, Named Entity Recognition, narratives, Natural Language Generation, NER, Nested, News, NLP, NLU, offensive language, online, ontologies, Open-Source, organizations, Palestine, Palestinian, Palestinian Dialect Corpus, Palestinian Nakba, paraphrasing, Part-Of-Speech, Part-of-speech Tagging, POS, Pre-trained model, Prefix, Projects, Qabas, relationship extraction, Research, resources, SALMA, Semantic Relatedness, semantic tagging, sense, Sentiment analysis, similarity, SinaLab, stem, Sudanese, Sudanese Dialect Corpus, suffix, summarisation, Synonyms, Synonyms Evaluate, Synonyms Extraction, Syrian, Syrian Dialect Corpus, Tool, topic modeling, union, Vocabularies, Welsh, Wojood, Word Sense Disambiguation, Workshop, WSD, Yemeni, Yemeni Dialect Corpus, أخبار, ألمى, اتحاد, استخراج المترادفات, التعرف على الكينونات, اللغة العربية, اللغة العربية المعاصرة, انجليزي, بحث علمي, تقاطع, جامعة بيرزيت, خصائص صرفية, خوارزميات, دليل معياري, ذم, سلمى, سينا, شبكة بيانات, شبكة بيانات معجمية, عامية, عامية إماراتية, عامية سودانية, عامية سورية, عامية عراقية, عامية فلسطينية, عامية لبنانية, عامية ليبية, عامية مصرية, عامية يمنية, عربي, فصحى, فصحى حديثة, فلسطين, فهم الدلالة, قاموس عربي, قبس, قسم الكلام, كراسات, كراهية, محلل دلالي, مدخلات, مدخلات معجمية, مدخلة, مدخلة عامية, مدخلة فصحى, مدونات, مدونات عامية, مدونة, مصادر, مصطفى جرار, معاجم, معالجة اللغة الطبيعية, معجم, معجم اللغة العربية, معجم عربي, معجم مجاني, مفتوح المصدر, مقارنة, مكنز, مكنز شجري صرفي, نكبة, نموذج, وجود, ">
+  <!-- Custom styles for this template -->
+  <link href="css/agency.min.css" rel="stylesheet">
+<style>
+
+#old
+	{
+	text-decoration: line-through;
+	}
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #23a99e;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #e9ecef;
+    }
+    td {
+      vertical-align: text-top;
+
+    }
+    .activity-cell {
+      font-weight: bold;
+    }
+    @media (max-width: 1250px) {
+    .row1 {
+        flex-direction: column !important;
+        gap: 15px;
+    }
+  }
+    @media (min-width: 576px) {
+    .col-sm-2 {
+        display: flex;
+        justify-content: center;
+    }
+	
+}
+
+</style>
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <p><img src="img/logos/—Pngtree—palestinian nakba day 1948_6302098.png" alt="Brand Logo" width="80px" height="80px">  Nakba-NLP 2025</p>
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#overview">Overview</a>
+          </li>
+ 
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#c4p">C4P</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#dates">DATES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#speakers">SPEAKERS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#panel">PANEL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#organizers">ORGANIZERS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#program">PROGRAM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#sponsors">SPONSORS</a>
+          </li>
+
+<!--           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#past_years">Past Iterations</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-box">
+          <h1 class="intro-heading ">Nakba-NLP 2025</h1>
+          <p class="intro-heading ">The 1st International Workshop on Nakba Narratives as Language Resources</p>
+          <P class="intro-l">Part of the <a href="https://coling2025.org/">COLING-2025</a> Conference </P>
+          <P class="intro-l">Fully Virtual</P>
+          <P class="intro-l">January 20, 2025</P> 
+         
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- services -->
+  <section id="overview">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Overview</h2>
+          <div style="text-align:justify">
+            <p>
+                The narratives of the (ongoing) Palestinian Nakba possess significant historical, cultural, literary, and academic value. Preserving this content and empowering it with AI tools is crucial for ensuring its accessibility and usability for present and future generations. Nakba narratives and testimonies exist in diverse formats such as manuscripts, books, audio recordings, novels, and films. Converting this content into a machine-understandable format presents a notable challenge. Establishing accessible archives and well-annotated collections is essential for researchers and historians to verify and share meaningful information.
+              </p>
+              <p style="text-align:justify">
+
+                This workshop aims to explore how artificial intelligence, natural language processing, and corpus linguistics can assist in understanding, disseminating and preserving, Nakba narratives and testimonies. The goal is to create accessible, comprehensive, and well-annotated collections that empower researchers and historians to validate and share critical insights derived from these data. The workshop targets datasets and narratives in Arabic, English, and other languages, however, submitted articles should be written in English.
+                </p>
+          </div>
+        </div>
+        <br />
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="c4p">
+    <style>
+      #c4p {
+           background-color: #eeeeee;
+       }
+   </style>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Call for Papers</h2>
+          <div style="text-align:justify">
+            We invite submissions for Nakba-NLP 2025, a workshop dedicated to the exploration and preservation of Nakba narratives through the application of artificial intelligence, natural language processing, and corpus linguistics.          All submitted papers should explain their relevance to the topic of ‘Nakba Narratives as Language Resources’. The organisers reserve the right to reject any papers that incite hatred, refute established facts, or undermine the suffering of individuals.
+      <br />
+      <p style="text-align:justify">
+       We seek contributions on the following issues of interest:
+            <ul>
+              <li>Digitisation of oral and written narratives</li>
+              <li>Creation and labeling of language corpora and datasets</li>
+              <li>Digital archives, metadata, and semantic/content mark-up</li>
+              <li>Annotation tools and annotation guidelines</li>
+              <li>Document classification, topic modeling, and information retrieval</li>
+              <li>Named entity recognition for identifying people, places, organizations, and events</li>
+              <li>Entity linking and relationship extraction</li>
+              <li>Event detection and event argument extraction</li>
+              <li>Knowledge Graphs and Linked Data</li>
+              <li>Vocabularies, dictionaries, and ontologies</li>
+              <li>Data visualisation</li>
+              <li>Knowledge representation</li>
+              <li>Machine translation, summarisation, and paraphrasing</li>
+              <li>Natural Language Generation</li>
+              <li>Large Language Models</li>
+              <li>Sentiment analysis and emotional content extraction</li>
+              <li>Discourse analysis (e.g., bias, offensive language, and misinformation) related to Nakba narratives</li>
+              <li>Voice & dialogue-based systems; ASR</li>
+              <li>Palestinian dialects (written and spoken)</li>
+            </ul>
+         </p>
+         <p style="text-align:justify">
+
+
+
+          <b>Participants are invited to use the following archives:</b> Institute for <a href="https://www.palestine-studies.org">Palestine Studies</a>, <a href="https://palmuseum.org/en">The Palestinian Museum</a>, <a href="https://www.nakba-archive.org">Nakba-Archive</a>, <a href="https://libraries.aub.edu.lb/poha/">POHA</a>,<a href="https://www.alhaq.org">Alhaq</a>,<a href="https://www.ichr.ps/en">ICHR</a>, as well as Wikipedia and the Wikidata Knowledge Graph.
+         </p>
+          </div>
+        </div>
+
+
+        <br />
+        <div class="col-lg-12 text-center">
+          <h3 class="left">Submission Details</h3>
+          <style>
+            .left {
+              text-align: left;
+            }
+          </style>
+          <div style="text-align:justify">
+            <p>
+            All submitted papers must clearly state and explain their relevance to the topic of ‘Nakba Narratives as Language Resources’. The organisers reserve the right to reject any papers that incite hatred, refute established facts, or undermine the suffering of individuals.
+            </p>
+            <p style="text-align:justify">
+             <b>Submissions may be of two types:</b> 
+             <ul>
+              <li>Long papers – up to eight (8) pages maximum, presenting substantial, original, completed, and unpublished work.</li>
+              <li>Short papers – up to four (4) pages, describing a small focused contribution, negative results, system demonstrations, etc.</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="col-lg-12 text-center">
+          <div style="text-align:left">
+            <div style="text-align:justify">
+             <p>
+		     The workshop supports the COLING anti-harassment policy: <a href="https://coling2022.org/policy">Policy</a>.</br>
+		     COLING 2025 submission templates: <a href="https://coling2025.org/calls/main_conference_papers/">Template</a>.</br>
+		     <b>Submission URL:</b> <a href="https://softconf.com/coling2025/Nakba-NLP25/">Please submit here</a>.
+	     </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <section  id="dates">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Important Dates</h2>
+          <div style="text-align:justify">
+            <ul>
+              <!-- <li>First CFP: Monday, 15 July 2024</li>
+              <li>Second CFP: 15 August 2024</li> -->
+              <li>Submission Deadline: <b id="old">25 November 2024</b> 28 November 2024</li>
+              <li>Notifications of Acceptance: 5 December 2024</li>
+              <li>Camera Ready Deadline: 13 December 2024 (cannot be changed).</li>
+              <!-- <li>Workshop Date: 20 Jan 2025</li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="welcome-message" class="bg-light">       
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-heading">Welcome Message from the Organizers</h2>
+	<div style="text-align:justify">
+			
+			Welcome to the Nakba Narratives as Language Resources workshop! <br><br>
+			This workshop explores how natural language processing (NLP) tools can contribute to the documentation and understanding of significant historical events. Similar to other initiatives such as the Holocaust Testimonies as Language Resources workshop</span> at LREC-COLING 2024, we aim to examine the intersection of language, technology, and social good - an essential and growing area of research.<br><br>
+We recognize that topics like the Nakba may be viewed as sensitive or politically charged. However, addressing such issues is not unprecedented in NLP. Research on socially significant topics, including gender bias, propaganda, and historical testimonies, often intersects with political and cultural discourse. Such efforts are widely recognized as essential for advancing NLP as a field. Similarly, this workshop seeks to foster rigorous and inclusive exploration of narratives surrounding the Nakba.<br><br>
+Our keynote speaker is a globally respected scholar specializing in the Nakba. While not an NLP researcher, his expertise offers invaluable context for understanding the linguistic and societal dynamics behind the narratives we aim to analyze and document. His talk will explore how words are used, shaped, and contested in political and cultural discourse on the Nakba —insights that are directly relevant to applying NLP to such narratives.<br><br>
+We are committed to fostering an inclusive and respectful environment where diverse perspectives are welcomed and all opinions can be expressed and discussed in an academic and constructive manner. Open dialogue is at the heart of our approach, and we value thoughtful contributions from every participant. This workshop adheres to the Diversity, Inclusion, and Anti-Harassment Policy of COLING 2025.<br><br>
+Thank you for your participation. We look forward to a thoughtful and impactful workshop.<br> <br>
+Best regards,<br>
+The Workshop Organizers
+
+			
+          </div>
+		  </div>
+		  </div>
+	</div>
+	</section>
+    
+  <section id="speakers">
+    <style>
+      #speakers {
+           background-color: #eeeeee;
+       }
+   </style>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Keynote Speaker</h2>
+          <div style="text-align:justify">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-3">
+                <div class="team-member">
+                    <img src="img/team/pappe.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
+                    <h4><a href="https://experts.exeter.ac.uk/545-ilan-pappe">Ilan Pappé</a></h4>
+                    <p class="text-muted">University of Exeter, UK</p>
+                </div>
+            </div>
+			</div>
+          </div>
+		 <h3><b><i>The Words Laundrette: Unmasking Bias and Propaganda in the Discourses on the Ongoing Nakba</i></b></h3>
+          <div style="text-align:justify">
+		  <p>
+Understanding bias and propaganda in the discourse of Nakba narratives is of utmost importance, and this significance is further amplified by the advent of AI and technological advancements. In this talk, I will examine the Zionist language employed both for domestic and external consumption during the 1948 Nakba and the present genocide of Gaza. This language and its basic vocabulary shielded Israel for many years from internal criticism and international condemnation and granted it Western impunity. 
+			</p>
+			<p>
+			 This vocabulary represented a twin process of dehumanization and militarization of the Palestinian civil space.  The reference to villages and towns as military bases at best, or as terrorist hotbeds at worst, was an important part of the indoctrination of the Israeli troops as well as a crucial aspect of the Israeli Hasbara, propaganda,  outside. 
+			</p>
+			<p>
+			 This vocabulary should be seen as an eliminatory praxis by Israel and before that by the Zionist state. A verbal elimination indeed preceded the actual attempted one in 1948.  The early attempt was to expunge the Palestinians as people of the land from history and memory before perpetrating a massive expulsion in 1948. The eliminatory vocabulary continued to be employed during the Nakba and ever since 1948. One the most worrying aspects of the current phase of the ongoing Nakba is the sense that manipulation of language is not needed anymore and the eliminatory policies are presented as such in the most vile and direct manner. But it is noteworthy that the direct approach is done only in Hebrew, which Israeli policymakers, still treat as a secret language only they understand.
+			</p>
+			<P>
+			 Resisting this eliminatory praxis, common among settler colonial movements in the past, highlights the importance, quite often belittled, of scholarship, professional acumen, wordsmanship and articulation in any language that can reach a wider audience, who can be part of a solidarity movement or in position  to make a difference on the ground.  Also the slow process of introducing the counter vocabulary to the Israeli Jewish society, as done by Zochrot, should be acknowledged. None of these efforts is just about words or language, or even discourse. They have to be contextualized historically, legally and morally to appreciate how close they bring us to the adage: the word is [can be at least] mightier than the sword. 
+			</p>
+			<p>
+			I hope through this talk to provide insights for AI practitioners on how to approach texts on this topic, as well as guidance on developing benchmarks and metrics to assess and track patterns of bias and propaganda over time and across diverse sources and languages.
+			</p>
+		  </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  
+
+  <section  id="panel">
+    <div class="container">
+      <div class="row">
+        <br />
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Panel Discussion</h2>
+          <div style="text-align:left">
+            <div style="text-align:justify">
+		  <h3><b>Title</b>: <i>Digital Archives and Cultural Heritage in the LLMs Era</i>.</p></h3>     
+		  <p>
+		<b>Mediator:</b>
+		<ul style="margin-top:-15px;">
+		<li><b><a href="https://www.lancaster.ac.uk/staff/elhaj/">Mo El-Haj</a></b> – Panel Chair – Lancaster University, UK.</li>
+		</ul>
+	        </p>
+	        <p>
+		<b>Panelists:</b>
+		<ul style="margin-top:-15px;">
+		<li><b><a href="https://mageed.arts.ubc.ca/">Muhammad Abdul-Mageed</a></b>, The University of British Columbia, Canada.</li>
+		<li><b><a href="https://scholar.google.co.uk/citations?user=ZZxDojsAAAAJ&hl=en">Antonio Moreno Sandoval</a></b>, Autonomous University Madrid, Spain.</li>
+		<li><b><a href="https://profiles.cardiff.ac.uk/staff/knightd5">Dawn Knight</a></b>, Cardiff University, UK.</li>
+		<li><b><a href="https://www.jarrar.info/">Mustafa Jarrar</a></b>, Birzeit University, Palestine.</li>
+		</ul>
+		</p>
+            </div>
+ 
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section id="organizers" class="bg-light">
+    <style>
+        #organizers {
+            background-color: #eeeeee;
+        }
+    </style>
+    <div class="container2">
+        <div class="row">
+            <div class="col-lg-12 text-center" style="padding-bottom: 20px;">
+                <h2 class="section-heading">Organizers</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-3">
+                <div class="team-member">
+                    <img src="img/team/mustafa.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
+                    <h4><a href="http://www.jarrar.info">Mustafa Jarrar</a></h4>
+                    <p class="text-muted">Birzeit University, Palestine</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="team-member">
+                    <img src="img/team/nizar.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
+                    <h4><a href="https://www.nizarhabash.com">Nizar Habash</a></h4>
+                    <p class="text-muted">New York University Abu Dhabi, UAE</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="team-member">
+                    <img src="img/team/mo.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
+                    <h4><a href="http://elhaj.uk">Mo El-Haj</a></h4>
+                    <p class="text-muted">Lancaster University, UK</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+	    <div class="col-sm-3">
+                <div class="team-member">
+                    <img src="img/team/haddad.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
+                    <h4><a href="https://www.ugr.es/en/staff/amal-haddad-haddad">Amal Haddad</a></h4>
+                    <p class="text-muted">University of Granada, Spain</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="team-member">
+                    <img src="img/team/zeina.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
+                    <h4><a href="https://iglp.law.harvard.edu/current-fellows/">Zeina Jallad</a></h4>
+                    <p class="text-muted">Harvard Law School, USA</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="team-member">
+                    <img src="img/team/Camille.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
+                    <h4><a href="https://en.wikipedia.org/wiki/Camille_Mansour">Camille Mansour</a></h4>
+                    <p class="text-muted">Institute for Palestine Studies, Lebanon</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+	    <div class="col-sm-3">
+                <div class="team-member">
+                    <img src="img/team/diana.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
+                    <h4><a href="https://www.mcgill.ca/anthropology/people/dianaallan">Diana Allan</a></h4>
+                    <p class="text-muted">McGill University, Canada</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="team-member">
+                    <img src="img/team/paul.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
+                    <h4><a href="https://www.lancaster.ac.uk/security-lancaster/people/paul-rayson">Paul Rayson</a></h4>
+                    <p class="text-muted">Lancaster University, UK</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="team-member">
+                    <img src="img/team/TymaaHammouda.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
+                    <h4><a href="https://scholar.google.com/citations?user=gWBF6oUAAAAJ&hl=en">Tymaa Hammouda</a></h4>
+                    <p class="text-muted">Birzeit University, Palestine</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Program Committee</h2>
+          <div style="text-align:justify">
+            <ul>
+              <li>Abdelkader El Mahdaouy, Mohamed VI polytechnic University</li>
+              <li>Abdellah El Mekki, School of Computer Sciences, Mohammed VI Polytechnic University</li>
+              <li>Abdelrahim Qaddoumi, NYU</li>
+              <li>Abdulrahman Abdulsalam, University of Utah</li>
+              <li>Abed Alhakim Freihat, University of Trento</li>
+              <li>Adnan Yahya, Birzeit University</li>
+              <li>Ala Alazzeh, Birzeit University</li>
+              <li>Ali AlKhathlan, Assistant Professor King Abdulaziz University</li>
+              <li>Almoataz B. Al-Said, Cairo University</li>
+              <li>Amr Keleg, The University of Edinburgh</li>
+              <li>Areej Jaber, Technical University Khadouri</li>
+              <li>Ashraf Elnagar, University of Sharjah</li>
+              <li>Ayah Soufan, Strathclyde University</li>
+              <li>Azzeddine Mazroui, University Mohammed First, Faculty of Sciences</li>
+              <li>Badr AlKhamissi, EPFL</li>
+              <li>Baker Abdalhaq, Annajah National University</li>
+              <li>Basem Ezbidi, Birzeit university</li>
+              <li>Bassam Haddad, University of Petra</li>
+              <li>Bayan AbuShawar, Associate Professor-Cyber security Department-Al Ain University</li>
+              <li>Dana Abdulrahim, University of Bahrain</li>
+              <li>Dima Taji, Charles University, Faculty of Mathematics and Physics, Institute of Formal and Applied Linguistics</li>
+              <li>ElMoatez Billah Nagoudi, The University of British Columbia</li>
+              <li>Eyad Elyan, Robert Gordon University</li>
+              <li>Fadhl Eryani, University of Tübingen</li>
+              <li>Fadi Zaraket, American University of Beirut</li>
+              <li>Faisal Awartani, Insights for Research Polling and Training</li>
+              <li>Fatemah Husain, Kuwait University</li>
+              <li>Fatima Haouari, Qatar University</li>
+              <li>Fethi Bougares, LIUM- Le Mans Université</li>
+              <li>Fouzi Harrag, Ferhat Abbas University</li>
+              <li>Ghassan Mourad, libanese university</li>
+              <li>Go Inoue, Mohamed bin Zayed University of Artificial Intelligence</li>
+              <li>Habiba Dahmani, Mohamed  Boudiaf University</li>
+              <li>Haithem Afli, ADAPT Centre, Munster Technological University</li>
+              <li>Hamada Nayel, Benha University</li>
+              <li>Ibrahim Abu Farha, University of Sheffield</li>
+              <li>Imed Zitouni, Google</li>
+              <li>Imene Bensalem, ESCF de Constantine & MISC Lab, Constantine 2 University, Algeria</li>
+              <li>Injy Hamed, Institute for Natural Language Processing, University of Stuttgart</li>
+              <li>Kamel Gaanoun, National Institute of Statistics and Applied Economics</li>
+              <li>Kamel Smaili, LORIA</li>
+              <li>Kaoukab Chebaro, Columbia University</li>
+              <li>Karim Bouzoubaa, Mohammed V University in Rabat</li>
+              <li>Khaled Shaalan, The British University in Dubai</li>
+              <li>Khalid Choukri, ELRA/ELDA</li>
+              <li>Khalil Mrini, Bytedance</li>
+              <li>Khloud Al Jallad, SySSR</li>
+              <li>Labib Arafeh, AlQuds University</li>
+              <li>Lama Nachman, Intel Labs</li>
+              <li>Lamia Hadrich-Belguith, ANLP Research Group, MIRACL Lab, FSEGS, Sfax University</li>
+              <li>Majdi Sawalha, The University of Jordan</li>
+              <li>Manar Alkhatib, British University in Dubai</li>
+              <li>Maram Hasanain, Qatar Computing Research Institute</li>
+              <li>Mo El-Haj, Lancaster University</li>
+              <li>Mohamed Lichouri, Centre de Recherche Scientifique et Technique pour le Développement de la Langue Arabe (CRSTDLA)</li>
+              <li>Mohamed Yahya, NLP Researcher</li>
+              <li>Mohammad Abuoudeh, Al Hussein Bin Talal University</li>
+              <li>Mohammed Attia, Google Inc.</li>
+              <li>Mohammed Khalilia, Birzeit University</li>
+              <li>Mohammed Salah Al-Radhi, Budapest University of Technology and Economics, Department of Telecommunications and Media Informatics</li>
+              <li>Mona Baker, University of Oslo</li>
+              <li>Moustafa Al-Hajj, Lebanese University</li>
+              <li>Muhammad Abdul-Mageed, The University of British Columbia</li>
+              <li>Munir Fakher Eldin, Birzeit University</li>
+              <li>Munther Dahleh, MIT</li>
+              <li>Nada Ghneim, Damascus University - Information Technology Engineering Faculty</li>
+              <li>Omar Shehabi, Yale Law School</li>
+              <li>Omar Tesdell, Birzeit University</li>
+              <li>Omar Trigui, University of Sousse in Tunisia</li>
+              <li>Owen Rambow, Stony Brook University</li>
+              <li>Radi Jarrar, Birzeit University</li>
+              <li>Radwan Tahboub, Palestine Polytechnic University</li>
+              <li>Raia Abu Ahmad, DFKI</li>
+              <li>Reem Suwaileh, Qatar University</li>
+              <li>Saad Ezzini, Lancaster University</li>
+              <li>Sabri Boughorbel, Qatar Computing Research Institute</li>
+              <li>Sahar Ghannay, CNRS, LISN</li>
+              <li>Salima Harrat, ENS Bouzaréah, Algiers</li>
+              <li>salima mdhaffar, LIA - University of Avignon</li>
+              <li>Samhaa R. El-Beltagy, Newgiza University/Optomatica</li>
+              <li>Sari Hanafi, American Univ of Beirut</li>
+              <li>Seif Mechti, ISSEPS</li>
+              <li>Serin Atiani, Princess Sumaya University for Technology</li>
+              <li>Shady Elbassuoni, American University of Beirut</li>
+              <li>Sultan Alrowili, University of Delaware</li>
+              <li>Susan Akram, Boston University</li>
+              <li>Tamer Elsayed, Qatar University</li>
+	      <li>Thaher Gharabeh, Univeristy of Granada</li>
+              <li>Violetta Cavalli-Sforza, Al Akhawayn University</li>
+              <li>Wajdi Zaghouani, Northwestern University Qatar</li>
+              <li>Walid Magdy, The University of Edinburgh</li>
+              <li>Wassim El-Hajj, American University of Beirut</li>
+              <li>Watheq Mansour, The University of Queensland</li>
+              <li>Wissam Antoun, Inria</li>
+              <li>Yahya Mohamed Elhadj, Arab Center for Research and Policy Studies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+    <section id="program" class="bg-light">
+    <style>
+        #program {
+            background-color: #eeeeee;
+        }
+    </style>
+       
+<div class="container">
+          
+  
+  <div class="row">
+        <div class="col-lg-12 text-center">
+    <h2 class="section-heading">Workshop Program</h2>
+	<div style="text-align: left;">All times are in GMT</div>
+            <table>
+    <!-- <thead>
+      <tr>
+        <th>Time</th>
+        <th>Activity</th>
+        <th>Authors</th>
+        <th>Paper ID</th>
+      </tr>
+    </thead> -->
+    <tbody>
+      <tr>
+        <td style="text-wrap: nowrap; ">09:00 - 09:20</td>
+        <td><span class="activity-cell">Opening Session: Welcome by Workshop Chairs</span> (<a href="https://www.youtube.com/watch?v=1GHpWTeYOAc&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=1&pp=iAQB">Watch</a>)
+		<br><br><span style="font-weight:bold;">Chairs</span>: Mustafa Jarrar, Camille Mansour
+		<br><br><a href="#welcome-message">A note from the organizers</a>
+		</td>
+      
+      
+      </tr>
+      <tr>
+        <td>09:20 - 10:00</td>
+        <td><span class="activity-cell">Session 1: Propaganda Detection<br><br>Chair:</span> Nizar Habash
+        <br><br>
+        <ul>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.14.pdf" >Integrating Argumentation Features for Enhanced Propaganda Detection in Arabic Narratives on the Israeli War on Gaza</a>.</span>
+			 Sara Nabhani, Claudia Borg, Kurt Micallef, and Khalid Al-Khatib. (<a href="https://www.youtube.com/watch?v=_4VumtxNos0&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=2&t=7s&pp=iAQB">Watch</a>)
+          </li>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.9.pdf" >Multilingual Propaganda Detection: Exploring Transformer-Based Models mBERT, XLM-RoBERTa, and mT5</a>.</span> 
+			Mohamed Ibrahim Ragab, Ensaf Hussein Mohamed and Walaa Medhat. (<a href="https://www.youtube.com/watch?v=oWX_3XdjwgY&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=3&pp=iAQB">Watch</a>) 
+          </li>
+        </ul>
+        </td> 
+      </tr>
+      <tr>
+        <td>10:00 - 10:40</td>
+        <td><span class="activity-cell">Session 2: Bias Detection<br><br>Chair:</span> Mustafa Jarrar
+        <br><br>
+        <ul>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.11.pdf" >The Missing Cause: An Analysis of Causal Attributions in Reporting on Palestine</a>.</span> 
+			Paulina Garcia Corral, Hannah Bechara, Krishnamoorthy Manohara and Slava Jankin. (<a href="https://www.youtube.com/watch?v=BXIpGC21rOc&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=4&pp=iAQB">Watch</a>)
+          </li>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.1.pdf" >Deciphering Implicatures: On NLP and Oral Testimonies</a>.</span> Zainab Sabra. (<a href="https://www.youtube.com/watch?v=2hyuqj9Ubi4&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=5&pp=iAQB">Watch</a>)
+          </li>
+        </ul>
+        </td> 
+      </tr>
+      <tr>
+        <td>10:40 - 11:15</td>
+        <td class="activity-cell" style="text-align: center;">Break</td>
+     
+      </tr>
+
+      <tr>
+        <td>11:15 - 12:30</td>
+        <td><span class="activity-cell">Panel Discussion: Digital Archives and Cultural Heritage in the LLMs Era.</span> (<a href="https://www.youtube.com/watch?v=6_2hQB1feBs&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=6&pp=iAQB">Watch</a>)
+		<br><span class="activity-cell">Panel Chair:</span> Mo El-Haj
+		<br><span class="activity-cell">Panelists:</span>
+        <ul style="list-style: none;">
+          <li>
+            Muhammad Abdul-Mageed, The University of British Columbia, Canada.
+          </li>
+          <li>
+            Antonio Moreno Sandoval, Autonomous University Madrid, Spain.
+          </li>
+          <li>
+            Dawn Knight, Cardiff University, UK.
+          </li>
+          <li>
+            Mustafa Jarrar, Birzeit University, Palestine.
+          </li>
+        </ul>
+	  </td>		
+      </tr>
+	  
+      <tr>
+        <td>12:30 - 13:00</td>
+        <td class="activity-cell" style="text-align: center;">Lunch Break</td>
+      </tr>
+      <tr>
+        <td>13:00 - 13:45</td>
+        <td><span class="activity-cell">Session 3: Classification of Narratives<br><br>Chair:</span> Tymaa Hammouda
+        <br><br>
+        <ul>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.4.pdf" >Sentiment Analysis of Nakba Oral Histories: A Critical Study of Large Language Models</a>.</span> Huthaifa I. Ashqar. (<a href="https://www.youtube.com/watch?v=aQGKS7VaQyE&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=7">Watch</a>)
+          </li>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.6.pdf" >Arabic Topic Classification Corpus of the Nakba Short Stories</a>.</span> Osama Hamed and Nadeem Zaidkilani. (<a href="https://www.youtube.com/watch?v=ioS1KHVQKkg&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=8">Watch</a>)
+          </li>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.7.pdf" >Exploring Author Style in Nakba Short Stories: A Comparative Study of Transformer-Based Models</a>.</span> Osama Hamed and Nadeem Zaidkilani.
+          </li>
+        </ul>
+        </td> 
+      </tr>
+      <tr>
+        <td>13:45 - 14:00</td>
+        <td class="activity-cell" style="text-align: center;">Break</td>
+      </tr>
+      <tr>
+        <td>14:00 - 15:00</td>
+        <td><span class="activity-cell">Session 4: Tagging of Nakba Narratives<br><br>Chair:</span> Ghadir Awad
+        <br><br>
+        <ul>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.13.pdf" >NakbaTR: A Turkish NER Dataset for Nakba Narratives</a>.</span> Esma Fatıma Bilgin Tasdemir and Şaziye Betül Özateş. (<a href="https://www.youtube.com/watch?v=1HjqexrxWYw&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=9">Watch</a>)
+          </li>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.5.pdf" >The Nakba Lexicon: Building a Comprehensive Dataset from Palestinian Literature</a>.</span> Izza AbuHaija, Salim Al Mandhari, Mo El-Haj, Jonas Sibony and Paul Rayson. (<a href="https://www.youtube.com/watch?v=yU26Q0_YPNI&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=10">Watch</a>)
+          </li>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.3.pdf" >Cognitive Geographies of Catastrophe Narratives: Georeferenced Interview Transcriptions as Language Resource for Models of Forced Displacement</a>.</span> Annie K. Lamar, Rick Castle, Carissa Chappell, Emmanouela Schoinoplokaki, Allene M. Seet, Amit Shilo and Chloe Nahas. (<a href="https://www.youtube.com/watch?v=lmLMD78OGA8&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=11">Watch</a>)
+          </li>
+        </ul>
+        </td> 
+      </tr>
+      <tr>
+        <td>15:00 - 16:00</td>
+        <td><span class="activity-cell">Session 5: Nakba Narratives<br><br>Chair:</span> Osama Hamed
+        <br><br>
+        <ul>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.10.pdf" >Collective Memory and Narrative Cohesion: A Computational Study of Palestinian Refugee Oral Histories in Lebanon</a>.</span>Ghadir A. Awad, Tamara N. Rayan, Lavinia Dunagan and David Gamba. (<a href="https://www.youtube.com/watch?v=wknkoYtSU5Q&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=12">Watch</a>)
+		  </li>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.2.pdf" >A cultural shift in Western perceptions of Palestine</a>.</span> Terry Regier and Muhammad Ali Khalidi. (<a href="https://www.youtube.com/watch?v=ySMzTURDDyQ&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=13">Watch</a>)
+		  </li>
+          <li>
+            <span class="activity-cell"><a href="https://aclanthology.org/2025.nakbanlp-1.8.pdf" >Detecting Inconsistencies in Narrative Elements of Cross Lingual Nakba Texts</a>.</span> Nada Hamarsheh, Zahia Elabour, Aya Murra and Adnan Yahya. (<a href="https://www.youtube.com/watch?v=AiXYWIyHqd0&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=14">Watch</a>)
+          </li>
+        </ul>
+        </td> 
+      </tr>	
+	  <tr>
+        <td>16:00 - 17:00</td>
+        <td><span class="activity-cell">Keynote: The Words Laundrette: Unmasking Bias and Propaganda in the Discourses on the Ongoing Nakba</span> (<a href="https://www.youtube.com/watch?v=_u9N0WDwFPM&list=PLqv-aG-HVPDDYt47xPF468Yj92M0H-cx3&index=15">Watch</a>)
+        <br>By Ilan Pappe
+		</td>		
+      </tr>
+	  <tr>
+        <td>17:00 - 17:15</td>
+        <td class="activity-cell" style="text-align: center;">Closing</td>
+      </tr>
+    </tbody>
+  </table>
+        </div>
+</div>
+
+
+    </div>
+      
+    
+</section>
+    <section id="sponsors">
+    <style>
+        #sponsors {
+            background-color: #eeeeee;
+        }
+    </style>
+    <div class="container2">
+        <div class="row">
+            <div class="col-lg-12 text-center" style="padding-bottom: 20px;">
+                <h2 class="section-heading">Sponsors</h2>
+            </div>
+        </div>
+
+        <!--<div class="row justify-content-center align-items-center">
+            <div class="col-sm-3">
+                <a href="https://www.birzeit.edu/en"><img src="img/logos/bzu.png" class="img-responsive img-square" alt="" width="600" height="600"></a>                
+            </div>
+			<div class="col-sm-2">
+			</div>
+            <div class="col-sm-3">
+                <a href="https://www.aub.edu.lb/"><img src="img/logos/aub.png" style="width:500px;height:170px"></a>
+            </div>
+        </div>-->
+        <div class="row justify-content-center align-items-center row1">
+            <div class="col-sm-2">
+                <a href="https://www.birzeit.edu/en"><img src="img/logos/bzu.png" style="width:290px;height:115px"></a>                
+            </div>
+			<div class="col-sm-1">
+			</div>
+			<div class="col-sm-2">
+			<a href="https://www.palestine-studies.org/"><img src="img/logos/ips.png" style="width:310px;height:130px"></a>
+			</div>
+			<div class="col-sm-1">
+			</div>
+            <div class="col-sm-2">
+                <a href="https://www.aub.edu.lb/"><img src="img/logos/aub.png" style="width:330px;height:114px"></a>
+            </div>
+        </div>
+    </div>
+</section>
+  
+  
+
+ <!-- Bootstrap core JavaScript  -->
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+
+</body>
+
+</html>

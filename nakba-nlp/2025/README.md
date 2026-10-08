@@ -1,1 +1,0 @@
-Nakpa NLP workshop

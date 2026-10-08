@@ -496,7 +496,7 @@ function arStrip(input_str, diacs, smallDiacs , shaddah ,  digit , alif , specia
 
         if (input_str){
             if (diacs == "True"){
-              input_str = input_str.replace(/[\u064B-\u0650]/g, '') ; // Remove all Arabic diacretics [ ًٌٍَُِْ]
+              input_str = input_str.replace(/[\u064B-\u0650]/g, '') ; // Remove all Arabic diacritics [ ًٌٍَُِْ]
               input_str = input_str.replace(/[\u0652]/g, ''); // Remove SUKUN
             }
             if (shaddah == "True"){

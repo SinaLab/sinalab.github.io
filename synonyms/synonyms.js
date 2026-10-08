@@ -12,8 +12,8 @@ function findSynonyms() {
 
 
 	var synset = document.getElementById("text").value;
-	var accurecy = parseInt(document.getElementById("accurecy").value) / 100;
-	/*console.log("accurecy : ",accurecy);*/
+	var Accuracy = parseInt(document.getElementById("Accuracy").value) / 100;
+	/*console.log("Accuracy : ",Accuracy);*/
 
 	var filter_en = document.getElementById("filter1").checked;
 	var filter_ar = document.getElementById("filter2").checked;
@@ -96,7 +96,7 @@ function findSynonyms() {
 			for (var i = 0; i < synonems.length; i++) {
 				// console.log("synonems : ", synonems[i][0],synonems[i][1], " start with 1 : ", synonems[i][0].trim().startsWith("1"));
 
-				if (synonems[i][1] > accurecy) {
+				if (synonems[i][1] > Accuracy) {
 					if (filter_ar == true) {
 						if (arabic.test(synonems[i][0].trim()) == true) {
 							arabic_syn.push([synonems[i][0], synonems[i][1]]);
@@ -143,7 +143,7 @@ function findSynonyms() {
 			var arabic_final_output = [];
 			// console.log(" results : ", output );
 			for (var j = 0; j < arabic_syn.length; j++) {
-				// <!-- updated by weaam on 18/12/2022 add the Accurecy value -->
+				// <!-- updated by weaam on 18/12/2022 add the Accuracy value -->
 				var x = arabic_syn[j][1];
 				arabic_final_output.push(arabic_syn[j][0] + "<a style=\"color: black;font-weight: normal;font-size: 10px;text-decoration: none;\"> " + Math.round(Number(x).toFixed(2) * 100) + "% " + "</a>");
 				// console.log(" final     "+final_output);
@@ -154,7 +154,7 @@ function findSynonyms() {
 			var english_final_output = [];
 			// console.log(" results : ", output );
 			for (var j = 0; j < english_syn.length; j++) {
-				// <!-- updated by weaam on 18/12/2022 add the Accurecy value -->
+				// <!-- updated by weaam on 18/12/2022 add the Accuracy value -->
 				var x = english_syn[j][1];
 				english_final_output.push(english_syn[j][0] + "<a style=\"color: black;font-weight: normal;font-size: 10px;text-decoration: none;\"> " +  Math.round(Number(x).toFixed(2) * 100) + "% " + "</a>");
 				// console.log(" final     "+final_output);
@@ -164,7 +164,7 @@ function findSynonyms() {
 			var welsh_final_output = [];
 			// console.log(" results : ", output );
 			for (var j = 0; j < welsh_syn.length; j++) {
-				// <!-- updated by weaam on 18/12/2022 add the Accurecy value -->
+				// <!-- updated by weaam on 18/12/2022 add the Accuracy value -->
 				var x = welsh_syn[j][1];
 				welsh_final_output.push(welsh_syn[j][0].replace("1","") + "<a style=\"color: black;font-weight: normal;font-size: 10px;text-decoration: none;\"> " + Math.round(Number(x).toFixed(2) * 100) + "% " +"</a>");
 				// console.log(" final     "+final_output);
@@ -208,7 +208,7 @@ function EvaluateSynset() {
 
 	var synset = document.getElementById("text").value;
 	/*
-	var accurecy = parseInt(document.getElementById("accurecy").value) / 100;
+	var Accuracy = parseInt(document.getElementById("Accuracy").value) / 100;
 
 
 	var filter_en = document.getElementById("filter1").checked;
@@ -349,7 +349,7 @@ function EvaluateSynset() {
 
 				for (var i = 0; i < synonems.length; i++) {
 					// console.log("synonems : ", synonems[i][0],synonems[i][1], " start with 1 : ", synonems[i][0].trim().startsWith("1"));
-					//if (synonems[i][1] > accurecy) {
+					//if (synonems[i][1] > Accuracy) {
 					if (synonems[i][0].trim().startsWith("1") == true) {	
 							evaluate_output.push(synonems[i][0].replace("1","") + "<a style=\"color: black;font-weight: normal;font-size: 10px;text-decoration: none;\"> " + Math.round(Number(synonems[i][1]).toFixed(2) * 100) + "% " + "</a>");
 							tmp_output.push(synonems[i]);
@@ -404,8 +404,8 @@ function filter_results() {
 	// <!-- updated by weaam on 18/12/2022 added Id to the text on btn (btn_text) and make it hidden when click -->
 	var btn_Text = document.getElementById("btn_text");
 	btn_Text.style.display = "none";
-	var accurecy = parseInt(document.getElementById("accurecy").value) / 100;
-	//console.log("accurecy 1 : ", accurecy);
+	var Accuracy = parseInt(document.getElementById("Accuracy").value) / 100;
+	//console.log("Accuracy 1 : ", Accuracy);
 
 	var prev_output = document.getElementById("output").value;
 	var english_prev_output = document.getElementById("english_result").value;
@@ -429,7 +429,7 @@ function filter_results() {
 
 	if (prev_output != undefined){
 		for (var i = 0; i < prev_output.length; i++) {
-			if (prev_output[i][1] > accurecy) {
+			if (prev_output[i][1] > Accuracy) {
 				// console.log(prev_output[i][1]);
 				if (filter_ar == true) {
 					if (arabic.test(prev_output[i][0].trim()) == true) {
@@ -460,7 +460,7 @@ function filter_results() {
 
 
 	//$('#output').html(output.join(", "));
-	$('#accurracy_label').html(accurecy);
+	$('#accurracy_label').html(Accuracy);
 	document.getElementById("output").style.display = "block";
 	document.getElementById("spinner").style.animation = "none";
 	document.getElementById("spinner").style.display = "none";

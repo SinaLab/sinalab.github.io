@@ -701,3 +701,9 @@ ol {
     color: #888;
     margin-bottom: 20px;
 }
+
+.highlight {
+    font-weight: bold;  
+    padding-left: 0px; 
+    padding-right: 0px;
+}

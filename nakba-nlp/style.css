@@ -40,7 +40,6 @@ main {
   font-size: clamp(1.25rem, 2.6vw, 2rem);
   line-height: 1.2;
   letter-spacing: .3px;
-  text-transform: uppercase;
 }
 
 /* Framed portrait */
@@ -79,24 +78,44 @@ main {
 
 .workshop {
   --accent: #000;                 /* overridden per year below */
-  display: grid;
-  grid-template-columns: 130px 1fr auto;
+  /* display: grid; */
+  /* grid-template-columns: 130px 1fr auto; */
   align-items: center;
   gap: clamp(16px, 3vw, 36px);
-  padding: 28px 8px;
+  /* padding: 28px 8px; */
   border-bottom: 1px solid rgba(61, 74, 52, .35);
   transition: background-color .25s ease;
 }
 .workshop:hover { background: rgba(255, 255, 255, .45); }
 
+.workshop-link {
+  align-items: center;
+  gap: clamp(16px, 3vw, 36px);
+  padding: 28px 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.workshop-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+@media (max-width: 720px) {
+  .workshop-link {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 24px 4px;
+  }
+}
 .card-2025 { --accent: #000; }
 .card-2026 { --accent: #2b4c32; }
 .card-2027 { --accent: #a81212; }
 
 /* Year with an accent bar */
 .year {
-  padding-left: 16px;
-  border-left: 5px solid var(--accent);
+  /* padding-left: 16px; */
+  /* border-left: 5px solid var(--accent); */
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: bold;
   letter-spacing: 1px;

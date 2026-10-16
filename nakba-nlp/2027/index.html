@@ -37,6 +37,11 @@
 <style>
 
 /* Arabic title under the intro box, on top of the header image */
+/* Slightly larger body text in all page sections (menu and header unaffected) */
+section {
+  font-size: 1.1rem; /* default is 1rem = 16px */
+}
+
 .intro-arabic {
   font-family: 'Kaushan Script', serif;
   font-weight: 700;
@@ -496,6 +501,13 @@ The Workshop Organizers
         #organizers {
             background-color: #eeeeee;
         }
+        /* up to 5 organizers per row on wide screens */
+        @media (min-width: 1200px) {
+            #organizers .org-col {
+                flex: 0 0 20%;
+                max-width: 20%;
+            }
+        }
     </style>
     <div class="container2">
         <div class="row">
@@ -504,22 +516,22 @@ The Workshop Organizers
             </div>
         </div>
 
-        <div class="row justify-content-center align-items-center">
-            <div class="col-sm-3">
+        <div class="row justify-content-center align-items-start">
+            <div class="col-6 col-md-4 col-lg-3 org-col">
                 <div class="team-member">
                     <img src="img/team/mustafa.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="http://www.jarrar.info">Mustafa Jarrar</a></h4>
                     <p class="text-muted">Hamad Bin Khalifa University, Qatar <br> Birzeit University, Palestine</p>
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-6 col-md-4 col-lg-3 org-col">
 			<div class="team-member">
                     <img src="img/team/khalil.PNG" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://www.uva.nl/en/profile/s/i/k.simaan/k.simaan.html?cb">Khalil Simaan</a></h4>
                     <p class="text-muted">University of Amsterdam</p>
                 </div>
             </div>
-			<div class="col-sm-3">
+			<div class="col-6 col-md-4 col-lg-3 org-col">
                 <!--<div class="team-member">
                     <img src="img/team/haddad.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://www.ugr.es/en/staff/amal-haddad-haddad">Amal Haddad</a></h4>
@@ -531,32 +543,28 @@ The Workshop Organizers
                     <p class="text-muted">University of London, UK</p>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-sm-3">
+            <div class="col-6 col-md-4 col-lg-3 org-col">
 			    <div class="team-member">
                     <img src="img/team/mo.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="http://elhaj.uk">Mo El-Haj</a></h4>
                     <p class="text-muted">Lancaster University, UK</p>
                 </div>
             </div>
-			<div class="col-sm-3">
+			<div class="col-6 col-md-4 col-lg-3 org-col">
                 <div class="team-member">
                     <img src="img/team/paul.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://www.lancaster.ac.uk/security-lancaster/people/paul-rayson">Paul Rayson</a></h4>
                     <p class="text-muted">Lancaster University, UK</p>
                 </div>
             </div>
-			<div class="col-sm-3">
+			<div class="col-6 col-md-4 col-lg-3 org-col">
                 <div class="team-member">
                     <img src="img/team/serin.PNG" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://psut.edu.jo/en/staff/professor/dr-serin-atiani">Serin Atiani</a></h4>
                     <p class="text-muted">Princess Sumaya University, Jordan</p>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center align-items-center">
-	    <div class="col-sm-3">
+	    <div class="col-6 col-md-4 col-lg-3 org-col">
 				<div class="team-member">
                     <img src="img/team/Camille.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://en.wikipedia.org/wiki/Camille_Mansour">Camille Mansour</a></h4>
@@ -564,7 +572,7 @@ The Workshop Organizers
                 </div>
             </div>
             
-            <div class="col-sm-3">
+            <div class="col-6 col-md-4 col-lg-3 org-col">
                 <!--<div class="team-member">
                     <img src="img/team/shadi.PNG" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://pure.kfupm.edu.sa/en/persons/shadi-abudalfa/">Shadi Abudalfa</a></h4>
@@ -578,7 +586,7 @@ The Workshop Organizers
             </div>
 			
 			
-			<div class="col-sm-3">
+			<div class="col-6 col-md-4 col-lg-3 org-col">
                 <!--<div class="team-member">
                     <img src="img/team/terry.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://lclab.berkeley.edu/regier/">Terry Regier</a></h4>

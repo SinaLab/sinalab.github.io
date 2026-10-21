@@ -20,6 +20,7 @@
     type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 
 
   <meta property="og:title" content="Nakba-NLP 2027 - International Workshop on Nakba Narratives as Language Resources">
@@ -34,6 +35,28 @@
   <!-- Custom styles for this template -->
   <link href="css/agency.min.css" rel="stylesheet">
 <style>
+
+/* Arabic title under the intro box, on top of the header image */
+/* Slightly larger body text in all page sections (menu and header unaffected) */
+section {
+  font-size: 1.1rem; /* default is 1rem = 16px */
+}
+
+.intro-arabic {
+  font-family: 'Kaushan Script', serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #9d9d9d;
+  margin: 25px 0 0;
+  line-height: 1.4;
+  text-align: right;
+  padding-right: 2%; /* distance from the right edge; lower = further right */
+}
+@media (max-width: 712px) {
+  .intro-arabic {
+    font-size: 32px;
+  }
+}
 
 #old
 	{
@@ -140,14 +163,15 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-box" >
-          <P class="intro-l"><span style="color: rgb(161, 160, 162);padding-right: -776px;margin-left: -1008px;">Call for papers</span></P> 
-          <h1 class="intro-heading ">Nakba-NLP Workshop</h1>
-          <p class="intro-heading ">The 3nd International Workshop on Nakba Narratives as Language Resources</p>
+          <P class="intro-l"><span style="color: rgb(161, 160, 162);padding-right: -776px;margin-left: -825px;">Call for papers</span></P> 
+          <h1 class="intro-heading ">Nakba-NLP Workshop</h1> 
+          <p class="intro-heading ">The 3rd International Workshop on Nakba Narratives as Language Resources</p>
           <P class="intro-l">Part of <a href="https://2027.aclweb.org/"><strong><span style="color: red;font-size: larger;">ACL 2027</span></strong></a></P>
           <P class="intro-l">Kyoto, Japan (Hybrid Workshop)</P>
-          <P class="intro-l">18-19 August, 2027</P> 
-         
+          <P class="intro-l">18-19 August 2027</P>
+
         </div>
+        <p class="intro-arabic" dir="rtl" lang="ar">ورشة النكبة والذكاء الاصطناعي</p>
       </div>
     </div>
   </header>
@@ -164,7 +188,7 @@
 					The narratives of the (ongoing) Palestinian Nakba possess significant historical, cultural, literary, and academic value. Preserving this content and empowering it with AI tools is crucial for ensuring its accessibility and usability for present and future generations. Nakba narratives and testimonies exist in diverse formats such as manuscripts, books, audio recordings, novels, and films. Converting this content into a machine-understandable format presents a notable challenge. Establishing accessible archives and well-annotated collections is essential for researchers and historians to verify and share meaningful information.
 				</p>
 				<p style="text-align:justify">
-                    This workshop aims to explore how artificial intelligence, natural language processing, and corpus linguistics can assist in understanding, disseminating and preserving, Nakba narratives and testimonies. The goal is to create accessible, comprehensive, and well-annotated collections that empower researchers and historians to validate and share critical insights derived from these data. The workshop targets datasets and narratives in Arabic, English, and other languages, however, submitted articles should be written in English.
+                    This workshop aims to explore how artificial intelligence, natural language processing, and corpus linguistics can assist in understanding, disseminating and preserving Nakba narratives and testimonies. The goal is to create accessible, comprehensive, and well-annotated collections that empower researchers and historians to validate and share critical insights derived from these data. The workshop targets datasets and narratives in Arabic, English, and other languages, however, submitted articles should be written in English.
                 </p>
 				<p>
 					<span style="font-weight:bold;">Previous Workshops:</span> <br>
@@ -246,7 +270,7 @@
 		<li><b>Fake News Detection</b> (<a href="https://mohamedibrahim1708.github.io/fake-news-detection/">NakbaFakeNewsDetection</a>)</li>
 		<li><b>Arabic Manuscript Understanding</b> (<i><a href="https://acrps.ai/nakba-nlp-manu-understanding-2027">AR-MS</a>)</li>
 	</ul>
-	
+
 						</div>-->
 		  
 				</div>
@@ -284,6 +308,11 @@
 			  <li>Bias, misinformation, and hate speech</li>
 			  <li>Speech recognition and voice technologies</li>
 			  <li>Palestinian dialects (spoken and written)</li>
+              <li>Historical OCR </li>
+              <li>Multimodal testimonies </li>
+              <li>Provenance tracking</li>
+              <li>Evidence-grounded retrieval</li>
+              <li>Temporal analysis and ethical data stewardship</li>
             </ul>
          </p>
          <p style="text-align:justify">
@@ -324,8 +353,9 @@
           <div style="text-align:left">
             <div style="text-align:justify">
              <p>
-		     <!--The workshop supports the COLING anti-harassment policy: <a href="https://coling2022.org/policy">Policy</a>.</br>
-		     COLING 2025 submission templates: <a href="https://coling2025.org/calls/main_conference_papers/">Template</a>.</br> -->
+		     The workshop supports the  <a href="https://www.aclweb.org/adminwiki/index.php/Anti-Harassment_Policy">ACL Anti-Harassment Policy</a>.</br>
+		     All submissions must comply with <a href="https://www.aclweb.org/adminwiki/index.php/ACL_Policy_on_Publication_Ethics">ACL’s research ethics requirements</a>, particularly
+                 when handling sensitive historical testimonies and personal data.</br>
 		     <b>Submission URL:</b> <a href="https://sina.birzeit.edu/nakba-nlp/2027/">Coming Soon</a>.
 	     </p>
             </div>
@@ -354,8 +384,8 @@
 			  <!--<del>20</del> <del>11</del>-->
 <li>Submission Deadline:  <B>TBA</B></li>
 <li>Notification of Acceptance:  <B>TBA</B></li>
-<li>Camera Ready paper submission Hard Deadline: <B>TBA</B></li>
-<li>Workshop Date: 18-19 August , 2027</li>
+<li>Camera-ready paper submission Hard Deadline: <B>TBA</B></li>
+<li>Workshop Date: 18-19 August 2027</li>
 
             </ul>
           </div>
@@ -373,9 +403,19 @@
 	<div style="text-align:justify">
 			
 			Welcome to the Nakba Narratives as Language Resources workshop! <br><br>
-			This workshop explores how natural language processing (NLP) tools can contribute to the documentation and understanding of significant historical events. Similar to other initiatives such as the Holocaust Testimonies as Language Resources workshop</span> at ACL 2027, we aim to examine the intersection of language, technology, and social good - an essential and growing area of research.<br><br>
-We recognize that topics like the Nakba may be viewed as sensitive or politically charged. However, addressing such issues is not unprecedented in NLP. Research on socially significant topics, including gender bias, propaganda, and historical testimonies, often intersects with political and cultural discourse. Such efforts are widely recognized as essential for advancing NLP as a field. Similarly, this workshop seeks to foster rigorous and inclusive exploration of narratives surrounding the Nakba.<br><br>
-We are committed to fostering an inclusive and respectful environment where diverse perspectives are welcomed and all opinions can be expressed and discussed in an academic and constructive manner. Open dialogue is at the heart of our approach, and we value thoughtful contributions from every participant. This workshop adheres to the Diversity, Inclusion, and Anti-Harassment Policy of LREC 2027.<br><br>
+			This workshop explores how natural language processing (NLP) tools can contribute to the documentation
+        and understanding of significant historical events. We aim to examine the intersection of language, technology,
+        and social good - an essential and growing area of research.<br><br>
+<!-- We recognize that topics like the Nakba may be viewed as sensitive or politically charged. However, addressing such
+        issues is not unprecedented in NLP. Research on socially significant topics, including gender bias, propaganda,
+        and historical testimonies, often intersects with political and cultural discourse. Such efforts are widely
+        recognized as essential for advancing NLP as a field. Similarly, this workshop seeks to foster rigorous and
+        inclusive exploration of narratives surrounding the Nakba.<br><br>-->
+        By bridging computational linguistics and historical narrative analysis,
+        this workshop focuses on key scientific challenges including corpus creation,
+        low-resource dialect processing, information extraction, and the
+        digital preservation of Nakba.<br><br>
+We are committed to fostering an inclusive and respectful environment where diverse perspectives are welcomed and all opinions can be expressed and discussed in an academic and constructive manner. Open dialogue is at the heart of our approach, and we value thoughtful contributions from every participant. This workshop adheres to the Diversity, Inclusion, and Anti-Harassment Policy of ACL 2027.<br><br>
 Thank you for your participation. We look forward to a thoughtful and impactful workshop.<br> <br>
 Best regards,<br>
 The Workshop Organizers
@@ -477,6 +517,13 @@ The Workshop Organizers
         #organizers {
             background-color: #eeeeee;
         }
+        /* up to 5 organizers per row on wide screens */
+        @media (min-width: 1200px) {
+            #organizers .org-col {
+                flex: 0 0 20%;
+                max-width: 20%;
+            }
+        }
     </style>
     <div class="container2">
         <div class="row">
@@ -485,22 +532,22 @@ The Workshop Organizers
             </div>
         </div>
 
-        <div class="row justify-content-center align-items-center">
-            <div class="col-sm-3">
+        <div class="row justify-content-center align-items-start">
+            <div class="col-6 col-md-4 col-lg-3 org-col">
                 <div class="team-member">
                     <img src="img/team/mustafa.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="http://www.jarrar.info">Mustafa Jarrar</a></h4>
                     <p class="text-muted">Hamad Bin Khalifa University, Qatar <br> Birzeit University, Palestine</p>
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-6 col-md-4 col-lg-3 org-col">
 			<div class="team-member">
                     <img src="img/team/khalil.PNG" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://www.uva.nl/en/profile/s/i/k.simaan/k.simaan.html?cb">Khalil Simaan</a></h4>
                     <p class="text-muted">University of Amsterdam</p>
                 </div>
             </div>
-			<div class="col-sm-3">
+			<div class="col-6 col-md-4 col-lg-3 org-col">
                 <!--<div class="team-member">
                     <img src="img/team/haddad.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://www.ugr.es/en/staff/amal-haddad-haddad">Amal Haddad</a></h4>
@@ -512,32 +559,28 @@ The Workshop Organizers
                     <p class="text-muted">University of London, UK</p>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-sm-3">
+            <div class="col-6 col-md-4 col-lg-3 org-col">
 			    <div class="team-member">
                     <img src="img/team/mo.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="http://elhaj.uk">Mo El-Haj</a></h4>
                     <p class="text-muted">Lancaster University, UK</p>
                 </div>
             </div>
-			<div class="col-sm-3">
+			<div class="col-6 col-md-4 col-lg-3 org-col">
                 <div class="team-member">
                     <img src="img/team/paul.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://www.lancaster.ac.uk/security-lancaster/people/paul-rayson">Paul Rayson</a></h4>
                     <p class="text-muted">Lancaster University, UK</p>
                 </div>
             </div>
-			<div class="col-sm-3">
+			<div class="col-6 col-md-4 col-lg-3 org-col">
                 <div class="team-member">
                     <img src="img/team/serin.PNG" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://psut.edu.jo/en/staff/professor/dr-serin-atiani">Serin Atiani</a></h4>
                     <p class="text-muted">Princess Sumaya University, Jordan</p>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center align-items-center">
-	    <div class="col-sm-3">
+	    <div class="col-6 col-md-4 col-lg-3 org-col">
 				<div class="team-member">
                     <img src="img/team/Camille.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://en.wikipedia.org/wiki/Camille_Mansour">Camille Mansour</a></h4>
@@ -545,7 +588,7 @@ The Workshop Organizers
                 </div>
             </div>
             
-            <div class="col-sm-3">
+            <div class="col-6 col-md-4 col-lg-3 org-col">
                 <!--<div class="team-member">
                     <img src="img/team/shadi.PNG" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://pure.kfupm.edu.sa/en/persons/shadi-abudalfa/">Shadi Abudalfa</a></h4>
@@ -559,7 +602,7 @@ The Workshop Organizers
             </div>
 			
 			
-			<div class="col-sm-3">
+			<div class="col-6 col-md-4 col-lg-3 org-col">
                 <!--<div class="team-member">
                     <img src="img/team/terry.jpg" class="img-responsive img-circle" alt="" width="600" height="600">
                     <h4><a href="https://lclab.berkeley.edu/regier/">Terry Regier</a></h4>
@@ -583,32 +626,32 @@ The Workshop Organizers
           <div style="text-align:justify">
 		  <ul>
               <li>Abdelkader El Mahdaouy, Mohamed VI polytechnic University</li>
-              <li>Abdellah El Mekki, School of Computer Sciences, Mohammed VI Polytechnic University</li>
+              <li>Abdellah El Mekki,Mohammed VI Polytechnic University</li>
               <li>Abdelrahim Qaddoumi, NYU</li>
               <li>Abdulrahman Abdulsalam, University of Utah</li>
               <li>Abed Alhakim Freihat, University of Trento</li>
-			  			  <li>Abualsoud Hanani, Birzeit University</li>
+			  			<li>Abualsoud Hanani, Birzeit University</li>
               <li>Adnan Yahya, Birzeit University</li>
               <li>Ala Alazzeh, Birzeit University</li>
-			  			  <li>Alaa Aljabari, Birzeit University</li>
-              <li>Ali AlKhathlan, Assistant Professor King Abdulaziz University</li>
+			  			<li>Alaa Aljabari, Birzeit University</li>
+              <li>Ali AlKhathlan, King Abdulaziz University</li>
               <li>Almoataz B. Al-Said, Cairo University</li>
               <li>Areej Jaber, Technical University Khadouri</li>
               <li>Ashraf Elnagar, University of Sharjah</li>
               <li>Ayah Soufan, Strathclyde University</li>
               <li>Azzeddine Mazroui, University Mohammed First, Faculty of Sciences</li>
-			  			  <li>Aziz Mohaisen, University of Central Florida</li>
+			  			<li>Aziz Mohaisen, University of Central Florida</li>
               <li>Badr AlKhamissi, EPFL</li>
               <li>Baker Abdalhaq, Annajah National University</li>
               <li>Basem Ezbidi, Birzeit university</li>
               <li>Bassam Haddad, University of Petra</li>
-              <li>Bayan AbuShawar, Associate Professor-Cyber security Department-Al Ain University</li>
-              			  <li>Bashar Tahayna, Birzeit University</li>
-			  <li>Dana Abdulrahim, University of Bahrain</li>
+              <li>Bayan AbuShawar, Al Ain University</li>
+              <li>Bashar Tahayna, Birzeit University</li>
+			        <li>Dana Abdulrahim, University of Bahrain</li>
               <li>Dima Taji, Charles University, Faculty of Mathematics and Physics, Institute of Formal and Applied Linguistics</li>
               <li>ElMoatez Billah Nagoudi, The University of British Columbia</li>
               <li>Eyad Elyan, Robert Gordon University</li>
-              <li>Fadhl Eryani, University of Tübingen</li>
+              <li>Fadhl Eryani, University of Tubingen</li>
               <li>Fadi Zaraket, American University of Beirut</li>
               <li>Faisal Awartani, Insights for Research Polling and Training</li>
               <li>Fatemah Husain, Kuwait University</li>
@@ -616,15 +659,15 @@ The Workshop Organizers
               <li>Fethi Bougares, LIUM- Le Mans Université</li>
               <li>Fouzi Harrag, Ferhat Abbas University</li>
               <li>Ghassan Mourad, libanese university</li>
-			  			  <li>Ghada Almadbouh, Birzeit University</li>
+			  			<li>Ghada Almadbouh, Birzeit University</li>
               <li>Go Inoue, Mohamed bin Zayed University of Artificial Intelligence</li>
               <li>Habiba Dahmani, Mohamed  Boudiaf University</li>
               <li>Haithem Afli, ADAPT Centre, Munster Technological University</li>
               <li>Hamada Nayel, Benha University</li>
               <li>Ibrahim Abu Farha, University of Sheffield</li>
-			  			  <li>Ibrahim Bounhas, Université de la Manouba Engineering & Technology</li>
+			  			<li>Ibrahim Bounhas, Universite de la Manouba Engineering & Technology</li>
               <li>Imed Zitouni, Google</li>
-              <li>Imene Bensalem, ESCF de Constantine &amp; MISC Lab, Constantine 2 University, Algeria</li>
+              <li>Imene Bensalem, ESCF de Constantine &amp; MISC Lab, Constantine 2 University</li>
               <li>Injy Hamed, Institute for Natural Language Processing, University of Stuttgart</li>
               <li>Kamel Gaanoun, National Institute of Statistics and Applied Economics</li>
               <li>Kamel Smaili, LORIA</li>
@@ -634,47 +677,46 @@ The Workshop Organizers
               <li>Khalid Choukri, ELRA/ELDA</li>
               <li>Khalil Mrini, Bytedance</li>
               <li>Khloud Al Jallad, SySSR</li>
-					<li>Kholoud Aldous, Northwestern University in Qatar‏</li>
+					    <li>Kholoud Aldous, Northwestern University in Qatar</li>
               <li>Labib Arafeh, AlQuds University</li>
               <li>Lama Nachman, Intel Labs</li>
-              <li>Lamia Hadrich-Belguith, ANLP Research Group, MIRACL Lab, FSEGS, Sfax University</li>
+              <li>Lamia Hadrich-Belguith, Sfax University</li>
               <li>Majdi Sawalha, The University of Jordan</li>
               <li>Manar Alkhatib, British University in Dubai</li>
               <li>Maram Hasanain, Qatar Computing Research Institute</li>
               <li>Mo El-Haj, Lancaster University</li>
-              <li>Mohamed Lichouri, Centre de Recherche Scientifique et Technique pour le Développement de la Langue Arabe (CRSTDLA)</li>
+              <li>Mohamed Lichouri, Centre de Recherche Scientifique et Technique pour le Developpement de la Langue Arabe</li>
               <li>Mohamed Yahya, NLP Researcher</li>
               <li>Mohammad Abuoudeh, Al Hussein Bin Talal University</li>
               <li>Mohammed Attia, Google Inc.</li>
               <li>Mohammed Khalilia, Birzeit University</li>
-              <li>Mohammed Salah Al-Radhi, Budapest University of Technology and Economics, Department of Telecommunications and Media Informatics</li>
-              			  <li>Mohammad Azza, Princess Sumaya University for Technology</li>
-			  			  <li>Mahmoud Al-Ayyoub, Jordan University of Science and Technology</li>			  
-
-			  <li>Mona Baker, University of Oslo</li>
+              <li>Mohammed Salah Al-Radhi, Budapest University of Technology and Economics</li>
+              <li>Mohammad Azza, Princess Sumaya University for Technology</li>
+			  			<li>Mahmoud Al-Ayyoub, Jordan University of Science and Technology</li>			  
+	  		      <li>Mona Baker, University of Oslo</li>
               <li>Moustafa Al-Hajj, Lebanese University</li>
               <li>Muhammad Abdul-Mageed, The University of British Columbia</li>
-						<li>Mohammad Ateeq, Xi'an Jiaotong-Liverpool University</li>
-						<li>Mourad Abbas, University of Science and Technology Houari Boumediene‏</li>
+  						<li>Mohammad Ateeq, Xi'an Jiaotong-Liverpool University</li>
+  						<li>Mourad Abbas, University of Science and Technology Houari Boumediene</li>
               <li>Munir Fakher Eldin, Birzeit University</li>
               <li>Munther Dahleh, MIT</li>
               <li>Nada Ghneim, Damascus University - Information Technology Engineering Faculty</li>
-			  			  <li>Nagham Hamad, Birzeit University</li>
+			  			<li>Nagham Hamad, Birzeit University</li>
 						  <li>Nizar Habash, New York University</li>
               <li>Omar Shehabi, Yale Law School</li>
               <li>Omar Tesdell, Birzeit University</li>
               <li>Omar Trigui, University of Sousse in Tunisia</li>
-					<li>Omar Qawasmeh, Princess Sumaya University for Technology</li>
-					<li>Osama Hamed, Palestine Technical University</li>
-					<li>Oussama Ben Khiroun, University of Manouba</li>
+					    <li>Omar Qawasmeh, Princess Sumaya University for Technology</li>
+					    <li>Osama Hamed, Palestine Technical University</li>
+					    <li>Oussama Ben Khiroun, University of Manouba</li>
               <li>Owen Rambow, Stony Brook University</li>
               <li>Radi Jarrar, Birzeit University</li>
               <li>Radwan Tahboub, Palestine Polytechnic University</li>
               <li>Raia Abu Ahmad, DFKI</li>
-			  		<li>Rana Malhas, Qatar University</li>
-					<li>Razan Jaber, Stockholm University</li>
-					<li>Rebhi Baraka, Islamic University of Gaza</li>
-					<li>Rehab Duwairi, Jordan University of Science and Technology</li>
+			  		  <li>Rana Malhas, Qatar University</li>
+					    <li>Razan Jaber, Stockholm University</li>
+					    <li>Rebhi Baraka, Islamic University of Gaza</li>
+					    <li>Rehab Duwairi, Jordan University of Science and Technology</li>
               <li>Reem Suwaileh, Qatar University</li>
               <li>Saad Ezzini, Lancaster University</li>
               <li>Sabri Boughorbel, Qatar Computing Research Institute</li>
@@ -682,22 +724,22 @@ The Workshop Organizers
               <li>salima mdhaffar, LIA - University of Avignon</li>
               <li>Samhaa R. El-Beltagy, Newgiza University/Optomatica</li>
 			  			<li>Sara Nabhani, De Rijksuniversiteit Groningen</li>
-						<li>Samir Abdaljalil, Texas A&M University</li>
-						<li>Samir Tartir, ‏Al Hussein Technical University</li>
-						<li>Sanaa kaddoura, Zayed University - United Arab Emirates</li>
+						  <li>Samir Abdaljalil, Texas A&M University</li>
+						  <li>Samir Tartir, Al Hussein Technical University</li>
+						  <li>Sanaa kaddoura, Zayed University</li>
               <li>Seif Mechti, ISSEPS</li>
               <li>Serin Atiani, Princess Sumaya University for Technology</li>
               <li>Shady Elbassuoni, American University of Beirut</li>
               <li>Sultan Alrowili, University of Delaware</li>
               <li>Susan Akram, Boston University</li>
               <li>Tamer Elsayed, Qatar University</li>
-			  <li>Thaher Gharabeh, Univeristy of Granada</li>
+			        <li>Thaher Gharabeh, Univeristy of Granada</li>
               <li>Wajdi Zaghouani, Northwestern University Qatar</li>
               <li>Walid Magdy, The University of Edinburgh</li>
               <li>Wassim El-Hajj, American University of Beirut</li>
               <li>Wissam Antoun, Inria</li>
               <li>Yahya Mohamed Elhadj, Arab Center for Research and Policy Studies</li>
-					<li>ZeNina Jallad, Birzeit University</li>			  
+				    	<li>Zeina Jallad, Birzeit University</li>			  
             </ul>
 			
 		  <!--

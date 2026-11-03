@@ -338,6 +338,48 @@ th{
     text-align: right;
 }
 
+.ljtext {
+    font-size: 13px;
+    margin: 8px 0 0;
+}
+
+.ljtable {
+    margin-top: 10px;
+    font-size: 12px;
+    width: auto;
+}
+
+.ljtable th, .ljtable td {
+    padding: 4px 10px;
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.ljtable th {
+    background: none;
+}
+
+.ljtable tbody {
+    border-top: 2px solid #999;
+}
+
+.ljtable .l {
+    text-align: left;
+}
+
+.ljtable .grp {
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.ljtable .grp small {
+    display: block;
+    font-weight: 400;
+    color: #777;
+}
+
 </style>
   </head>
 
@@ -537,6 +579,54 @@ th{
             <tfoot><tr><th colspan="2" class="r">Total</th><th>1124</th><th>126 (11.2%)</th><th>470 (41.8%)</th><th>402 (35.7%)</th><th>115 (10.2%)</th></tr></tfoot>
           </table>
           </div>
+        </details>
+
+        <details class="sectoggle">
+          <summary><span class="secicon"></span>LLM-as-a-Judge results</summary>
+          <p class="ljtext">We test each LLM as a judge that labels responses as <em>Aligned</em> or <em>Misaligned</em>, and compare its labels with the human annotations under three prompting setups. ChatGPT is the most reliable judge in every setup (best weighted F1 of .8984 with few-shot). Few-shot examples change little for ChatGPT, Grok and Gemini, but substantially raise Fanar's recall of <em>Misaligned</em> and its F1: the examples mainly shift how strictly a model separates aligned from misaligned responses.</p>
+          <div class="tablewrap">
+          <table class="ljtable">
+            <thead><tr><th class="l">Method</th><th class="l">Model</th><th>n</th><th>Precision</th><th>Recall</th><th>Macro F1</th><th>Weighted F1</th></tr></thead>
+            <tbody>
+              <tr><td class="l grp" rowspan="4">Zero-Shot 1<small>(no instructions)</small></td><td class="l">ChatGPT</td><td>3356</td><td>.7858</td><td>.8953</td><td>.8746</td><td><strong>.8876</strong></td></tr>
+              <tr><td class="l">Grok</td><td>3356</td><td>.8604</td><td>.7523</td><td>.8577</td><td>.8767</td></tr>
+              <tr><td class="l">Gemini</td><td>3356</td><td>.8023</td><td>.8279</td><td>.8614</td><td>.8774</td></tr>
+              <tr><td class="l">Fanar</td><td>2178</td><td>.871</td><td>.3153</td><td>.6924</td><td>.8363</td></tr>
+            </tbody>
+            <tbody>
+              <tr><td class="l grp" rowspan="4">Zero-Shot 2<small>(with instructions)</small></td><td class="l">ChatGPT</td><td>3356</td><td>.7964</td><td>.898</td><td>.8805</td><td><strong>.8900</strong></td></tr>
+              <tr><td class="l">Grok</td><td>3356</td><td>.8503</td><td>.7914</td><td>.8683</td><td>.8851</td></tr>
+              <tr><td class="l">Gemini</td><td>3356</td><td>.8219</td><td>.8197</td><td>.8669</td><td>.8829</td></tr>
+              <tr><td class="l">Fanar</td><td>2237</td><td>.873</td><td>.257</td><td>.656</td><td>.8157</td></tr>
+            </tbody>
+            <tbody>
+              <tr><td class="l grp" rowspan="4">Few-Shot<small>(four examples)</small></td><td class="l">ChatGPT</td><td>3356</td><td>.8184</td><td>.8825</td><td>.8858</td><td><strong>.8984</strong></td></tr>
+              <tr><td class="l">Grok</td><td>3356</td><td>.8615</td><td>.765</td><td>.8629</td><td>.8810</td></tr>
+              <tr><td class="l">Gemini</td><td>3356</td><td>.8602</td><td>.8124</td><td>.8795</td><td>.8946</td></tr>
+              <tr><td class="l">Fanar</td><td>2193</td><td>.794</td><td>.4523</td><td>.7518</td><td>.8619</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="heatcaption">Judge performance against human annotations. Precision, Recall and Macro F1 are for the <em>Misaligned</em> class; n = responses judged.</p>
+          <div class="tablewrap">
+          <table class="ljtable">
+            <thead><tr><th class="l" rowspan="2">Setup</th><th class="l" rowspan="2">Human label</th><th colspan="2">ChatGPT</th><th colspan="2">Grok</th><th colspan="2">Gemini</th><th colspan="2">Fanar</th></tr>
+            <tr><th>A</th><th>M</th><th>A</th><th>M</th><th>A</th><th>M</th><th>A</th><th>M</th></tr></thead>
+            <tbody>
+              <tr><td class="l grp" rowspan="2">Zero-Shot 1</td><td class="l">Aligned</td><td>1990</td><td>268</td><td>2123</td><td>134</td><td>2034</td><td>224</td><td>1753</td><td>19</td></tr>
+              <tr><td class="l">Misaligned</td><td>115</td><td>983</td><td>272</td><td>826</td><td>189</td><td>909</td><td>278</td><td>128</td></tr>
+            </tbody>
+            <tbody>
+              <tr><td class="l grp" rowspan="2">Zero-Shot 2</td><td class="l">Aligned</td><td>2006</td><td>252</td><td>2105</td><td>153</td><td>2063</td><td>195</td><td>1793</td><td>16</td></tr>
+              <tr><td class="l">Misaligned</td><td>112</td><td>986</td><td>229</td><td>869</td><td>198</td><td>900</td><td>318</td><td>110</td></tr>
+            </tbody>
+            <tbody>
+              <tr><td class="l grp" rowspan="2">Few-Shot</td><td class="l">Aligned</td><td>2043</td><td>215</td><td>2123</td><td>135</td><td>2113</td><td>145</td><td>1736</td><td>48</td></tr>
+              <tr><td class="l">Misaligned</td><td>129</td><td>969</td><td>258</td><td>840</td><td>206</td><td>892</td><td>224</td><td>185</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="heatcaption">Confusion matrices per judge model. A = predicted <em>Aligned</em>, M = predicted <em>Misaligned</em>.</p>
         </details>
       </div>
 	  <br>

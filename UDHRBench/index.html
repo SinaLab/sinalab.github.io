@@ -222,6 +222,64 @@ th{
     display: inline-block;
 }
 
+.heatmap {
+    font-size: 12px;
+}
+
+.heatmap th, .heatmap td {
+    padding: 4px 2px;
+    text-align: center;
+    border: 2px solid #fff;
+    min-width: 26px;
+}
+
+.heatmap th {
+    background: none;
+    font-weight: 700;
+}
+
+.heatmap th small {
+    display: block;
+    font-weight: 400;
+    font-size: 10px;
+    color: #777;
+}
+
+.heatmap .l {
+    text-align: left;
+    white-space: nowrap;
+    font-weight: 700;
+    background: none;
+    padding-right: 8px;
+}
+
+.heatmap th.l {
+    font-weight: 400;
+    color: #777;
+}
+
+.heatlegend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    font-size: 11px;
+    color: #777;
+}
+
+.heatlegend i {
+    width: 160px;
+    height: 10px;
+    border-radius: 2px;
+    background: linear-gradient(to right, #fbf3ec, #c0492b);
+}
+
+.heatcaption {
+    font-size: 12px;
+    color: #666;
+    margin-top: 6px;
+}
+
 </style>
   </head>
 
@@ -361,6 +419,21 @@ th{
           </tbody>
         </table>
         </div>
+
+        <h4 style="margin: 24px 0 6px; font-size: 16px !important;">Misalignment across all 30 articles</h4>
+        <div class="heatlegend"><span>0%</span><i></i><span>84%</span></div>
+        <div class="tablewrap">
+        <table class="heatmap">
+          <thead><tr><th class="l">Article / n</th><th>1<small>129</small></th><th>2<small>153</small></th><th>3<small>127</small></th><th>4<small>17</small></th><th>5<small>33</small></th><th>6<small>76</small></th><th>7<small>53</small></th><th>8<small>16</small></th><th>9<small>37</small></th><th>10<small>25</small></th><th>11<small>19</small></th><th>12<small>48</small></th><th>13<small>38</small></th><th>14<small>23</small></th><th>15<small>18</small></th><th>16<small>74</small></th><th>17<small>13</small></th><th>18<small>14</small></th><th>19<small>15</small></th><th>20<small>18</small></th><th>21<small>17</small></th><th>22<small>16</small></th><th>23<small>18</small></th><th>24<small>22</small></th><th>25<small>10</small></th><th>26<small>16</small></th><th>27<small>21</small></th><th>28<small>20</small></th><th>29<small>19</small></th><th>30<small>20</small></th></tr></thead>
+          <tbody>
+            <tr><td class="l">ChatGPT</td><td style="background:#f9ede5">3</td><td style="background:#f7e9e1">5</td><td style="background:#f5e3da">8</td><td style="background:#fbf3ec">0</td><td style="background:#f7e7de">6</td><td style="background:#f5e1d7">9</td><td style="background:#f7e7de">6</td><td style="background:#f2d9ce">13</td><td style="background:#f1d7cc">14</td><td style="background:#eac2b5">24</td><td style="background:#de9e8c">42</td><td style="background:#f7e7de">6</td><td style="background:#eecdc0">19</td><td style="background:#e9beb0">26</td><td style="background:#ecc6b9">22</td><td style="background:#f5e3da">8</td><td style="background:#e5b4a5">31</td><td style="background:#fbf3ec">0</td><td style="background:#f2d9ce">13</td><td style="background:#efd1c5">17</td><td style="background:#eecfc3">18</td><td style="background:#f2d9ce">13</td><td style="background:#e0a492">39</td><td style="background:#eecfc3">18</td><td style="background:#fbf3ec">0</td><td style="background:#f9ede5">3</td><td style="background:#f4dfd5">10</td><td style="background:#f4dfd5">10</td><td style="background:#e5b2a2">32</td><td style="background:#edcbbe">20</td></tr>
+            <tr><td class="l">Grok</td><td style="background:#e0a695">38</td><td style="background:#dfa290">40</td><td style="background:#dea08e">41</td><td style="background:#cd6f57;color:#fff;font-weight:700">65</td><td style="background:#d9927e">48</td><td style="background:#f0d3c7">16</td><td style="background:#ecc8bc">21</td><td style="background:#e5b4a5">31</td><td style="background:#d9907b">49</td><td style="background:#dfa290">40</td><td style="background:#cb6950;color:#fff;font-weight:700">68</td><td style="background:#e8bcae">27</td><td style="background:#e1a897">37</td><td style="background:#d07860">61</td><td style="background:#d4846e">55</td><td style="background:#eecdc0">19</td><td style="background:#c0492b;color:#fff;font-weight:700">84</td><td style="background:#e2aa99">36</td><td style="background:#da9480">47</td><td style="background:#d4826b">56</td><td style="background:#c14d30;color:#fff;font-weight:700">82</td><td style="background:#d4826b">56</td><td style="background:#c14b2d;color:#fff;font-weight:700">83</td><td style="background:#c86147;color:#fff;font-weight:700">72</td><td style="background:#dfa290">40</td><td style="background:#cf745b">63</td><td style="background:#cc6b52;color:#fff;font-weight:700">67</td><td style="background:#cd6f57;color:#fff;font-weight:700">65</td><td style="background:#d68872">53</td><td style="background:#db9885">45</td></tr>
+            <tr><td class="l">Gemini</td><td style="background:#e4b0a0">33</td><td style="background:#e2ac9c">35</td><td style="background:#e1a897">37</td><td style="background:#da9480">47</td><td style="background:#db9885">45</td><td style="background:#efd1c5">17</td><td style="background:#f3ddd3">11</td><td style="background:#dc9a87">44</td><td style="background:#dea08e">41</td><td style="background:#d9927e">48</td><td style="background:#cf745b">63</td><td style="background:#e9c0b3">25</td><td style="background:#e7b8a9">29</td><td style="background:#d38069">57</td><td style="background:#dc9a87">44</td><td style="background:#f0d5ca">15</td><td style="background:#d07860">61</td><td style="background:#e7baac">28</td><td style="background:#dfa290">40</td><td style="background:#dc9a87">44</td><td style="background:#d68872">53</td><td style="background:#d88e79">50</td><td style="background:#d07860">61</td><td style="background:#d58670">54</td><td style="background:#edcbbe">20</td><td style="background:#d88e79">50</td><td style="background:#d68a75">52</td><td style="background:#d4846e">55</td><td style="background:#da9480">47</td><td style="background:#db9885">45</td></tr>
+            <tr><td class="l">Fanar</td><td style="background:#f0d3c7">16</td><td style="background:#f7e9e1">5</td><td style="background:#f5e1d7">9</td><td style="background:#f3dbd0">12</td><td style="background:#f5e1d7">9</td><td style="background:#f7e9e1">5</td><td style="background:#f8ebe3">4</td><td style="background:#f7e7de">6</td><td style="background:#f9ede5">3</td><td style="background:#edcbbe">20</td><td style="background:#ecc8bc">21</td><td style="background:#f5e3da">8</td><td style="background:#f7e9e1">5</td><td style="background:#f5e1d7">9</td><td style="background:#e4b0a0">33</td><td style="background:#f5e3da">8</td><td style="background:#f0d5ca">15</td><td style="background:#e7baac">28</td><td style="background:#fbf3ec">0</td><td style="background:#f0d3c7">16</td><td style="background:#e2ac9c">35</td><td style="background:#f2d9ce">13</td><td style="background:#f3ddd3">11</td><td style="background:#f2d9ce">13</td><td style="background:#fbf3ec">0</td><td style="background:#f2d9ce">13</td><td style="background:#fbf3ec">0</td><td style="background:#e6b6a7">30</td><td style="background:#f3ddd3">11</td><td style="background:#f4dfd5">10</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p class="heatcaption">Share of misaligned responses (%) per model and article; n = questions probing each article. Article 17 (property) peaks at 84% for Grok; Article 23 (work) is ChatGPT's highest in the socio-economic cluster.</p>
       </div>
 	  <br>
 					  See <a href="https://www.jarrar.info/publications/RMSAJ26.pdf">article</a> for additional statistics and results.

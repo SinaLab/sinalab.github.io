@@ -278,6 +278,62 @@ th{
     margin-top: 6px;
 }
 
+.a1toggle {
+    margin-top: 18px;
+}
+
+.a1toggle summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.a1toggle summary::-webkit-details-marker {
+    display: none;
+}
+
+.a1icon::before {
+    content: "+";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.a1toggle[open] .a1icon::before {
+    content: "\2212";
+}
+
+.a1table {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.a1table th, .a1table td {
+    padding: 4px 6px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.a1table .l {
+    text-align: left;
+    white-space: normal;
+    min-width: 240px;
+}
+
+.a1table .r {
+    text-align: right;
+}
+
 </style>
   </head>
 
@@ -432,6 +488,48 @@ th{
         </table>
         </div>
         <p class="heatcaption">Share of misaligned responses (%) per model and article; n = questions probing each article. Article 17 (property) peaks at 84% for Grok; Article 23 (work) is ChatGPT's highest in the socio-economic cluster.</p>
+
+        <details class="a1toggle">
+          <summary><span class="a1icon"></span>Table A1: Number (and percentage) of misalignments per UDHR article across the four LLMs</summary>
+          <div class="tablewrap">
+          <table class="a1table">
+            <thead><tr><th>No.</th><th class="l">Article</th><th>#Q</th><th>ChatGPT</th><th>Grok</th><th>Gemini</th><th>Fanar</th></tr></thead>
+            <tbody>
+              <tr><td>A1</td><td class="l">All human beings are born free and equal in dignity and rights.</td><td>129</td><td>4 (3%)</td><td>49 (38%)</td><td>43 (33%)</td><td>20 (15.5%)</td></tr>
+              <tr><td>A2</td><td class="l">Everyone is entitled to all rights without distinction of any kind.</td><td>153</td><td>8 (5.2%)</td><td>61 (40%)</td><td>53 (34.6%)</td><td>7 (4.5%)</td></tr>
+              <tr><td>A3</td><td class="l">Everyone has the right to life, liberty, and security of person.</td><td>127</td><td>10 (8%)</td><td>52 (41%)</td><td>47 (37%)</td><td>12 (9%)</td></tr>
+              <tr><td>A4</td><td class="l">No one shall be held in slavery or servitude.</td><td>17</td><td>0</td><td>11 (65%)</td><td>8 (47%)</td><td>2 (11.7%)</td></tr>
+              <tr><td>A5</td><td class="l">No one shall be subjected to torture or cruel, inhuman, or degrading treatment or punishment.</td><td>33</td><td>2 (6.1%)</td><td>16 (48%)</td><td>15 (45%)</td><td>3 (9%)</td></tr>
+              <tr><td>A6</td><td class="l">Everyone has the right to recognition everywhere as a person before the law.</td><td>76</td><td>7 (9%)</td><td>12 (16%)</td><td>13 (17%)</td><td>4 (5%)</td></tr>
+              <tr><td>A7</td><td class="l">All are equal before the law and entitled to equal protection without discrimination.</td><td>53</td><td>3 (5.6%)</td><td>11 (21%)</td><td>6 (11%)</td><td>2 (3.7%)</td></tr>
+              <tr><td>A8</td><td class="l">Everyone has the right to an effective remedy by national tribunals for violations of their rights.</td><td>16</td><td>2 (12.5%)</td><td>5 (31%)</td><td>7 (44%)</td><td>1 (6%)</td></tr>
+              <tr><td>A9</td><td class="l">No one shall be subjected to arbitrary arrest, detention or exile.</td><td>37</td><td>5 (13.5%)</td><td>18 (49%)</td><td>15 (40.5%)</td><td>1 (2.7%)</td></tr>
+              <tr><td>A10</td><td class="l">Everyone is entitled to a fair and public hearing by an independent and impartial tribunal.</td><td>25</td><td>6 (24%)</td><td>10 (40%)</td><td>12 (48%)</td><td>5 (20%)</td></tr>
+              <tr><td>A11</td><td class="l">Everyone charged with an offence has the right to be presumed innocent until proven guilty.</td><td>19</td><td>8 (42%)</td><td>13 (68%)</td><td>12 (63%)</td><td>4 (21%)</td></tr>
+              <tr><td>A12</td><td class="l">No one shall be subjected to arbitrary interference with privacy, family, home, or correspondence.</td><td>48</td><td>3 (6.25%)</td><td>13 (27%)</td><td>12 (25%)</td><td>4 (8%)</td></tr>
+              <tr><td>A13</td><td class="l">Everyone has the right to freedom of movement and to leave and return to their country.</td><td>38</td><td>9 (19%)</td><td>14 (37%)</td><td>11 (29%)</td><td>2 (5%)</td></tr>
+              <tr><td>A14</td><td class="l">Everyone has the right to seek and enjoy asylum from persecution in other countries.</td><td>23</td><td>6 (26%)</td><td>14 (61%)</td><td>13 (56.5%)</td><td>2 (8.6%)</td></tr>
+              <tr><td>A15</td><td class="l">Everyone has the right to a nationality and cannot be arbitrarily deprived of it.</td><td>18</td><td>4 (22%)</td><td>10 (55%)</td><td>8 (44%)</td><td>6 (33%)</td></tr>
+              <tr><td>A16</td><td class="l">Men and women of full age have the right to marry and found a family, with equal rights throughout.</td><td>74</td><td>6 (8%)</td><td>14 (19%)</td><td>11 (15%)</td><td>6 (8%)</td></tr>
+              <tr><td>A17</td><td class="l">Everyone has the right to own property and not be arbitrarily deprived of it.</td><td>13</td><td>4 (31%)</td><td>11 (84%)</td><td>8 (61%)</td><td>2 (15%)</td></tr>
+              <tr><td>A18</td><td class="l">Everyone has the right to freedom of thought, conscience and religion.</td><td>14</td><td>0</td><td>5 (36%)</td><td>4 (28%)</td><td>4 (28%)</td></tr>
+              <tr><td>A19</td><td class="l">Everyone has the right to freedom of opinion and expression.</td><td>15</td><td>2 (13%)</td><td>7 (47%)</td><td>6 (40%)</td><td>0</td></tr>
+              <tr><td>A20</td><td class="l">Everyone has the right to freedom of peaceful assembly and association.</td><td>18</td><td>3 (17%)</td><td>10 (55.5%)</td><td>8 (44%)</td><td>3 (16%)</td></tr>
+              <tr><td>A21</td><td class="l">Everyone has the right to take part in government and to equal access to public service.</td><td>17</td><td>3 (18%)</td><td>14 (82%)</td><td>9 (53%)</td><td>6 (35%)</td></tr>
+              <tr><td>A22</td><td class="l">Everyone has the right to social security and economic, social and cultural rights.</td><td>16</td><td>2 (12.5%)</td><td>9 (56%)</td><td>8 (50%)</td><td>2 (12.5%)</td></tr>
+              <tr><td>A23</td><td class="l">Everyone has the right to work, free choice of employment, just conditions and equal pay.</td><td>18</td><td>7 (39%)</td><td>15 (83%)</td><td>11 (61%)</td><td>2 (11%)</td></tr>
+              <tr><td>A24</td><td class="l">Everyone has the right to rest, leisure and reasonable limitation of working hours.</td><td>22</td><td>4 (18%)</td><td>16 (72%)</td><td>12 (54%)</td><td>3 (12.5%)</td></tr>
+              <tr><td>A25</td><td class="l">Everyone has the right to an adequate standard of living including food, housing and medical care.</td><td>10</td><td>0</td><td>4 (40%)</td><td>2 (20%)</td><td>0</td></tr>
+              <tr><td>A26</td><td class="l">Everyone has the right to education, which shall be free at least in elementary stages.</td><td>16</td><td>4 (25%)</td><td>10 (62.5%)</td><td>8 (50%)</td><td>2 (12.5%)</td></tr>
+              <tr><td>A27</td><td class="l">Everyone has the right to participate in cultural life and to benefit from scientific advances.</td><td>21</td><td>2 (9.5%)</td><td>14 (66.7%)</td><td>11 (52%)</td><td>0</td></tr>
+              <tr><td>A28</td><td class="l">Everyone is entitled to a social and international order where these rights can be realized.</td><td>19</td><td>2 (10%)</td><td>13 (65%)</td><td>11 (55%)</td><td>6 (30%)</td></tr>
+              <tr><td>A29</td><td class="l">Everyone has duties to the community; rights may be limited only to secure others' rights and meet just requirements of morality, public order and general welfare.</td><td>19</td><td>6 (32%)</td><td>10 (53%)</td><td>9 (47%)</td><td>2 (10.5%)</td></tr>
+              <tr><td>A30</td><td class="l">Nothing in the Declaration may be interpreted as implying any right to destroy any of the rights set forth herein.</td><td>20</td><td>4 (20%)</td><td>9 (45%)</td><td>9 (45%)</td><td>2 (10%)</td></tr>
+            </tbody>
+            <tfoot><tr><th colspan="2" class="r">Total</th><th>1124</th><th>126 (11.2%)</th><th>470 (41.8%)</th><th>402 (35.7%)</th><th>115 (10.2%)</th></tr></tfoot>
+          </table>
+          </div>
+        </details>
       </div>
 	  <br>
 					  See <a href="https://www.jarrar.info/publications/RMSAJ26.pdf">article</a> for additional statistics and results.

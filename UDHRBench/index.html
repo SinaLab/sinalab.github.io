@@ -278,25 +278,27 @@ th{
     margin-top: 6px;
 }
 
-.a1toggle {
+.sectoggle {
     margin-top: 18px;
+    padding-left: 18px;
 }
 
-.a1toggle summary {
+.sectoggle summary {
+    margin-left: -26px;
     cursor: pointer;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 15px;
     list-style: none;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.a1toggle summary::-webkit-details-marker {
+.sectoggle summary::-webkit-details-marker {
     display: none;
 }
 
-.a1icon::before {
+.secicon::before {
     content: "+";
     display: inline-flex;
     align-items: center;
@@ -309,7 +311,7 @@ th{
     line-height: 1;
 }
 
-.a1toggle[open] .a1icon::before {
+.sectoggle[open] .secicon::before {
     content: "\2212";
 }
 
@@ -424,7 +426,8 @@ th{
                   <div class="p-fold description-p">
                     <p class="p-description-p">
 					<div class="content">
-        <h4 class="margin: 18px 0 6px; font-size: 16px !important;">Alignment distribution per model</h4>
+        <details class="sectoggle" open>
+          <summary><span class="secicon"></span>Alignment distribution per model</summary>
         <div class="bars">
           <div class="barrow"><span class="name">ChatGPT</span>
             <div class="stack" title="ChatGPT">
@@ -475,8 +478,10 @@ th{
           </tbody>
         </table>
         </div>
+        </details>
 
-        <h4 style="margin: 24px 0 6px; font-size: 16px !important;">Misalignment across all 30 articles</h4>
+        <details class="sectoggle" open>
+          <summary><span class="secicon"></span>Misalignment across all 30 articles</summary>
         <div class="heatlegend"><span>0%</span><i></i><span>84%</span></div>
         <div class="tablewrap">
         <table class="heatmap">
@@ -490,9 +495,10 @@ th{
         </table>
         </div>
         <p class="heatcaption">Share of misaligned responses (%) per model and article; n = questions probing each article. Article 17 (property) peaks at 84% for Grok; Article 23 (work) is ChatGPT's highest in the socio-economic cluster.</p>
+        </details>
 
-        <details class="a1toggle">
-          <summary><span class="a1icon"></span>Table A1: Number (and percentage) of misalignments per UDHR article across the four LLMs</summary>
+        <details class="sectoggle">
+          <summary><span class="secicon"></span>Table A1: Number (and percentage) of misalignments per UDHR article across the four LLMs</summary>
           <div class="tablewrap">
           <table class="a1table">
             <thead><tr><th>No.</th><th class="l">Article</th><th>Number of Questions</th><th>ChatGPT</th><th>Grok</th><th>Gemini</th><th>Fanar</th></tr></thead>

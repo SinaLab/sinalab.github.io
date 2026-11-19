@@ -220,6 +220,166 @@ th{
     display: inline-block;
 }
 
+.heatmap {
+    font-size: 12px;
+}
+
+.heatmap th, .heatmap td {
+    padding: 4px 2px;
+    text-align: center;
+    border: 2px solid #fff;
+    min-width: 26px;
+}
+
+.heatmap th {
+    background: none;
+    font-weight: 700;
+}
+
+.heatmap th small {
+    display: block;
+    font-weight: 400;
+    font-size: 10px;
+    color: #777;
+}
+
+.heatmap .l {
+    text-align: left;
+    white-space: nowrap;
+    font-weight: 700;
+    background: none;
+    padding-right: 8px;
+}
+
+.heatmap th.l {
+    font-weight: 400;
+    color: #777;
+}
+
+.heatlegend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    font-size: 11px;
+    color: #777;
+}
+
+.heatlegend i {
+    width: 160px;
+    height: 10px;
+    border-radius: 2px;
+    background: linear-gradient(to right, #fbf3ec, #c0492b);
+}
+
+.heatcaption {
+    font-size: 12px;
+    color: #666;
+    margin-top: 6px;
+}
+
+.sectoggle {
+    margin-top: 18px;
+    padding-left: 18px;
+}
+
+.sectoggle summary {
+    margin-left: -26px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sectoggle summary::-webkit-details-marker {
+    display: none;
+}
+
+.secicon::before {
+    content: "+";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.sectoggle[open] .secicon::before {
+    content: "\2212";
+}
+
+.a1table {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.a1table th, .a1table td {
+    padding: 4px 6px;
+    border: 1px solid #fff;
+    border-bottom-color: #e6e6e6;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.a1table .l {
+    text-align: left;
+    white-space: normal;
+    min-width: 240px;
+}
+
+.a1table .r {
+    text-align: right;
+}
+
+.ljtext {
+    font-size: 13px;
+    margin: 8px 0 0;
+}
+
+.ljtable {
+    margin-top: 10px;
+    font-size: 12px;
+    width: auto;
+}
+
+.ljtable th, .ljtable td {
+    padding: 4px 10px;
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.ljtable th {
+    background: none;
+}
+
+.ljtable tbody {
+    border-top: 2px solid #999;
+}
+
+.ljtable .l {
+    text-align: left;
+}
+
+.ljtable .grp {
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.ljtable .grp small {
+    display: block;
+    font-weight: 400;
+    color: #777;
+}
+
 </style>
   </head>
 
@@ -308,7 +468,8 @@ th{
                   <div class="p-fold description-p">
                     <p class="p-description-p">
 					<div class="content">
-        <h4 class="margin: 18px 0 6px; font-size: 16px !important;">Alignment distribution per model</h4>
+        <details class="sectoggle" open>
+          <summary><span class="secicon"></span>Alignment distribution per model</summary>
         <div class="bars">
           <div class="barrow"><span class="name">ChatGPT</span>
             <div class="stack" title="ChatGPT">
@@ -359,9 +520,117 @@ th{
           </tbody>
         </table>
         </div>
+        </details>
+
+        <details class="sectoggle" open>
+          <summary><span class="secicon"></span>Misalignment across all 30 articles</summary>
+        <div class="heatlegend"><span>0%</span><i></i><span>84%</span></div>
+        <div class="tablewrap">
+        <table class="heatmap">
+          <thead><tr><th class="l">Article / n</th><th>1<small>129</small></th><th>2<small>153</small></th><th>3<small>127</small></th><th>4<small>17</small></th><th>5<small>33</small></th><th>6<small>76</small></th><th>7<small>53</small></th><th>8<small>16</small></th><th>9<small>37</small></th><th>10<small>25</small></th><th>11<small>19</small></th><th>12<small>48</small></th><th>13<small>38</small></th><th>14<small>23</small></th><th>15<small>18</small></th><th>16<small>74</small></th><th>17<small>13</small></th><th>18<small>14</small></th><th>19<small>15</small></th><th>20<small>18</small></th><th>21<small>17</small></th><th>22<small>16</small></th><th>23<small>18</small></th><th>24<small>22</small></th><th>25<small>10</small></th><th>26<small>16</small></th><th>27<small>21</small></th><th>28<small>20</small></th><th>29<small>19</small></th><th>30<small>20</small></th></tr></thead>
+          <tbody>
+            <tr><td class="l">ChatGPT</td><td style="background:#f9ede5">3</td><td style="background:#f7e9e1">5</td><td style="background:#f5e3da">8</td><td style="background:#fbf3ec">0</td><td style="background:#f7e7de">6</td><td style="background:#f5e1d7">9</td><td style="background:#f7e7de">6</td><td style="background:#f2d9ce">13</td><td style="background:#f1d7cc">14</td><td style="background:#eac2b5">24</td><td style="background:#de9e8c">42</td><td style="background:#f7e7de">6</td><td style="background:#eecdc0">19</td><td style="background:#e9beb0">26</td><td style="background:#ecc6b9">22</td><td style="background:#f5e3da">8</td><td style="background:#e5b4a5">31</td><td style="background:#fbf3ec">0</td><td style="background:#f2d9ce">13</td><td style="background:#efd1c5">17</td><td style="background:#eecfc3">18</td><td style="background:#f2d9ce">13</td><td style="background:#e0a492">39</td><td style="background:#eecfc3">18</td><td style="background:#fbf3ec">0</td><td style="background:#f9ede5">3</td><td style="background:#f4dfd5">10</td><td style="background:#f4dfd5">10</td><td style="background:#e5b2a2">32</td><td style="background:#edcbbe">20</td></tr>
+            <tr><td class="l">Grok</td><td style="background:#e0a695">38</td><td style="background:#dfa290">40</td><td style="background:#dea08e">41</td><td style="background:#cd6f57;color:#fff;font-weight:700">65</td><td style="background:#d9927e">48</td><td style="background:#f0d3c7">16</td><td style="background:#ecc8bc">21</td><td style="background:#e5b4a5">31</td><td style="background:#d9907b">49</td><td style="background:#dfa290">40</td><td style="background:#cb6950;color:#fff;font-weight:700">68</td><td style="background:#e8bcae">27</td><td style="background:#e1a897">37</td><td style="background:#d07860">61</td><td style="background:#d4846e">55</td><td style="background:#eecdc0">19</td><td style="background:#c0492b;color:#fff;font-weight:700">84</td><td style="background:#e2aa99">36</td><td style="background:#da9480">47</td><td style="background:#d4826b">56</td><td style="background:#c14d30;color:#fff;font-weight:700">82</td><td style="background:#d4826b">56</td><td style="background:#c14b2d;color:#fff;font-weight:700">83</td><td style="background:#c86147;color:#fff;font-weight:700">72</td><td style="background:#dfa290">40</td><td style="background:#cf745b">63</td><td style="background:#cc6b52;color:#fff;font-weight:700">67</td><td style="background:#cd6f57;color:#fff;font-weight:700">65</td><td style="background:#d68872">53</td><td style="background:#db9885">45</td></tr>
+            <tr><td class="l">Gemini</td><td style="background:#e4b0a0">33</td><td style="background:#e2ac9c">35</td><td style="background:#e1a897">37</td><td style="background:#da9480">47</td><td style="background:#db9885">45</td><td style="background:#efd1c5">17</td><td style="background:#f3ddd3">11</td><td style="background:#dc9a87">44</td><td style="background:#dea08e">41</td><td style="background:#d9927e">48</td><td style="background:#cf745b">63</td><td style="background:#e9c0b3">25</td><td style="background:#e7b8a9">29</td><td style="background:#d38069">57</td><td style="background:#dc9a87">44</td><td style="background:#f0d5ca">15</td><td style="background:#d07860">61</td><td style="background:#e7baac">28</td><td style="background:#dfa290">40</td><td style="background:#dc9a87">44</td><td style="background:#d68872">53</td><td style="background:#d88e79">50</td><td style="background:#d07860">61</td><td style="background:#d58670">54</td><td style="background:#edcbbe">20</td><td style="background:#d88e79">50</td><td style="background:#d68a75">52</td><td style="background:#d4846e">55</td><td style="background:#da9480">47</td><td style="background:#db9885">45</td></tr>
+            <tr><td class="l">Fanar</td><td style="background:#f0d3c7">16</td><td style="background:#f7e9e1">5</td><td style="background:#f5e1d7">9</td><td style="background:#f3dbd0">12</td><td style="background:#f5e1d7">9</td><td style="background:#f7e9e1">5</td><td style="background:#f8ebe3">4</td><td style="background:#f7e7de">6</td><td style="background:#f9ede5">3</td><td style="background:#edcbbe">20</td><td style="background:#ecc8bc">21</td><td style="background:#f5e3da">8</td><td style="background:#f7e9e1">5</td><td style="background:#f5e1d7">9</td><td style="background:#e4b0a0">33</td><td style="background:#f5e3da">8</td><td style="background:#f0d5ca">15</td><td style="background:#e7baac">28</td><td style="background:#fbf3ec">0</td><td style="background:#f0d3c7">16</td><td style="background:#e2ac9c">35</td><td style="background:#f2d9ce">13</td><td style="background:#f3ddd3">11</td><td style="background:#f2d9ce">13</td><td style="background:#fbf3ec">0</td><td style="background:#f2d9ce">13</td><td style="background:#fbf3ec">0</td><td style="background:#e6b6a7">30</td><td style="background:#f3ddd3">11</td><td style="background:#f4dfd5">10</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p class="heatcaption">Share of misaligned responses (%) per model and article; n = questions probing each article. Article 17 (property) peaks at 84% for Grok; Article 23 (work) is ChatGPT's highest in the socio-economic cluster.</p>
+        </details>
+
+        <details class="sectoggle">
+          <summary><span class="secicon"></span>Table A1: Number (and percentage) of misalignments per UDHR article across the four LLMs</summary>
+          <div class="tablewrap">
+          <table class="a1table">
+            <thead><tr><th>No.</th><th class="l">Article</th><th>Number of Questions</th><th>ChatGPT</th><th>Grok</th><th>Gemini</th><th>Fanar</th></tr></thead>
+            <tbody>
+              <tr><td>A1</td><td class="l"><strong>(Equality)</strong> All human beings are born free and equal in dignity and rights.</td><td>129</td><td style="background:#f9ede5">4 (3%)</td><td style="background:#e0a695">49 (38%)</td><td style="background:#e4b0a0">43 (33%)</td><td style="background:#f0d4c8">20 (15.5%)</td></tr>
+              <tr><td>A2</td><td class="l"><strong>(Discrimination)</strong> Everyone is entitled to all rights without distinction of any kind.</td><td>153</td><td style="background:#f7e8e0">8 (5.2%)</td><td style="background:#dfa290">61 (40%)</td><td style="background:#e3ad9d">53 (34.6%)</td><td style="background:#f8eae2">7 (4.5%)</td></tr>
+              <tr><td>A3</td><td class="l"><strong>(Life)</strong> Everyone has the right to life, liberty, and security of person.</td><td>127</td><td style="background:#f5e3da">10 (8%)</td><td style="background:#dea08e">52 (41%)</td><td style="background:#e1a897">47 (37%)</td><td style="background:#f5e1d7">12 (9%)</td></tr>
+              <tr><td>A4</td><td class="l"><strong>(Slavery)</strong> No one shall be held in slavery or servitude.</td><td>17</td><td style="background:#fbf3ec">0</td><td style="background:#cd6f57;color:#fff;font-weight:700">11 (65%)</td><td style="background:#da9480">8 (47%)</td><td style="background:#f3dbd1">2 (11.7%)</td></tr>
+              <tr><td>A5</td><td class="l"><strong>(Torture)</strong> No one shall be subjected to torture or cruel, inhuman, or degrading treatment or punishment.</td><td>33</td><td style="background:#f7e7de">2 (6.1%)</td><td style="background:#d9927e">16 (48%)</td><td style="background:#db9885">15 (45%)</td><td style="background:#f5e1d7">3 (9%)</td></tr>
+              <tr><td>A6</td><td class="l"><strong>(Legal Recognition)</strong> Everyone has the right to recognition everywhere as a person before the law.</td><td>76</td><td style="background:#f5e1d7">7 (9%)</td><td style="background:#f0d3c7">12 (16%)</td><td style="background:#efd1c5">13 (17%)</td><td style="background:#f7e9e1">4 (5%)</td></tr>
+              <tr><td>A7</td><td class="l"><strong>(Legal Equality)</strong> All are equal before the law and entitled to equal protection without discrimination.</td><td>53</td><td style="background:#f7e8df">3 (5.6%)</td><td style="background:#ecc8bc">11 (21%)</td><td style="background:#f3ddd3">6 (11%)</td><td style="background:#f8ece3">2 (3.7%)</td></tr>
+              <tr><td>A8</td><td class="l"><strong>(Remedy)</strong> Everyone has the right to an effective remedy by national tribunals for violations of their rights.</td><td>16</td><td style="background:#f2dacf">2 (12.5%)</td><td style="background:#e5b4a5">5 (31%)</td><td style="background:#dc9a87">7 (44%)</td><td style="background:#f7e7de">1 (6%)</td></tr>
+              <tr><td>A9</td><td class="l"><strong>(Arrest)</strong> No one shall be subjected to arbitrary arrest, detention or exile.</td><td>37</td><td style="background:#f2d8cd">5 (13.5%)</td><td style="background:#d9907b">18 (49%)</td><td style="background:#dfa18f">15 (40.5%)</td><td style="background:#f9eee6">1 (2.7%)</td></tr>
+              <tr><td>A10</td><td class="l"><strong>(Hearing)</strong> Everyone is entitled to a fair and public hearing by an independent and impartial tribunal.</td><td>25</td><td style="background:#eac2b5">6 (24%)</td><td style="background:#dfa290">10 (40%)</td><td style="background:#d9927e">12 (48%)</td><td style="background:#edcbbe">5 (20%)</td></tr>
+              <tr><td>A11</td><td class="l"><strong>(Innocence)</strong> Everyone charged with an offence has the right to be presumed innocent until proven guilty.</td><td>19</td><td style="background:#de9e8c">8 (42%)</td><td style="background:#cb6950;color:#fff;font-weight:700">13 (68%)</td><td style="background:#cf745b">12 (63%)</td><td style="background:#ecc8bc">4 (21%)</td></tr>
+              <tr><td>A12</td><td class="l"><strong>(Privacy)</strong> No one shall be subjected to arbitrary interference with privacy, family, home, or correspondence.</td><td>48</td><td style="background:#f7e6de">3 (6.25%)</td><td style="background:#e8bcae">13 (27%)</td><td style="background:#e9c0b3">12 (25%)</td><td style="background:#f5e3da">4 (8%)</td></tr>
+              <tr><td>A13</td><td class="l"><strong>(Movement)</strong> Everyone has the right to freedom of movement and to leave and return to their country.</td><td>38</td><td style="background:#eecdc0">9 (19%)</td><td style="background:#e1a897">14 (37%)</td><td style="background:#e7b8a9">11 (29%)</td><td style="background:#f7e9e1">2 (5%)</td></tr>
+              <tr><td>A14</td><td class="l"><strong>(Asylum)</strong> Everyone has the right to seek and enjoy asylum from persecution in other countries.</td><td>23</td><td style="background:#e9beb0">6 (26%)</td><td style="background:#d07860">14 (61%)</td><td style="background:#d3816a">13 (56.5%)</td><td style="background:#f5e2d8">2 (8.6%)</td></tr>
+              <tr><td>A15</td><td class="l"><strong>(Nationality)</strong> Everyone has the right to a nationality and cannot be arbitrarily deprived of it.</td><td>18</td><td style="background:#ecc6b9">4 (22%)</td><td style="background:#d4846e">10 (55%)</td><td style="background:#dc9a87">8 (44%)</td><td style="background:#e4b0a0">6 (33%)</td></tr>
+              <tr><td>A16</td><td class="l"><strong>(Family)</strong> Men and women of full age have the right to marry and found a family, with equal rights throughout.</td><td>74</td><td style="background:#f5e3da">6 (8%)</td><td style="background:#eecdc0">14 (19%)</td><td style="background:#f0d5ca">11 (15%)</td><td style="background:#f5e3da">6 (8%)</td></tr>
+              <tr><td>A17</td><td class="l"><strong>(Property)</strong> Everyone has the right to own property and not be arbitrarily deprived of it.</td><td>13</td><td style="background:#e5b4a5">4 (31%)</td><td style="background:#c0492b;color:#fff;font-weight:700">11 (84%)</td><td style="background:#d07860">8 (61%)</td><td style="background:#f0d5ca">2 (15%)</td></tr>
+              <tr><td>A18</td><td class="l"><strong>(Belief)</strong> Everyone has the right to freedom of thought, conscience and religion.</td><td>14</td><td style="background:#fbf3ec">0</td><td style="background:#e2aa99">5 (36%)</td><td style="background:#e7baac">4 (28%)</td><td style="background:#e7baac">4 (28%)</td></tr>
+              <tr><td>A19</td><td class="l"><strong>(Opinion)</strong> Everyone has the right to freedom of opinion and expression.</td><td>15</td><td style="background:#f2d9ce">2 (13%)</td><td style="background:#da9480">7 (47%)</td><td style="background:#dfa290">6 (40%)</td><td style="background:#fbf3ec">0</td></tr>
+              <tr><td>A20</td><td class="l"><strong>(Assembly)</strong> Everyone has the right to freedom of peaceful assembly and association.</td><td>18</td><td style="background:#efd1c5">3 (17%)</td><td style="background:#d4836c">10 (55.5%)</td><td style="background:#dc9a87">8 (44%)</td><td style="background:#f0d3c7">3 (16%)</td></tr>
+              <tr><td>A21</td><td class="l"><strong>(Government)</strong> Everyone has the right to take part in government and to equal access to public service.</td><td>17</td><td style="background:#eecfc3">3 (18%)</td><td style="background:#c14d30;color:#fff;font-weight:700">14 (82%)</td><td style="background:#d68872">9 (53%)</td><td style="background:#e2ac9c">6 (35%)</td></tr>
+              <tr><td>A22</td><td class="l"><strong>(Social Security)</strong> Everyone has the right to social security and economic, social and cultural rights.</td><td>16</td><td style="background:#f2dacf">2 (12.5%)</td><td style="background:#d4826b">9 (56%)</td><td style="background:#d88e79">8 (50%)</td><td style="background:#f2dacf">2 (12.5%)</td></tr>
+              <tr><td>A23</td><td class="l"><strong>(Work)</strong> Everyone has the right to work, free choice of employment, just conditions and equal pay.</td><td>18</td><td style="background:#e0a492">7 (39%)</td><td style="background:#c14b2d;color:#fff;font-weight:700">15 (83%)</td><td style="background:#d07860">11 (61%)</td><td style="background:#f3ddd3">2 (11%)</td></tr>
+              <tr><td>A24</td><td class="l"><strong>(Rest)</strong> Everyone has the right to rest, leisure and reasonable limitation of working hours.</td><td>22</td><td style="background:#eecfc3">4 (18%)</td><td style="background:#c86147;color:#fff;font-weight:700">16 (72%)</td><td style="background:#d58670">12 (54%)</td><td style="background:#f2dacf">3 (12.5%)</td></tr>
+              <tr><td>A25</td><td class="l"><strong>(Living)</strong> Everyone has the right to an adequate standard of living including food, housing and medical care.</td><td>10</td><td style="background:#fbf3ec">0</td><td style="background:#dfa290">4 (40%)</td><td style="background:#edcbbe">2 (20%)</td><td style="background:#fbf3ec">0</td></tr>
+              <tr><td>A26</td><td class="l"><strong>(Education)</strong> Everyone has the right to education, which shall be free at least in elementary stages.</td><td>16</td><td style="background:#e9c0b3">4 (25%)</td><td style="background:#cf755c">10 (62.5%)</td><td style="background:#d88e79">8 (50%)</td><td style="background:#f2dacf">2 (12.5%)</td></tr>
+              <tr><td>A27</td><td class="l"><strong>(Culture)</strong> Everyone has the right to participate in cultural life and to benefit from scientific advances.</td><td>21</td><td style="background:#f4e0d6">2 (9.5%)</td><td style="background:#cc6c53;color:#fff;font-weight:700">14 (66.7%)</td><td style="background:#d68a75">11 (52%)</td><td style="background:#fbf3ec">0</td></tr>
+              <tr><td>A28</td><td class="l"><strong>(Order)</strong> Everyone is entitled to a social and international order where these rights can be realized.</td><td>19</td><td style="background:#f4dfd5">2 (10%)</td><td style="background:#cd6f57;color:#fff;font-weight:700">13 (65%)</td><td style="background:#d4846e">11 (55%)</td><td style="background:#e6b6a7">6 (30%)</td></tr>
+              <tr><td>A29</td><td class="l"><strong>(Duties)</strong> Everyone has duties to the community; rights may be limited only to secure others' rights and meet just requirements of morality, public order and general welfare.</td><td>19</td><td style="background:#e5b2a2">6 (32%)</td><td style="background:#d68872">10 (53%)</td><td style="background:#da9480">9 (47%)</td><td style="background:#f4ded4">2 (10.5%)</td></tr>
+              <tr><td>A30</td><td class="l"><strong>(Interference)</strong> Nothing in the Declaration may be interpreted as implying any right to destroy any of the rights set forth herein.</td><td>20</td><td style="background:#edcbbe">4 (20%)</td><td style="background:#db9885">9 (45%)</td><td style="background:#db9885">9 (45%)</td><td style="background:#f4dfd5">2 (10%)</td></tr>
+            </tbody>
+            <tfoot><tr><th colspan="2" class="r">Total</th><th>1124</th><th>126 (11.2%)</th><th>470 (41.8%)</th><th>402 (35.7%)</th><th>115 (10.2%)</th></tr></tfoot>
+          </table>
+          </div>
+        </details>
+
+        <details class="sectoggle">
+          <summary><span class="secicon"></span>LLM-as-a-Judge results</summary>
+          <p class="ljtext">We test each LLM as a judge that labels responses as <em>Aligned</em> or <em>Misaligned</em>, and compare its labels with the human annotations under three prompting setups. ChatGPT is the most reliable judge in every setup (best weighted F1 of .8984 with few-shot). Few-shot examples change little for ChatGPT, Grok and Gemini, but substantially raise Fanar's recall of <em>Misaligned</em> and its F1: the examples mainly shift how strictly a model separates aligned from misaligned responses.</p>
+          <div class="tablewrap">
+          <table class="ljtable">
+            <thead><tr><th class="l">Method</th><th class="l">Model</th><th>n</th><th>Precision</th><th>Recall</th><th>Macro F1</th><th>Weighted F1</th></tr></thead>
+            <tbody>
+              <tr><td class="l grp" rowspan="4">Zero-Shot 1<small>(no instructions)</small></td><td class="l">ChatGPT</td><td>3356</td><td>.7858</td><td>.8953</td><td>.8746</td><td><strong>.8876</strong></td></tr>
+              <tr><td class="l">Grok</td><td>3356</td><td>.8604</td><td>.7523</td><td>.8577</td><td>.8767</td></tr>
+              <tr><td class="l">Gemini</td><td>3356</td><td>.8023</td><td>.8279</td><td>.8614</td><td>.8774</td></tr>
+              <tr><td class="l">Fanar</td><td>2178</td><td>.871</td><td>.3153</td><td>.6924</td><td>.8363</td></tr>
+            </tbody>
+            <tbody>
+              <tr><td class="l grp" rowspan="4">Zero-Shot 2<small>(with instructions)</small></td><td class="l">ChatGPT</td><td>3356</td><td>.7964</td><td>.898</td><td>.8805</td><td><strong>.8900</strong></td></tr>
+              <tr><td class="l">Grok</td><td>3356</td><td>.8503</td><td>.7914</td><td>.8683</td><td>.8851</td></tr>
+              <tr><td class="l">Gemini</td><td>3356</td><td>.8219</td><td>.8197</td><td>.8669</td><td>.8829</td></tr>
+              <tr><td class="l">Fanar</td><td>2237</td><td>.873</td><td>.257</td><td>.656</td><td>.8157</td></tr>
+            </tbody>
+            <tbody>
+              <tr><td class="l grp" rowspan="4">Few-Shot<small>(four examples)</small></td><td class="l">ChatGPT</td><td>3356</td><td>.8184</td><td>.8825</td><td>.8858</td><td><strong>.8984</strong></td></tr>
+              <tr><td class="l">Grok</td><td>3356</td><td>.8615</td><td>.765</td><td>.8629</td><td>.8810</td></tr>
+              <tr><td class="l">Gemini</td><td>3356</td><td>.8602</td><td>.8124</td><td>.8795</td><td>.8946</td></tr>
+              <tr><td class="l">Fanar</td><td>2193</td><td>.794</td><td>.4523</td><td>.7518</td><td>.8619</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="heatcaption">Judge performance against human annotations. Precision, Recall and Macro F1 are for the <em>Misaligned</em> class; n = responses judged.</p>
+          <div class="tablewrap">
+          <table class="ljtable">
+            <thead><tr><th class="l" rowspan="2">Setup</th><th class="l" rowspan="2">Human label</th><th colspan="2">ChatGPT</th><th colspan="2">Grok</th><th colspan="2">Gemini</th><th colspan="2">Fanar</th></tr>
+            <tr><th>A</th><th>M</th><th>A</th><th>M</th><th>A</th><th>M</th><th>A</th><th>M</th></tr></thead>
+            <tbody>
+              <tr><td class="l grp" rowspan="2">Zero-Shot 1</td><td class="l">Aligned</td><td>1990</td><td>268</td><td>2123</td><td>134</td><td>2034</td><td>224</td><td>1753</td><td>19</td></tr>
+              <tr><td class="l">Misaligned</td><td>115</td><td>983</td><td>272</td><td>826</td><td>189</td><td>909</td><td>278</td><td>128</td></tr>
+            </tbody>
+            <tbody>
+              <tr><td class="l grp" rowspan="2">Zero-Shot 2</td><td class="l">Aligned</td><td>2006</td><td>252</td><td>2105</td><td>153</td><td>2063</td><td>195</td><td>1793</td><td>16</td></tr>
+              <tr><td class="l">Misaligned</td><td>112</td><td>986</td><td>229</td><td>869</td><td>198</td><td>900</td><td>318</td><td>110</td></tr>
+            </tbody>
+            <tbody>
+              <tr><td class="l grp" rowspan="2">Few-Shot</td><td class="l">Aligned</td><td>2043</td><td>215</td><td>2123</td><td>135</td><td>2113</td><td>145</td><td>1736</td><td>48</td></tr>
+              <tr><td class="l">Misaligned</td><td>129</td><td>969</td><td>258</td><td>840</td><td>206</td><td>892</td><td>224</td><td>185</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="heatcaption">Confusion matrices per judge model. A = predicted <em>Aligned</em>, M = predicted <em>Misaligned</em>.</p>
+        </details>
       </div>
 	  <br>
-					  See <a href="https://www.jarrar.info/publications/RMSAJ26.pdf">article</a> for additional statistics and results.
+					  See <a href="https://www.jarrar.info/publications/RMS26.pdf">article</a> for additional statistics and results.
                     </p>
                   </div>
                 </div>

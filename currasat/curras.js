@@ -55,20 +55,33 @@ function GetResult() {
 
     var search_text_strip = arStrip(search_text, "True", "True", "True", "False", "True", "True");
 
-    if (search_text && search_fields.length && sources.length) {
-
-        currentRequest = $.ajax({
-            url: "https://ontology.birzeit.edu/sina/v2/api/FilterCurrasBiladiResults/?apikey=annotationsKey",
-            type: "POST",
-            contentType: "application/json",
-            data: JSON.stringify({
+    var getPayload = {
                 "search_fields": search_fields.join('+'),
                 "match_type": match_type.join('+'),
                 "source": sources.join('+'),
                 "search_text": search_text_strip,
                 "page": currentPage,
                 "page_size": pageSize
-            }),
+            };
+    // Encode the object safely to Base64
+    var serializedData = JSON.stringify(getPayload);
+    var getString = btoa(unescape(encodeURIComponent(serializedData)));
+
+    if (search_text && search_fields.length && sources.length) {
+
+        currentRequest = $.ajax({
+            url: "https://ontology.birzeit.edu/sina/v2/api/FilterCurrasBiladiResults/?apikey=annotationsKey",
+            type: "POST",
+            contentType: "application/json",
+    		data: JSON.stringify({ "payload": getString }),
+            // data: JSON.stringify({
+            //     "search_fields": search_fields.join('+'),
+            //     "match_type": match_type.join('+'),
+            //     "source": sources.join('+'),
+            //     "search_text": search_text_strip,
+            //     "page": currentPage,
+            //     "page_size": pageSize
+            // }),
             timeout: 1000000,
             beforeSend: function() {
                 var element = document.getElementById("myprogressBar");

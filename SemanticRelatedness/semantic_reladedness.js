@@ -23,7 +23,7 @@ $(function() {
 			$('#output').val('Processing...');
 
 			$.ajax({
-				url: 'https://ontology.birzeit.edu/sina/v2/api/Semantic_relatedness/',
+				url: 'https://sina.birzeit.edu/sina/v2/api/Semantic_relatedness/',
 				method: 'POST',
 				contentType: 'application/json',
 				data: JSON.stringify({

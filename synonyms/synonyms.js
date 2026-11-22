@@ -72,7 +72,7 @@ function findSynonyms() {
 	// console.log("lexicons : ",filter_lexicons);
 	// console.log({ "synset": final_synset, "level": level, "task": task });
 	$.ajax({
-		url: "https://ontology.birzeit.edu/sina/v2/api/SynonymGenerator/?apikey=sinaMapping",
+		url: "https://sina.birzeit.edu/sina/v2/api/SynonymGenerator/?apikey=sinaMapping",
 // //		data: JSON.stringify({ "synset": final_synset, "level": level, "task": task }),
 		data: JSON.stringify({ "synset": final_synset.join(" | "), "level": level, "useALMA": use_lemmatization}),
 		//url: 'https://sinalab-synonyms-api.hf.space/predict',
@@ -326,7 +326,7 @@ function EvaluateSynset() {
 	//console.log({ "synset": final_synset.join(" | "), "level": level});
 	
 	$.ajax({
-		url: "https://ontology.birzeit.edu/sina/v2/api/EvaluateSynset/?apikey=IntentKey",
+		url: "https://sina.birzeit.edu/sina/v2/api/EvaluateSynset/?apikey=IntentKey",
 		//data: JSON.stringify({ "synset": final_synset, "level": level, "task": task }),
 		data: JSON.stringify({ "synset": final_synset.join(" | "), "level": level }),
 		type: "POST",

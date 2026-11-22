@@ -40,7 +40,7 @@ function jaccard() {
 function requestJaccard(list1, list2, delimiter, ignoreAllDiacriticsButNotShadda, ignoreShaddaDiacritic) {
 	$.ajax({
 		type: "POST",
-		url: 'https://ontology.birzeit.edu/sina/v2/api/jaccard/',
+		url: 'https://sina.birzeit.edu/sina/v2/api/jaccard/',
 		data: JSON.stringify({
 		"delimiter" : delimiter,
 		"string1" : list1,

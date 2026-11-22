@@ -48,7 +48,7 @@ function morphTagger() {
       '<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>';
 
     $.ajax({
-      url: 'https://ontology.birzeit.edu/sina/v2/api/AlmaDemo/?apikey=sampleKey',
+      url: 'https://sina.birzeit.edu/sina/v2/api/AlmaDemo/?apikey=sampleKey',
       data: JSON.stringify({
         text: textAreaInput.trim(),
         language: 'MSA',
@@ -244,7 +244,7 @@ function lemmatization() {
 
     $.ajax({
 		
-      url: 'https://ontology.birzeit.edu/sina/v2/api/AlmaDemo/?apikey=sampleKey',
+      url: 'https://sina.birzeit.edu/sina/v2/api/AlmaDemo/?apikey=sampleKey',
       data: JSON.stringify({
         text: textAreaInput.trim(),
         language: 'MSA',
@@ -418,7 +418,7 @@ function posTagger() {
 
     $.ajax({
 		
-      url: 'https://ontology.birzeit.edu/sina/v2/api/AlmaDemo/?apikey=sampleKey',
+      url: 'https://sina.birzeit.edu/sina/v2/api/AlmaDemo/?apikey=sampleKey',
       data: JSON.stringify({
         text: textAreaInput.trim(),
         language: 'MSA',

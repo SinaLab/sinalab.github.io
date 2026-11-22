@@ -8,7 +8,7 @@ function ExcuteSALMA() {
     '<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>'
   );
   $.ajax({
-    url: 'https://ontology.birzeit.edu/sina/v2/api/SALMA/?apikey=sampleKey',
+    url: 'https://sina.birzeit.edu/sina/v2/api/SALMA/?apikey=sampleKey',
     data: JSON.stringify({ sentence: input }),
 	//url: 'https://sinalab-salma-api.hf.space/predict',
     //data: JSON.stringify({ "text": input }),

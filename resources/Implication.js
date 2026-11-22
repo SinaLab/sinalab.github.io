@@ -26,7 +26,7 @@ $(function() {
 			var ignorefirstLetterHamza = $('#ignorefirstLetterHamza').is(":checked");
 			var ignoreAL = $('#ignoreAL').is(":checked");
 			$.ajax({
-				url: `https://sina.birzeit.edu/sina/api/Implication/${word1}/${word2}`,
+				url: `https://sina.birzeit.edu/sina/v2/api/Implication/${word1}/${word2}`,
 				timeout: 3000,
 				success: function(data) {
 				  $('#output').val(JSON.stringify(data));

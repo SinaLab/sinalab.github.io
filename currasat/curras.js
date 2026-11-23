@@ -4,7 +4,11 @@ var currentRequestId = null; // Variable to store a unique ID for each request
 // Global variables to manage pagination
 let currentPage = 1; // Current page number
 let pageSize = 250; // Default page size
-var prev_st =document.getElementById("searchbar_main").value.trim();// Previous search text
+var prev_st = ""; 
+if (document.getElementById("searchbar_main")){
+    prev_st = document.getElementById("searchbar_main").value.trim();// Previous search text
+}
+
 var Flag = 0;
 function getRes() {
     $('#thead').empty();
@@ -55,12 +59,25 @@ function GetResult() {
 
     var search_text_strip = arStrip(search_text, "True", "True", "True", "False", "True", "True");
 
+    // var getPayload = {
+    //             "search_fields": search_fields.join('+'),
+    //             "match_type": match_type.join('+'),
+    //             "source": sources.join('+'),
+    //             "search_text": search_text_strip,
+    //             "page": currentPage,
+    //             "page_size": pageSize
+    //         };
+    // // Encode the object safely to Base64
+    // var serializedData = JSON.stringify(getPayload);
+    // var getString = btoa(unescape(encodeURIComponent(serializedData)));
+
     if (search_text && search_fields.length && sources.length) {
 
         currentRequest = $.ajax({
-            url: "https://ontology.birzeit.edu/sina/v2/api/FilterCurrasBiladiResults/?apikey=annotationsKey",
+            url: "https://sina.birzeit.edu/sina/v2/api/FilterCurrasBiladiResults/?apikey=annotationsKey",
             type: "POST",
             contentType: "application/json",
+    		// data: JSON.stringify({ "payload": getString }),
             data: JSON.stringify({
                 "search_fields": search_fields.join('+'),
                 "match_type": match_type.join('+'),
